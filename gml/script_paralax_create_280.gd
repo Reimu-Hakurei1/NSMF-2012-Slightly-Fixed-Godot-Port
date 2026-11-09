@@ -1,0 +1,23 @@
+extends RefCounted
+## GameMaker script "script_paralax_create" kept verbatim as comments.
+## GML calls this by name with positional arguments.
+
+func run(_a = null, _b = null, _c = null, _d = null) -> void:
+	# ixor=view_xview[0]
+	# iyor=0
+	# x_przesunieto=0
+	# starting=0
+	#     
+	#       /*
+	#     image_xscale=1
+	#     image_yscale=1
+	#     image_angle=0
+	#     image_alpha=1
+	#     dzielnik=1
+	#     depth=90000
+	#     odleglosc_przemijania=400
+	#     
+	#     // dla pustyni elementy (nie dziala xscale i yscale)
+	#     nagraj_scalex=0
+	#     nagraj_scaley=0
+	pass

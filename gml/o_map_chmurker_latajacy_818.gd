@@ -1,0 +1,22 @@
+extends Node2D
+## GameMaker object "o_map_chmurker_latajacy" (index 818)
+## sprite_index=394 depth=0 solid=0 visible=1 parent=-100 mask=-1
+
+func gm_Create_0() -> void:
+	# stream=random(360)
+	# kierunek=1
+	# dzielnik=1.5+random(1)
+	pass
+
+func gm_Outside_0() -> void:
+	# draw_sprite_ext(global.gfx_lakitus_1,0,x+sin(degtorad(stream))*10,y,kierunek/dzielnik+sin(degtorad(stream*4))/20,1/dzielnik-sin(degtorad(stream*3))/20,0,c_white,0.85)
+	# draw_sprite_ext(s_map_shadow_1,0,x+sin(degtorad(stream))*30,1140,1+sin(degtorad(stream))/20,1/2-sin(degtorad(stream))/20,0,c_white,0.5)
+	# /*
+	# if stream<90 {kierunek=1}
+	# if stream>=90 && stream<=270 {kierunek=-1}
+	# if stream>270  {kierunek=1}
+	# 
+	# */
+	# if stream>360 {stream=0}
+	# stream+=1
+	pass

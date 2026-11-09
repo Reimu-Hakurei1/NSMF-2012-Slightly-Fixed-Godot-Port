@@ -1,0 +1,804 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Texture2D" id="t1" path="res://images/backgrounds/background42.42.png"]
+[ext_resource type="Texture2D" id="t2" path="res://images/backgrounds/b_rury_pionowe.3.png"]
+[ext_resource type="Texture2D" id="t3" path="res://images/sprites/s_arrow_show.251.0.png"]
+[ext_resource type="Texture2D" id="t4" path="res://images/sprites/s_marker_160x160.314.0.png"]
+[ext_resource type="Texture2D" id="t5" path="res://images/sprites/s_40x40_marker.27.0.png"]
+[ext_resource type="Texture2D" id="t6" path="res://images/sprites/s_slide_block_mask.235.0.png"]
+[ext_resource type="Texture2D" id="t7" path="res://images/sprites/s_kwadrat_maker.6.0.png"]
+[ext_resource type="Texture2D" id="t8" path="res://images/sprites/s_big_boo_marker.22.0.png"]
+[ext_resource type="Texture2D" id="t9" path="res://images/sprites/s_bullet_ball_mark.15.0.png"]
+[ext_resource type="Texture2D" id="t10" path="res://images/sprites/sprite_big_marker_2.39.0.png"]
+[ext_resource type="Texture2D" id="t11" path="res://images/sprites/sprite_guru.37.0.png"]
+[ext_resource type="Texture2D" id="t12" path="res://images/sprites/s_goomba_marker.7.0.png"]
+[ext_resource type="Texture2D" id="t13" path="res://images/sprites/sprite11.211.0.png"]
+[ext_resource type="Script" path="res://runtime/room_preview_boot.gd" id="boot"]
+
+[node name="room_lavas_4_Castle_Part_2" type="Node2D"]
+script = ExtResource("boot")
+metadata/gm_room = "room_lavas_4_Castle_Part_2"
+metadata/gm_bg_colour = 12632256
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(400, 300)
+limit_left = 0
+limit_top = 0
+limit_right = 5000
+limit_bottom = 1000
+
+[node name="RoomColour" type="ColorRect" parent="."]
+z_index = -4096
+offset_right = 5000
+offset_bottom = 1000
+color = Color(0.753, 0.753, 0.753, 1)
+
+[node name="Tiles_20000" type="Node2D" parent="."]
+z_index = 1
+metadata/gm_depth = 20000
+
+[node name="tile_0" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(240, 800)
+texture = ExtResource("t1")
+region_enabled = true
+region_rect = Rect2(0, 0, 120, 40)
+centered = false
+
+[node name="tile_1" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(40, 800)
+texture = ExtResource("t1")
+region_enabled = true
+region_rect = Rect2(80, 0, 40, 40)
+centered = false
+
+[node name="tile_2" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(120, 840)
+texture = ExtResource("t1")
+region_enabled = true
+region_rect = Rect2(120, 0, 160, 80)
+centered = false
+
+[node name="tile_3" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(120, 920)
+texture = ExtResource("t1")
+region_enabled = true
+region_rect = Rect2(120, 0, 160, 80)
+centered = false
+
+[node name="tile_4" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(160, 800)
+texture = ExtResource("t1")
+region_enabled = true
+region_rect = Rect2(80, 0, 40, 40)
+centered = false
+
+[node name="tile_5" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(200, 800)
+texture = ExtResource("t1")
+region_enabled = true
+region_rect = Rect2(80, 0, 40, 40)
+centered = false
+
+[node name="tile_6" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(80, 800)
+texture = ExtResource("t1")
+region_enabled = true
+region_rect = Rect2(0, 0, 80, 40)
+centered = false
+
+[node name="tile_7" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(160, 680)
+texture = ExtResource("t2")
+region_enabled = true
+region_rect = Rect2(240, 0, 80, 80)
+centered = false
+
+[node name="tile_8" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(160, 760)
+texture = ExtResource("t2")
+region_enabled = true
+region_rect = Rect2(240, 40, 80, 40)
+centered = false
+
+[node name="tile_9" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(4360, 640)
+texture = ExtResource("t2")
+region_enabled = true
+region_rect = Rect2(80, 0, 80, 80)
+centered = false
+
+[node name="tile_10" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(4360, 720)
+texture = ExtResource("t2")
+region_enabled = true
+region_rect = Rect2(80, 40, 80, 40)
+centered = false
+
+[node name="tile_11" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(4360, 760)
+texture = ExtResource("t2")
+region_enabled = true
+region_rect = Rect2(80, 40, 80, 40)
+centered = false
+
+[node name="tile_12" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(4360, 800)
+texture = ExtResource("t2")
+region_enabled = true
+region_rect = Rect2(80, 40, 80, 40)
+centered = false
+
+[node name="tile_13" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(4360, 840)
+texture = ExtResource("t2")
+region_enabled = true
+region_rect = Rect2(80, 40, 80, 40)
+centered = false
+
+[node name="tile_14" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(4360, 880)
+texture = ExtResource("t2")
+region_enabled = true
+region_rect = Rect2(80, 40, 80, 40)
+centered = false
+
+[node name="tile_15" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(4360, 920)
+texture = ExtResource("t2")
+region_enabled = true
+region_rect = Rect2(80, 40, 80, 40)
+centered = false
+
+[node name="tile_16" type="Sprite2D" parent="Tiles_20000"]
+position = Vector2(4360, 960)
+texture = ExtResource("t2")
+region_enabled = true
+region_rect = Rect2(80, 40, 80, 40)
+centered = false
+
+[node name="Objects_-1000000" type="Node2D" parent="."]
+z_index = -2
+metadata/gm_depth = -1000000
+
+[node name="obj_mario_0" type="Sprite2D" parent="Objects_-1000000"]
+metadata/gm_object = "obj_mario"
+position = Vector2(185, 616)
+texture = ExtResource("t13")
+offset = Vector2(-32, -32)
+centered = false
+visible = false
+
+[node name="Objects_-10000" type="Node2D" parent="."]
+z_index = -1
+metadata/gm_depth = -10000
+
+[node name="o_big_marker_2_0" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(-40, 560)
+texture = ExtResource("t10")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_1" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(-40, 160)
+texture = ExtResource("t10")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_2" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(-40, -240)
+texture = ExtResource("t10")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="obj_wall_3" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "obj_wall"
+position = Vector2(-40, 960)
+texture = ExtResource("t11")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_4" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(160, 680)
+texture = ExtResource("t10")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_5" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(200, 680)
+texture = ExtResource("t10")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_6" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(120, 800)
+texture = ExtResource("t10")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_7" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(240, 800)
+texture = ExtResource("t10")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="obj_wall_8" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "obj_wall"
+position = Vector2(40, 800)
+texture = ExtResource("t11")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="obj_wall_9" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "obj_wall"
+position = Vector2(80, 800)
+texture = ExtResource("t11")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="obj_wall_10" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "obj_wall"
+position = Vector2(280, 800)
+texture = ExtResource("t11")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="obj_wall_11" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "obj_wall"
+position = Vector2(320, 800)
+texture = ExtResource("t11")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_12" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(4360, 640)
+texture = ExtResource("t10")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_13" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(4400, 640)
+texture = ExtResource("t10")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_FUCUS_LAWOWY_CALOETAPOWY_SREDNI_14" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_FUCUS_LAWOWY_CALOETAPOWY_SREDNI"
+position = Vector2(160, 560)
+texture = ExtResource("t12")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="Objects_0" type="Node2D" parent="."]
+z_index = 0
+metadata/gm_depth = 0
+
+[node name="o_tworzy_lave_przez_caly_etap_GLEBOKOSC_4_0" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_tworzy_lave_przez_caly_etap_GLEBOKOSC_4"
+position = Vector2(80, 920)
+texture = ExtResource("t4")
+offset = Vector2(-80, -80)
+centered = false
+
+[node name="o_winda_przesowana_zamkowa_1" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_winda_przesowana_zamkowa"
+metadata/gm_creation_code = "kat=0 \r\nrodzaj=0\r\nszybkosc=22\r\n\r\n\r\nwielkosc_kolka=11 // dla windy obracanej RODZAJ=1\r\njak_daleko_jedzie=3 // dla windy pionowej\r\n\r\njaki_wyglad_windy=0\r\n\r\n\r\nnalezydo=155741\r\nsampluj_machine=0"
+position = Vector2(400, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_aktywowacz_przesowanej_zamkowej_AKTYWATOR_STAWIAJ_2" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_aktywowacz_przesowanej_zamkowej_AKTYWATOR_STAWIAJ"
+position = Vector2(400, 640)
+
+[node name="o_aktywowacz_przesowanej_zamkowej_3" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_aktywowacz_przesowanej_zamkowej"
+position = Vector2(640, 720)
+texture = ExtResource("t4")
+offset = Vector2(-80, -80)
+centered = false
+visible = false
+
+[node name="o_winda_przesowana_zamkowa_4" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_winda_przesowana_zamkowa"
+metadata/gm_creation_code = "kat=0 \r\nrodzaj=0\r\nszybkosc=22\r\n\r\n\r\nwielkosc_kolka=11 // dla windy obracanej RODZAJ=1\r\njak_daleko_jedzie=3 // dla windy pionowej\r\n\r\njaki_wyglad_windy=0\r\n\r\n\r\nnalezydo=155741\r\nsampluj_machine=0"
+position = Vector2(440, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_winda_przesowana_zamkowa_5" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_winda_przesowana_zamkowa"
+metadata/gm_creation_code = "kat=0 \r\nrodzaj=0\r\nszybkosc=22\r\n\r\n\r\nwielkosc_kolka=11 // dla windy obracanej RODZAJ=1\r\njak_daleko_jedzie=3 // dla windy pionowej\r\n\r\njaki_wyglad_windy=0\r\n\r\n\r\nnalezydo=155741\r\nsampluj_machine=0"
+position = Vector2(480, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_winda_przesowana_zamkowa_6" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_winda_przesowana_zamkowa"
+metadata/gm_creation_code = "kat=0 \r\nrodzaj=0\r\nszybkosc=22\r\n\r\n\r\nwielkosc_kolka=11 // dla windy obracanej RODZAJ=1\r\njak_daleko_jedzie=3 // dla windy pionowej\r\n\r\njaki_wyglad_windy=0\r\n\r\n\r\nnalezydo=155741\r\nsampluj_machine=1"
+position = Vector2(520, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_winda_przesowana_zamkowa_7" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_winda_przesowana_zamkowa"
+metadata/gm_creation_code = "kat=0 \r\nrodzaj=0\r\nszybkosc=22\r\n\r\n\r\nwielkosc_kolka=11 // dla windy obracanej RODZAJ=1\r\njak_daleko_jedzie=3 // dla windy pionowej\r\n\r\njaki_wyglad_windy=0\r\n\r\n\r\nnalezydo=155741\r\nsampluj_machine=0"
+position = Vector2(560, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_winda_przesowana_zamkowa_8" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_winda_przesowana_zamkowa"
+metadata/gm_creation_code = "kat=0 \r\nrodzaj=0\r\nszybkosc=22\r\n\r\n\r\nwielkosc_kolka=11 // dla windy obracanej RODZAJ=1\r\njak_daleko_jedzie=3 // dla windy pionowej\r\n\r\njaki_wyglad_windy=0\r\n\r\n\r\nnalezydo=155741\r\nsampluj_machine=0"
+position = Vector2(600, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_winda_przesowana_zamkowa_9" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_winda_przesowana_zamkowa"
+metadata/gm_creation_code = "kat=0 \r\nrodzaj=0\r\nszybkosc=22\r\n\r\n\r\nwielkosc_kolka=11 // dla windy obracanej RODZAJ=1\r\njak_daleko_jedzie=3 // dla windy pionowej\r\n\r\njaki_wyglad_windy=0\r\n\r\n\r\nnalezydo=155741\r\nsampluj_machine=0"
+position = Vector2(640, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_winda_przesowana_zamkowa_10" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_winda_przesowana_zamkowa"
+metadata/gm_creation_code = "kat=0 \r\nrodzaj=0\r\nszybkosc=22\r\n\r\n\r\nwielkosc_kolka=11 // dla windy obracanej RODZAJ=1\r\njak_daleko_jedzie=3 // dla windy pionowej\r\n\r\njaki_wyglad_windy=0\r\n\r\n\r\nnalezydo=155741\r\nsampluj_machine=0"
+position = Vector2(680, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_odbij_zamkowo_do_gory_11" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_do_gory"
+position = Vector2(1080, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_w_lewo_12" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_w_lewo"
+position = Vector2(1040, 560)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_w_prawo_13" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_w_prawo"
+position = Vector2(840, 320)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_na_dol_14" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_na_dol"
+position = Vector2(1280, 360)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_w_prawo_15" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_w_prawo"
+position = Vector2(1240, 960)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_do_gory_16" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_do_gory"
+position = Vector2(1600, 920)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_w_prawo_17" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_w_prawo"
+position = Vector2(1560, 760)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_do_gory_18" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_do_gory"
+position = Vector2(800, 600)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_19" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+position = Vector2(960, 680)
+texture = ExtResource("t4")
+offset = Vector2(-80, -80)
+centered = false
+visible = false
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_20" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+position = Vector2(960, 400)
+texture = ExtResource("t4")
+offset = Vector2(-80, -80)
+centered = false
+visible = false
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_21" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+position = Vector2(1400, 400)
+texture = ExtResource("t4")
+offset = Vector2(-80, -80)
+centered = false
+visible = false
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_22" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+position = Vector2(1400, 680)
+texture = ExtResource("t4")
+offset = Vector2(-80, -80)
+centered = false
+visible = false
+
+[node name="o_point_red_block_offed_23" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_point_red_block_offed"
+position = Vector2(1400, 760)
+texture = ExtResource("t6")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_point_red_activator_24" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_point_red_activator"
+position = Vector2(1040, 200)
+texture = ExtResource("t6")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_winda_przesowana_zamkowa_25" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_winda_przesowana_zamkowa"
+metadata/gm_creation_code = "kat=0 \r\nrodzaj=0\r\nszybkosc=22\r\n\r\n\r\nwielkosc_kolka=11 // dla windy obracanej RODZAJ=1\r\njak_daleko_jedzie=3 // dla windy pionowej\r\n\r\njaki_wyglad_windy=0\r\n\r\n\r\nnalezydo=155741\r\nsampluj_machine=0"
+position = Vector2(720, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_winda_przesowana_zamkowa_26" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_winda_przesowana_zamkowa"
+metadata/gm_creation_code = "kat=0 \r\nrodzaj=0\r\nszybkosc=22\r\n\r\n\r\nwielkosc_kolka=11 // dla windy obracanej RODZAJ=1\r\njak_daleko_jedzie=3 // dla windy pionowej\r\n\r\njaki_wyglad_windy=0\r\n\r\n\r\nnalezydo=155741\r\nsampluj_machine=0"
+position = Vector2(760, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_check_point_1_27" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_check_point_1"
+position = Vector2(320, 800)
+texture = ExtResource("t7")
+offset = Vector2(-20, -40)
+centered = false
+
+[node name="o_odbij_zamkowo_do_gory_28" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_do_gory"
+position = Vector2(2080, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_w_prawo_29" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_w_prawo"
+position = Vector2(2040, 600)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_do_gory_30" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_do_gory"
+position = Vector2(2240, 640)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_w_lewo_31" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_w_lewo"
+position = Vector2(2200, 480)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_na_dol_32" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_na_dol"
+position = Vector2(1920, 520)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_w_lewo_33" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_w_lewo"
+position = Vector2(1960, 720)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_do_gory_34" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_do_gory"
+position = Vector2(1800, 680)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_w_prawo_35" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_w_prawo"
+position = Vector2(1840, 320)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_na_dol_36" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_na_dol"
+position = Vector2(2480, 360)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_w_prawo_37" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_w_prawo"
+position = Vector2(2440, 960)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_w_prawo_38" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_w_prawo"
+position = Vector2(3480, 680)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_point_red_block_39" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_point_red_block"
+position = Vector2(3320, 720)
+texture = ExtResource("t6")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_point_red_block_40" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_point_red_block"
+position = Vector2(3160, 680)
+texture = ExtResource("t6")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_point_red_block_41" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_point_red_block"
+position = Vector2(3000, 760)
+texture = ExtResource("t6")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_point_red_block_42" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_point_red_block"
+position = Vector2(2800, 680)
+texture = ExtResource("t6")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_point_red_block_43" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_point_red_block"
+position = Vector2(2640, 760)
+texture = ExtResource("t6")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_point_red_activator_44" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_point_red_activator"
+position = Vector2(2160, 240)
+texture = ExtResource("t6")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_odbij_zamkowo_do_gory_45" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_do_gory"
+position = Vector2(3520, 920)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_46" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+position = Vector2(2080, 680)
+texture = ExtResource("t4")
+offset = Vector2(-80, -80)
+centered = false
+visible = false
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_47" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+position = Vector2(2360, 680)
+texture = ExtResource("t4")
+offset = Vector2(-80, -80)
+centered = false
+visible = false
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_48" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+position = Vector2(2080, 400)
+texture = ExtResource("t4")
+offset = Vector2(-80, -80)
+centered = false
+visible = false
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_49" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+position = Vector2(2360, 400)
+texture = ExtResource("t4")
+offset = Vector2(-80, -80)
+centered = false
+visible = false
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_50" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+position = Vector2(3000, 640)
+texture = ExtResource("t4")
+offset = Vector2(-80, -80)
+centered = false
+visible = false
+
+[node name="o_pila_tarczowa_ustawiana_51" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_pila_tarczowa_ustawiana"
+metadata/gm_creation_code = "promien=200\r\nkat=0\r\nobracanie=1\r\n\r\nsinus_odleglosc=0\r\nsinus_kat=0\r\nsinus_szybkosc=0"
+position = Vector2(2160, 560)
+texture = ExtResource("t8")
+offset = Vector2(-72, -72)
+centered = false
+
+[node name="o_pila_tarczowa_ustawiana_52" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_pila_tarczowa_ustawiana"
+metadata/gm_creation_code = "promien=200\r\nkat=0\r\nobracanie=1\r\n\r\nsinus_odleglosc=0\r\nsinus_kat=0\r\nsinus_szybkosc=0"
+position = Vector2(3020, 781)
+texture = ExtResource("t8")
+offset = Vector2(-72, -72)
+centered = false
+
+[node name="o_odbij_zamkowo_na_dol_53" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_na_dol"
+position = Vector2(4280, 680)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_na_dol_54" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_na_dol"
+position = Vector2(4280, 720)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_na_dol_55" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_na_dol"
+position = Vector2(4280, 760)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_na_dol_56" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_na_dol"
+position = Vector2(4280, 800)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_na_dol_57" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_na_dol"
+position = Vector2(4280, 840)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_na_dol_58" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_na_dol"
+position = Vector2(4280, 880)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_na_dol_59" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_na_dol"
+position = Vector2(4280, 920)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_odbij_zamkowo_na_dol_60" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_odbij_zamkowo_na_dol"
+position = Vector2(4280, 960)
+texture = ExtResource("t5")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_secret_show_61" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_secret_show"
+position = Vector2(4396, 524)
+texture = ExtResource("t3")
+offset = Vector2(-41, -7)
+centered = false
+
+[node name="o_skrot_definiowalny_62" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_skrot_definiowalny"
+metadata/gm_creation_code = "kierunek_wchodzenia=0\r\nkierunek_wychodzenia=2\r\npodazaj=0\r\nwyjscie_x=24160\r\nwyjscie_y=1006\r\nkill_on_use=1\r\nscrooling_changer=1\r\nscrool_x=24120\r\nscrool_y=600\r\nchange_background=2\r\n\r\nblanker_in=0\r\nblanker_out=1\r\n\r\nchange_music=2\r\nefektuj=1\r\n\r\ndepth_mario_changer=10000\r\n\r\nlevel_changer=room_lavas_4_Castle_Part_3\r\nuzyj_w_nastepnym_etapie_rury_na_poczatku=1"
+position = Vector2(4401, 627)
+texture = ExtResource("t9")
+offset = Vector2(-6, -6)
+centered = false
+visible = false
+
+[node name="Objects_50000" type="Node2D" parent="."]
+z_index = 2
+metadata/gm_depth = 50000
+
+[node name="o_rounding_sparcle_do_zaznaczania_czegos_0" type="Sprite2D" parent="Objects_50000"]
+metadata/gm_object = "o_rounding_sparcle_do_zaznaczania_czegos"
+position = Vector2(2181, 252)
+texture = ExtResource("t3")
+offset = Vector2(-41, -7)
+centered = false
+
+[node name="o_rounding_sparcle_do_zaznaczania_czegos_1" type="Sprite2D" parent="Objects_50000"]
+metadata/gm_object = "o_rounding_sparcle_do_zaznaczania_czegos"
+position = Vector2(1058, 214)
+texture = ExtResource("t3")
+offset = Vector2(-41, -7)
+centered = false

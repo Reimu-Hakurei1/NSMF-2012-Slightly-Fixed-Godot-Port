@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" id="t1" path="res://images/sprites/s_arrow_show.251.0.png"]
+[ext_resource type="Texture2D" id="t2" path="res://images/sprites/s_fireball.61.0.png"]
+[ext_resource type="Texture2D" id="t3" path="res://images/sprites/s_goomba_marker.7.0.png"]
+[ext_resource type="Script" path="res://runtime/room_preview_boot.gd" id="boot"]
+
+[node name="room_TV_JOY" type="Node2D"]
+script = ExtResource("boot")
+metadata/gm_room = "room_TV_JOY"
+metadata/gm_bg_colour = 16777215
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(400, 300)
+limit_left = 0
+limit_top = 0
+limit_right = 800
+limit_bottom = 600
+
+[node name="RoomColour" type="ColorRect" parent="."]
+z_index = -4096
+offset_right = 800
+offset_bottom = 600
+color = Color(1.000, 1.000, 1.000, 1)
+
+[node name="Objects_-10000" type="Node2D" parent="."]
+z_index = -1
+metadata/gm_depth = -10000
+
+[node name="o_FUCUS_LAWOWY_CALOETAPOWY_SREDNI_0" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_FUCUS_LAWOWY_CALOETAPOWY_SREDNI"
+position = Vector2(608, 96)
+texture = ExtResource("t3")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="Objects_0" type="Node2D" parent="."]
+z_index = 0
+metadata/gm_depth = 0
+
+[node name="o_graj_yojstick_ekran_0" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_graj_yojstick_ekran"
+position = Vector2(352, 288)
+
+[node name="o_sparkling_in_da_cave_1" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_sparkling_in_da_cave"
+position = Vector2(640, 288)
+texture = ExtResource("t1")
+offset = Vector2(-41, -7)
+centered = false
+visible = false
+
+[node name="o_sparkling_in_da_cave_2" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_sparkling_in_da_cave"
+position = Vector2(160, 416)
+texture = ExtResource("t1")
+offset = Vector2(-41, -7)
+centered = false
+visible = false
+
+[node name="o_sparkling_in_da_cave_3" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_sparkling_in_da_cave"
+position = Vector2(352, 128)
+texture = ExtResource("t1")
+offset = Vector2(-41, -7)
+centered = false
+visible = false
+
+[node name="o_sparkle_for_day_lavels_4" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_sparkle_for_day_lavels"
+position = Vector2(1120, 128)
+texture = ExtResource("t2")
+offset = Vector2(-39, -34)
+centered = false
+visible = false
+
+[node name="o_sparkle_for_day_lavels_5" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_sparkle_for_day_lavels"
+position = Vector2(960, 480)
+texture = ExtResource("t2")
+offset = Vector2(-39, -34)
+centered = false
+visible = false

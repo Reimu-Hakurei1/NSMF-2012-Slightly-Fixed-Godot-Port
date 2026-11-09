@@ -1,0 +1,555 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Texture2D" id="t1" path="res://images/sprites/s_linelapacz.212.0.png"]
+[ext_resource type="Texture2D" id="t2" path="res://images/sprites/s_bonus_kwiatek_1.143.0.png"]
+[ext_resource type="Texture2D" id="t3" path="res://images/sprites/s_lampka_jaskiniowa.203.0.png"]
+[ext_resource type="Texture2D" id="t4" path="res://images/sprites/s_40x40_marker.27.0.png"]
+[ext_resource type="Texture2D" id="t5" path="res://images/sprites/s_bullet_ball_mark.15.0.png"]
+[ext_resource type="Texture2D" id="t6" path="res://images/sprites/s_slide_block_mask.235.0.png"]
+[ext_resource type="Texture2D" id="t7" path="res://images/sprites/s_goomba_marker.7.0.png"]
+[ext_resource type="Texture2D" id="t8" path="res://images/sprites/s_goomba_kickable.9.0.png"]
+[ext_resource type="Texture2D" id="t9" path="res://images/sprites/sprite_big_marker_2.39.0.png"]
+[ext_resource type="Texture2D" id="t10" path="res://images/sprites/sprite_guru.37.0.png"]
+[ext_resource type="Texture2D" id="t11" path="res://images/sprites/sprite_big_marker.38.0.png"]
+[ext_resource type="Texture2D" id="t12" path="res://images/sprites/s_blocks_9.36.0.png"]
+[ext_resource type="Texture2D" id="t13" path="res://images/sprites/sprite11.211.0.png"]
+[ext_resource type="Script" path="res://runtime/room_preview_boot.gd" id="boot"]
+
+[node name="room_COPY_ME_CAVE" type="Node2D"]
+script = ExtResource("boot")
+metadata/gm_room = "room_COPY_ME_CAVE"
+metadata/gm_bg_colour = 0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(400, 300)
+limit_left = 0
+limit_top = 0
+limit_right = 15000
+limit_bottom = 800
+
+[node name="Objects_-1000000" type="Node2D" parent="."]
+z_index = -2
+metadata/gm_depth = -1000000
+
+[node name="obj_mario_0" type="Sprite2D" parent="Objects_-1000000"]
+metadata/gm_object = "obj_mario"
+position = Vector2(200, -320)
+texture = ExtResource("t13")
+offset = Vector2(-32, -32)
+centered = false
+visible = false
+
+[node name="Objects_-10000" type="Node2D" parent="."]
+z_index = -1
+metadata/gm_depth = -10000
+
+[node name="o_big_marker_2_0" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(40, 0)
+texture = ExtResource("t9")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_1" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(40, 400)
+texture = ExtResource("t9")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="obj_wall_2" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "obj_wall"
+position = Vector2(2840, 760)
+texture = ExtResource("t10")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="obj_wall_3" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "obj_wall"
+position = Vector2(3040, 760)
+texture = ExtResource("t10")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_4" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(40, -400)
+texture = ExtResource("t9")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_5" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(360, -400)
+texture = ExtResource("t9")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_6" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker"
+position = Vector2(20, -440)
+texture = ExtResource("t11")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_7" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(13800, 200)
+texture = ExtResource("t9")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_8" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(14680, 200)
+texture = ExtResource("t9")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_9" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(14680, -200)
+texture = ExtResource("t9")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2_10" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker_2"
+position = Vector2(13800, -200)
+texture = ExtResource("t9")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_11" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker"
+position = Vector2(13840, -240)
+texture = ExtResource("t11")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_12" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker"
+position = Vector2(14240, -240)
+texture = ExtResource("t11")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="obj_wall_10_13" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "obj_wall_10"
+position = Vector2(14640, -240)
+texture = ExtResource("t12")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="obj_wall_10_14" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "obj_wall_10"
+position = Vector2(14240, 520)
+texture = ExtResource("t12")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="obj_wall_10_15" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "obj_wall_10"
+position = Vector2(14240, 560)
+texture = ExtResource("t12")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_16" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker"
+position = Vector2(13840, 600)
+texture = ExtResource("t11")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_17" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker"
+position = Vector2(14320, 600)
+texture = ExtResource("t11")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="Objects_0" type="Node2D" parent="."]
+z_index = 0
+metadata/gm_depth = 0
+
+[node name="o_COIN_0" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14480, 440)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_1" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14520, 440)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_2" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14560, 440)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_3" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14600, 440)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_4" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14600, 400)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_5" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14560, 400)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_6" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14520, 400)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_7" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14480, 400)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_8" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14480, 480)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_9" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14520, 480)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_10" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14560, 480)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_11" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14600, 480)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_12" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14200, 360)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_13" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14240, 360)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_14" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14280, 360)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_15" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14320, 360)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_16" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14320, 320)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_17" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14280, 320)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_18" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14240, 320)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_19" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14200, 320)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_20" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14200, 400)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_21" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14240, 400)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_22" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14280, 400)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_COIN_23" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_COIN"
+position = Vector2(14320, 400)
+texture = ExtResource("t4")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_skrot_definiowalny_24" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_skrot_definiowalny"
+metadata/gm_creation_code = "kierunek_wchodzenia=0\r\nkierunek_wychodzenia=2\r\npodazaj=0\r\nwyjscie_x=7160\r\nwyjscie_y=580\r\nkill_on_use=1\r\nscrooling_changer=1000\r\nscrool_x=0\r\nscrool_y=0\r\nchange_background=2\r\n\r\nblanker_in=0\r\nblanker_out=1\r\n\r\nchange_music=2\r\nefektuj=1\r\n\r\ndepth_mario_changer=10000\r\n\r\nlevel_changer=0\r\nuzyj_w_nastepnym_etapie_rury_na_poczatku=0\r\n\r\n\r\n\r\n\r\n/*\r\nkierunek_wchodzenia=1\r\nkierunek_wychodzenia=2\r\npodazaj=0\r\nwyjscie_x=5120\r\nwyjscie_y=900\r\nkill_on_use=1\r\nscrooling_changer=2\r\nchange_background=0\r\n\r\nblanker_in=0\r\nblanker_out=1\r\n\r\nchange_music=1\r\nefektuj=1\r\n\r\ndepth_mario_changer=-9999999\r\nlevel_changer=0"
+position = Vector2(14280, 500)
+texture = ExtResource("t5")
+offset = Vector2(-6, -6)
+centered = false
+visible = false
+
+[node name="o_point_red_activator_25" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_point_red_activator"
+position = Vector2(14000, 400)
+texture = ExtResource("t6")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_lift_creator_windyjadacenadol_26" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_lift_creator_windyjadacenadol"
+position = Vector2(9320, -80)
+texture = ExtResource("t7")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="o_lift_destroyer_27" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_lift_destroyer"
+position = Vector2(9320, 840)
+texture = ExtResource("t8")
+offset = Vector2(0, 0)
+centered = false
+
+[node name="Objects_100" type="Node2D" parent="."]
+z_index = 1
+metadata/gm_depth = 100
+
+[node name="o_blyskanie_jaskiniowe_0" type="Sprite2D" parent="Objects_100"]
+metadata/gm_object = "o_blyskanie_jaskiniowe"
+position = Vector2(14560, 520)
+texture = ExtResource("t2")
+offset = Vector2(-34, -23)
+centered = false
+visible = false
+
+[node name="o_lampka_jaskiniowa_ledwobujana_1" type="Sprite2D" parent="Objects_100"]
+metadata/gm_object = "o_lampka_jaskiniowa_ledwobujana"
+position = Vector2(13905, 188)
+texture = ExtResource("t3")
+offset = Vector2(-24, -7)
+centered = false
+
+[node name="o_lampka_jaskiniowa_ledwobujana_2" type="Sprite2D" parent="Objects_100"]
+metadata/gm_object = "o_lampka_jaskiniowa_ledwobujana"
+position = Vector2(14100, 190)
+texture = ExtResource("t3")
+offset = Vector2(-24, -7)
+centered = false
+
+[node name="o_lampka_jaskiniowa_ledwobujana_3" type="Sprite2D" parent="Objects_100"]
+metadata/gm_object = "o_lampka_jaskiniowa_ledwobujana"
+position = Vector2(14350, 230)
+texture = ExtResource("t3")
+offset = Vector2(-24, -7)
+centered = false
+
+[node name="o_lampka_jaskiniowa_ledwobujana_4" type="Sprite2D" parent="Objects_100"]
+metadata/gm_object = "o_lampka_jaskiniowa_ledwobujana"
+position = Vector2(14565, 224)
+texture = ExtResource("t3")
+offset = Vector2(-24, -7)
+centered = false
+
+[node name="o_blyskanie_jaskiniowe_5" type="Sprite2D" parent="Objects_100"]
+metadata/gm_object = "o_blyskanie_jaskiniowe"
+position = Vector2(13880, 360)
+texture = ExtResource("t2")
+offset = Vector2(-34, -23)
+centered = false
+visible = false
+
+[node name="o_blyskanie_jaskiniowe_6" type="Sprite2D" parent="Objects_100"]
+metadata/gm_object = "o_blyskanie_jaskiniowe"
+position = Vector2(14080, 520)
+texture = ExtResource("t2")
+offset = Vector2(-34, -23)
+centered = false
+visible = false
+
+[node name="Objects_99999999" type="Node2D" parent="."]
+z_index = 2
+metadata/gm_depth = 99999999
+
+[node name="o_niebieski_murek_jaskiniowy_0" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(350, 590)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_1" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(500, 460)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_2" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(850, 390)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_3" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(1000, 540)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_4" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(1240, 440)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_5" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(1460, 470)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_6" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(1960, 590)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_7" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(2170, 410)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_8" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(2450, 420)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_9" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(13891, 348)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_10" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(13986, 274)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_11" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(14343, 151)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_12" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(14506, 314)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_13" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(14631, 358)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false
+
+[node name="o_niebieski_murek_jaskiniowy_14" type="Sprite2D" parent="Objects_99999999"]
+metadata/gm_object = "o_niebieski_murek_jaskiniowy"
+position = Vector2(14389, 439)
+texture = ExtResource("t1")
+offset = Vector2(-15, -15)
+centered = false

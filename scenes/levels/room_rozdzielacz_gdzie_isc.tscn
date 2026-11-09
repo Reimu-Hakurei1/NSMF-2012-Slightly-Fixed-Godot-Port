@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" id="t1" path="res://images/sprites/s_bulletbill_marker.13.0.png"]
+[ext_resource type="Script" path="res://runtime/room_preview_boot.gd" id="boot"]
+
+[node name="room_rozdzielacz_gdzie_isc" type="Node2D"]
+script = ExtResource("boot")
+metadata/gm_room = "room_rozdzielacz_gdzie_isc"
+metadata/gm_bg_colour = 0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(400, 300)
+limit_left = 0
+limit_top = 0
+limit_right = 800
+limit_bottom = 600
+
+[node name="Objects_0" type="Node2D" parent="."]
+z_index = 0
+metadata/gm_depth = 0
+
+[node name="o_rodzielacz_po_savegame_0" type="Sprite2D" parent="Objects_0"]
+metadata/gm_object = "o_rodzielacz_po_savegame"
+position = Vector2(384, 256)
+texture = ExtResource("t1")
+offset = Vector2(-22, -15)
+centered = false
+visible = false

@@ -1,0 +1,53 @@
+extends Node2D
+## GameMaker object "o_nippler_plant_CZARNY_NIEZNISZCZALNY_DO_GORY_NOGAMI" (index 673)
+## sprite_index=5 depth=0 solid=0 visible=1 parent=124 mask=-1
+
+func gm_Create_0() -> void:
+	# stream=random(360)
+	# 
+	# 
+	# sekwencja=0
+	# szybkosc=4
+	# ruch_testowy=0
+	# 
+	# 
+	# 
+	# anim=random(360)
+	# 
+	# image_xscale=1
+	# image_yscale=1
+	# 
+	# 
+	# 
+	# 
+	# sekwencja=0
+	# ruch_testowy=0
+	# anim=random(360)
+	# 
+	# grawitacja=0
+	# sekwencja=0
+	# kierunek=1
+	# rozdeptywalny=0
+	# kill=0
+	# seened=0
+	# 
+	# energy=999999999
+	# gwiazdker=0
+	# niezjadywalny=1
+	# 
+	# 
+	# 
+	# /*
+	# szybkosc=4
+	pass
+
+func gm_Outside_0() -> void:
+	# if point_distance(x,y,global.ekran_srodek_x,global.ekran_srodek_y)<=global.odleglosc_ekranu*1.1 {
+	# 
+	# draw_sprite_ext(global.nippler_plant_1,0,x+20,y,1,-1,sin(degtorad(stream*6))*5,c_white,1)
+	# draw_sprite_ext(global.nippler_plant_2,0,x+23,y+5,1,-1,sin(degtorad(stream*3))*20,c_white,1)
+	# draw_sprite_ext(global.nippler_plant_3,0,x+17,y+5,1,-1,-sin(degtorad(stream*3))*20,c_white,1)
+	# 
+	# stream+=5
+	# }
+	pass

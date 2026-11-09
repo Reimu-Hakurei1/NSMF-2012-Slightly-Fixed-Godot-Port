@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" id="t1" path="res://images/sprites/sprite_big_marker.38.0.png"]
+[ext_resource type="Texture2D" id="t2" path="res://images/sprites/sprite11.211.0.png"]
+[ext_resource type="Script" path="res://runtime/room_preview_boot.gd" id="boot"]
+
+[node name="COPY_ME_LAVA_LEVEL" type="Node2D"]
+script = ExtResource("boot")
+metadata/gm_room = "COPY_ME_LAVA_LEVEL"
+metadata/gm_bg_colour = 16777215
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(400, 300)
+limit_left = 0
+limit_top = 0
+limit_right = 15000
+limit_bottom = 1600
+
+[node name="RoomColour" type="ColorRect" parent="."]
+z_index = -4096
+offset_right = 15000
+offset_bottom = 1600
+color = Color(1.000, 1.000, 1.000, 1)
+
+[node name="Objects_-1000000" type="Node2D" parent="."]
+z_index = -1
+metadata/gm_depth = -1000000
+
+[node name="obj_mario_0" type="Sprite2D" parent="Objects_-1000000"]
+metadata/gm_object = "obj_mario"
+position = Vector2(200, -320)
+texture = ExtResource("t2")
+offset = Vector2(-32, -32)
+centered = false
+visible = false
+
+[node name="Objects_-10000" type="Node2D" parent="."]
+z_index = 0
+metadata/gm_depth = -10000
+
+[node name="o_big_marker_0" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker"
+position = Vector2(0, 1120)
+texture = ExtResource("t1")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_1" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker"
+position = Vector2(360, 1160)
+texture = ExtResource("t1")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_2" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker"
+position = Vector2(840, 1280)
+texture = ExtResource("t1")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_3" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker"
+position = Vector2(600, 1320)
+texture = ExtResource("t1")
+offset = Vector2(0, 0)
+centered = false
+visible = false
+
+[node name="o_big_marker_4" type="Sprite2D" parent="Objects_-10000"]
+metadata/gm_object = "o_big_marker"
+position = Vector2(1240, 1160)
+texture = ExtResource("t1")
+offset = Vector2(0, 0)
+centered = false
+visible = false
