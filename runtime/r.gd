@@ -578,12 +578,14 @@ static func run_room_code(which: Dictionary, key: String, S) -> void:
 
 # ---------------------------------------------------------------- instances
 static func _register(inst: GMInstance) -> void:
+	fam_cache.clear()
 	instances.append(inst)
 	by_id[inst.inst_id] = inst
 	var oi: int = int(inst.g_object_index)
 	if not by_object.has(oi):
 		by_object[oi] = []
 	by_object[oi].append(inst)
+	_mark_obj_dirty(oi)
 
 
 static func instance_create(S, x: float, y: float, obj: int) -> Variant:
@@ -631,12 +633,14 @@ static func instance_destroy(S, id: Variant = null) -> Variant:
 	var inst: GMInstance = S if id == null else _as_inst(id)
 	if inst == null or not inst.alive:
 		return 0
+	fam_cache.clear()
 	inst.alive = false
 	instances.erase(inst)
 	by_id.erase(inst.inst_id)
 	var oi: int = int(inst.g_object_index)
 	if by_object.has(oi):
 		by_object[oi].erase(inst)
+	_mark_obj_dirty(oi)
 	run_event(inst, 1, 0)
 	inst.queue_free()
 	return 0
@@ -704,16 +708,123 @@ static func instance_exists(S, id: Variant) -> Variant:
 	return false
 
 
+static var fam_cache: Dictionary = {}
+
+
+# Collision queries are called dozens of times per step (several NPC draw events
+# scan the whole wall family), so the per-family list is reused until an instance
+# is created or destroyed.
 static func _family_instances(obj: int) -> Array:
-	var out: Array = []
 	if obj == -3:
 		return instances.duplicate()
 	if obj < 0 or not obj_family.has(obj):
-		return out
+		return []
+	if fam_cache.has(obj):
+		return fam_cache[obj]
+	var out: Array = []
 	for oi in obj_family[obj]:
 		for inst in by_object.get(oi, []):
 			if inst.alive:
 				out.append(inst)
+	fam_cache[obj] = out
+	return out
+
+
+# Big families (walls, coins) are bucketed into a coarse grid; a query then only
+# touches instances whose collision box shares a cell with the query box. Grids
+# are rebuilt lazily after any member moves or a member is created/destroyed.
+const GRID_CELL := 128
+const GRID_OFFSET := 32768
+static var fam_grid: Dictionary = {}
+static var fam_dirty: Dictionary = {}
+static var grid_watch: Dictionary = {}
+static var grid_qid: int = 0
+
+
+static func _mark_obj_dirty(oi: int) -> void:
+	if fam_grid.is_empty():
+		return
+	var fs: Variant = grid_watch.get(oi)
+	if fs == null:
+		var arr: Array = []
+		for f in obj_family:
+			if obj_family[f].has(oi):
+				arr.append(f)
+		grid_watch[oi] = arr
+		fs = arr
+	for f in fs:
+		fam_dirty[f] = true
+
+
+static func _mark_moved(oi: int) -> void:
+	var fs: Variant = grid_watch.get(oi)
+	if fs == null:
+		return
+	for f in fs:
+		fam_dirty[f] = true
+
+
+static func _fam_grid_key(cx: int, cy: int) -> int:
+	return (cy + GRID_OFFSET) * 65536 + (cx + GRID_OFFSET)
+
+
+static func _family_grid(obj: int) -> Dictionary:
+	var g: Variant = fam_grid.get(obj)
+	if g != null and not bool(fam_dirty.get(obj, false)):
+		return g
+	var lst := _family_instances(obj)
+	g = {"cells": {}, "big": []}
+	var cells: Dictionary = g["cells"]
+	var big: Array = g["big"]
+	for inst in lst:
+		if not inst.alive:
+			continue
+		var xs := absf(float(inst.g_image_xscale))
+		var ys := absf(float(inst.g_image_yscale))
+		var b: Rect2 = inst.mask_at(inst.position.x, inst.position.y)
+		if xs != 1.0 or ys != 1.0 or b.size.x > 512.0 or b.size.y > 512.0:
+			big.append(inst)
+			continue
+		var x0: int = floori(b.position.x / GRID_CELL)
+		var x1: int = floori((b.end.x - 0.001) / GRID_CELL)
+		var y0: int = floori(b.position.y / GRID_CELL)
+		var y1: int = floori((b.end.y - 0.001) / GRID_CELL)
+		for cy in range(y0, y1 + 1):
+			for cx in range(x0, x1 + 1):
+				var k := _fam_grid_key(cx, cy)
+				if cells.has(k):
+					cells[k].append(inst)
+				else:
+					cells[k] = [inst]
+	fam_grid[obj] = g
+	fam_dirty[obj] = false
+	return g
+
+
+static func _family_candidates(obj: int, a: Rect2) -> Array:
+	var lst := _family_instances(obj)
+	if obj < 0 or lst.size() < 24:
+		return lst
+	var g := _family_grid(obj)
+	var out: Array = g["big"].duplicate()
+	grid_qid += 1
+	var q: int = grid_qid
+	for inst in out:
+		inst.qstamp = q
+	var cells: Dictionary = g["cells"]
+	var x0: int = floori(a.position.x / GRID_CELL)
+	var x1: int = floori((a.end.x - 0.001) / GRID_CELL)
+	var y0: int = floori(a.position.y / GRID_CELL)
+	var y1: int = floori((a.end.y - 0.001) / GRID_CELL)
+	for cy in range(y0, y1 + 1):
+		for cx in range(x0, x1 + 1):
+			var arr: Variant = cells.get(_fam_grid_key(cx, cy))
+			if arr == null:
+				continue
+			for inst in arr:
+				if inst.qstamp != q:
+					inst.qstamp = q
+					out.append(inst)
 	return out
 
 
@@ -784,8 +895,10 @@ static func member_get(inst: GMInstance, name: String) -> Variant:
 static func member_set(inst: GMInstance, name: String, val: Variant) -> void:
 	if name == "g_x":
 		inst.position.x = float(val)
+		_mark_moved(int(inst.g_object_index))
 	elif name == "g_y":
 		inst.position.y = float(val)
+		_mark_moved(int(inst.g_object_index))
 	else:
 		var old: Variant = inst.get(name)
 		if old is Array:
@@ -1046,10 +1159,18 @@ static func _build_mask(idx: int, frame_key: int) -> Dictionary:
 
 
 static func _pin_mask(inst) -> Dictionary:
-	var m := _mask_of(inst)
-	if m.is_empty() or bool(m["full"]):
-		return {}
-	return m
+	var mi: int = int(inst.g_mask_index)
+	var idx: int = mi if mi >= 0 else int(inst.g_sprite_index)
+	var key: int = idx * 4096 + posmod(int(inst.g_image_index), 4096)
+	if inst.pm_key == key:
+		return inst.pm_val
+	var m := _mask_for(idx, int(inst.g_image_index))
+	var val: Dictionary = {}
+	if not m.is_empty() and not bool(m["full"]):
+		val = m
+	inst.pm_key = key
+	inst.pm_val = val
+	return val
 
 
 # Both instances' transforms are integer scale/mirror and unrotated: intersect the
@@ -1062,20 +1183,6 @@ static func _mask_fast_ok(inst) -> bool:
 	return xs == 1.0 and ys == 1.0
 
 
-static func _hit_at(S, px: float, py: float, other) -> bool:
-	var a: Rect2 = S.mask_at(px, py)
-	var b: Rect2 = other.mask_at(other.position.x, other.position.y)
-	if not a.intersects(b):
-		return false
-	var ma := _pin_mask(S)
-	var mb := _pin_mask(other)
-	if ma.is_empty() and mb.is_empty():
-		return true
-	if _mask_fast_ok(S) and _mask_fast_ok(other):
-		return _hit_spans(S, px, py, ma, other, mb, a, b)
-	return _hit_pixels(S, px, py, ma, other, mb, a, b)
-
-
 static func _hit_spans(S, px: float, py: float, ma: Dictionary, other, mb: Dictionary,
 		a: Rect2, b: Rect2) -> bool:
 	var y0: int = int(ceil(maxf(a.position.y, b.position.y)))
@@ -1086,10 +1193,10 @@ static func _hit_spans(S, px: float, py: float, ma: Dictionary, other, mb: Dicti
 	var bsx: int = 1 if float(other.g_image_xscale) > 0.0 else -1
 	var asy: int = 1 if float(S.g_image_yscale) > 0.0 else -1
 	var bsy: int = 1 if float(other.g_image_yscale) > 0.0 else -1
-	var aoy: int = int(S.spr_origin.y)
-	var boy: int = int(other.spr_origin.y)
-	var aox: int = int(S.spr_origin.x)
-	var box: int = int(other.spr_origin.x)
+	var aoy: int = int(S.mask_origin.y)
+	var boy: int = int(other.mask_origin.y)
+	var aox: int = int(S.mask_origin.x)
+	var box: int = int(other.mask_origin.x)
 	var bmin: int = int(floor(b.position.x))
 	var bmax: int = int(ceil(b.end.x) - 1.0)
 	var amin: int = int(floor(a.position.x))
@@ -1192,27 +1299,55 @@ static func _pixel_hit(inst, px: float, py: float, m: Dictionary, wx: int, wy: i
 	var ys := float(inst.g_image_yscale)
 	if xs == 0.0 or ys == 0.0:
 		return false
-	var lx: int = int(floorf(inst.spr_origin.x + dx / xs))
-	var ly: int = int(floorf(inst.spr_origin.y + dy / ys))
+	var lx: int = int(floorf(inst.mask_origin.x + dx / xs))
+	var ly: int = int(floorf(inst.mask_origin.y + dy / ys))
 	if lx < int(m["x0"]) or lx > int(m["x1"]) or ly < int(m["y0"]) or ly > int(m["y1"]):
 		return false
 	return m["bits"][ly * int(m["w"]) + lx] != 0
 
 
 static func place_meeting(S, x: float, y: float, obj: int) -> Variant:
-	for inst in _family_instances(obj):
+	var a: Rect2 = S.mask_at(x, y)
+	var ma: Dictionary = _pin_mask(S)
+	var fast: bool = _mask_fast_ok(S)
+	var lst: Array = _family_candidates(obj, a)
+	for k in lst.size():
+		var inst: GMInstance = lst[k]
 		if inst == S or not inst.alive:
 			continue
-		if _hit_at(S, x, y, inst):
+		var b: Rect2 = inst.mask_at(inst.position.x, inst.position.y)
+		if not a.intersects(b):
+			continue
+		var mb: Dictionary = _pin_mask(inst)
+		if ma.is_empty() and mb.is_empty():
+			return true
+		if fast and _mask_fast_ok(inst):
+			if _hit_spans(S, x, y, ma, inst, mb, a, b):
+				return true
+		elif _hit_pixels(S, x, y, ma, inst, mb, a, b):
 			return true
 	return false
 
 
 static func instance_place(S, x: float, y: float, obj: int) -> Variant:
-	for inst in _family_instances(obj):
+	var a: Rect2 = S.mask_at(x, y)
+	var ma: Dictionary = _pin_mask(S)
+	var fast: bool = _mask_fast_ok(S)
+	var lst: Array = _family_candidates(obj, a)
+	for k in lst.size():
+		var inst: GMInstance = lst[k]
 		if inst == S or not inst.alive:
 			continue
-		if _hit_at(S, x, y, inst):
+		var b: Rect2 = inst.mask_at(inst.position.x, inst.position.y)
+		if not a.intersects(b):
+			continue
+		var mb: Dictionary = _pin_mask(inst)
+		if ma.is_empty() and mb.is_empty():
+			return inst
+		if fast and _mask_fast_ok(inst):
+			if _hit_spans(S, x, y, ma, inst, mb, a, b):
+				return inst
+		elif _hit_pixels(S, x, y, ma, inst, mb, a, b):
 			return inst
 	return NOONE
 
@@ -1266,6 +1401,7 @@ static func pipe_softlock_guard(S, pauza: int) -> bool:
 				var q: Vector2 = Vector2(px, py) + Vector2(off)
 				if not place_meeting(S, q.x, q.y, 1):
 					S.position = q
+					_mark_moved(int(S.g_object_index))
 					freed = true
 					break
 			if freed:
@@ -1293,7 +1429,7 @@ static func collision_point(S, x: float, y: float, obj: int, prec = 0, notme = 0
 static func collision_rectangle(S, x1: float, y1: float, x2: float, y2: float,
 		obj: int, prec = 0, notme = 0) -> Variant:
 	var r := Rect2(Vector2(minf(x1, x2), minf(y1, y2)), Vector2(absf(x2 - x1), absf(y2 - y1)))
-	for inst in _family_instances(obj):
+	for inst in _family_candidates(obj, r):
 		if notme and inst == S:
 			continue
 		if not r.intersects(inst.mask_at(inst.position.x, inst.position.y)):
@@ -1322,7 +1458,8 @@ static func collision_rectangle(S, x1: float, y1: float, x2: float, y2: float,
 static func collision_circle(S, x: float, y: float, radius: float, obj: int,
 		prec = 0, notme = 0) -> Variant:
 	var c := Vector2(x, y)
-	for inst in _family_instances(obj):
+	var cb := Rect2(x - radius, y - radius, radius * 2.0, radius * 2.0)
+	for inst in _family_candidates(obj, cb):
 		if notme and inst == S:
 			continue
 		var mr: Rect2 = inst.mask_at(inst.position.x, inst.position.y)
@@ -1631,6 +1768,27 @@ static func _resolve_room(target: Variant) -> int:
 	return -1
 
 
+# Some rooms spawn Mario inside a pipe shaft and rely on the pipe-exit intro to
+# lift him out; that flag is normally set by the pipe in the previous room, so
+# map entry and standalone scene boots would leave him wedged.
+static func _start_pipe_intro_if_embedded() -> void:
+	if G.wychodz_z_rury_nastepny_etap != 0:
+		return
+	var player: Variant = null
+	for inst in instances:
+		if inst.alive and int(inst.g_object_index) == 303:
+			player = inst
+			break
+	if player == null:
+		return
+	var px: float = player.position.x
+	var py: float = player.position.y
+	# A 1px overlap is a normal ground rest; still embedded 6px up means a pipe.
+	if not place_meeting(player, px, py, 1) or not place_meeting(player, px, py - 6, 1):
+		return
+	G.wychodz_z_rury_nastepny_etap = 1
+
+
 static func _load_room(idx: int) -> void:
 	var meta: Dictionary = room_data.get("rooms", {}).get(str(idx), {})
 	if meta.is_empty():
@@ -1645,6 +1803,10 @@ static func _load_room(idx: int) -> void:
 		debug_script_hits = 0
 		debug_script_hit_usec = 0
 	var keep: Array = []
+	fam_cache.clear()
+	fam_grid.clear()
+	fam_dirty.clear()
+	grid_watch.clear()
 	if room_root != null:
 		for inst in instances.duplicate():
 			if inst.alive:
@@ -1756,6 +1918,13 @@ static func _load_room(idx: int) -> void:
 	room_ci.init_instance({"i": -1, "depth": 0, "visible": 0, "persistent": 0,
 		"solid": 0, "mask": -1, "sprite": -1}, -1)
 	run_room_code(registry.get("room_create", {}), str(idx), room_ci)
+	_start_pipe_intro_if_embedded()
+	# A death that restarts the same room skips the map room, which is what
+	# normally clears this latch; otherwise the player considers the level song
+	# still running and never starts it again.
+	if music_player != null and not music_player.playing \
+			and eqv(null, G.zostaw_ta_sama_muzyke_w_nast_etapie, G.level_music):
+		G.zostaw_ta_sama_muzyke_w_nast_etapie = 8714917489
 	if debug_load:
 		print("LOAD room=%d unload=%.1f meta=%.1f spawn=%.1f tiles=%.1f room_create=%.1f inst=%d" % [
 			idx, _unload_us / 1000.0, _meta_us / 1000.0, _spawn_us / 1000.0,
@@ -1791,8 +1960,13 @@ static func step() -> void:
 		var target: Variant = pending_room
 		pending_room = null
 		var idx := _resolve_room(target)
-		if idx >= 0:
+		if idx >= 0 and room_data.get("rooms", {}).has(str(idx)):
 			_load_room(idx)
+		elif room >= 0:
+			# Death returns to global.return_name_of_map, which standalone boots
+			# never set; restart the current room instead of leaving it running.
+			warn("room_invalid_target:%s restarting:%d" % [str(target), room])
+			_load_room(room)
 	if room < 0 or room_root == null:
 		return
 	tick_count += 1
@@ -1844,6 +2018,7 @@ static func step() -> void:
 					set_speed(inst, maxf(0.0, sp - fr))
 			inst.position.x += float(inst.g_hspeed)
 			inst.position.y += float(inst.g_vspeed)
+			_mark_moved(int(inst.g_object_index))
 	perf_motion_usec = Time.get_ticks_usec() - _t
 	_t = Time.get_ticks_usec()
 	for inst in instances.duplicate():
@@ -1890,6 +2065,17 @@ static func step() -> void:
 	if bg_front != null:
 		bg_front.queue_redraw()
 	perf_views_usec = Time.get_ticks_usec() - _t
+
+
+# GM8 runs every draw event once per logic step, but Godot only renders once per
+# frame. High-speed system rooms (the 1000 Hz loading screen) advance their state
+# from the draw event, so replay it for the extra steps. draw_ci stays null here,
+# which makes all draw_* calls no-ops while the event's side effects still run.
+static func draw_state_passes(count: int) -> void:
+	for _p in count:
+		for inst in instances.duplicate():
+			if inst.alive and inst.has_draw:
+				run_event(inst, 8, 0)
 
 
 static func _update_views() -> void:
@@ -3659,6 +3845,7 @@ static func _path_move(inst: GMInstance) -> void:
 	inst.g_path_position = pos
 	var origin: Vector2 = path_origins.get(inst.inst_id, Vector2.ZERO)
 	inst.position = origin + _path_point(pts, bool(p["closed"]), pos)
+	_mark_moved(int(inst.g_object_index))
 
 
 # ---------------------------------------------------------------- window / display

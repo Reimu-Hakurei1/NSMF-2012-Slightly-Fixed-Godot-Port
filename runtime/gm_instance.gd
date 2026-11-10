@@ -14,6 +14,7 @@ var key_events: Array = []
 var has_anim_end: bool = false
 var frames: Array = []
 var spr_origin: Vector2 = Vector2.ZERO
+var mask_origin: Vector2 = Vector2.ZERO
 var spr_size: Vector2 = Vector2.ZERO
 var mask: Rect2 = Rect2()
 var alive: bool = true
@@ -23,6 +24,9 @@ var last_mask: int = -999
 var last_depth: float = 1e30
 var add_layer: Node2D = null
 var add_cmds: Array = []
+var pm_key: int = -1
+var pm_val: Dictionary = {}
+var qstamp: int = 0
 var last_img: float = -1e30
 var last_xs: float = -1e30
 var last_ys: float = -1e30
@@ -36,12 +40,14 @@ var x: float:
 		return position.x
 	set(v):
 		position.x = v
+		R._mark_moved(g_object_index)
 
 var y: float:
 	get:
 		return position.y
 	set(v):
 		position.y = v
+		R._mark_moved(g_object_index)
 
 
 func init_instance(meta: Dictionary, id: int) -> void:
@@ -128,7 +134,12 @@ func sync_visuals() -> bool:
 func refresh_mask() -> void:
 	last_mask = int(g_mask_index)
 	var idx: int = g_mask_index if g_mask_index >= 0 else g_sprite_index
-	mask = R.sprite_info(idx)["bbox"]
+	var info: Dictionary = R.sprite_info(idx)
+	mask = info["bbox"]
+	# GM aligns the mask sprite's own origin with the instance position, which
+	# differs from the display sprite's origin when a separate mask is assigned.
+	mask_origin = info["origin"]
+	R._mark_obj_dirty(g_object_index)
 
 
 func mask_at(px: float, py: float) -> Rect2:
@@ -162,6 +173,11 @@ func _draw() -> void:
 		return
 	R.draw_ci = self
 	R.draw_blend = 0
+	# GM keeps draw alignment global between instances, and the score popups
+	# (o_cyferkownia) leave valign=1 behind; that shifted the HUD text up after
+	# every coin or stomp. Each object's draw starts from the defaults instead.
+	R.draw_halign = 0
+	R.draw_valign = 0
 	add_cmds.clear()
 	draw_set_transform(-position, 0.0, Vector2.ONE)
 	if has_draw:
