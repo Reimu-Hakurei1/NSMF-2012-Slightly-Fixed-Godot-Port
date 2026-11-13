@@ -43,7 +43,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_killed += 0.05
             if (R.eqv(S, S.g_zniszczony_od_muszli, 1) and (S.g_coin_numba < 20)):
                 S.g_zniszczony_od_muszli = 0
-                P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_coin_numba += 1
                 if (S.g_coin_numba >= 20):
                     R.instance_create(S, S.x, S.y, 51)
@@ -58,7 +58,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 G.punkty += 200
                 G.coins += 1
             if (R.eqv(S, S.g_destroy, 1) and (S.g_coin_numba < 20)):
-                P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_coin_numba += 1
                 if (S.g_coin_numba >= 20):
                     R.instance_create(S, S.x, S.y, 51)

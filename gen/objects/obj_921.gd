@@ -13,8 +13,8 @@ static func ev_0_0(S, A: Array) -> Variant:
 static func ev_8_0(S, A: Array) -> Variant:
     R.draw_sprite_ext(S, 510, 0, S.x, S.y, (1 + S.g_wielkosc), (1 + S.g_wielkosc), 0, 0xFFFFFF, S.g_image_alpha)
     S.g_wielkosc += 0.001
-    S.x = (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2))
-    S.y = (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2))
+    S.x = (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2))
+    S.y = (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2))
     S.g_timer += 1
     if ((S.g_timer < 50) and (S.g_image_alpha < 1)):
         S.g_image_alpha += 0.05

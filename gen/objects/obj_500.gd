@@ -18,13 +18,13 @@ static func ev_3_0(S, A: Array) -> Variant:
             S.g_sekwencja = 1
             S.g_nagraj_x_gracza = R.get_obj_var(303, "g_x")
             S.g_nagraj_y_gracza = R.get_obj_var(303, "g_y")
-            P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if (1 - R.eqv(S, S.g_zamknij_jak_przekroczy_o_x, 0)):
             if (R.place_meeting(S, ((S.x + S.g_zamknij_jak_przekroczy_o_x) - 40), S.y, 303) and R.eqv(S, S.g_sekwencja, 0)):
                 S.g_sekwencja = 1
                 S.g_nagraj_x_gracza = R.get_obj_var(303, "g_x")
                 S.g_nagraj_y_gracza = R.get_obj_var(303, "g_y")
-                P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if R.eqv(S, S.g_sekwencja, 1):
             if (S.g_przyciemniacz > 0):
                 S.g_przyciemniacz -= 0.05
@@ -38,17 +38,17 @@ static func ev_3_0(S, A: Array) -> Variant:
                 S.g_i += 1
         if R.eqv(S, S.g_sekwencja, 2):
             if (((S.x < R.get_obj_var(303, "g_x")) and R.lnot(R.place_meeting(S, S.x, S.y, 303))) and R.eqv(S, S.g_lewo, 1)):
-                P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_sekwencja = 3
             if (((S.x > R.get_obj_var(303, "g_x")) and R.lnot(R.place_meeting(S, S.x, S.y, 303))) and R.eqv(S, S.g_prawo, 1)):
-                P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_sekwencja = 3
             if (1 - R.eqv(S, S.g_zamknij_jak_przekroczy_o_x, 0)):
                 if ((S.g_zamknij_jak_przekroczy_o_x > 0) and (R.get_obj_var(303, "g_x") > (S.x + S.g_zamknij_jak_przekroczy_o_x))):
-                    P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                    P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                     S.g_sekwencja = 3
                 if ((S.g_zamknij_jak_przekroczy_o_x < 0) and (R.get_obj_var(303, "g_x") < (S.x + S.g_zamknij_jak_przekroczy_o_x))):
-                    P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                    P2.SXMS_SFX_PlayExt(S, [24, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                     S.g_sekwencja = 3
         if R.eqv(S, S.g_sekwencja, 3):
             if (S.g_przyciemniacz < 1):

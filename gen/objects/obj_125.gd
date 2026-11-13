@@ -33,13 +33,13 @@ static func ev_8_0(S, A: Array) -> Variant:
         if (R.lnot(R.place_meeting(S, S.x, S.y, 303)) and (S.g_kick_timer > 10)):
             S.g_kickable = 1
         if R.eqv(S, S.g_kill, 77):
-            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
             R.inst_set(R.aget(S.g_lolo, 0), "grafika", G.gfx_goomba)
             R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
             R.instance_destroy(S)
         if R.eqv(S, S.g_kill, 1):
-            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
             R.inst_set(R.aget(S.g_lolo, 0), "grafika", G.gfx_goomba)
             R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)

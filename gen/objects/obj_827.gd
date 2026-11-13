@@ -99,9 +99,9 @@ static func ev_0_0(S, A: Array) -> Variant:
 
 static func ev_3_0(S, A: Array) -> Variant:
     if R.eqv(S, G.map_number, 8):
-        G.odleglosc_ekranu = R.sqrt(S, ((((R.aget(R.view_wview, 0) / 2)) * ((R.aget(R.view_wview, 0) / 2))) + (((R.aget(R.view_hview, 0) / 2)) * ((R.aget(R.view_hview, 0) / 2)))))
-        G.ekran_srodek_x = (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2))
-        G.ekran_srodek_y = (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2))
+        G.odleglosc_ekranu = R.sqrt(S, ((((R.anum(R.aget(R.view_wview, 0)) / 2)) * ((R.anum(R.aget(R.view_wview, 0)) / 2))) + (((R.anum(R.aget(R.view_hview, 0)) / 2)) * ((R.anum(R.aget(R.view_hview, 0)) / 2)))))
+        G.ekran_srodek_x = (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2))
+        G.ekran_srodek_y = (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2))
         S.g_koko += 0.05
         R.aset(R.bg_y, 0, (R.aget(R.bg_y, 0) + (R.sin(S, (S.g_koko / 2)) / 10)))
         R.aset(R.bg_y, 1, (R.aget(R.bg_y, 1) + (R.sin(S, ((S.g_koko / 2) + 1.5)) / 10)))
@@ -114,9 +114,9 @@ static func ev_3_0(S, A: Array) -> Variant:
         R.aset(R.bg_alpha, 1, ((R.sin(S, (S.g_koko / 2)) / 10) + 0.55))
         R.aset(R.bg_alpha, 0, ((R.cos(S, (S.g_koko / 2)) / 10) + 0.85))
     if (1 - R.eqv(S, G.map_number, 8)):
-        G.odleglosc_ekranu = R.sqrt(S, ((((R.aget(R.view_wview, 0) / 2)) * ((R.aget(R.view_wview, 0) / 2))) + (((R.aget(R.view_hview, 0) / 2)) * ((R.aget(R.view_hview, 0) / 2)))))
-        G.ekran_srodek_x = (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2))
-        G.ekran_srodek_y = (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2))
+        G.odleglosc_ekranu = R.sqrt(S, ((((R.anum(R.aget(R.view_wview, 0)) / 2)) * ((R.anum(R.aget(R.view_wview, 0)) / 2))) + (((R.anum(R.aget(R.view_hview, 0)) / 2)) * ((R.anum(R.aget(R.view_hview, 0)) / 2)))))
+        G.ekran_srodek_x = (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2))
+        G.ekran_srodek_y = (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2))
         S.g_koko += 0.01
         R.aset(R.bg_y, 0, (R.aget(R.bg_y, 0) + (R.sin(S, S.g_koko) / 3)))
         R.aset(R.bg_y, 1, (R.aget(R.bg_y, 1) + (R.sin(S, (S.g_koko + 1.5)) / 3)))
@@ -138,7 +138,7 @@ static func ev_3_2(S, A: Array) -> Variant:
         S.g_klicknieto = 1
         if R.eqv(S, S.g_sampel_ogladania_mapy, 0):
             S.g_sampel_ogladania_mapy = 1
-            P2.SXMS_SFX_PlayExt(S, [123, (((S.x - R.aget(R.view_xview, 0))) / ((R.aget(R.view_xview, 0) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [123, (((S.x - R.anum(R.aget(R.view_xview, 0)))) / ((R.anum(R.aget(R.view_xview, 0)) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
     if (R.lnot(R.keyboard_check(S, 9)) and (S.g_boczki_alpha > 0.5)):
         S.g_boczki_alpha -= 0.1
     if (((((((R.keyboard_check(S, 9) and (S.g_boczki_przyciemniaj_hud < 200)) and R.eqv(S, R.lnot(S.g_item_selecting), 1)) and (G.delayer >= 1000)) and (G.chwilowy_stopper <= 0)) and (G.chwilowy_stopper <= 0)) and R.eqv(S, G.mario_skusil, 0)) and R.eqv(S, G.game_over, 0)):
@@ -204,7 +204,7 @@ static func ev_8_0(S, A: Array) -> Variant:
     if R.eqv(S, S.g_wybral_mape_1, 1):
         R.draw_set_color(S, 0x000000)
         R.draw_set_alpha(S, S.g_wybral_mape_2)
-        R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), 0)
+        R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), 0)
         R.draw_set_color(S, 0xFFFFFF)
         R.draw_set_alpha(S, 1)
         S.g_wybral_mape_2 += (0.01 + (S.g_wybral_mape_2 / 100))
@@ -232,15 +232,15 @@ static func ev_8_0(S, A: Array) -> Variant:
         if (R.eqv(S, S.g_zmien_mape, 7) and (S.g_wybral_mape_2 >= 1)):
             G.map_wgraj_wartosci = 1
             R.room_goto(S, 267)
-        R.draw_sprite_ext(S, 467, 0, (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)), (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)), S.g_wielkosc_glowy_map, S.g_wielkosc_glowy_map, 0, 0xFFFFFF, 1)
+        R.draw_sprite_ext(S, 467, 0, (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)), (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)), S.g_wielkosc_glowy_map, S.g_wielkosc_glowy_map, 0, 0xFFFFFF, 1)
         S.g_wielkosc_glowy_map += (0.01 + (S.g_wielkosc_glowy_map / 50))
         G.efektuj_przejscie_mapy = S.g_wielkosc_glowy_map
         S.g_blokuj_przyciemnianie_glowy_w_nastepnej_mapie = 1
     if ((1 - R.eqv(S, G.efektuj_przejscie_mapy, 0)) and R.eqv(S, S.g_blokuj_przyciemnianie_glowy_w_nastepnej_mapie, 0)):
-        R.draw_sprite_ext(S, 467, 0, (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)), (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)), G.efektuj_przejscie_mapy, G.efektuj_przejscie_mapy, 0, 0xFFFFFF, S.g_alpha_glowy_mario)
+        R.draw_sprite_ext(S, 467, 0, (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)), (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)), G.efektuj_przejscie_mapy, G.efektuj_przejscie_mapy, 0, 0xFFFFFF, S.g_alpha_glowy_mario)
         R.draw_set_color(S, 0x000000)
         R.draw_set_alpha(S, (S.g_alpha_glowy_mario / 2))
-        R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), 0)
+        R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), 0)
         R.draw_set_color(S, 0xFFFFFF)
         R.draw_set_alpha(S, 1)
         G.efektuj_przejscie_mapy += (0.01 + (G.efektuj_przejscie_mapy / 50))

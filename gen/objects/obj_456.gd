@@ -16,10 +16,10 @@ static func ev_3_0(S, A: Array) -> Variant:
             S.g_timer = 0
             R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 251))
             if (S.g_szybkosc_min > 0):
-                R.inst_set(R.aget(S.g_lolo, 0), "x", (R.aget(R.view_xview, 0) - 300))
+                R.inst_set(R.aget(S.g_lolo, 0), "x", (R.anum(R.aget(R.view_xview, 0)) - 300))
             if (S.g_szybkosc_min < 0):
-                R.inst_set(R.aget(S.g_lolo, 0), "x", ((R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)) + 300))
+                R.inst_set(R.aget(S.g_lolo, 0), "x", ((R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))) + 300))
             R.inst_set(R.aget(S.g_lolo, 0), "image_xscale", (0.3 + R.random(S, 0.7)))
             R.inst_set(R.aget(S.g_lolo, 0), "szybkosc", (S.g_szybkosc_min + R.random(S, (S.g_szybkosc_max - S.g_szybkosc_min))))
-            R.inst_set(R.aget(S.g_lolo, 0), "y", ((R.aget(R.view_yview, 0) + R.random(S, 1200)) - 400))
+            R.inst_set(R.aget(S.g_lolo, 0), "y", ((R.anum(R.aget(R.view_yview, 0)) + R.random(S, 1200)) - 400))
     return 0

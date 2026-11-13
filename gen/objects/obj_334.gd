@@ -12,7 +12,7 @@ static func ev_0_0(S, A: Array) -> Variant:
     return 0
 
 static func ev_8_0(S, A: Array) -> Variant:
-    R.draw_sprite_ext(S, G.gfx_check_point, 0, ((R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 7)) + S.g_kartofel), (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 1.2)), ((1.5 + (R.sin(S, S.g_stream) / 20)) + (R.sin(S, S.g_stream) / 5)), ((1.5 - (R.sin(S, S.g_stream) / 20)) + (R.sin(S, S.g_stream) / 5)), (((R.sin(S, S.g_stream) / 20) - 30) + (R.sin(S, (S.g_stream / 2)) * 10)), 0xFFFFFF, 1)
+    R.draw_sprite_ext(S, G.gfx_check_point, 0, ((R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 7)) + S.g_kartofel), (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 1.2)), ((1.5 + (R.sin(S, S.g_stream) / 20)) + (R.sin(S, S.g_stream) / 5)), ((1.5 - (R.sin(S, S.g_stream) / 20)) + (R.sin(S, S.g_stream) / 5)), (((R.sin(S, S.g_stream) / 20) - 30) + (R.sin(S, (S.g_stream / 2)) * 10)), 0xFFFFFF, 1)
     if R.eqv(S, G.pauza, 0):
         S.g_stream += 0.1
         if R.eqv(S, S.g_sekwencja, 0):

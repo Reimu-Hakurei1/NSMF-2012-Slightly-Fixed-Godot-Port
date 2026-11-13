@@ -23,6 +23,8 @@ func _ready() -> void:
 	_load(current)
 	if args.size() > 2:
 		cam.position = Vector2(float(args[1]), float(args[2]))
+		if args.size() > 4:
+			cam.zoom = Vector2.ONE * float(args[4])
 		_hud(rooms[current])
 	if args.size() > 3:
 		shot = args[3]

@@ -26,7 +26,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 while _n1 > 0:
                     R.part_particles_create(S, G.particle_sys_1, ((S.x + R.random(S, 100)) - R.random(S, 100)), (((S.y - 20) + R.random(S, 20)) - R.random(S, 20)), G.part_lava_smoke, 1)
                     _n1 -= 1
-                P2.SXMS_SFX_PlayExt(S, [205, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [205, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.part_particles_create(S, G.particle_sys_1, (S.x + 16), S.y, G.part_point_block, 5)
                 R.part_particles_create(S, G.particle_sys_1, (S.x + 16), S.y, G.part_effect_star, 5)
         if (S.g_sekwencja >= 1):
@@ -39,7 +39,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_grawitacja += 0.1
             if R.place_meeting(S, S.x, S.y, 1):
                 S.g_sekwencja = 2
-                P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 var _n2 = int(5)
                 while _n2 > 0:
                     R.effect_create_above(S, 5, ((S.x + R.random(S, 104)) - R.random(S, 104)), S.y, (0.5 + R.random(S, 1)), 0xFFFFFF)

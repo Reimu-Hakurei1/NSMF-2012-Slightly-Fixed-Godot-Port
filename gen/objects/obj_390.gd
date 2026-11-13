@@ -22,7 +22,7 @@ static func ev_0_0(S, A: Array) -> Variant:
     S.g_sounder = 0
     S.g_iyor = 13
     S.g_dodano = 0
-    P2.SXMS_SFX_PlayExt(S, [206, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+    P2.SXMS_SFX_PlayExt(S, [206, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     S.g_grafika = 0
     S.g_obrotnis = 0
     S.g_animer = 0

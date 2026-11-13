@@ -9,14 +9,14 @@ static func ev_0_0(S, A: Array) -> Variant:
     S.g_image_alpha = 0
     S.g_timer = 0
     S.g_sekwencja = 0
-    P2.SXMS_SFX_PlayExt(S, [327, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+    P2.SXMS_SFX_PlayExt(S, [327, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     S.g_kefir = 0
     if R.eqv(S, G.english_or_polish, 1):
         S.g_odliczator = 0
-        G.bufor = P2.SXMS_SFX_PlayExt(S, [500, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        G.bufor = P2.SXMS_SFX_PlayExt(S, [500, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, G.english_or_polish, 0):
         S.g_odliczator = 0
-        G.bufor = P2.SXMS_SFX_PlayExt(S, [501, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        G.bufor = P2.SXMS_SFX_PlayExt(S, [501, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     S.g_used = 0
     return 0
 
@@ -28,11 +28,11 @@ static func ev_7_5(S, A: Array) -> Variant:
 static func ev_8_0(S, A: Array) -> Variant:
     if ((S.g_image_alpha < 1) and (S.g_used < 1)):
         S.g_image_alpha += 0.01
-    R.draw_sprite_ext(S, 75, 0, (R.aget(R.view_xview, 0) + (680 * G.ekran_size_act)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), (20 * G.ekran_size_act), (20 * G.ekran_size_act), 0, 0xFFFFFF, S.g_image_alpha)
-    R.draw_sprite_ext(S, 75, 0, (R.aget(R.view_xview, 0) + (680 * G.ekran_size_act)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), (10 * G.ekran_size_act), (10 * G.ekran_size_act), 0, 0xFFFFFF, S.g_image_alpha)
+    R.draw_sprite_ext(S, 75, 0, (R.anum(R.aget(R.view_xview, 0)) + (680 * G.ekran_size_act)), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), (20 * G.ekran_size_act), (20 * G.ekran_size_act), 0, 0xFFFFFF, S.g_image_alpha)
+    R.draw_sprite_ext(S, 75, 0, (R.anum(R.aget(R.view_xview, 0)) + (680 * G.ekran_size_act)), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), (10 * G.ekran_size_act), (10 * G.ekran_size_act), 0, 0xFFFFFF, S.g_image_alpha)
     S.g_stro += 4
-    R.draw_sprite_ext(S, 478, 0, (((R.aget(R.view_xview, 0) + (680 * G.ekran_size_act)) - 100) + (R.sin(S, R.degtorad(S, (S.g_stro / 3))) * 11)), (((R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)) + (R.sin(S, R.degtorad(S, (S.g_stro / 2))) * 10)) - 290), ((-(1) * G.ekran_size_act) + (R.sin(S, R.degtorad(S, (S.g_stro / 2))) / 10)), ((1 * G.ekran_size_act) - (R.sin(S, R.degtorad(S, (S.g_stro / 2))) / 10)), (0 + (R.sin(S, R.degtorad(S, S.g_stro)) * 5)), 0xFFFFFF, S.g_image_alpha)
-    R.draw_sprite_ext(S, S.g_sprite_index, 0, (R.aget(R.view_xview, 0) + (680 * G.ekran_size_act)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), (1 * G.ekran_size_act), (1 * G.ekran_size_act), 0, 0xFFFFFF, S.g_image_alpha)
+    R.draw_sprite_ext(S, 478, 0, (((R.anum(R.aget(R.view_xview, 0)) + (680 * G.ekran_size_act)) - 100) + (R.sin(S, R.degtorad(S, (S.g_stro / 3))) * 11)), (((R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))) + (R.sin(S, R.degtorad(S, (S.g_stro / 2))) * 10)) - 290), ((-(1) * G.ekran_size_act) + (R.sin(S, R.degtorad(S, (S.g_stro / 2))) / 10)), ((1 * G.ekran_size_act) - (R.sin(S, R.degtorad(S, (S.g_stro / 2))) / 10)), (0 + (R.sin(S, R.degtorad(S, S.g_stro)) * 5)), 0xFFFFFF, S.g_image_alpha)
+    R.draw_sprite_ext(S, S.g_sprite_index, 0, (R.anum(R.aget(R.view_xview, 0)) + (680 * G.ekran_size_act)), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), (1 * G.ekran_size_act), (1 * G.ekran_size_act), 0, 0xFFFFFF, S.g_image_alpha)
     if R.eqv(S, S.g_kefir, P2.SXMS_SFX_Position(S, [1, G.bufor, 0])):
         S.g_odliczator += 1
     if (1 - R.eqv(S, S.g_kefir, P2.SXMS_SFX_Position(S, [1, G.bufor, 0]))):
@@ -48,7 +48,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S = _w3
             R.instance_create(S, (S.x + 100), S.y, 540)
             R.instance_create(S, (S.x - 100), S.y, 541)
-            P2.SXMS_SFX_PlayExt(S, [313, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [313, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         S = _sv2
         var _sv5 = S
         var _ws4 = R.with_ids(S, 178250)
@@ -71,7 +71,7 @@ static func ev_8_0(S, A: Array) -> Variant:
     if R.eqv(S, S.g_used, 120):
         if R.eqv(S, G.english_or_polish, 0):
             S.g_odliczator = 0
-            S.g_sampel = P2.SXMS_SFX_PlayExt(S, [503, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            S.g_sampel = P2.SXMS_SFX_PlayExt(S, [503, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if (S.g_used >= 1):
         S.g_used += 1
         S.g_image_alpha = (S.g_image_alpha / 1.05)
@@ -80,5 +80,5 @@ static func ev_8_0(S, A: Array) -> Variant:
     if R.eqv(S, S.g_used, 120):
         if R.eqv(S, G.english_or_polish, 1):
             S.g_odliczator = 0
-            S.g_sampel = P2.SXMS_SFX_PlayExt(S, [502, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            S.g_sampel = P2.SXMS_SFX_PlayExt(S, [502, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     return 0

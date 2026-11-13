@@ -21,7 +21,7 @@ static func ev_3_0(S, A: Array) -> Variant:
                 S = _w3
                 R.instance_destroy(S)
             S = _sv2
-            P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             G.coins += 1
             R.instance_create(S, (S.x + 16), (S.y + 16), 322)
         if R.place_meeting(S, S.x, S.y, 124):

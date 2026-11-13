@@ -51,7 +51,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             if ((1 - R.eqv(S, S.g_bump3, 0)) and (S.g_bump3 < 1)):
                 S.g_bump3 += 0.05
             if R.eqv(S, S.g_destroy, 1):
-                P2.SXMS_SFX_PlayExt(S, [111, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [111, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.instance_create(S, S.x, S.y, 43)
                 R.instance_destroy(S)
                 S.g_killed = 1

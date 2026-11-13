@@ -49,7 +49,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_kefir = R.instance_place(S, S.x, S.y, 303)
             if R.eqv(S, R.inst_get(S.g_kefir, "timer_skrot"), 101):
                 R.part_emitter_region(S, S.g_explosion, S.g_emit1, S.x, ((S.x + 20) - R.random(S, 40)), S.y, ((S.y + 20) - R.random(S, 40)), 1, 1)
-                P2.SXMS_SFX_PlayExt(S, [22, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [22, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_lolor = R.instance_create(S, S.x, S.y, 324)
                 R.inst_set(S.g_lolor, "napis", "1UP!")
                 G.zycia += 1

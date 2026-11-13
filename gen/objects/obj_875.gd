@@ -41,7 +41,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             if (S.g_wybuch <= 5):
                 S.g_wybuch = 5
             R.instance_create(S, ((S.x + R.random(S, 300)) - R.random(S, 300)), (S.y - R.random(S, 300)), 358)
-            P2.SXMS_SFX_PlayExt(S, [75, (((((S.x - R.aget(R.view_xview, 0))) / (R.get_obj_var(925, "g_sw")))) * 255), (G.glosnosc_dzwieku / 2), -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [75, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / (R.get_obj_var(925, "g_sw")))) * 255), (G.glosnosc_dzwieku / 2), -(1), 0, 0])
         if (S.g_wybuch <= 15):
             R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, S.x, S.y, S.g_mega_wybuch, S.g_mega_wybuch, (S.g_koko * 10), 0xFFFFFF, 1)
             R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, S.x, S.y, (S.g_mega_wybuch * 2), (S.g_mega_wybuch * 2), (S.g_koko * 20), 0xFFFFFF, 1)
@@ -50,11 +50,11 @@ static func ev_8_0(S, A: Array) -> Variant:
         if (S.g_mega_wybuch >= 4):
             S.g_sekwencja = 1
             S.g_timer = 0
-            P2.SXMS_SFX_PlayExt(S, [404, (((((S.x - R.aget(R.view_xview, 0))) / R.get_obj_var(925, "g_sw"))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [404, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / R.get_obj_var(925, "g_sw"))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_sekwencja, 1):
         R.draw_set_color(S, 0xFFFFFF)
         R.draw_set_alpha(S, S.g_mega_wybuch_alpha)
-        R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), 0)
+        R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), 0)
         R.draw_set_alpha(S, 1)
         S.g_mega_wybuch_alpha = (S.g_mega_wybuch_alpha / 1.01)
         if (S.g_mega_wybuch_alpha >= 0.05):
@@ -63,7 +63,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_blanker += 0.01
         R.draw_set_color(S, 0x000000)
         R.draw_set_alpha(S, S.g_blanker)
-        R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), 0)
+        R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), 0)
         R.draw_set_alpha(S, 1)
         if (S.g_blanker >= 1):
             R.room_goto(S, 311)

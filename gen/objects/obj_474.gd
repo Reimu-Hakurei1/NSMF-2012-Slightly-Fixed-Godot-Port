@@ -21,7 +21,7 @@ static func ev_0_0(S, A: Array) -> Variant:
 
 static func ev_8_0(S, A: Array) -> Variant:
     R.draw_set_blend_mode(S, 1)
-    R.draw_sprite_ext(S, G.water_drop, 0, (R.aget(R.view_xview, 0) + (S.g_xore * G.ekran_size_act)), ((R.aget(R.view_yview, 0) + (S.g_yore * G.ekran_size_act)) + (S.g_szybkosc_y * G.ekran_size_act)), S.g_wielkosc_aktual, S.g_wielkosc_aktual, 0, 0xFFFFFF, S.g_przezroczystosc)
+    R.draw_sprite_ext(S, G.water_drop, 0, (R.anum(R.aget(R.view_xview, 0)) + (S.g_xore * G.ekran_size_act)), ((R.anum(R.aget(R.view_yview, 0)) + (S.g_yore * G.ekran_size_act)) + (S.g_szybkosc_y * G.ekran_size_act)), S.g_wielkosc_aktual, S.g_wielkosc_aktual, 0, 0xFFFFFF, S.g_przezroczystosc)
     R.draw_set_blend_mode(S, 0)
     if (1 - R.eqv(S, R.get_obj_var(303, "g_watered"), 1)):
         S.g_sekwencja = 2

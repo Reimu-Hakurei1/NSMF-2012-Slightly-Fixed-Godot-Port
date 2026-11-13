@@ -30,7 +30,7 @@ static func ev_1_0(S, A: Array) -> Variant:
         S = _w3
         R.set_visible(S, 1)
     S = _sv2
-    P2.SXMS_SFX_PlayExt(S, [315, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, G.czestotliwosc_dzwieku, 0, 0])
+    P2.SXMS_SFX_PlayExt(S, [315, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, G.czestotliwosc_dzwieku, 0, 0])
     R.set_obj_var(303, "g_szybkosc", 0)
     return 0
 

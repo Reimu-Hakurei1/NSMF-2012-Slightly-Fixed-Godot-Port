@@ -23,50 +23,50 @@ static func ev_8_0(S, A: Array) -> Variant:
         S.g_stream_rurowy += 0.1
         S.g_timer += 1
         if (S.g_timer > 0):
-            R.aset(S.g_wysow, 0, (R.aget(S.g_wysow, 0) / 1.08))
+            R.aset(S.g_wysow, 0, (R.anum(R.aget(S.g_wysow, 0)) / 1.08))
         if (S.g_timer > 20):
-            R.aset(S.g_wysow, 1, (R.aget(S.g_wysow, 1) / 1.08))
+            R.aset(S.g_wysow, 1, (R.anum(R.aget(S.g_wysow, 1)) / 1.08))
         if (S.g_timer > 40):
-            R.aset(S.g_wysow, 2, (R.aget(S.g_wysow, 2) / 1.08))
-        R.draw_background_part_ext(S, 3, 160, 0, 80, 80, S.x, ((S.y + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream_rurowy) * 2)), 1, 1, 0xFFFFFF, 1)
+            R.aset(S.g_wysow, 2, (R.anum(R.aget(S.g_wysow, 2)) / 1.08))
+        R.draw_background_part_ext(S, 3, 160, 0, 80, 80, S.x, ((S.y + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream_rurowy) * 2)), 1, 1, 0xFFFFFF, 1)
         S.g_i = 0
         while true:
             if not ((S.g_i < 10)):
                 break
-            R.draw_background_part_ext(S, 3, 160, 40, 80, 40, S.x, ((((S.y + R.aget(S.g_wysow, 0)) + 80) + (S.g_i * 40)) + (R.sin(S, S.g_stream_rurowy) * 2)), 1, 1, 0xFFFFFF, 1)
+            R.draw_background_part_ext(S, 3, 160, 40, 80, 40, S.x, ((((S.y + R.anum(R.aget(S.g_wysow, 0))) + 80) + (S.g_i * 40)) + (R.sin(S, S.g_stream_rurowy) * 2)), 1, 1, 0xFFFFFF, 1)
             S.g_i += 1
-        R.draw_sprite_ext(S, 488, 0, (S.x + 5), (((S.y + 5) + R.aget(S.g_wysow, 0)) + R.sin(S, S.g_stream_rurowy)), (1 + S.g_fifi), (1 + S.g_fifi), R.random(S, 2), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
-        R.draw_sprite_ext(S, 488, 0, (S.x + 5), (((S.y + 5) + R.aget(S.g_wysow, 0)) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
-        R.draw_sprite_ext(S, 488, 0, (S.x + 5), (((S.y + 5) + R.aget(S.g_wysow, 0)) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.1 + R.random(S, 0.1)))
-        R.draw_background_part_ext(S, 3, 160, 0, 80, 80, (S.x + 200), ((S.y + R.aget(S.g_wysow, 1)) + (R.sin(S, (S.g_stream_rurowy + 1)) * 2)), 1, 1, 0xFFFFFF, 1)
+        R.draw_sprite_ext(S, 488, 0, (S.x + 5), (((S.y + 5) + R.anum(R.aget(S.g_wysow, 0))) + R.sin(S, S.g_stream_rurowy)), (1 + S.g_fifi), (1 + S.g_fifi), R.random(S, 2), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
+        R.draw_sprite_ext(S, 488, 0, (S.x + 5), (((S.y + 5) + R.anum(R.aget(S.g_wysow, 0))) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
+        R.draw_sprite_ext(S, 488, 0, (S.x + 5), (((S.y + 5) + R.anum(R.aget(S.g_wysow, 0))) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.1 + R.random(S, 0.1)))
+        R.draw_background_part_ext(S, 3, 160, 0, 80, 80, (S.x + 200), ((S.y + R.anum(R.aget(S.g_wysow, 1))) + (R.sin(S, (S.g_stream_rurowy + 1)) * 2)), 1, 1, 0xFFFFFF, 1)
         S.g_i = 0
         while true:
             if not ((S.g_i < 10)):
                 break
-            R.draw_background_part_ext(S, 3, 160, 40, 80, 40, (S.x + 200), ((((S.y + R.aget(S.g_wysow, 1)) + 80) + (S.g_i * 40)) + (R.sin(S, (S.g_stream_rurowy + 1)) * 2)), 1, 1, 0xFFFFFF, 1)
+            R.draw_background_part_ext(S, 3, 160, 40, 80, 40, (S.x + 200), ((((S.y + R.anum(R.aget(S.g_wysow, 1))) + 80) + (S.g_i * 40)) + (R.sin(S, (S.g_stream_rurowy + 1)) * 2)), 1, 1, 0xFFFFFF, 1)
             S.g_i += 1
-        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 200), (((S.y + 5) + R.aget(S.g_wysow, 1)) + R.sin(S, S.g_stream_rurowy)), (1 + S.g_fifi), (1 + S.g_fifi), R.random(S, 2), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
-        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 200), (((S.y + 5) + R.aget(S.g_wysow, 1)) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
-        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 200), (((S.y + 5) + R.aget(S.g_wysow, 1)) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.1 + R.random(S, 0.1)))
-        R.draw_background_part_ext(S, 3, 160, 0, 80, 80, (S.x + 400), ((S.y + R.aget(S.g_wysow, 2)) + (R.sin(S, (S.g_stream_rurowy + 2)) * 2)), 1, 1, 0xFFFFFF, 1)
+        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 200), (((S.y + 5) + R.anum(R.aget(S.g_wysow, 1))) + R.sin(S, S.g_stream_rurowy)), (1 + S.g_fifi), (1 + S.g_fifi), R.random(S, 2), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
+        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 200), (((S.y + 5) + R.anum(R.aget(S.g_wysow, 1))) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
+        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 200), (((S.y + 5) + R.anum(R.aget(S.g_wysow, 1))) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.1 + R.random(S, 0.1)))
+        R.draw_background_part_ext(S, 3, 160, 0, 80, 80, (S.x + 400), ((S.y + R.anum(R.aget(S.g_wysow, 2))) + (R.sin(S, (S.g_stream_rurowy + 2)) * 2)), 1, 1, 0xFFFFFF, 1)
         S.g_i = 0
         while true:
             if not ((S.g_i < 10)):
                 break
-            R.draw_background_part_ext(S, 3, 160, 40, 80, 40, (S.x + 400), ((((S.y + R.aget(S.g_wysow, 2)) + 80) + (S.g_i * 40)) + (R.sin(S, (S.g_stream_rurowy + 2)) * 2)), 1, 1, 0xFFFFFF, 1)
+            R.draw_background_part_ext(S, 3, 160, 40, 80, 40, (S.x + 400), ((((S.y + R.anum(R.aget(S.g_wysow, 2))) + 80) + (S.g_i * 40)) + (R.sin(S, (S.g_stream_rurowy + 2)) * 2)), 1, 1, 0xFFFFFF, 1)
             S.g_i += 1
-        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 400), (((S.y + 5) + R.aget(S.g_wysow, 2)) + R.sin(S, S.g_stream_rurowy)), (1 + S.g_fifi), (1 + S.g_fifi), R.random(S, 2), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
-        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 400), (((S.y + 5) + R.aget(S.g_wysow, 2)) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
-        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 400), (((S.y + 5) + R.aget(S.g_wysow, 2)) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.1 + R.random(S, 0.1)))
+        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 400), (((S.y + 5) + R.anum(R.aget(S.g_wysow, 2))) + R.sin(S, S.g_stream_rurowy)), (1 + S.g_fifi), (1 + S.g_fifi), R.random(S, 2), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
+        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 400), (((S.y + 5) + R.anum(R.aget(S.g_wysow, 2))) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((2 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.2 + R.random(S, 0.2)))
+        R.draw_sprite_ext(S, 488, 0, ((S.x + 5) + 400), (((S.y + 5) + R.anum(R.aget(S.g_wysow, 2))) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), ((3 + S.g_fifi) + R.sin(S, S.g_stream_rurowy)), (R.random(S, 2) + S.g_stream_rurowy), 0xFFFFFF, (0.1 + R.random(S, 0.1)))
     if R.eqv(S, G.english_or_polish, 0):
         R.draw_set_font(S, G.map_fonts_1)
         R.draw_set_alpha(S, S.g_image_alpha)
         R.draw_set_color(S, 0xFFFFFF)
         R.draw_set_halign(S, 1)
         R.draw_set_valign(S, 1)
-        R.draw_text_transformed(S, (S.x + 40), ((S.y - 40) + R.aget(S.g_wysow, 0)), "SLOT 1", 1, 1, 0)
-        R.draw_text_transformed(S, ((S.x + 40) + 200), ((S.y - 40) + R.aget(S.g_wysow, 1)), "SLOT 2", 1, 1, 0)
-        R.draw_text_transformed(S, ((S.x + 40) + (200 * 2)), ((S.y - 40) + R.aget(S.g_wysow, 2)), "SLOT 3", 1, 1, 0)
+        R.draw_text_transformed(S, (S.x + 40), ((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))), "SLOT 1", 1, 1, 0)
+        R.draw_text_transformed(S, ((S.x + 40) + 200), ((S.y - 40) + R.anum(R.aget(S.g_wysow, 1))), "SLOT 2", 1, 1, 0)
+        R.draw_text_transformed(S, ((S.x + 40) + (200 * 2)), ((S.y - 40) + R.anum(R.aget(S.g_wysow, 2))), "SLOT 3", 1, 1, 0)
         if ((R.eqv(S, R.get_obj_var(729, "g_setter"), 1200) and R.eqv(S, R.get_obj_var(729, "g_steruj_scroolem"), 0)) and (S.g_napisy_1 > 0)):
             S.g_napisy_1 = (S.g_napisy_1 / 1.5)
         if (((1 - R.eqv(S, R.get_obj_var(729, "g_setter"), 1200)) or (1 - R.eqv(S, R.get_obj_var(729, "g_steruj_scroolem"), 0))) and (S.g_napisy_1 < 1000)):
@@ -78,7 +78,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.draw_set_color(S, 0xFFFFFF)
         R.draw_set_halign(S, 1)
         R.draw_set_valign(S, 1)
-        R.draw_text_transformed(S, (S.x + 40), ((S.y - 40) + R.aget(S.g_wysow, 0)), "ZAPIS 1", 1, 1, 0)
-        R.draw_text_transformed(S, ((S.x + 40) + 200), ((S.y - 40) + R.aget(S.g_wysow, 1)), "ZAPIS 2", 1, 1, 0)
-        R.draw_text_transformed(S, ((S.x + 40) + (200 * 2)), ((S.y - 40) + R.aget(S.g_wysow, 2)), "ZAPIS 3", 1, 1, 0)
+        R.draw_text_transformed(S, (S.x + 40), ((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))), "ZAPIS 1", 1, 1, 0)
+        R.draw_text_transformed(S, ((S.x + 40) + 200), ((S.y - 40) + R.anum(R.aget(S.g_wysow, 1))), "ZAPIS 2", 1, 1, 0)
+        R.draw_text_transformed(S, ((S.x + 40) + (200 * 2)), ((S.y - 40) + R.anum(R.aget(S.g_wysow, 2))), "ZAPIS 3", 1, 1, 0)
     return 0

@@ -43,7 +43,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_timer = 0
             S.g_sekwencja = 1
         if R.eqv(S, S.g_timer, 20):
-            P2.SXMS_SFX_PlayExt(S, [128, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [128, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_sekwencja, 1):
         var _sv5 = S
         var _ws4 = R.with_ids(S, 303)
@@ -62,8 +62,8 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_timer = 0
             S.g_sekwencja = 2
             S.g_grawitacja_gracza = -(15)
-            P2.SXMS_SFX_PlayExt(S, [(10 + R.round(S, R.random(S, 3))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
-            P2.SXMS_SFX_PlayExt(S, [19, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [(10 + R.round(S, R.random(S, 3))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [19, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_sekwencja, 2):
         S.g_timer += 1
         R.set_obj_var(303, "g_y", (R.get_obj_var(303, "g_y") + S.g_grawitacja_gracza))
@@ -75,7 +75,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         S.g_grawitacja_gracza += 0.5
         R.set_obj_var(306, "g_animacja", 1)
         if ((S.g_grawitacja_gracza >= 5) and (R.get_obj_var(303, "g_y") >= R.inst_get(G.sekwencja_statku, "y"))):
-            P2.SXMS_SFX_PlayExt(S, [25, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [25, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             S.g_sekwencja = 3
             S.g_timer = 0
             R.part_particles_create(S, G.particle_sys_1, (S.x + 16), S.y, G.part_effect_star, 20)
@@ -88,7 +88,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         S.g_timer += 1
         if (S.g_timer > 150):
             R.room_goto(S, S.g_gdzie_idzie)
-    S.x = ((R.aget(R.view_xview, 0) + 1100) - R.min(S, (R.get_obj_var(303, "g_x") / 5), 500))
+    S.x = ((R.anum(R.aget(R.view_xview, 0)) + 1100) - R.min(S, (R.get_obj_var(303, "g_x") / 5), 500))
     R.draw_sprite_ext(S, G.ship_anim, 0, S.x, S.y, 1, 1, (R.sin(S, R.degtorad(S, S.g_stream)) * 5), 0xFFFFFF, 1)
     R.inst_set(S.g_kotwica, "x", (S.x + (R.sin(S, R.degtorad(S, (-(40) + (R.sin(S, R.degtorad(S, S.g_stream)) * 5)))) * 150)))
     R.inst_set(S.g_kotwica, "y", (S.y + (R.cos(S, R.degtorad(S, (-(40) + (R.sin(S, R.degtorad(S, S.g_stream)) * 5)))) * 150)))
@@ -98,8 +98,8 @@ static func ev_8_0(S, A: Array) -> Variant:
     if (R.random(S, 100) > 85):
         R.part_particles_create(S, G.particle_map_sterring, (S.x + 200), ((S.y + R.random(S, 200)) - R.random(S, 200)), G.part_BOOMBOOM_smoke3, 1)
     R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (1 + (S.g_alphar / 4)), (1 + (S.g_alphar / 4)), 0, 0xFFFFFF, S.g_alphar)
-    R.draw_sprite_ext(S, 413, 0, (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), R.aget(R.view_yview, 0), (-(1) - (S.g_alphar / 4)), (1 + (S.g_alphar / 4)), 0, 0xFFFFFF, S.g_alphar)
-    R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), (1 + (S.g_alphar / 4)), (-(1) - (S.g_alphar / 4)), 0, 0xFFFFFF, S.g_alphar)
-    R.draw_sprite_ext(S, 413, 0, (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), (-(1) - (S.g_alphar / 4)), (-(1) - (S.g_alphar / 4)), 0, 0xFFFFFF, S.g_alphar)
+    R.draw_sprite_ext(S, 413, 0, (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), R.aget(R.view_yview, 0), (-(1) - (S.g_alphar / 4)), (1 + (S.g_alphar / 4)), 0, 0xFFFFFF, S.g_alphar)
+    R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), (1 + (S.g_alphar / 4)), (-(1) - (S.g_alphar / 4)), 0, 0xFFFFFF, S.g_alphar)
+    R.draw_sprite_ext(S, 413, 0, (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), (-(1) - (S.g_alphar / 4)), (-(1) - (S.g_alphar / 4)), 0, 0xFFFFFF, S.g_alphar)
     S.g_alphar += 0.005
     return 0

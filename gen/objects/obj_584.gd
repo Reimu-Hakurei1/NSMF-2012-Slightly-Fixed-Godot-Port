@@ -6,6 +6,6 @@ static var G = load("res://gen/globals.gd")
 static var P2 = load("res://gen/scripts/part_2.gd")
 static func ev_3_0(S, A: Array) -> Variant:
     if R.place_meeting(S, S.x, S.y, 303):
-        P2.SXMS_SFX_PlayExt(S, [25, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [25, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         R.instance_destroy(S)
     return 0

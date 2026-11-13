@@ -94,23 +94,23 @@ static func ev_8_0(S, A: Array) -> Variant:
                 if (R.eqv(S, R.inst_get(R.aget(S.g_lolo, 0), "enemy_lewo"), 1) and R.eqv(S, S.g_randomer, 0)):
                     S.g_idzie = 1
                     S.g_moze_isc -= 1
-                    if ((((S.x > R.aget(R.view_xview, 0)) and (S.x < (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)))) and (S.y > R.aget(R.view_yview, 0))) and (S.y < (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)))):
-                        P2.SXMS_SFX_PlayExt(S, [166, (((S.x - R.aget(R.view_xview, 0))) / ((R.aget(R.view_xview, 0) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
+                    if ((((S.x > R.aget(R.view_xview, 0)) and (S.x < (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))))) and (S.y > R.aget(R.view_yview, 0))) and (S.y < (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))))):
+                        P2.SXMS_SFX_PlayExt(S, [166, (((S.x - R.anum(R.aget(R.view_xview, 0)))) / ((R.anum(R.aget(R.view_xview, 0)) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
                 if (R.eqv(S, R.inst_get(R.aget(S.g_lolo, 0), "enemy_prawo"), 1) and R.eqv(S, S.g_randomer, 1)):
                     S.g_idzie = 3
                     S.g_moze_isc -= 1
-                    if ((((S.x > R.aget(R.view_xview, 0)) and (S.x < (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)))) and (S.y > R.aget(R.view_yview, 0))) and (S.y < (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)))):
-                        P2.SXMS_SFX_PlayExt(S, [166, (((S.x - R.aget(R.view_xview, 0))) / ((R.aget(R.view_xview, 0) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
+                    if ((((S.x > R.aget(R.view_xview, 0)) and (S.x < (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))))) and (S.y > R.aget(R.view_yview, 0))) and (S.y < (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))))):
+                        P2.SXMS_SFX_PlayExt(S, [166, (((S.x - R.anum(R.aget(R.view_xview, 0)))) / ((R.anum(R.aget(R.view_xview, 0)) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
                 if (R.eqv(S, R.inst_get(R.aget(S.g_lolo, 0), "enemy_gora"), 1) and R.eqv(S, S.g_randomer, 2)):
                     S.g_idzie = 2
                     S.g_moze_isc -= 1
-                    if ((((S.x > R.aget(R.view_xview, 0)) and (S.x < (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)))) and (S.y > R.aget(R.view_yview, 0))) and (S.y < (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)))):
-                        P2.SXMS_SFX_PlayExt(S, [166, (((S.x - R.aget(R.view_xview, 0))) / ((R.aget(R.view_xview, 0) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
+                    if ((((S.x > R.aget(R.view_xview, 0)) and (S.x < (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))))) and (S.y > R.aget(R.view_yview, 0))) and (S.y < (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))))):
+                        P2.SXMS_SFX_PlayExt(S, [166, (((S.x - R.anum(R.aget(R.view_xview, 0)))) / ((R.anum(R.aget(R.view_xview, 0)) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
                 if (R.eqv(S, R.inst_get(R.aget(S.g_lolo, 0), "enemy_dol"), 1) and R.eqv(S, S.g_randomer, 3)):
                     S.g_idzie = 4
                     S.g_moze_isc -= 1
-                    if ((((S.x > R.aget(R.view_xview, 0)) and (S.x < (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)))) and (S.y > R.aget(R.view_yview, 0))) and (S.y < (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)))):
-                        P2.SXMS_SFX_PlayExt(S, [166, (((S.x - R.aget(R.view_xview, 0))) / ((R.aget(R.view_xview, 0) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
+                    if ((((S.x > R.aget(R.view_xview, 0)) and (S.x < (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))))) and (S.y > R.aget(R.view_yview, 0))) and (S.y < (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))))):
+                        P2.SXMS_SFX_PlayExt(S, [166, (((S.x - R.anum(R.aget(R.view_xview, 0)))) / ((R.anum(R.aget(R.view_xview, 0)) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
         if (((R.place_meeting(S, S.x, S.y, 828) and R.eqv(S, S.g_idzie, 0)) and (S.g_moze_isc > 0)) and R.eqv(S, S.g_uciekaj_gdy_mario_skusil, 1)):
             R.aset(S.g_lolo, 0, R.instance_place(S, S.x, S.y, 828))
             S.g_last_x_point = R.inst_get(R.aget(S.g_lolo, 0), "x")
@@ -164,7 +164,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                     S.g_moze_isc_po_skuszeniu = 1
         if (R.eqv(S, S.g_rodzaj, 10) and (1 - R.eqv(S, S.g_idzie, 0))):
             if (S.g_statek_moves > 10):
-                P2.SXMS_SFX_PlayExt(S, [149, (((S.x - R.aget(R.view_xview, 0))) / ((R.aget(R.view_xview, 0) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [149, (((S.x - R.anum(R.aget(R.view_xview, 0)))) / ((R.anum(R.aget(R.view_xview, 0)) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_statek_moves = 0
                 S.g_kokoz = R.round(S, R.random(S, (S.g_ilosc_etapow - 1)))
                 S.g_staryx = S.x

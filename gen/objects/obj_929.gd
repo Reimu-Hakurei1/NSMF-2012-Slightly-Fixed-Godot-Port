@@ -6,8 +6,8 @@ static var G = load("res://gen/globals.gd")
 static func ev_8_0(S, A: Array) -> Variant:
     var L_tx = 0
     var L_ty = 0
-    L_tx = (R.aget(R.view_xview, 0) + 195)
-    L_ty = (R.aget(R.view_yview, 0) + 20)
+    L_tx = (R.anum(R.aget(R.view_xview, 0)) + 195)
+    L_ty = (R.anum(R.aget(R.view_yview, 0)) + 20)
     if R.eqv(S, G.modified_physics, 1):
         R.draw_set_color(S, 0x00FF00)
         R.draw_text(S, L_tx, L_ty, "MODIFIED PHYSICS: ON")

@@ -15,6 +15,6 @@ static func ev_8_0(S, A: Array) -> Variant:
             break
         if (S.g_xscrooling_ixor < -(200)):
             S.g_xscrooling_ixor += 200
-        R.draw_sprite_ext(S, S.g_s_back_clouds, 0, ((R.aget(R.view_xview, 0) + (S.g_i * 200)) + S.g_xscrooling_ixor), (R.aget(R.view_yview, 0) + 360), 1, 1, 0, 0xFFFFFF, 1)
+        R.draw_sprite_ext(S, S.g_s_back_clouds, 0, ((R.anum(R.aget(R.view_xview, 0)) + (S.g_i * 200)) + S.g_xscrooling_ixor), (R.anum(R.aget(R.view_yview, 0)) + 360), 1, 1, 0, 0xFFFFFF, 1)
         S.g_i += 1
     return 0

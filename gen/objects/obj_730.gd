@@ -12,12 +12,12 @@ static func ev_0_0(S, A: Array) -> Variant:
     return 0
 
 static func ev_8_0(S, A: Array) -> Variant:
-    R.draw_background_part_ext(S, 3, 160, 80, 80, 40, S.x, (S.y - R.aget(S.g_wysow, 0)), 1, 1, 0xFFFFFF, 1)
+    R.draw_background_part_ext(S, 3, 160, 80, 80, 40, S.x, (S.y - R.anum(R.aget(S.g_wysow, 0))), 1, 1, 0xFFFFFF, 1)
     S.g_i = 0
     while true:
         if not ((S.g_i < 10)):
             break
-        R.draw_background_part_ext(S, 3, 160, 40, 80, 40, S.x, (((S.y - 40) - (S.g_i * 40)) - R.aget(S.g_wysow, 0)), 1, 1, 0xFFFFFF, 1)
+        R.draw_background_part_ext(S, 3, 160, 40, 80, 40, S.x, (((S.y - 40) - (S.g_i * 40)) - R.anum(R.aget(S.g_wysow, 0))), 1, 1, 0xFFFFFF, 1)
         S.g_i += 1
     if R.eqv(S, S.g_sekwencja, 0):
         S.g_timer += 1
@@ -25,7 +25,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_timer = 0
             S.g_sekwencja += 1
     if R.eqv(S, S.g_sekwencja, 1):
-        R.aset(S.g_wysow, 0, (R.aget(S.g_wysow, 0) / 1.03))
+        R.aset(S.g_wysow, 0, (R.anum(R.aget(S.g_wysow, 0)) / 1.03))
         if (R.aget(S.g_wysow, 0) <= 1):
             S.g_timer += 1
         if (S.g_timer >= 100):
@@ -34,7 +34,7 @@ static func ev_8_0(S, A: Array) -> Variant:
     if R.eqv(S, S.g_sekwencja, 2):
         S.g_timer += 1
         if (R.aget(S.g_wysow, 0) < 10000):
-            R.aset(S.g_wysow, 0, (R.aget(S.g_wysow, 0) + (0.1 + (R.aget(S.g_wysow, 0) / 10))))
+            R.aset(S.g_wysow, 0, (R.aget(S.g_wysow, 0) + (0.1 + (R.anum(R.aget(S.g_wysow, 0)) / 10))))
         if (R.aget(S.g_wysow, 0) > 30):
             if R.instance_exists(S, 170475):
                 var _sv2 = S

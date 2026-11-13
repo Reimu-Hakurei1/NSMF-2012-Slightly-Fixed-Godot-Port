@@ -24,7 +24,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_otwarty = 0
                 S.g_dzielnik = 1
             if ((((1 - R.eqv(S, S.g_energy_do, S.g_energy)) or R.eqv(S, S.g_kill, 1)) and R.eqv(S, S.g_otwarty, 0)) and (S.g_dzielnik >= 1)):
-                P2.SXMS_SFX_PlayExt(S, [48, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [48, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_otwarty = 1
                 S.g_kill = 0
                 S.g_energy_do = S.g_energy
@@ -40,7 +40,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 if (S.g_dzielnik > 0):
                     S.g_dzielnik = (S.g_dzielnik / 1.1)
             if ((R.eqv(S, S.g_otwarty, 1) and (S.g_dzielnik <= 0.01)) and (((1 - R.eqv(S, S.g_energy_do, S.g_energy)) or R.eqv(S, S.g_kill, 1)))):
-                P2.SXMS_SFX_PlayExt(S, [48, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [48, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_otwarty = 2
                 S.g_kill = 0
                 S.g_dzielnik = 0
@@ -56,7 +56,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_energy_do -= 1
             if (1 - R.eqv(S, S.g_energy_do, S.g_energy)):
                 S.g_energy_do = S.g_energy
-                P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             S.g_stream += (2 + (S.g_pompon * 5))
             if (S.g_pompon > 0):
                 S.g_pompon = (S.g_pompon / 1.05)
@@ -68,8 +68,8 @@ static func ev_8_0(S, A: Array) -> Variant:
             R.draw_sprite_ext(S, G.gfx_bulpon_2, 0, S.x, S.y, ((((R.point_distance(S, S.x, S.y, R.aget(S.g_bulpon_nagraj_x, S.g_i), R.aget(S.g_bulpon_nagraj_y, S.g_i)) / 220) + (R.sin(S, R.degtorad(S, (S.g_stream + (S.g_i * 30)))) / 20))) * S.g_dzielnik), (((1 - (R.sin(S, R.degtorad(S, (S.g_stream + (S.g_i * 30)))) / 20))) * S.g_dzielnik), R.point_direction(S, S.x, S.y, R.aget(S.g_bulpon_nagraj_x, S.g_i), R.aget(S.g_bulpon_nagraj_y, S.g_i)), 0xFFFFFF, 1)
             if (S.g_otwarty > 0):
                 if R.instance_exists(S, R.aget(S.g_bulpon, S.g_i)):
-                    R.draw_sprite_ext(S, G.gfx_bulpon_3, 0, (S.x + (((R.aget(S.g_bulpon_nagraj_x, S.g_i) - S.x)) * S.g_dzielnik)), (S.y + (((R.aget(S.g_bulpon_nagraj_y, S.g_i) - S.y)) * S.g_dzielnik)), (((((R.sin(S, R.degtorad(S, S.g_stream)) / 20) * ((S.g_pompon + 1)))) * S.g_dzielnik) + ((((R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_xscale")) * S.g_dzielnik)) / 1.3)), ((((R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_yscale")) * S.g_dzielnik)) / 1.3), R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_angle"), 0xFFFFFF, (1 - (S.g_dzielnik / 2)))
-                    R.draw_sprite_ext(S, G.gfx_kolco_kuler_1, 0, (S.x + (((R.aget(S.g_bulpon_nagraj_x, S.g_i) - S.x)) * S.g_dzielnik)), (S.y + (((R.aget(S.g_bulpon_nagraj_y, S.g_i) - S.y)) * S.g_dzielnik)), (((((R.sin(S, R.degtorad(S, S.g_stream)) / 20) * ((S.g_pompon + 1)))) * S.g_dzielnik) + ((((R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_xscale")) * S.g_dzielnik)) / 1.3)), ((((R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_yscale")) * S.g_dzielnik)) / 1.3), R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_angle"), 0xFFFFFF, S.g_dzielnik)
+                    R.draw_sprite_ext(S, G.gfx_bulpon_3, 0, (S.x + (((R.anum(R.aget(S.g_bulpon_nagraj_x, S.g_i)) - S.x)) * S.g_dzielnik)), (S.y + (((R.anum(R.aget(S.g_bulpon_nagraj_y, S.g_i)) - S.y)) * S.g_dzielnik)), (((((R.sin(S, R.degtorad(S, S.g_stream)) / 20) * ((S.g_pompon + 1)))) * S.g_dzielnik) + ((((R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_xscale")) * S.g_dzielnik)) / 1.3)), ((((R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_yscale")) * S.g_dzielnik)) / 1.3), R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_angle"), 0xFFFFFF, (1 - (S.g_dzielnik / 2)))
+                    R.draw_sprite_ext(S, G.gfx_kolco_kuler_1, 0, (S.x + (((R.anum(R.aget(S.g_bulpon_nagraj_x, S.g_i)) - S.x)) * S.g_dzielnik)), (S.y + (((R.anum(R.aget(S.g_bulpon_nagraj_y, S.g_i)) - S.y)) * S.g_dzielnik)), (((((R.sin(S, R.degtorad(S, S.g_stream)) / 20) * ((S.g_pompon + 1)))) * S.g_dzielnik) + ((((R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_xscale")) * S.g_dzielnik)) / 1.3)), ((((R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_yscale")) * S.g_dzielnik)) / 1.3), R.inst_get(R.aget(S.g_bulpon, S.g_i), "image_angle"), 0xFFFFFF, S.g_dzielnik)
                     R.inst_set(R.aget(S.g_bulpon, S.g_i), "x", -(100000))
                     if R.eqv(S, R.inst_get(R.aget(S.g_bulpon, S.g_i), "spadnie"), 2):
                         R.inst_set(R.aget(S.g_bulpon, S.g_i), "spadnie", 1)

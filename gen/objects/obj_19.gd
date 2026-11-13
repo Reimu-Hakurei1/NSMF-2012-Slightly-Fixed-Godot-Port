@@ -29,7 +29,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_kicked = 1
             if R.eqv(S, S.g_destroy, 1):
                 G.punkty += 200
-                P2.SXMS_SFX_PlayExt(S, [43, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [43, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 if R.eqv(S, S.g_rodzaj, 0):
                     G.coins += 1
                 R.instance_create(S, S.x, S.y, 20)

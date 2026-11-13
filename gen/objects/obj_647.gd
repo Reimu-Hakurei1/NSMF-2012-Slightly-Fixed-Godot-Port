@@ -42,16 +42,16 @@ static func ev_3_0(S, A: Array) -> Variant:
         var _ws4 = R.with_ids(S, 303)
         for _w6 in _ws4:
             S = _w6
-            if (S.y < (R.aget(R.view_yview, 0) - 300)):
+            if (S.y < (R.anum(R.aget(R.view_yview, 0)) - 300)):
                 R.part_particles_create(S, G.particle_sys_1, (S.x + 16), S.y, G.part_effect_star, 20)
                 G.pauza = 88
                 S.g_wiwi = R.instance_create(S, (S.x + 16), (S.y + 32), 332)
-                P2.SXMS_SFX_PlayExt(S, [(128 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [(128 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.inst_set(S.g_wiwi, "iyor", -(18))
         S = _sv5
         S.g_timer_killer += 1
         if (S.g_timer_killer > 20):
-            G.level_death_pit = ((R.aget(R.view_yview, 0) + (600 * G.ekran_size_act)) + 80)
+            G.level_death_pit = ((R.anum(R.aget(R.view_yview, 0)) + (600 * G.ekran_size_act)) + 80)
         if R.place_meeting(S, S.x, S.y, 571):
             S.g_kok = R.instance_place(S, S.x, S.y, 571)
             var _sv8 = S
@@ -109,10 +109,10 @@ static func ev_3_0(S, A: Array) -> Variant:
         if (1 - R.eqv(S, S.g_nagraj_speed, 0)):
             R.set_speed(S, S.g_nagraj_speed)
             S.g_nagraj_speed = 0
-    R.inst_set(S.g_markerus_1, "x", (R.aget(R.view_xview, 0) - 40))
-    R.inst_set(S.g_markerus_1, "y", (R.aget(R.view_yview, 0) - 800))
-    R.inst_set(S.g_markerus_2, "x", (R.aget(R.view_xview, 0) + 800))
-    R.inst_set(S.g_markerus_2, "y", (R.aget(R.view_yview, 0) - 800))
+    R.inst_set(S.g_markerus_1, "x", (R.anum(R.aget(R.view_xview, 0)) - 40))
+    R.inst_set(S.g_markerus_1, "y", (R.anum(R.aget(R.view_yview, 0)) - 800))
+    R.inst_set(S.g_markerus_2, "x", (R.anum(R.aget(R.view_xview, 0)) + 800))
+    R.inst_set(S.g_markerus_2, "y", (R.anum(R.aget(R.view_yview, 0)) - 800))
     if R.eqv(S, G.pauza, 0):
         S.g_rusza_sie = 0
         if (1 - R.eqv(S, S.g_rusza_sie_x, R.aget(R.view_xview, 0))):

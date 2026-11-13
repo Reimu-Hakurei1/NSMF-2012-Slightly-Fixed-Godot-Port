@@ -6,5 +6,5 @@ static var G = load("res://gen/globals.gd")
 static func ev_3_0(S, A: Array) -> Variant:
     if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 2)):
         if (R.random(S, 100) > 50):
-            R.part_particles_create(S, G.particle_sys_przed_morkami, (R.aget(R.view_xview, 0) + R.random(S, R.aget(R.view_wview, 0))), (R.aget(R.view_yview, 0) + R.random(S, R.aget(R.view_hview, 0))), G.part_efekt_lotu, 1)
+            R.part_particles_create(S, G.particle_sys_przed_morkami, (R.anum(R.aget(R.view_xview, 0)) + R.random(S, R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_yview, 0)) + R.random(S, R.aget(R.view_hview, 0))), G.part_efekt_lotu, 1)
     return 0

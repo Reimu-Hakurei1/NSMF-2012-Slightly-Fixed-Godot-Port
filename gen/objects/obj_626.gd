@@ -11,7 +11,7 @@ static func ev_0_0(S, A: Array) -> Variant:
 
 static func ev_8_0(S, A: Array) -> Variant:
     R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (0.75 * G.ekran_size_act), (0.5 * G.ekran_size_act), 0, 0x0000FF, 0.65)
-    R.draw_sprite_ext(S, 413, 0, (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), R.aget(R.view_yview, 0), (-(0.75) * G.ekran_size_act), (0.5 * G.ekran_size_act), 0, 0x0000FF, 0.65)
-    R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), (0.75 * G.ekran_size_act), (-(0.5) * G.ekran_size_act), 0, 0x0000FF, 0.65)
-    R.draw_sprite_ext(S, 413, 0, (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), (-(0.75) * G.ekran_size_act), (-(0.5) * G.ekran_size_act), 0, 0x0000FF, 0.65)
+    R.draw_sprite_ext(S, 413, 0, (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), R.aget(R.view_yview, 0), (-(0.75) * G.ekran_size_act), (0.5 * G.ekran_size_act), 0, 0x0000FF, 0.65)
+    R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), (0.75 * G.ekran_size_act), (-(0.5) * G.ekran_size_act), 0, 0x0000FF, 0.65)
+    R.draw_sprite_ext(S, 413, 0, (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), (-(0.75) * G.ekran_size_act), (-(0.5) * G.ekran_size_act), 0, 0x0000FF, 0.65)
     return 0

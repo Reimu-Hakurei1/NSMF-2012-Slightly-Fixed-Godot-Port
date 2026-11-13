@@ -6,7 +6,7 @@ static var G = load("res://gen/globals.gd")
 static var P2 = load("res://gen/scripts/part_2.gd")
 static var P6_7_8 = load("res://gen/scripts/part_6_7_8.gd")
 static func ev_0_0(S, A: Array) -> Variant:
-    P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+    P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     S.g_kierunek = 0
     S.g_stream = 0
     S.g_globalny_kat = 0

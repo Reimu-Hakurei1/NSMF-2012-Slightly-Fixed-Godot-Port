@@ -48,7 +48,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             if ((1 - R.eqv(S, S.g_bump3, 0)) and (S.g_bump3 < 1)):
                 S.g_bump3 += 0.20
             if (R.eqv(S, S.g_destroy, 1) and R.eqv(S, S.g_bump3, 0)):
-                P2.SXMS_SFX_PlayExt(S, [43, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [43, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_destroy = 0
                 S.g_bump = -(40)
                 S.g_bump2 = (R.random(S, 40) - R.random(S, 40))

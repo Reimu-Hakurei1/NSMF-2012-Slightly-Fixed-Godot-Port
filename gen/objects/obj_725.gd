@@ -72,7 +72,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_przyciemniaj += 0.05
             R.draw_set_color(S, 0x000000)
             R.draw_set_alpha(S, (-(1) + S.g_przyciemniaj))
-            R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_hview, 0) + R.aget(R.view_yview, 0)), 0)
+            R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_hview, 0)) + R.anum(R.aget(R.view_yview, 0))), 0)
             R.draw_set_alpha(S, 1)
             if R.eqv(S, S.g_przyciemniaj, 2):
                 S.g_sekwencja += 1
@@ -85,7 +85,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_trans = 0
             R.draw_set_color(S, 0x000000)
             R.draw_set_alpha(S, S.g_trans)
-            R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_hview, 0) + R.aget(R.view_yview, 0)), 0)
+            R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_hview, 0)) + R.anum(R.aget(R.view_yview, 0))), 0)
             R.draw_set_alpha(S, 1)
         if R.eqv(S, S.g_sekwencja, 23):
             R.set_obj_var(303, "g_x", 250)

@@ -39,24 +39,24 @@ static func ev_8_0(S, A: Array) -> Variant:
             if ((1 - R.eqv(S, S.g_bump3, 0)) and (S.g_bump3 < 1)):
                 S.g_bump3 += 0.20
             if R.eqv(S, S.g_zniszczony_od_muszli, 1):
-                P2.SXMS_SFX_PlayExt(S, [21, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [21, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_koko = R.instance_create(S, S.x, S.y, 52)
                 R.inst_set(S.g_koko, "sprite_index", G.gfx_point_brick_alone)
                 R.instance_destroy(S)
             if (R.eqv(S, S.g_destroy, 1) and R.eqv(S, S.g_bump3, 0)):
                 if R.eqv(S, S.g_eksploduj_bez_mario_duzego, 1):
                     G.punkty += 200
-                    P2.SXMS_SFX_PlayExt(S, [21, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                    P2.SXMS_SFX_PlayExt(S, [21, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                     S.g_koko = R.instance_create(S, S.x, S.y, 52)
                     R.inst_set(S.g_koko, "sprite_index", G.gfx_point_brick_alone)
                     R.instance_destroy(S)
                 if R.eqv(S, R.get_obj_var(303, "g_can_destroy_brick"), 1):
                     G.punkty += 200
-                    P2.SXMS_SFX_PlayExt(S, [21, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                    P2.SXMS_SFX_PlayExt(S, [21, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                     S.g_koko = R.instance_create(S, S.x, S.y, 52)
                     R.inst_set(S.g_koko, "sprite_index", G.gfx_point_brick_alone)
                     R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [43, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [43, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.instance_create(S, S.x, (S.y - 16), 326)
                 S.g_destroy = 2
                 S.g_bump = -(40)

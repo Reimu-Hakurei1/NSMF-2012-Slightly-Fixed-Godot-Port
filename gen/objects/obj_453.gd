@@ -48,7 +48,7 @@ static func ev_3_2(S, A: Array) -> Variant:
     return 0
 
 static func ev_8_0(S, A: Array) -> Variant:
-    if ((((S.x < (R.aget(R.view_xview, 0) + 1400)) and (S.x > (R.aget(R.view_xview, 0) - 640))) and (S.y > (R.aget(R.view_yview, 0) - 640))) and (S.y < (R.aget(R.view_yview, 0) + 1200))):
+    if ((((S.x < (R.anum(R.aget(R.view_xview, 0)) + 1400)) and (S.x > (R.anum(R.aget(R.view_xview, 0)) - 640))) and (S.y > (R.anum(R.aget(R.view_yview, 0)) - 640))) and (S.y < (R.anum(R.aget(R.view_yview, 0)) + 1200))):
         if R.eqv(S, S.g_mario, 1):
             if (S.g_dzielnik < 1):
                 S.g_dzielnik = 1

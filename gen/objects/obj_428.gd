@@ -47,7 +47,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_sounder += 1
         if R.eqv(S, S.g_sounder, 15):
             S.g_sounder = 100
-            P2.SXMS_SFX_PlayExt(S, [40, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [40, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         S.g_animowanie += 5
         if (R.eqv(S, S.g_wylatuje, 0) and R.place_meeting(S, S.x, S.y, 1)):
             S.y = (S.y - 1)

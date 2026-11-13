@@ -15,7 +15,7 @@ static func ev_0_0(S, A: Array) -> Variant:
 static func ev_8_0(S, A: Array) -> Variant:
     if (R.eqv(S, S.g_pojawiator_sampel, 0) and (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 0.8))):
         S.g_pojawiator_sampel = 1
-        P2.SXMS_SFX_PlayExt(S, [325, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [325, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 1.5)):
         S.g_efektuj += 1
         if (S.g_efektuj > 1000):
@@ -29,7 +29,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 846))
                 R.inst_set(R.aget(S.g_lolo, 0), "wartosc", "ODKRYÅ�EÅš_SEKRET_NA_MAPIE!")
             S.g_collected = 1
-            P2.SXMS_SFX_PlayExt(S, [326, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [326, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             G.map_key_level_id = S.g_unlock
             G.map_key_level_collected = 1
             G.game_over = 2000

@@ -1,1316 +1,1073 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene format=4]
 
-[ext_resource type="Texture2D" id="t1" path="res://images/backgrounds/back_pociemnianie_murkow.29.png"]
-[ext_resource type="Texture2D" id="t2" path="res://images/backgrounds/background42.42.png"]
-[ext_resource type="Texture2D" id="t3" path="res://images/sprites/s_big_bullet_mark.18.0.png"]
-[ext_resource type="Texture2D" id="t4" path="res://images/sprites/s_hill_1.187.0.png"]
-[ext_resource type="Texture2D" id="t5" path="res://images/sprites/s_small_thromb_marker.20.0.png"]
-[ext_resource type="Texture2D" id="t6" path="res://images/sprites/sprite_big_marker.38.0.png"]
-[ext_resource type="Texture2D" id="t7" path="res://images/sprites/sprite_big_marker_2.39.0.png"]
-[ext_resource type="Texture2D" id="t8" path="res://images/sprites/sprite11.211.0.png"]
 [ext_resource type="Script" path="res://runtime/room_preview_boot.gd" id="boot"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/b100447.png" id="t1"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_big_bullet_mark.18.0.png" id="t4"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/s102163.png" id="t5"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_small_thromb_marker.20.0.png" id="t6"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite_big_marker.38.0.png" id="t7"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite_big_marker_2.39.0.png" id="t8"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite11.211.1.png" id="t9"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_point_wind_marker.376.0.png" id="t10"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite17.218.0.png" id="t11"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite88.213.0.png" id="t12"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_linelapacz.212.0.png" id="t13"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_thromb.67.0.png" id="t14"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_thromb_usta.68.0.png" id="t15"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_red_glow.69.0.png" id="t16"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_chain.136.0.png" id="t17"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_chain.136.1.png" id="t18"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_boom_boom_2.289.0.png" id="t19"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_boom_boom_1.293.0.png" id="t20"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_boom_boom_3.291.0.png" id="t21"]
+[ext_resource type="TileSet" path="res://tilesets/back_pociemnianie_murkow_29.tres" id="tileset_29"]
+[ext_resource type="TileSet" path="res://tilesets/background42_42.tres" id="tileset_42"]
 
-[node name="room_cloudy_5_7_Castle_2_boss" type="Node2D"]
+[node name="room_cloudy_5_7_Castle_2_boss" type="Node2D" unique_id=897014172]
 script = ExtResource("boot")
 metadata/gm_room = "room_cloudy_5_7_Castle_2_boss"
 metadata/gm_bg_colour = 0
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(400, 300)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=805204309]
+position = Vector2(400.6638, 300.49783)
 limit_left = 0
 limit_top = 0
 limit_right = 2400
 limit_bottom = 600
 
-[node name="Tiles_1000000" type="Node2D" parent="."]
-z_index = 2
-metadata/gm_depth = 1000000
+[node name="Bg0___data_gfx_castle_1_jpg" type="Node2D" parent="." unique_id=1463628411]
+z_index = -104
+metadata/gm_background_slot = 0
+metadata/gm_source_bg = 100447
+metadata/gm_tile_horz = 1
+metadata/gm_tile_vert = 1
+metadata/gm_foreground = 0
+metadata/gm_hspeed = 0.0
+metadata/gm_vspeed = 0.0
+metadata/gm_bg_xscale = 1.0
+metadata/gm_bg_yscale = 1.0
+metadata/gm_bg_alpha = 1.0
 
-[node name="tile_0" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(0, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(80, 0, 40, 40)
-centered = false
-
-[node name="tile_1" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(40, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_2" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(160, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_3" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(280, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_4" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(400, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_5" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(520, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_6" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(640, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_7" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(760, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_8" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(880, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_9" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1000, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_10" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1120, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_11" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1240, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_12" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1360, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_13" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1480, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_14" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1600, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_15" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1720, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_16" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1840, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_17" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1960, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_18" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(2080, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_19" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(2200, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_20" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(2320, 480)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_21" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(0, 520)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_22" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(0, 560)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_23" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(2240, 520)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_24" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(2240, 560)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_25" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(360, 520)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_26" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(360, 560)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_27" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(720, 520)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_28" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(720, 560)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_29" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1080, 520)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_30" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1080, 560)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_31" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1440, 520)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_32" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1440, 560)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_33" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1800, 520)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="tile_34" type="Sprite2D" parent="Tiles_1000000"]
-position = Vector2(1800, 560)
-texture = ExtResource("t2")
-region_enabled = true
-region_rect = Rect2(120, 40, 160, 40)
-centered = false
-
-[node name="Tiles_10000000" type="Node2D" parent="."]
-z_index = 3
-metadata/gm_depth = 10000000
-
-[node name="tile_0" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(140, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_1" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(140, 560)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_2" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(860, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_3" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(860, 560)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_4" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1220, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_5" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1220, 560)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_6" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1580, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_7" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1580, 560)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_8" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1940, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_9" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1940, 560)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_10" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2180, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 80, 80, 40)
-centered = false
-
-[node name="tile_11" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2180, 560)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 80, 80, 40)
-centered = false
-
-[node name="tile_12" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1740, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 80, 80, 40)
-centered = false
-
-[node name="tile_13" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1740, 560)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 80, 80, 40)
-centered = false
-
-[node name="tile_14" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1380, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 80, 80, 40)
-centered = false
-
-[node name="tile_15" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1380, 560)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 80, 80, 40)
-centered = false
-
-[node name="tile_16" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1020, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 80, 80, 40)
-centered = false
-
-[node name="tile_17" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1020, 560)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 80, 80, 40)
-centered = false
-
-[node name="tile_18" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(300, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 80, 80, 40)
-centered = false
-
-[node name="tile_19" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(300, 560)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 80, 80, 40)
-centered = false
-
-[node name="tile_20" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(500, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_21" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(500, 560)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 80, 80, 40)
-centered = false
-
-[node name="tile_22" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(0, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_23" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(40, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_24" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(80, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_25" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(120, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_26" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(160, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_27" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(200, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_28" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(240, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_29" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(280, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_30" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(320, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_31" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(360, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_32" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(400, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_33" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(440, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_34" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(480, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_35" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(520, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_36" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(560, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_37" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(600, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_38" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(640, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_39" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(680, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_40" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(720, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_41" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(760, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_42" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(800, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_43" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(840, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_44" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(880, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_45" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(920, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_46" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(960, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_47" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1000, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_48" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1040, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_49" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1080, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_50" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1120, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_51" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1160, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_52" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1200, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_53" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1240, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_54" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1280, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_55" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1320, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_56" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1360, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_57" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1400, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_58" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1440, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_59" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1480, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_60" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1520, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_61" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1560, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_62" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1600, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_63" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1640, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_64" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1680, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_65" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1720, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_66" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1760, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_67" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1800, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_68" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1840, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_69" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1880, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_70" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1920, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_71" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1960, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_72" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2000, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_73" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2040, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_74" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2080, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_75" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2120, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_76" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2160, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_77" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2200, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_78" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2240, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_79" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2280, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_80" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2320, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_81" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2360, 400)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(40, 0, 40, 80)
-centered = false
-
-[node name="tile_82" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(160, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_83" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(200, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_84" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(240, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_85" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(280, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_86" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(320, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_87" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(520, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_88" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(560, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_89" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(600, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_90" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(640, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_91" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(680, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_92" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(880, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_93" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(920, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_94" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(960, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_95" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1000, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_96" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1040, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_97" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1240, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_98" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1280, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_99" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1320, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_100" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1360, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_101" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1400, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_102" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1600, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_103" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1640, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_104" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1680, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_105" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1720, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_106" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1760, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_107" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(1960, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_108" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2000, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_109" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2040, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_110" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2080, 520)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="tile_111" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2120, 520)
+[node name="t0_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1147437209]
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
 centered = false
 
-[node name="tile_112" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2160, 520)
+[node name="t1_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1423627389]
+position = Vector2(800, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
 centered = false
 
-[node name="tile_113" type="Sprite2D" parent="Tiles_10000000"]
-position = Vector2(2200, 520)
+[node name="t2_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1324582673]
+position = Vector2(1600, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(80, 40, 40, 40)
-centered = false
-
-[node name="Objects_-1000000" type="Node2D" parent="."]
-z_index = -4
-metadata/gm_depth = -1000000
-
-[node name="obj_mario_0" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "obj_mario"
-position = Vector2(120, 400)
-texture = ExtResource("t8")
-offset = Vector2(-32, -32)
-centered = false
-visible = false
-
-[node name="Objects_-10000" type="Node2D" parent="."]
-z_index = -3
-metadata/gm_depth = -10000
-
-[node name="o_big_marker_0" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(0, 480)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_1" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(400, 480)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_2_2" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker_2"
-position = Vector2(-40, 80)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_2_3" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker_2"
-position = Vector2(-40, -320)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_4" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(800, 480)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_5" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(1200, 480)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_6" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(1600, 480)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_7" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(2000, 480)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_2_8" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker_2"
-position = Vector2(2400, 80)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_2_9" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker_2"
-position = Vector2(2400, -320)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_2_10" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker_2"
-position = Vector2(2400, -720)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_2_11" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker_2"
-position = Vector2(-40, -720)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_12" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(0, -760)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_13" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(400, -720)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_14" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(800, -760)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_15" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(1200, -760)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_16" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(1600, -760)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_17" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(2000, -760)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
 centered = false
-visible = false
 
-[node name="Objects_-9999" type="Node2D" parent="."]
+[node name="Tiles_1000000_42_0" type="TileMapLayer" parent="." unique_id=1013170976]
 z_index = -2
-metadata/gm_depth = -9999
+tile_map_data = PackedByteArray("AAAAAAwAAAAmAAIAAAABAAwAAAAsAAAAAAAEAAwAAAAsAAAAAAAHAAwAAAAsAAAAAAAKAAwAAAAsAAAAAAANAAwAAAAsAAAAAAAQAAwAAAAsAAAAAAATAAwAAAAsAAAAAAAWAAwAAAAsAAAAAAAZAAwAAAAsAAAAAAAcAAwAAAAsAAAAAAAfAAwAAAAsAAAAAAAiAAwAAAAsAAAAAAAlAAwAAAAsAAAAAAAoAAwAAAAsAAAAAAArAAwAAAAsAAAAAAAuAAwAAAAsAAAAAAAxAAwAAAAsAAAAAAA0AAwAAAAsAAAAAAA3AAwAAAAsAAAAAAA6AAwAAAAsAAAAAAAAAA0AAAAoAAAAAAAAAA4AAAAoAAAAAAA4AA0AAAAoAAAAAAA4AA4AAAAoAAAAAAAJAA0AAAAoAAAAAAAJAA4AAAAoAAAAAAASAA0AAAAoAAAAAAASAA4AAAAoAAAAAAAbAA0AAAAoAAAAAAAbAA4AAAAoAAAAAAAkAA0AAAAoAAAAAAAkAA4AAAAoAAAAAAAtAA0AAAAoAAAAAAAtAA4AAAAoAAAAAAA=")
+tile_set = ExtResource("tileset_42")
+collision_enabled = false
+navigation_enabled = false
+metadata/gm_depth = 1000000
+metadata/gm_tile_ids = {
+"0,12": 10002823,
+"0,13": 10002844,
+"0,14": 10002845,
+"1,12": 10002824,
+"10,12": 10002827,
+"13,12": 10002828,
+"16,12": 10002829,
+"18,13": 10002850,
+"18,14": 10002851,
+"19,12": 10002830,
+"22,12": 10002831,
+"25,12": 10002832,
+"27,13": 10002852,
+"27,14": 10002853,
+"28,12": 10002833,
+"31,12": 10002834,
+"34,12": 10002835,
+"36,13": 10002854,
+"36,14": 10002855,
+"37,12": 10002836,
+"4,12": 10002825,
+"40,12": 10002837,
+"43,12": 10002838,
+"45,13": 10002856,
+"45,14": 10002857,
+"46,12": 10002839,
+"49,12": 10002840,
+"52,12": 10002841,
+"55,12": 10002842,
+"56,13": 10002846,
+"56,14": 10002847,
+"58,12": 10002843,
+"7,12": 10002826,
+"9,13": 10002848,
+"9,14": 10002849
+}
 
-[node name="o_boss_boom_0" type="Sprite2D" parent="Objects_-9999"]
-metadata/gm_object = "o_boss_boom"
-metadata/gm_creation_code = "end_boss_item=0\r\nboss_level=2\r\ndodaj_energie_dla_bossa=2\r\naccelerator_akcji=0"
-position = Vector2(560, 400)
-texture = ExtResource("t5")
-offset = Vector2(-40, -40)
+[node name="Tiles_10000000_29_1" type="TileMapLayer" parent="." unique_id=746547706]
+z_index = -3
+position = Vector2(20, 0)
+tile_map_data = PackedByteArray("AAADAA0AAAAuAAAAAAADAA4AAAAuAAAAAAAVAA0AAAAuAAAAAAAVAA4AAAAuAAAAAAAeAA0AAAAuAAAAAAAeAA4AAAAuAAAAAAAnAA0AAAAuAAAAAAAnAA4AAAAuAAAAAAAwAA0AAAAuAAAAAAAwAA4AAAAuAAAAAAA2AA0AAAAwAAAAAAA2AA4AAAAwAAAAAAArAA0AAAAwAAAAAAArAA4AAAAwAAAAAAAiAA0AAAAwAAAAAAAiAA4AAAAwAAAAAAAZAA0AAAAwAAAAAAAZAA4AAAAwAAAAAAAHAA0AAAAwAAAAAAAHAA4AAAAwAAAAAAAMAA0AAAAuAAAAAAAMAA4AAAAuAAAAAAA=")
+tile_set = ExtResource("tileset_29")
+collision_enabled = false
+navigation_enabled = false
+metadata/gm_depth = 10000000
+metadata/gm_tile_ids = {
+"12,13": 10002882,
+"12,14": 10002883,
+"21,13": 10002864,
+"21,14": 10002865,
+"25,13": 10002878,
+"25,14": 10002879,
+"3,13": 10002862,
+"3,14": 10002863,
+"30,13": 10002866,
+"30,14": 10002867,
+"34,13": 10002876,
+"34,14": 10002877,
+"39,13": 10002868,
+"39,14": 10002869,
+"43,13": 10002874,
+"43,14": 10002875,
+"48,13": 10002870,
+"48,14": 10002871,
+"54,13": 10002872,
+"54,14": 10002873,
+"7,13": 10002880,
+"7,14": 10002881
+}
+
+[node name="Tiles_10000000_29_2" type="TileMapLayer" parent="." unique_id=537158395]
+z_index = -3
+tile_map_data = PackedByteArray("AAAAAAoAAAAlAAAAAAABAAoAAAAlAAAAAAACAAoAAAAlAAAAAAADAAoAAAAlAAAAAAAEAAoAAAAlAAAAAAAFAAoAAAAlAAAAAAAGAAoAAAAlAAAAAAAHAAoAAAAlAAAAAAAIAAoAAAAlAAAAAAAJAAoAAAAlAAAAAAAKAAoAAAAlAAAAAAALAAoAAAAlAAAAAAAMAAoAAAAlAAAAAAANAAoAAAAlAAAAAAAOAAoAAAAlAAAAAAAPAAoAAAAlAAAAAAAQAAoAAAAlAAAAAAARAAoAAAAlAAAAAAASAAoAAAAlAAAAAAATAAoAAAAlAAAAAAAUAAoAAAAlAAAAAAAVAAoAAAAlAAAAAAAWAAoAAAAlAAAAAAAXAAoAAAAlAAAAAAAYAAoAAAAlAAAAAAAZAAoAAAAlAAAAAAAaAAoAAAAlAAAAAAAbAAoAAAAlAAAAAAAcAAoAAAAlAAAAAAAdAAoAAAAlAAAAAAAeAAoAAAAlAAAAAAAfAAoAAAAlAAAAAAAgAAoAAAAlAAAAAAAhAAoAAAAlAAAAAAAiAAoAAAAlAAAAAAAjAAoAAAAlAAAAAAAkAAoAAAAlAAAAAAAlAAoAAAAlAAAAAAAmAAoAAAAlAAAAAAAnAAoAAAAlAAAAAAAoAAoAAAAlAAAAAAApAAoAAAAlAAAAAAAqAAoAAAAlAAAAAAArAAoAAAAlAAAAAAAsAAoAAAAlAAAAAAAtAAoAAAAlAAAAAAAuAAoAAAAlAAAAAAAvAAoAAAAlAAAAAAAwAAoAAAAlAAAAAAAxAAoAAAAlAAAAAAAyAAoAAAAlAAAAAAAzAAoAAAAlAAAAAAA0AAoAAAAlAAAAAAA1AAoAAAAlAAAAAAA2AAoAAAAlAAAAAAA3AAoAAAAlAAAAAAA4AAoAAAAlAAAAAAA5AAoAAAAlAAAAAAA6AAoAAAAlAAAAAAA7AAoAAAAlAAAAAAAEAA0AAAACAAYAAAAFAA0AAAACAAYAAAAGAA0AAAACAAYAAAAHAA0AAAACAAYAAAAIAA0AAAACAAYAAAANAA0AAAACAAYAAAAOAA0AAAACAAYAAAAPAA0AAAACAAYAAAAQAA0AAAACAAYAAAARAA0AAAACAAYAAAAWAA0AAAACAAYAAAAXAA0AAAACAAYAAAAYAA0AAAACAAYAAAAZAA0AAAACAAYAAAAaAA0AAAACAAYAAAAfAA0AAAACAAYAAAAgAA0AAAACAAYAAAAhAA0AAAACAAYAAAAiAA0AAAACAAYAAAAjAA0AAAACAAYAAAAoAA0AAAACAAYAAAApAA0AAAACAAYAAAAqAA0AAAACAAYAAAArAA0AAAACAAYAAAAsAA0AAAACAAYAAAAxAA0AAAACAAYAAAAyAA0AAAACAAYAAAAzAA0AAAACAAYAAAA0AA0AAAACAAYAAAA1AA0AAAACAAYAAAA2AA0AAAACAAYAAAA3AA0AAAACAAYAAAA=")
+tile_set = ExtResource("tileset_29")
+collision_enabled = false
+navigation_enabled = false
+metadata/gm_depth = 10000000
+metadata/gm_tile_ids = {
+"0,10": 10002884,
+"1,10": 10002885,
+"10,10": 10002894,
+"11,10": 10002895,
+"12,10": 10002896,
+"13,10": 10002897,
+"13,13": 10002957,
+"14,10": 10002898,
+"14,13": 10002958,
+"15,10": 10002899,
+"15,13": 10002959,
+"16,10": 10002900,
+"16,13": 10002960,
+"17,10": 10002901,
+"17,13": 10002961,
+"18,10": 10002902,
+"19,10": 10002903,
+"2,10": 10002886,
+"20,10": 10002904,
+"21,10": 10002905,
+"22,10": 10002906,
+"22,13": 10002962,
+"23,10": 10002907,
+"23,13": 10002963,
+"24,10": 10002908,
+"24,13": 10002964,
+"25,10": 10002909,
+"25,13": 10002965,
+"26,10": 10002910,
+"26,13": 10002966,
+"27,10": 10002911,
+"28,10": 10002912,
+"29,10": 10002913,
+"3,10": 10002887,
+"30,10": 10002914,
+"31,10": 10002915,
+"31,13": 10002967,
+"32,10": 10002916,
+"32,13": 10002968,
+"33,10": 10002917,
+"33,13": 10002969,
+"34,10": 10002918,
+"34,13": 10002970,
+"35,10": 10002919,
+"35,13": 10002971,
+"36,10": 10002920,
+"37,10": 10002921,
+"38,10": 10002922,
+"39,10": 10002923,
+"4,10": 10002888,
+"4,13": 10002952,
+"40,10": 10002924,
+"40,13": 10002972,
+"41,10": 10002925,
+"41,13": 10002973,
+"42,10": 10002926,
+"42,13": 10002974,
+"43,10": 10002927,
+"43,13": 10002975,
+"44,10": 10002928,
+"44,13": 10002976,
+"45,10": 10002929,
+"46,10": 10002930,
+"47,10": 10002931,
+"48,10": 10002932,
+"49,10": 10002933,
+"49,13": 10002977,
+"5,10": 10002889,
+"5,13": 10002953,
+"50,10": 10002934,
+"50,13": 10002978,
+"51,10": 10002935,
+"51,13": 10002979,
+"52,10": 10002936,
+"52,13": 10002980,
+"53,10": 10002937,
+"53,13": 10002981,
+"54,10": 10002938,
+"54,13": 10002982,
+"55,10": 10002939,
+"55,13": 10002983,
+"56,10": 10002940,
+"57,10": 10002941,
+"58,10": 10002942,
+"59,10": 10002943,
+"6,10": 10002890,
+"6,13": 10002954,
+"7,10": 10002891,
+"7,13": 10002955,
+"8,10": 10002892,
+"8,13": 10002956,
+"9,10": 10002893
+}
+
+[node name="Objects_-10000000.0" type="Node2D" parent="." unique_id=1419395076]
+z_index = 5
+metadata/gm_depth = -10000000.0
+
+[node name="obj_mario_line_marker_0" type="Sprite2D" parent="Objects_-10000000.0" unique_id=348975064]
+visible = false
+position = Vector2(136, 416)
+texture = ExtResource("t13")
 centered = false
+offset = Vector2(-15, -15)
+metadata/gm_object = "obj_mario_line_marker"
+metadata/gm_object_index = 309
+metadata/gm_runtime_spawned = true
 
-[node name="Objects_0" type="Node2D" parent="."]
-z_index = -1
-metadata/gm_depth = 0
+[node name="Objects_-1000000.0" type="Node2D" parent="." unique_id=466369990]
+z_index = 4
+metadata/gm_depth = -1000000.0
 
-[node name="o_CASTLE_bujany_lancuch_0" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_CASTLE_bujany_lancuch"
-metadata/gm_creation_code = "odleglosc=30\r\ndlugosc=10\r\nszybkosc=1\r\n\r\npromien_bujania=10\r\nkat=0\r\nkat_poczatkowy=0"
-position = Vector2(360, -80)
-
-[node name="o_CASTLE_bujany_lancuch_1" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_CASTLE_bujany_lancuch"
-metadata/gm_creation_code = "odleglosc=30\r\ndlugosc=10\r\nszybkosc=1\r\n\r\npromien_bujania=10\r\nkat=0\r\nkat_poczatkowy=0"
-position = Vector2(800, -80)
-
-[node name="Objects_90000" type="Node2D" parent="."]
-z_index = 0
-metadata/gm_depth = 90000
-
-[node name="o_BIG_static_castle_collumn_0" type="Sprite2D" parent="Objects_90000"]
-metadata/gm_object = "o_BIG_static_castle_collumn"
-metadata/gm_creation_code = "image_xscale=1.2\r\nimage_yscale=1.2\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=2.5\r\nmnoznik=0\r\ndepth=910000099\r\nodleglosc_przemijania=400"
-position = Vector2(280, 600)
-texture = ExtResource("t4")
-offset = Vector2(-18, -42)
+[node name="obj_mario_0" type="Sprite2D" parent="Objects_-1000000.0" unique_id=180846835]
+visible = false
+position = Vector2(120, 416)
+texture = ExtResource("t9")
 centered = false
+offset = Vector2(-32, -32)
+metadata/gm_object = "obj_mario"
+metadata/gm_object_index = 303
+metadata/gm_instance = 103075
 
-[node name="o_BIG_static_castle_collumn_1" type="Sprite2D" parent="Objects_90000"]
-metadata/gm_object = "o_BIG_static_castle_collumn"
-metadata/gm_creation_code = "image_xscale=1.2\r\nimage_yscale=1.2\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=2.5\r\nmnoznik=0\r\ndepth=910000099\r\nodleglosc_przemijania=400"
-position = Vector2(600, 600)
-texture = ExtResource("t4")
-offset = Vector2(-18, -42)
+[node name="o_HUD_tworzony_przez_gracza_1" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1293526530]
+position = Vector2(120, 416)
+texture = ExtResource("t9")
 centered = false
+offset = Vector2(-32, -32)
+metadata/gm_object = "o_HUD_tworzony_przez_gracza"
+metadata/gm_object_index = 304
+metadata/gm_runtime_spawned = true
 
-[node name="o_BIG_static_castle_collumn_2" type="Sprite2D" parent="Objects_90000"]
-metadata/gm_object = "o_BIG_static_castle_collumn"
-metadata/gm_creation_code = "image_xscale=1.4\r\nimage_yscale=1.4\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=2.2\r\nmnoznik=0\r\ndepth=910000099\r\nodleglosc_przemijania=400"
-position = Vector2(1040, 600)
-texture = ExtResource("t4")
-offset = Vector2(-18, -42)
+[node name="Objects_-99999.0" type="Node2D" parent="." unique_id=1595886733]
+z_index = 3
+metadata/gm_depth = -99999.0
+
+[node name="obj_mario_windor_0" type="Sprite2D" parent="Objects_-99999.0" unique_id=1481795167]
+visible = false
+position = Vector2(120, 416)
+texture = ExtResource("t12")
 centered = false
+metadata/gm_object = "obj_mario_windor"
+metadata/gm_object_index = 310
+metadata/gm_runtime_spawned = true
 
-[node name="Objects_99999" type="Node2D" parent="."]
+[node name="Objects_-10000.0" type="Node2D" parent="." unique_id=1251516514]
+z_index = 2
+metadata/gm_depth = -10000.0
+
+[node name="o_big_marker_0" type="Sprite2D" parent="Objects_-10000.0" unique_id=2060337828]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 480)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103051
+
+[node name="o_big_marker_1" type="Sprite2D" parent="Objects_-10000.0" unique_id=269108698]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(400, 480)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103052
+
+[node name="o_big_marker_2_2" type="Sprite2D" parent="Objects_-10000.0" unique_id=252537411]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-40, 80)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_big_marker_2"
+metadata/gm_object_index = 12
+metadata/gm_instance = 103053
+
+[node name="o_big_marker_2_3" type="Sprite2D" parent="Objects_-10000.0" unique_id=1080889527]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-40, -320)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_big_marker_2"
+metadata/gm_object_index = 12
+metadata/gm_instance = 103056
+
+[node name="o_big_marker_4" type="Sprite2D" parent="Objects_-10000.0" unique_id=1806389779]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(800, 480)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103057
+
+[node name="o_big_marker_5" type="Sprite2D" parent="Objects_-10000.0" unique_id=1765702469]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1200, 480)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103059
+
+[node name="o_big_marker_6" type="Sprite2D" parent="Objects_-10000.0" unique_id=1953807320]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1600, 480)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103060
+
+[node name="o_big_marker_7" type="Sprite2D" parent="Objects_-10000.0" unique_id=39926177]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2000, 480)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103061
+
+[node name="o_big_marker_2_8" type="Sprite2D" parent="Objects_-10000.0" unique_id=205864150]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2400, 80)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_big_marker_2"
+metadata/gm_object_index = 12
+metadata/gm_instance = 103062
+
+[node name="o_big_marker_2_9" type="Sprite2D" parent="Objects_-10000.0" unique_id=425306073]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2400, -320)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_big_marker_2"
+metadata/gm_object_index = 12
+metadata/gm_instance = 103063
+
+[node name="o_big_marker_2_10" type="Sprite2D" parent="Objects_-10000.0" unique_id=652690717]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2400, -720)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_big_marker_2"
+metadata/gm_object_index = 12
+metadata/gm_instance = 103064
+
+[node name="o_big_marker_2_11" type="Sprite2D" parent="Objects_-10000.0" unique_id=443148745]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-40, -720)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_big_marker_2"
+metadata/gm_object_index = 12
+metadata/gm_instance = 103065
+
+[node name="o_big_marker_12" type="Sprite2D" parent="Objects_-10000.0" unique_id=1649264100]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -760)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103066
+
+[node name="o_big_marker_13" type="Sprite2D" parent="Objects_-10000.0" unique_id=1684451792]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(400, -720)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103067
+
+[node name="o_big_marker_14" type="Sprite2D" parent="Objects_-10000.0" unique_id=1746192501]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(800, -760)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103068
+
+[node name="o_big_marker_15" type="Sprite2D" parent="Objects_-10000.0" unique_id=1109165250]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1200, -760)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103069
+
+[node name="o_big_marker_16" type="Sprite2D" parent="Objects_-10000.0" unique_id=1385523929]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1600, -760)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103070
+
+[node name="o_big_marker_17" type="Sprite2D" parent="Objects_-10000.0" unique_id=424710839]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2000, -760)
+texture = ExtResource("t7")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 103071
+
+[node name="Objects_-9999.0" type="Node2D" parent="." unique_id=435163554]
 z_index = 1
-metadata/gm_depth = 99999
+metadata/gm_depth = -9999.0
 
-[node name="o_thromb_1_0" type="Sprite2D" parent="Objects_99999"]
-metadata/gm_object = "o_thromb_1"
-metadata/gm_creation_code = "kierunek_jebniecia=0"
+[node name="o_boss_boom_0" type="Sprite2D" parent="Objects_-9999.0" unique_id=40464055]
+visible = false
+position = Vector2(560, 432)
+scale = Vector2(1, 1.2)
+texture = ExtResource("t6")
+centered = false
+offset = Vector2(-40, -40)
+metadata/gm_object = "o_boss_boom"
+metadata/gm_object_index = 366
+metadata/gm_instance = 103072
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "end_boss_item=0
+boss_level=2
+dodaj_energie_dla_bossa=2
+accelerator_akcji=0"
+
+[node name="o_boss_boom_1" type="Sprite2D" parent="Objects_-9999.0" unique_id=1294984251]
+position = Vector2(570, 452.056)
+rotation = -0.004888
+texture = ExtResource("t19")
+centered = false
+offset = Vector2(-20, -23)
+metadata/gm_object = "o_boss_boom"
+metadata/gm_object_index = 366
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103072
+metadata/gm_preview_pos = Vector2(570, 452.056)
+metadata/gm_base_pos = Vector2(560, 432)
+
+[node name="o_boss_boom_2" type="Sprite2D" parent="Objects_-9999.0" unique_id=333690715]
+position = Vector2(550, 452.056)
+rotation = 0.004888
+scale = Vector2(-1, 1)
+texture = ExtResource("t19")
+centered = false
+offset = Vector2(-20, -23)
+metadata/gm_object = "o_boss_boom"
+metadata/gm_object_index = 366
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103072
+metadata/gm_preview_pos = Vector2(550, 452.056)
+metadata/gm_base_pos = Vector2(560, 432)
+
+[node name="o_boss_boom_3" type="Sprite2D" parent="Objects_-9999.0" unique_id=1423548033]
+position = Vector2(560, 422.28006)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-61, -49)
+metadata/gm_object = "o_boss_boom"
+metadata/gm_object_index = 366
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103072
+metadata/gm_preview_pos = Vector2(560, 422.28006)
+metadata/gm_base_pos = Vector2(560, 432)
+
+[node name="o_boss_boom_4" type="Sprite2D" parent="Objects_-9999.0" unique_id=789293818]
+position = Vector2(590, 422.28006)
+rotation = -0.004888
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-16, -32)
+metadata/gm_object = "o_boss_boom"
+metadata/gm_object_index = 366
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103072
+metadata/gm_preview_pos = Vector2(590, 422.28006)
+metadata/gm_base_pos = Vector2(560, 432)
+
+[node name="o_boss_boom_5" type="Sprite2D" parent="Objects_-9999.0" unique_id=801278598]
+position = Vector2(530, 422.28006)
+rotation = 0.004888
+scale = Vector2(-1, 1)
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-16, -32)
+metadata/gm_object = "o_boss_boom"
+metadata/gm_object_index = 366
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103072
+metadata/gm_preview_pos = Vector2(530, 422.28006)
+metadata/gm_base_pos = Vector2(560, 432)
+
+[node name="o_boss_boom_6" type="Sprite2D" parent="Objects_-9999.0" unique_id=2096819241]
+position = Vector2(570, 451.95605)
+rotation = 0.003835
+texture = ExtResource("t19")
+centered = false
+offset = Vector2(-20, -23)
+metadata/gm_object = "o_boss_boom"
+metadata/gm_object_index = 366
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103072
+metadata/gm_preview_pos = Vector2(570, 451.95605)
+metadata/gm_base_pos = Vector2(560, 432)
+
+[node name="o_boss_boom_7" type="Sprite2D" parent="Objects_-9999.0" unique_id=1726582590]
+position = Vector2(550, 451.95605)
+rotation = -0.003835
+scale = Vector2(-1, 1)
+texture = ExtResource("t19")
+centered = false
+offset = Vector2(-20, -23)
+metadata/gm_object = "o_boss_boom"
+metadata/gm_object_index = 366
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103072
+metadata/gm_preview_pos = Vector2(550, 451.95605)
+metadata/gm_base_pos = Vector2(560, 432)
+
+[node name="o_boss_boom_8" type="Sprite2D" parent="Objects_-9999.0" unique_id=425471248]
+position = Vector2(560, 421.78027)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-61, -49)
+metadata/gm_object = "o_boss_boom"
+metadata/gm_object_index = 366
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103072
+metadata/gm_preview_pos = Vector2(560, 421.78027)
+metadata/gm_base_pos = Vector2(560, 432)
+
+[node name="o_boss_boom_9" type="Sprite2D" parent="Objects_-9999.0" unique_id=707354670]
+position = Vector2(590, 421.78027)
+rotation = 0.003835
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-16, -32)
+metadata/gm_object = "o_boss_boom"
+metadata/gm_object_index = 366
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103072
+metadata/gm_preview_pos = Vector2(590, 421.78027)
+metadata/gm_base_pos = Vector2(560, 432)
+
+[node name="o_boss_boom_10" type="Sprite2D" parent="Objects_-9999.0" unique_id=49246197]
+position = Vector2(530, 421.78027)
+rotation = -0.003835
+scale = Vector2(-1, 1)
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-16, -32)
+metadata/gm_object = "o_boss_boom"
+metadata/gm_object_index = 366
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103072
+metadata/gm_preview_pos = Vector2(530, 421.78027)
+metadata/gm_base_pos = Vector2(560, 432)
+
+[node name="Objects_0.0" type="Node2D" parent="." unique_id=1226768332]
+metadata/gm_depth = 0.0
+
+[node name="o_CASTLE_bujany_lancuch_0" type="Sprite2D" parent="Objects_0.0" unique_id=1142642455]
+visible = false
+position = Vector2(360, -80)
+metadata/gm_object = "o_CASTLE_bujany_lancuch"
+metadata/gm_object_index = 365
+metadata/gm_instance = 103081
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "odleglosc=30
+dlugosc=10
+szybkosc=1
+
+promien_bujania=10
+kat=0
+kat_poczatkowy=0"
+
+[node name="o_CASTLE_bujany_lancuch_1" type="Sprite2D" parent="Objects_0.0" unique_id=709582452]
+visible = false
+position = Vector2(800, -80)
+metadata/gm_object = "o_CASTLE_bujany_lancuch"
+metadata/gm_object_index = 365
+metadata/gm_instance = 103082
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "odleglosc=30
+dlugosc=10
+szybkosc=1
+
+promien_bujania=10
+kat=0
+kat_poczatkowy=0"
+
+[node name="o_wind_fix_marker_2" type="Sprite2D" parent="Objects_0.0" unique_id=2038773498]
+visible = false
+position = Vector2(136, 484)
+texture = ExtResource("t10")
+centered = false
+metadata/gm_object = "o_wind_fix_marker"
+metadata/gm_object_index = 668
+metadata/gm_runtime_spawned = true
+
+[node name="obj_mario_anim_3" type="Sprite2D" parent="Objects_0.0" unique_id=2097632048]
+position = Vector2(136, 455)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "obj_mario_anim"
+metadata/gm_object_index = 306
+metadata/gm_runtime_spawned = true
+
+[node name="o_koniec_etapu_4" type="Sprite2D" parent="Objects_0.0" unique_id=455668607]
+position = Vector2(-10000, -10000)
+scale = Vector2(0.1, 1)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_koniec_etapu"
+metadata/gm_object_index = 288
+metadata/gm_runtime_spawned = true
+
+[node name="o_CASTLE_bujany_lancuch_5" type="Sprite2D" parent="Objects_0.0" unique_id=462876153]
+position = Vector2(360, -80)
+rotation = -1.433973
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_lancuch"
+metadata/gm_object_index = 365
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103081
+metadata/gm_preview_pos = Vector2(360, -80)
+metadata/gm_base_pos = Vector2(360, -80)
+
+[node name="o_CASTLE_bujany_lancuch_6" type="Sprite2D" parent="Objects_0.0" unique_id=1544813412]
+position = Vector2(355.76663, -50.30019)
+rotation = -1.42445
+texture = ExtResource("t18")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_lancuch"
+metadata/gm_object_index = 365
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103081
+metadata/gm_preview_pos = Vector2(355.76663, -50.30019)
+metadata/gm_base_pos = Vector2(360, -80)
+
+[node name="o_CASTLE_bujany_lancuch_7" type="Sprite2D" parent="Objects_0.0" unique_id=87571531]
+position = Vector2(360, -80)
+rotation = -1.435885
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_lancuch"
+metadata/gm_object_index = 365
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103081
+metadata/gm_preview_pos = Vector2(360, -80)
+metadata/gm_base_pos = Vector2(360, -80)
+
+[node name="o_CASTLE_bujany_lancuch_8" type="Sprite2D" parent="Objects_0.0" unique_id=290389005]
+position = Vector2(355.82538, -50.291878)
+rotation = -1.426495
+texture = ExtResource("t18")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_lancuch"
+metadata/gm_object_index = 365
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103081
+metadata/gm_preview_pos = Vector2(355.82538, -50.291878)
+metadata/gm_base_pos = Vector2(360, -80)
+
+[node name="o_CASTLE_bujany_lancuch_9" type="Sprite2D" parent="Objects_0.0" unique_id=642937534]
+position = Vector2(800, -80)
+rotation = -1.43224
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_lancuch"
+metadata/gm_object_index = 365
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103082
+metadata/gm_preview_pos = Vector2(800, -80)
+metadata/gm_base_pos = Vector2(800, -80)
+
+[node name="o_CASTLE_bujany_lancuch_10" type="Sprite2D" parent="Objects_0.0" unique_id=132258570]
+position = Vector2(795.7134, -50.307827)
+rotation = -1.422598
+texture = ExtResource("t18")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_lancuch"
+metadata/gm_object_index = 365
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103082
+metadata/gm_preview_pos = Vector2(795.7134, -50.307827)
+metadata/gm_base_pos = Vector2(800, -80)
+
+[node name="o_CASTLE_bujany_lancuch_11" type="Sprite2D" parent="Objects_0.0" unique_id=1240075307]
+position = Vector2(800, -80)
+rotation = -1.434114
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_lancuch"
+metadata/gm_object_index = 365
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103082
+metadata/gm_preview_pos = Vector2(800, -80)
+metadata/gm_base_pos = Vector2(800, -80)
+
+[node name="o_CASTLE_bujany_lancuch_12" type="Sprite2D" parent="Objects_0.0" unique_id=267137746]
+position = Vector2(795.77094, -50.299576)
+rotation = -1.424601
+texture = ExtResource("t18")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_lancuch"
+metadata/gm_object_index = 365
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103082
+metadata/gm_preview_pos = Vector2(795.77094, -50.299576)
+metadata/gm_base_pos = Vector2(800, -80)
+
+[node name="Objects_99999.0" type="Node2D" parent="." unique_id=2067239836]
+z_index = -1
+metadata/gm_depth = 99999.0
+
+[node name="o_thromb_1_0" type="Sprite2D" parent="Objects_99999.0" unique_id=1443229540]
+visible = false
 position = Vector2(800, 80)
-texture = ExtResource("t3")
-offset = Vector2(-66, -49)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("t4")
 centered = false
-
-[node name="o_thromb_1_1" type="Sprite2D" parent="Objects_99999"]
+offset = Vector2(-66, -49)
 metadata/gm_object = "o_thromb_1"
+metadata/gm_object_index = 178
+metadata/gm_instance = 137453
+metadata/gm_draw_base = true
 metadata/gm_creation_code = "kierunek_jebniecia=0"
+
+[node name="o_thromb_1_1" type="Sprite2D" parent="Objects_99999.0" unique_id=1702089645]
 position = Vector2(1520, 80)
-texture = ExtResource("t3")
-offset = Vector2(-66, -49)
+texture = ExtResource("t4")
 centered = false
-
-[node name="o_thromb_1_2" type="Sprite2D" parent="Objects_99999"]
+offset = Vector2(-66, -49)
 metadata/gm_object = "o_thromb_1"
+metadata/gm_object_index = 178
+metadata/gm_instance = 137454
 metadata/gm_creation_code = "kierunek_jebniecia=0"
+
+[node name="o_thromb_1_2" type="Sprite2D" parent="Objects_99999.0" unique_id=1898634283]
 position = Vector2(2280, 80)
-texture = ExtResource("t3")
-offset = Vector2(-66, -49)
+texture = ExtResource("t4")
 centered = false
+offset = Vector2(-66, -49)
+metadata/gm_object = "o_thromb_1"
+metadata/gm_object_index = 178
+metadata/gm_instance = 137455
+metadata/gm_creation_code = "kierunek_jebniecia=0"
+
+[node name="o_thromb_1_3" type="Sprite2D" parent="Objects_99999.0" unique_id=637368966]
+position = Vector2(800, 83.213936)
+texture = ExtResource("t14")
+centered = false
+offset = Vector2(-104, -111)
+metadata/gm_object = "o_thromb_1"
+metadata/gm_object_index = 178
+metadata/gm_draw_preview = true
+metadata/gm_instance = 137453
+metadata/gm_preview_pos = Vector2(800, 83.213936)
+metadata/gm_base_pos = Vector2(800, 80)
+
+[node name="o_thromb_1_4" type="Sprite2D" parent="Objects_99999.0" unique_id=1607529215]
+position = Vector2(800, 117.213936)
+scale = Vector2(1, 0.9106969)
+texture = ExtResource("t15")
+centered = false
+offset = Vector2(-65, -36)
+metadata/gm_object = "o_thromb_1"
+metadata/gm_object_index = 178
+metadata/gm_draw_preview = true
+metadata/gm_instance = 137453
+metadata/gm_preview_pos = Vector2(800, 117.213936)
+metadata/gm_base_pos = Vector2(800, 80)
+
+[node name="o_thromb_1_5" type="Sprite2D" parent="Objects_99999.0" unique_id=154439132]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(775, 58.21394)
+texture = ExtResource("t16")
+centered = false
+offset = Vector2(-43, -43)
+metadata/gm_object = "o_thromb_1"
+metadata/gm_object_index = 178
+metadata/gm_draw_preview = true
+metadata/gm_instance = 137453
+metadata/gm_preview_pos = Vector2(775, 58.21394)
+metadata/gm_base_pos = Vector2(800, 80)
+
+[node name="o_thromb_1_6" type="Sprite2D" parent="Objects_99999.0" unique_id=782521193]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(825, 58.21394)
+texture = ExtResource("t16")
+centered = false
+offset = Vector2(-43, -43)
+metadata/gm_object = "o_thromb_1"
+metadata/gm_object_index = 178
+metadata/gm_draw_preview = true
+metadata/gm_instance = 137453
+metadata/gm_preview_pos = Vector2(825, 58.21394)
+metadata/gm_base_pos = Vector2(800, 80)
+
+[node name="o_thromb_1_7" type="Sprite2D" parent="Objects_99999.0" unique_id=135278137]
+position = Vector2(800, 83.2803)
+texture = ExtResource("t14")
+centered = false
+offset = Vector2(-104, -111)
+metadata/gm_object = "o_thromb_1"
+metadata/gm_object_index = 178
+metadata/gm_draw_preview = true
+metadata/gm_instance = 137453
+metadata/gm_preview_pos = Vector2(800, 83.2803)
+metadata/gm_base_pos = Vector2(800, 80)
+
+[node name="o_thromb_1_8" type="Sprite2D" parent="Objects_99999.0" unique_id=1923900636]
+position = Vector2(800, 117.2803)
+scale = Vector2(1, 0.91401476)
+texture = ExtResource("t15")
+centered = false
+offset = Vector2(-65, -36)
+metadata/gm_object = "o_thromb_1"
+metadata/gm_object_index = 178
+metadata/gm_draw_preview = true
+metadata/gm_instance = 137453
+metadata/gm_preview_pos = Vector2(800, 117.2803)
+metadata/gm_base_pos = Vector2(800, 80)
+
+[node name="o_thromb_1_9" type="Sprite2D" parent="Objects_99999.0" unique_id=1006949191]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(775, 58.280296)
+texture = ExtResource("t16")
+centered = false
+offset = Vector2(-43, -43)
+metadata/gm_object = "o_thromb_1"
+metadata/gm_object_index = 178
+metadata/gm_draw_preview = true
+metadata/gm_instance = 137453
+metadata/gm_preview_pos = Vector2(775, 58.280296)
+metadata/gm_base_pos = Vector2(800, 80)
+
+[node name="o_thromb_1_10" type="Sprite2D" parent="Objects_99999.0" unique_id=1335407935]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(825, 58.280296)
+texture = ExtResource("t16")
+centered = false
+offset = Vector2(-43, -43)
+metadata/gm_object = "o_thromb_1"
+metadata/gm_object_index = 178
+metadata/gm_draw_preview = true
+metadata/gm_instance = 137453
+metadata/gm_preview_pos = Vector2(825, 58.280296)
+metadata/gm_base_pos = Vector2(800, 80)
+
+[node name="Objects_910000099.0" type="Node2D" parent="." unique_id=1530465838]
+z_index = -4
+metadata/gm_depth = 910000099.0
+
+[node name="o_BIG_static_castle_collumn_0" type="Sprite2D" parent="Objects_910000099.0" unique_id=28224560]
+visible = false
+position = Vector2(280, 600)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-104, -490)
+metadata/gm_object = "o_BIG_static_castle_collumn"
+metadata/gm_object_index = 363
+metadata/gm_instance = 103077
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1.2
+image_yscale=1.2
+image_angle=0
+image_alpha=1
+dzielnik=2.5
+mnoznik=0
+depth=910000099
+odleglosc_przemijania=400"
+
+[node name="o_BIG_static_castle_collumn_1" type="Sprite2D" parent="Objects_910000099.0" unique_id=956378370]
+visible = false
+position = Vector2(600, 600)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-104, -490)
+metadata/gm_object = "o_BIG_static_castle_collumn"
+metadata/gm_object_index = 363
+metadata/gm_instance = 103078
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1.2
+image_yscale=1.2
+image_angle=0
+image_alpha=1
+dzielnik=2.5
+mnoznik=0
+depth=910000099
+odleglosc_przemijania=400"
+
+[node name="o_BIG_static_castle_collumn_2" type="Sprite2D" parent="Objects_910000099.0" unique_id=1042121478]
+visible = false
+position = Vector2(1040, 600)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-104, -490)
+metadata/gm_object = "o_BIG_static_castle_collumn"
+metadata/gm_object_index = 363
+metadata/gm_instance = 103084
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1.4
+image_yscale=1.4
+image_angle=0
+image_alpha=1
+dzielnik=2.2
+mnoznik=0
+depth=910000099
+odleglosc_przemijania=400"
+
+[node name="o_BIG_static_castle_collumn_3" type="Sprite2D" parent="Objects_910000099.0" unique_id=1015655274]
+position = Vector2(280, 600)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-104, -490)
+metadata/gm_object = "o_BIG_static_castle_collumn"
+metadata/gm_object_index = 363
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103077
+metadata/gm_preview_pos = Vector2(280, 600)
+metadata/gm_base_pos = Vector2(280, 600)
+
+[node name="o_BIG_static_castle_collumn_4" type="Sprite2D" parent="Objects_910000099.0" unique_id=807839910]
+position = Vector2(280, 600)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-104, -490)
+metadata/gm_object = "o_BIG_static_castle_collumn"
+metadata/gm_object_index = 363
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103077
+metadata/gm_preview_pos = Vector2(280, 600)
+metadata/gm_base_pos = Vector2(280, 600)
+
+[node name="o_BIG_static_castle_collumn_5" type="Sprite2D" parent="Objects_910000099.0" unique_id=897053422]
+position = Vector2(600, 600)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-104, -490)
+metadata/gm_object = "o_BIG_static_castle_collumn"
+metadata/gm_object_index = 363
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103078
+metadata/gm_preview_pos = Vector2(600, 600)
+metadata/gm_base_pos = Vector2(600, 600)
+
+[node name="o_BIG_static_castle_collumn_6" type="Sprite2D" parent="Objects_910000099.0" unique_id=6258715]
+position = Vector2(600, 600)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-104, -490)
+metadata/gm_object = "o_BIG_static_castle_collumn"
+metadata/gm_object_index = 363
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103078
+metadata/gm_preview_pos = Vector2(600, 600)
+metadata/gm_base_pos = Vector2(600, 600)
+
+[node name="o_BIG_static_castle_collumn_7" type="Sprite2D" parent="Objects_910000099.0" unique_id=1132744679]
+position = Vector2(1040, 600)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-104, -490)
+metadata/gm_object = "o_BIG_static_castle_collumn"
+metadata/gm_object_index = 363
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103084
+metadata/gm_preview_pos = Vector2(1040, 600)
+metadata/gm_base_pos = Vector2(1040, 600)
+
+[node name="o_BIG_static_castle_collumn_8" type="Sprite2D" parent="Objects_910000099.0" unique_id=534173468]
+position = Vector2(1040, 600)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-104, -490)
+metadata/gm_object = "o_BIG_static_castle_collumn"
+metadata/gm_object_index = 363
+metadata/gm_draw_preview = true
+metadata/gm_instance = 103084
+metadata/gm_preview_pos = Vector2(1040, 600)
+metadata/gm_base_pos = Vector2(1040, 600)

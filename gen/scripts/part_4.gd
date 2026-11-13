@@ -133,7 +133,7 @@ static func script_anim_trzymanie_sie_liny(S, A: Array) -> Variant:
 		S.g_climbing += 1
 		if (S.g_climbing > 10):
 			S.g_climbing = 0
-			P2.SXMS_SFX_PlayExt(S, [42, (((((S.x - R.aget(R.view_xview, 0))) / R.get_obj_var(925, "g_sw"))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [42, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / R.get_obj_var(925, "g_sw"))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 		S.g_globalny_kat += (R.sin(S, R.degtorad(S, (S.g_linowanie / 2))) * 10)
 		if R.eqv(S, S.g_size2, 1):
 			if R.eqv(S, S.g_niesie, 1):
@@ -236,14 +236,14 @@ static func script_anim_trzymanie_sie_trampoliny(S, A: Array) -> Variant:
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_arm, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (230 + S.g_globalny_kat))) * 17) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (230 + S.g_globalny_kat))) * 17) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), S.g_size, S.g_size, (S.g_globalny_kat - (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 16)), S.g_power_star_kolorek, (1 + S.g_miganie))
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_arm, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (130 + S.g_globalny_kat))) * 17) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (130 + S.g_globalny_kat))) * 17) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.g_size * -(1)), S.g_size, (S.g_globalny_kat + (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 16)), S.g_power_star_kolorek, (1 + S.g_miganie))
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_leg, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (S.g_globalny_kat - 30))) * (((21 + S.g_berserk) - 5))) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (S.g_globalny_kat - 30))) * (((21 + S.g_berserk) - 5))) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), S.g_size, S.g_size, ((S.g_globalny_kat - (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 16)) - 20), S.g_power_star_kolorek, (1 + S.g_miganie))
-		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_leg, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (S.g_globalny_kat + 30))) * (((21 + R.aget(S.g_lolo, 0)) - 5))) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (S.g_globalny_kat + 30))) * (((21 + R.aget(S.g_lolo, 0)) - 5))) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.g_size * -(1)), S.g_size, ((S.g_globalny_kat + (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 16)) + 20), S.g_power_star_kolorek, (1 + S.g_miganie))
+		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_leg, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (S.g_globalny_kat + 30))) * (((21 + R.anum(R.aget(S.g_lolo, 0))) - 5))) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (S.g_globalny_kat + 30))) * (((21 + R.anum(R.aget(S.g_lolo, 0))) - 5))) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.g_size * -(1)), S.g_size, ((S.g_globalny_kat + (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 16)) + 20), S.g_power_star_kolorek, (1 + S.g_miganie))
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_chest, S.g_anim), 0, (S.x + (((R.sin(S, R.degtorad(S, S.g_globalny_kat)) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + (((R.cos(S, R.degtorad(S, S.g_globalny_kat)) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), S.g_size, S.g_size, S.g_globalny_kat, S.g_power_star_kolorek, (1 + S.g_miganie))
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_head, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (180 + S.g_globalny_kat))) * 25) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (180 + S.g_globalny_kat))) * 25) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), S.g_size, S.g_size, S.g_globalny_kat, S.g_power_star_kolorek, (1 + S.g_miganie))
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_ogon, S.g_anim), 0, (((7 * S.g_size) + S.x) + (((R.sin(S, R.degtorad(S, S.g_globalny_kat)) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (((7 * S.g_size) + S.y) + (((R.cos(S, R.degtorad(S, S.g_globalny_kat)) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), S.g_size, S.g_size, ((((S.g_globalny_kat + (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 5)) + 30) + S.g_ogon_uderzak) + (R.sin(S, R.degtorad(S, S.g_ogon_merda)) * 20)), S.g_power_star_kolorek, (1 + S.g_miganie))
 		S.g_climbing += 1
 		if (S.g_climbing > 10):
 			S.g_climbing = 0
-			P2.SXMS_SFX_PlayExt(S, [42, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [42, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 		S.g_run_pochylenie = 0
 		S.g_berserk = (R.sin(S, R.degtorad(S, (S.g_hamowanie + 180))) * 5)
 		R.aset(S.g_lolo, 0, (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 5))
@@ -255,14 +255,14 @@ static func script_anim_trzymanie_sie_trampoliny(S, A: Array) -> Variant:
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_arm, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (230 + S.g_globalny_kat))) * 17) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (230 + S.g_globalny_kat))) * 17) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), S.g_size, S.g_size, (S.g_globalny_kat - (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 16)), S.g_power_star_kolorek, (1 + S.g_miganie))
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_arm, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (130 + S.g_globalny_kat))) * 17) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (130 + S.g_globalny_kat))) * 17) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.g_size * -(1)), S.g_size, (S.g_globalny_kat - (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 16)), S.g_power_star_kolorek, (1 + S.g_miganie))
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_leg, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (S.g_globalny_kat - 30))) * (((21 + S.g_berserk) - 5))) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (S.g_globalny_kat - 30))) * (((21 + S.g_berserk) - 5))) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), S.g_size, S.g_size, ((S.g_globalny_kat - (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 16)) - 20), S.g_power_star_kolorek, (1 + S.g_miganie))
-		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_leg, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (S.g_globalny_kat + 30))) * (((21 + R.aget(S.g_lolo, 0)) - 5))) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (S.g_globalny_kat + 30))) * (((21 + R.aget(S.g_lolo, 0)) - 5))) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.g_size * -(1)), S.g_size, ((S.g_globalny_kat + (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 16)) + 20), S.g_power_star_kolorek, (1 + S.g_miganie))
+		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_leg, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (S.g_globalny_kat + 30))) * (((21 + R.anum(R.aget(S.g_lolo, 0))) - 5))) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (S.g_globalny_kat + 30))) * (((21 + R.anum(R.aget(S.g_lolo, 0))) - 5))) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.g_size * -(1)), S.g_size, ((S.g_globalny_kat + (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 16)) + 20), S.g_power_star_kolorek, (1 + S.g_miganie))
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_chest, S.g_anim), 0, (S.x + (((R.sin(S, R.degtorad(S, S.g_globalny_kat)) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + (((R.cos(S, R.degtorad(S, S.g_globalny_kat)) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), S.g_size, S.g_size, S.g_globalny_kat, S.g_power_star_kolorek, (1 + S.g_miganie))
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_tyl_head, S.g_anim), 0, (S.x + ((((R.sin(S, R.degtorad(S, (180 + S.g_globalny_kat))) * 25) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (S.y + ((((R.cos(S, R.degtorad(S, (180 + S.g_globalny_kat))) * 25) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), S.g_size, S.g_size, S.g_globalny_kat, S.g_power_star_kolorek, (1 + S.g_miganie))
 		R.draw_sprite_ext(S, R.aget(G.gfx_mario_ogon, S.g_anim), 0, (((7 * S.g_size) + S.x) + (((R.sin(S, R.degtorad(S, S.g_globalny_kat)) + (R.sin(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), (((7 * S.g_size) + S.y) + (((R.cos(S, R.degtorad(S, S.g_globalny_kat)) + (R.cos(S, R.degtorad(S, S.g_globalny_kat)) * S.g_berserk))) * S.g_size)), S.g_size, S.g_size, ((((S.g_globalny_kat + (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 5)) + 30) + S.g_ogon_uderzak) + (R.sin(S, R.degtorad(S, S.g_ogon_merda)) * 20)), S.g_power_star_kolorek, (1 + S.g_miganie))
 		S.g_climbing += 1
 		if (S.g_climbing > 10):
 			S.g_climbing = 0
-			P2.SXMS_SFX_PlayExt(S, [42, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [42, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 		S.g_run_pochylenie = 0
 		S.g_berserk = (R.sin(S, R.degtorad(S, (S.g_hamowanie + 180))) * 5)
 		R.aset(S.g_lolo, 0, (R.sin(S, R.degtorad(S, S.g_hamowanie)) * 5))
@@ -280,7 +280,7 @@ static func script_backgrounds(S, A: Array) -> Variant:
 		G.background_kind = 76
 	if R.eqv(S, G.background_kind, 76):
 		if (R.random(S, 100) > 90):
-			R.part_particles_create(S, G.particle_sys_1, (R.aget(R.view_xview, 0) + (R.random(S, 1000) * G.ekran_size_act)), (R.room_height - R.random(S, 100)), G.lavar2, 1)
+			R.part_particles_create(S, G.particle_sys_1, (R.anum(R.aget(R.view_xview, 0)) + (R.random(S, 1000) * G.ekran_size_act)), (R.room_height - R.random(S, 100)), G.lavar2, 1)
 		R.aset(R.bg_x, 0, R.aget(R.view_xview, 0))
 		R.aset(R.bg_y, 0, R.aget(R.view_yview, 0))
 		R.aset(R.bg_xscale, 0, (1 * G.ekran_size_act))
@@ -367,13 +367,13 @@ static func script_backgrounds(S, A: Array) -> Variant:
 		R.aset(R.bg_index, 5, G.background_ship_space_2)
 	if R.eqv(S, G.background_kind, 17):
 		R.aset(R.bg_y, 0, R.aget(R.view_yview, 0))
-		R.aset(R.bg_y, 1, (R.aget(R.view_yview, 0) + (300 * G.ekran_size_act)))
-		R.aset(R.bg_y, 2, (R.aget(R.view_yview, 0) + (350 * G.ekran_size_act)))
-		R.aset(R.bg_y, 3, (R.aget(R.view_yview, 0) + (450 * G.ekran_size_act)))
+		R.aset(R.bg_y, 1, (R.anum(R.aget(R.view_yview, 0)) + (300 * G.ekran_size_act)))
+		R.aset(R.bg_y, 2, (R.anum(R.aget(R.view_yview, 0)) + (350 * G.ekran_size_act)))
+		R.aset(R.bg_y, 3, (R.anum(R.aget(R.view_yview, 0)) + (450 * G.ekran_size_act)))
 		R.aset(R.bg_x, 0, R.aget(R.view_xview, 0))
-		R.aset(R.bg_x, 1, (R.aget(R.view_xview, 0) / 1.111))
-		R.aset(R.bg_x, 2, (R.aget(R.view_xview, 0) / 1.505))
-		R.aset(R.bg_x, 3, (R.aget(R.view_xview, 0) / 1.901))
+		R.aset(R.bg_x, 1, (R.anum(R.aget(R.view_xview, 0)) / 1.111))
+		R.aset(R.bg_x, 2, (R.anum(R.aget(R.view_xview, 0)) / 1.505))
+		R.aset(R.bg_x, 3, (R.anum(R.aget(R.view_xview, 0)) / 1.901))
 		R.aset(R.bg_x, 4, (R.aget(R.bg_x, 4) - 1))
 		R.aset(R.bg_y, 4, (R.room_height - 250))
 		R.aset(R.bg_yscale, 4, 2)
@@ -409,11 +409,11 @@ static func script_backgrounds(S, A: Array) -> Variant:
 		R.aset(R.bg_x, 0, R.aget(R.view_xview, 0))
 		R.aset(R.bg_y, 0, R.aget(R.view_yview, 0))
 		R.aset(R.bg_yscale, 0, (1 * G.ekran_size_act))
-		R.aset(R.bg_y, 1, (R.aget(R.view_yview, 0) + (200 * G.ekran_size_act)))
+		R.aset(R.bg_y, 1, (R.anum(R.aget(R.view_yview, 0)) + (200 * G.ekran_size_act)))
 		R.aset(R.bg_x, 1, (R.aget(R.bg_x, 1) + (0.2 * 5)))
-		R.aset(R.bg_y, 2, (R.aget(R.view_yview, 0) + (300 * G.ekran_size_act)))
+		R.aset(R.bg_y, 2, (R.anum(R.aget(R.view_yview, 0)) + (300 * G.ekran_size_act)))
 		R.aset(R.bg_x, 2, (R.aget(R.bg_x, 2) + (1 * 5)))
-		R.aset(R.bg_y, 3, (R.aget(R.view_yview, 0) + (400 * G.ekran_size_act)))
+		R.aset(R.bg_y, 3, (R.anum(R.aget(R.view_yview, 0)) + (400 * G.ekran_size_act)))
 		R.aset(R.bg_x, 3, (R.aget(R.bg_x, 3) + (2 * 5)))
 		R.aset(R.bg_foreground, 3, 1)
 	if R.eqv(S, G.background_kind, 30):
@@ -444,11 +444,11 @@ static func script_backgrounds(S, A: Array) -> Variant:
 		R.aset(R.bg_x, 0, R.aget(R.view_xview, 0))
 		R.aset(R.bg_y, 0, R.aget(R.view_yview, 0))
 		R.aset(R.bg_yscale, 0, (1 * G.ekran_size_act))
-		R.aset(R.bg_y, 1, (R.aget(R.view_yview, 0) + (200 * G.ekran_size_act)))
+		R.aset(R.bg_y, 1, (R.anum(R.aget(R.view_yview, 0)) + (200 * G.ekran_size_act)))
 		R.aset(R.bg_x, 1, (R.aget(R.bg_x, 1) + 0.2))
-		R.aset(R.bg_y, 2, (R.aget(R.view_yview, 0) + (300 * G.ekran_size_act)))
+		R.aset(R.bg_y, 2, (R.anum(R.aget(R.view_yview, 0)) + (300 * G.ekran_size_act)))
 		R.aset(R.bg_x, 2, (R.aget(R.bg_x, 2) + 1))
-		R.aset(R.bg_y, 3, (R.aget(R.view_yview, 0) + (400 * G.ekran_size_act)))
+		R.aset(R.bg_y, 3, (R.anum(R.aget(R.view_yview, 0)) + (400 * G.ekran_size_act)))
 		R.aset(R.bg_x, 3, (R.aget(R.bg_x, 3) + 2))
 		R.aset(R.bg_foreground, 3, 1)
 	if R.eqv(S, G.background_kind, 140):
@@ -480,11 +480,11 @@ static func script_backgrounds(S, A: Array) -> Variant:
 		R.aset(R.bg_yscale, 0, (1 * G.ekran_size_act))
 		R.aset(R.bg_x, 0, R.aget(R.view_xview, 0))
 		R.aset(R.bg_y, 0, R.aget(R.view_yview, 0))
-		R.aset(R.bg_y, 1, (R.aget(R.view_yview, 0) + (200 * G.ekran_size_act)))
+		R.aset(R.bg_y, 1, (R.anum(R.aget(R.view_yview, 0)) + (200 * G.ekran_size_act)))
 		R.aset(R.bg_x, 1, (R.aget(R.bg_x, 1) + 1))
-		R.aset(R.bg_y, 2, (R.aget(R.view_yview, 0) + (300 * G.ekran_size_act)))
+		R.aset(R.bg_y, 2, (R.anum(R.aget(R.view_yview, 0)) + (300 * G.ekran_size_act)))
 		R.aset(R.bg_x, 2, (R.aget(R.bg_x, 2) + 5))
-		R.aset(R.bg_y, 3, (R.aget(R.view_yview, 0) + (400 * G.ekran_size_act)))
+		R.aset(R.bg_y, 3, (R.anum(R.aget(R.view_yview, 0)) + (400 * G.ekran_size_act)))
 		R.aset(R.bg_x, 3, (R.aget(R.bg_x, 3) + 10))
 		R.aset(R.bg_foreground, 3, 1)
 	if R.eqv(S, G.background_kind, 14):
@@ -516,11 +516,11 @@ static func script_backgrounds(S, A: Array) -> Variant:
 		R.aset(R.bg_yscale, 0, (1 * G.ekran_size_act))
 		R.aset(R.bg_x, 0, R.aget(R.view_xview, 0))
 		R.aset(R.bg_y, 0, R.aget(R.view_yview, 0))
-		R.aset(R.bg_y, 1, (R.aget(R.view_yview, 0) + 200))
+		R.aset(R.bg_y, 1, (R.anum(R.aget(R.view_yview, 0)) + 200))
 		R.aset(R.bg_x, 1, (R.aget(R.bg_x, 1) + 1))
-		R.aset(R.bg_y, 2, (R.aget(R.view_yview, 0) + 300))
+		R.aset(R.bg_y, 2, (R.anum(R.aget(R.view_yview, 0)) + 300))
 		R.aset(R.bg_x, 2, (R.aget(R.bg_x, 2) + 5))
-		R.aset(R.bg_y, 3, (R.aget(R.view_yview, 0) + (400 * G.ekran_size_act)))
+		R.aset(R.bg_y, 3, (R.anum(R.aget(R.view_yview, 0)) + (400 * G.ekran_size_act)))
 		R.aset(R.bg_x, 3, (R.aget(R.bg_x, 3) + 10))
 		R.aset(R.bg_foreground, 3, 1)
 	if R.eqv(S, G.background_kind, 12):
@@ -536,7 +536,7 @@ static func script_backgrounds(S, A: Array) -> Variant:
 		R.aset(R.bg_vtiled, 0, 0)
 	if R.eqv(S, G.background_kind, 13):
 		R.aset(R.bg_index, 0, G.background_palace)
-		R.aset(R.bg_x, 0, (R.aget(R.view_xview, 0) - (R.aget(R.view_xview, 0) / 10)))
+		R.aset(R.bg_x, 0, (R.anum(R.aget(R.view_xview, 0)) - (R.anum(R.aget(R.view_xview, 0)) / 10)))
 	if R.eqv(S, G.background_kind, 10):
 		S.g_i = 0
 		while true:
@@ -550,7 +550,7 @@ static func script_backgrounds(S, A: Array) -> Variant:
 		R.aset(R.bg_vtiled, 0, 0)
 	if R.eqv(S, G.background_kind, 11):
 		R.aset(R.bg_index, 0, G.background_evil_forest)
-		R.aset(R.bg_x, 0, (R.aget(R.view_xview, 0) - (R.aget(R.view_xview, 0) / 100)))
+		R.aset(R.bg_x, 0, (R.anum(R.aget(R.view_xview, 0)) - (R.anum(R.aget(R.view_xview, 0)) / 100)))
 		R.aset(R.bg_y, 0, R.aget(R.view_yview, 0))
 		R.aset(R.bg_xscale, 0, (1 * G.ekran_size_act))
 		R.aset(R.bg_yscale, 0, (1 * G.ekran_size_act))
@@ -569,7 +569,7 @@ static func script_backgrounds(S, A: Array) -> Variant:
 		R.aset(R.bg_xscale, 0, (1 * G.ekran_size_act))
 		R.aset(R.bg_yscale, 0, (1 * G.ekran_size_act))
 		R.aset(R.bg_index, 0, G.background_ghosts)
-		R.aset(R.bg_x, 0, (R.aget(R.view_xview, 0) - (R.aget(R.view_xview, 0) / 10)))
+		R.aset(R.bg_x, 0, (R.anum(R.aget(R.view_xview, 0)) - (R.anum(R.aget(R.view_xview, 0)) / 10)))
 		R.aset(R.bg_y, 0, R.aget(R.view_yview, 0))
 	if R.eqv(S, G.background_kind, 0):
 		S.g_i = 0
@@ -584,7 +584,7 @@ static func script_backgrounds(S, A: Array) -> Variant:
 		R.aset(R.bg_vtiled, 0, 0)
 	if R.eqv(S, G.background_kind, 1):
 		R.aset(R.bg_index, 0, G.background_grassland)
-		R.aset(R.bg_x, 0, (R.aget(R.view_xview, 0) - (R.aget(R.view_xview, 0) / 10)))
+		R.aset(R.bg_x, 0, (R.anum(R.aget(R.view_xview, 0)) - (R.anum(R.aget(R.view_xview, 0)) / 10)))
 		R.aset(R.bg_y, 0, R.aget(R.view_yview, 0))
 		R.aset(R.bg_xscale, 0, (1 * G.ekran_size_act))
 		R.aset(R.bg_yscale, 0, (1 * G.ekran_size_act))
@@ -654,27 +654,27 @@ static func script_enemy_cannon(S, A: Array) -> Variant:
 				if (R.eqv(S, S.g_rodzaj, 0) or R.eqv(S, S.g_rodzaj, 1)):
 					S.g_efektuj = 20
 					S.g_koko = R.instance_create(S, (S.x + 20), (S.y + 20), 150)
-					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				if R.eqv(S, S.g_rodzaj, 2):
 					S.g_efektuj = 20
 					S.g_koko = R.instance_create(S, (S.x + 20), (S.y + 20), 155)
 					S.g_nalezy_do = R.inst_get(S.g_koko, "id")
-					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				if R.eqv(S, S.g_rodzaj, 3):
 					S.g_efektuj = 20
 					S.g_koko = R.instance_create(S, (S.x + 20), (S.y + 20), 156)
 					S.g_nalezy_do = R.inst_get(S.g_koko, "id")
-					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				if R.eqv(S, S.g_rodzaj, 4):
 					S.g_efektuj = 20
 					S.g_koko = R.instance_create(S, (S.x + 20), (S.y + 20), 151)
 					R.inst_set(S.g_koko, "spadanie", -(100.001))
-					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				if R.eqv(S, S.g_rodzaj, 5):
 					S.g_efektuj = 20
 					S.g_koko = R.instance_create(S, (S.x + 20), (S.y + 20), 151)
 					R.inst_set(S.g_koko, "spadanie", 0.001)
-					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.inst_set(S.g_koko, "kierunek", S.g_kierunek)
 				R.inst_set(S.g_koko, "depth", (S.g_depth + 10))
 				if R.eqv(S, S.g_rodzaj, 0):
@@ -706,7 +706,7 @@ static func script_enemy_ballcannon(S, A: Array) -> Variant:
 			if (S.g_reload >= S.g_reload_shot):
 				S.g_reload = 0
 				S.g_koko = R.instance_create(S, (S.x + 20), (S.y + 20), 152)
-				P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.inst_set(S.g_koko, "direction", S.g_kierunek)
 				R.inst_set(S.g_koko, "speed", 3)
 				R.inst_set(S.g_koko, "depth", (S.g_depth + 10))
@@ -756,7 +756,7 @@ static func script_enemy_big_cannon(S, A: Array) -> Variant:
 			if R.eqv(S, S.g_wachacz, 1):
 				S.g_kierunek = (S.g_kierunek + R.sin(S, R.degtorad(S, S.g_wacha)))
 			if (S.g_reload >= S.g_reload_shot):
-				P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_reload = 0
 				S.g_koko = R.instance_create(S, S.x, S.y, 153)
 				R.inst_set(S.g_koko, "direction", S.g_kierunek)
@@ -845,7 +845,7 @@ static func script_enemy_bulletbill(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 1):
-				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				if R.eqv(S, S.g_rodzaj, 0):
 					R.inst_set(R.aget(S.g_lolo, 0), "grafika", 54)
@@ -862,7 +862,7 @@ static func script_enemy_bulletbill(S, A: Array) -> Variant:
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				if R.eqv(S, S.g_rodzaj, 0):
@@ -933,20 +933,20 @@ static func script_enemy_bulletball(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 1):
-				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 57)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 57)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 57)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -985,20 +985,20 @@ static func script_enemy_bulletball_2(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 1):
-				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 57)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 57)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 57)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -1037,7 +1037,7 @@ static func script_enemy_bulletball_3(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 1):
-				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 63)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -1046,7 +1046,7 @@ static func script_enemy_bulletball_3(S, A: Array) -> Variant:
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 63)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -1178,7 +1178,7 @@ static func script_enemy_bulletbill_homing(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 1):
-				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 54)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -1273,7 +1273,7 @@ static func script_bigfat_hammer_bros(S, A: Array) -> Variant:
 			if (1 - R.eqv(S, S.g_oberwal, S.g_energy)):
 				S.g_oberwal = S.g_energy
 				S.g_oberwal_hit = 1
-				P2.SXMS_SFX_PlayExt(S, [(90 + R.round(S, R.random(S, 2))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(90 + R.round(S, R.random(S, 2))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if ((S.y >= (S.g_ystart - 40)) and (S.y <= (S.g_ystart + 40))):
 				S.g_jest_na_poziomie = 0
 			S.g_atakowanie += 1.2
@@ -1286,7 +1286,7 @@ static func script_bigfat_hammer_bros(S, A: Array) -> Variant:
 			if (S.g_atakowanie > 300):
 				S.g_rzut_anim = 100
 				S.g_atakowanie = -(R.random(S, 100))
-				P2.SXMS_SFX_PlayExt(S, [46, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [46, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, (S.x + 20), (S.y + 20), 177))
 				R.inst_set(R.aget(S.g_lolo, 0), "ixor", (4 * S.g_kierunek))
 			if R.eqv(S, S.g_sekwencer, 0):
@@ -1324,8 +1324,8 @@ static func script_bigfat_hammer_bros(S, A: Array) -> Variant:
 			if R.eqv(S, S.g_sekwencer, 0):
 				S.g_timer += 1
 			if (R.eqv(S, S.g_sekwencer, 0) and (S.g_timer > 200)):
-				P2.SXMS_SFX_PlayExt(S, [(87 + R.round(S, R.random(S, 2))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
-				P2.SXMS_SFX_PlayExt(S, [(85 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(87 + R.round(S, R.random(S, 2))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(85 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_jump_anim = 300
 				S.g_jaki_y = S.y
 				S.g_timer = 0
@@ -1412,7 +1412,7 @@ static func script_bigfat_hammer_bros(S, A: Array) -> Variant:
 								break
 							S.g_i += 1
 			if R.eqv(S, S.g_sekwencja, 2):
-				P2.SXMS_SFX_PlayExt(S, [(83 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(83 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if R.eqv(S, S.g_sekwencja, 2):
 				S.g_i = 0
 				while true:
@@ -1425,7 +1425,7 @@ static func script_bigfat_hammer_bros(S, A: Array) -> Variant:
 				S.g_sekwencja = 0
 				S.g_iyor = 0
 			if R.eqv(S, S.g_kill, 1):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "specjalny_kill", 3)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -1433,14 +1433,14 @@ static func script_bigfat_hammer_bros(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "specjalny_kill", 3)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "specjalny_kill", 3)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -1470,7 +1470,7 @@ static func script_enemy_boomerang(S, A: Array) -> Variant:
 		S.g_sampel += 1
 		if (S.g_sampel > 35):
 			S.g_sampel = 0
-			P2.SXMS_SFX_PlayExt(S, [76, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [76, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 		if R.instance_exists(S, S.g_nalezy_do):
 			if (S.g_powrot > 80):
 				S.g_desdir = R.point_direction(S, S.x, S.y, R.inst_get(S.g_nalezy_do, "x"), R.inst_get(S.g_nalezy_do, "y"))
@@ -1533,7 +1533,7 @@ static func script_enemy_big_hammers(S, A: Array) -> Variant:
 		if R.place_meeting(S, S.x, S.y, 303):
 			if (S.g_efekt > 4):
 				S.g_efekt = 0
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.instance_create(S, S.x, S.y, 77)
 	R.draw_sprite_ext(S, G.gfx_big_hammer, 0, S.x, S.y, S.g_kierunek, 1, S.g_obracacz, 0xFFFFFF, 1)
 	return 0
@@ -1565,7 +1565,7 @@ static func script_enemy_big_fish(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.inst_set(R.aget(S.g_lolo, 0), "wodne_spadanie", 2)
@@ -1573,7 +1573,7 @@ static func script_enemy_big_fish(S, A: Array) -> Variant:
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.inst_set(R.aget(S.g_lolo, 0), "wodne_spadanie", 2)
@@ -1605,14 +1605,14 @@ static func script_enemy_Cheep_Chomp(S, A: Array) -> Variant:
 			if (R.place_meeting(S, S.x, S.y, 303) and R.eqv(S, G.oberwal, 0)):
 				if (R.eqv(S, S.g_kierunek, 1) and (R.get_obj_var(303, "g_x") > S.x)):
 					G.oberwal = 2
-					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				if (R.eqv(S, S.g_kierunek, 1) and (R.get_obj_var(303, "g_x") < S.x)):
 					G.oberwal = 1
 				if (R.eqv(S, S.g_kierunek, -(1)) and (R.get_obj_var(303, "g_x") > S.x)):
 					G.oberwal = 1
 				if (R.eqv(S, S.g_kierunek, -(1)) and (R.get_obj_var(303, "g_x") < S.x)):
 					G.oberwal = 2
-					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if R.eqv(S, S.g_kierunek, 1):
 				R.set_direction(S, (R.sin(S, (S.g_stream / 4)) * 10))
 			if R.eqv(S, S.g_kierunek, -(1)):
@@ -1631,7 +1631,7 @@ static func script_enemy_Cheep_Chomp(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.inst_set(R.aget(S.g_lolo, 0), "wodne_spadanie", 2)
@@ -1639,7 +1639,7 @@ static func script_enemy_Cheep_Chomp(S, A: Array) -> Variant:
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.inst_set(R.aget(S.g_lolo, 0), "wodne_spadanie", 2)
@@ -1684,14 +1684,14 @@ static func script_enemy_Cheep_Chomp_sterowany(S, A: Array) -> Variant:
 			if (R.place_meeting(S, S.x, S.y, 303) and R.eqv(S, G.oberwal, 0)):
 				if (R.eqv(S, S.g_kierunek, 1) and (R.get_obj_var(303, "g_x") > S.x)):
 					G.oberwal = 2
-					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				if (R.eqv(S, S.g_kierunek, 1) and (R.get_obj_var(303, "g_x") < S.x)):
 					G.oberwal = 1
 				if (R.eqv(S, S.g_kierunek, -(1)) and (R.get_obj_var(303, "g_x") > S.x)):
 					G.oberwal = 1
 				if (R.eqv(S, S.g_kierunek, -(1)) and (R.get_obj_var(303, "g_x") < S.x)):
 					G.oberwal = 2
-					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if R.eqv(S, S.g_wyskok_sekwencja, 0):
 				S.g_wyskok_timer += 1
 				if (S.g_wyskok_timer > 300):
@@ -1739,12 +1739,12 @@ static func script_enemy_Cheep_Chomp_sterowany(S, A: Array) -> Variant:
 				R.set_speed(S, (R.get_speed(S) * -(1)))
 				S.x = S.g_xprevious
 			if (R.lnot(R.place_meeting(S, S.x, S.y, 182)) and R.eqv(S, S.g_plusknie, 0)):
-				P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_plusknie = 1
 				R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 0), 3)
 				R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 1), 3)
 			if (R.place_meeting(S, S.x, S.y, 182) and R.eqv(S, S.g_plusknie, 1)):
-				P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_plusknie = 0
 				R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 0), 3)
 				R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 1), 3)
@@ -1758,7 +1758,7 @@ static func script_enemy_Cheep_Chomp_sterowany(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.inst_set(R.aget(S.g_lolo, 0), "wodne_spadanie", 2)
@@ -1769,7 +1769,7 @@ static func script_enemy_Cheep_Chomp_sterowany(S, A: Array) -> Variant:
 				R.inst_set(S.g_fifi, "iyor", S.g_ystart)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.inst_set(R.aget(S.g_lolo, 0), "wodne_spadanie", 2)
@@ -1815,12 +1815,12 @@ static func script_enemy_big_fish_wyskocznix(S, A: Array) -> Variant:
 					S.g_iyor -= S.g_wysokosc_skoku
 			if R.eqv(S, S.g_sekwencja, 1):
 				if (R.lnot(R.place_meeting(S, S.x, S.y, 182)) and R.eqv(S, S.g_plusknie, 0)):
-					P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 					S.g_plusknie = 1
 					R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 0), 3)
 					R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 1), 3)
 				if (R.place_meeting(S, S.x, S.y, 182) and R.eqv(S, S.g_plusknie, 1)):
-					P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 					S.g_plusknie = 0
 					R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 0), 3)
 					R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 1), 3)
@@ -1837,7 +1837,7 @@ static func script_enemy_big_fish_wyskocznix(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.inst_set(R.aget(S.g_lolo, 0), "wodne_spadanie", 2)
@@ -1845,7 +1845,7 @@ static func script_enemy_big_fish_wyskocznix(S, A: Array) -> Variant:
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.inst_set(R.aget(S.g_lolo, 0), "wodne_spadanie", 2)
@@ -1878,7 +1878,7 @@ static func script_enemy_chomp(S, A: Array) -> Variant:
 		if R.eqv(S, S.g_timer, 200):
 			S.g_cel_x = R.get_obj_var(303, "g_x")
 			S.g_cel_y = (R.get_obj_var(303, "g_y") + 20)
-			P2.SXMS_SFX_PlayExt(S, [100, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [100, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 		if (S.g_timer > 200):
 			S.g_sekwencja = 1
 			if (S.g_naciagniety > 0):
@@ -2016,7 +2016,7 @@ static func script_enemy_bomb_omb(S, A: Array) -> Variant:
 				S.g_sekwencja = 0
 				S.g_grawitacja = 0
 			if R.eqv(S, S.g_kill, 1):
-				P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 95))
 				if R.eqv(S, R.get_obj_var(306, "g_size2"), 1):
 					R.inst_set(R.aget(S.g_lolo, 0), "ixor", 8)
@@ -2027,12 +2027,12 @@ static func script_enemy_bomb_omb(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 95))
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 95))
 				R.instance_destroy(S)
 			S.g_stream += 0.1
@@ -2053,9 +2053,9 @@ static func script_enemy_bomb_omb_lezy(S, A: Array) -> Variant:
 		if (S.g_wybuchnie > 320):
 			R.instance_destroy(S)
 			R.instance_create(S, S.x, S.y, 311)
-			P2.SXMS_SFX_PlayExt(S, [66, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [66, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 		if R.eqv(S, S.g_kill, 1):
-			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 			R.inst_set(R.aget(S.g_lolo, 0), "grafika", 108)
 			R.inst_set(R.aget(S.g_lolo, 0), "specjalny_kill", 13)
@@ -2066,7 +2066,7 @@ static func script_enemy_bomb_omb_lezy(S, A: Array) -> Variant:
 		if R.lnot(R.place_meeting(S, S.x, S.y, 303)):
 			S.g_dotknal = 0
 		if (R.eqv(S, S.g_kicked, 1) and R.eqv(S, S.g_dotknal, 0)):
-			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			S.g_dotknal = 1
 			if R.eqv(S, R.get_obj_var(306, "g_size2"), 1):
 				S.g_ixor = 18
@@ -2202,7 +2202,7 @@ static func script_enemy_buzzy_beetle(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 1):
-				P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 127))
 				R.inst_set(R.aget(S.g_lolo, 0), "jaka_grafika", 1)
 				R.inst_set(R.aget(S.g_lolo, 0), "energy", 99999999)
@@ -2212,14 +2212,14 @@ static func script_enemy_buzzy_beetle(S, A: Array) -> Variant:
 					R.inst_set(R.aget(S.g_lolo, 0), "ixor", -(8))
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 41)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 41)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -2244,14 +2244,14 @@ static func script_enemy_big_buzzy_beetle(S, A: Array) -> Variant:
 			if R.eqv(S, S.g_rodzaj, 1):
 				if (S.g_reload > 150):
 					S.g_reload = 0
-					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 					S.g_koko = R.instance_create(S, (((S.x + 32)) + (R.sin(S, R.degtorad(S, (180 + (R.sin(S, S.g_stream) * 15)))) * 70)), ((((S.y + 34) + (R.sin(S, S.g_stream) * 2))) + (R.cos(S, R.degtorad(S, (180 + (R.sin(S, S.g_stream) * 15)))) * 70)), 152)
 					R.inst_set(S.g_koko, "direction", ((90 - (90 * S.g_kierunek)) + (R.sin(S, S.g_stream) * 15)))
 					R.inst_set(S.g_koko, "speed", 4)
 					R.inst_set(S.g_koko, "depth", (S.g_depth + 1000))
 			if R.eqv(S, S.g_rodzaj, 2):
 				if (S.g_reload > 200):
-					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 					S.g_reload = 0
 					S.g_koko = R.instance_create(S, (((S.x + 32)) + (R.sin(S, R.degtorad(S, (180 + (R.sin(S, S.g_stream) * 15)))) * 70)), ((((S.y + 34) + (R.sin(S, S.g_stream) * 2))) + (R.cos(S, R.degtorad(S, (180 + (R.sin(S, S.g_stream) * 15)))) * 70)), 152)
 					R.inst_set(S.g_koko, "direction", (90 + (R.sin(S, S.g_stream) * 15)))
@@ -2314,7 +2314,7 @@ static func script_enemy_big_buzzy_beetle(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 1):
-				P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, (S.y - 30), 102))
 				if R.eqv(S, R.get_obj_var(306, "g_size2"), 1):
 					R.inst_set(R.aget(S.g_lolo, 0), "ixor", 8)
@@ -2326,14 +2326,14 @@ static func script_enemy_big_buzzy_beetle(S, A: Array) -> Variant:
 					R.inst_set(R.aget(S.g_lolo, 0), "grafika", 113)
 					R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 113)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 113)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -2369,14 +2369,14 @@ static func script_enemy_big_buzzy_beetle_2(S, A: Array) -> Variant:
 			if R.eqv(S, S.g_rodzaj, 1):
 				if (S.g_reload > 150):
 					S.g_reload = 0
-					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 					S.g_koko = R.instance_create(S, (((S.x + 32)) + (R.sin(S, R.degtorad(S, (180 + (R.sin(S, S.g_stream) * 15)))) * 70)), ((((S.y + 34) + (R.sin(S, S.g_stream) * 2))) + (R.cos(S, R.degtorad(S, (180 + (R.sin(S, S.g_stream) * 15)))) * 70)), 152)
 					R.inst_set(S.g_koko, "direction", ((90 - (90 * S.g_kierunek)) + (R.sin(S, S.g_stream) * 15)))
 					R.inst_set(S.g_koko, "speed", 4)
 					R.inst_set(S.g_koko, "depth", (S.g_depth + 1000))
 			if R.eqv(S, S.g_rodzaj, 2):
 				if (S.g_reload > 200):
-					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 					S.g_reload = 0
 					S.g_koko = R.instance_create(S, (((S.x + 32)) + (R.sin(S, R.degtorad(S, (180 + (R.sin(S, S.g_stream) * 15)))) * 70)), ((((S.y + 34) + (R.sin(S, S.g_stream) * 2))) + (R.cos(S, R.degtorad(S, (180 + (R.sin(S, S.g_stream) * 15)))) * 70)), 152)
 					R.inst_set(S.g_koko, "direction", (90 + (R.sin(S, S.g_stream) * 15)))
@@ -2439,7 +2439,7 @@ static func script_enemy_big_buzzy_beetle_2(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 1):
-				P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, (S.y - 30), 102))
 				if R.eqv(S, R.get_obj_var(306, "g_size2"), 1):
 					R.inst_set(R.aget(S.g_lolo, 0), "ixor", 8)
@@ -2447,14 +2447,14 @@ static func script_enemy_big_buzzy_beetle_2(S, A: Array) -> Variant:
 					R.inst_set(R.aget(S.g_lolo, 0), "ixor", -(8))
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 40)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 114)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -2484,14 +2484,14 @@ static func script_enemy_big_buzzy_beetle_lezy(S, A: Array) -> Variant:
 	if R.eqv(S, G.pauza, 0):
 		if R.eqv(S, S.g_kill, 1):
 			R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 			R.inst_set(R.aget(S.g_lolo, 0), "grafika", 112)
 			R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 			R.instance_destroy(S)
 		if R.eqv(S, S.g_kill, 1000):
 			R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 			R.inst_set(R.aget(S.g_lolo, 0), "grafika", 112)
 			R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -2571,19 +2571,19 @@ static func script_boomboom(S, A: Array) -> Variant:
 	if ((R.eqv(S, S.g_aktywuj, 1) and R.eqv(S, G.pauza, 0)) and R.eqv(S, S.g_w_muszli, 0)):
 		if (((S.g_energy_ma - 2) > S.g_energy) or R.eqv(S, S.g_kill, 1)):
 			S.g_kill = 0
-			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			S.g_w_muszli = 1
 			S.g_boss_ENERGY -= 1
 			S.g_energy_ma = S.g_energy
 			if (S.g_boss_ENERGY > 0):
-				P2.SXMS_SFX_PlayExt(S, [204, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [204, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_muszla2 = R.instance_create(S, S.x, S.y, 371)
 				R.inst_set(S.g_muszla2, "kierunek", S.g_kierunek)
 				R.inst_set(S.g_muszla2, "father_y", S.g_ystart)
 			if ((S.g_boss_ENERGY <= 0) and R.eqv(S, S.g_completed_boss, 0)):
 				R.set_obj_var(303, "g_sciszaj_muzyke", 1)
 				P0.SXMS_C_Stop(S, [])
-				P2.SXMS_SFX_PlayExt(S, [203, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [203, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_muszla = R.instance_create(S, S.x, S.y, 372)
 				R.inst_set(S.g_muszla, "key", S.g_key)
 			S.x = -(10000)
@@ -2607,7 +2607,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 			S.x = (S.x + (S.g_szybkosc * S.g_kierunek))
 			if (S.x < R.aget(R.view_xview, 0)):
 				S.g_kierunek = 1
-			if (S.x > (R.aget(R.view_xview, 0) + 800)):
+			if (S.x > (R.anum(R.aget(R.view_xview, 0)) + 800)):
 				S.g_kierunek = -(1)
 			if (R.eqv(S, S.g_kierunek, -(1)) and R.place_meeting(S, (S.x + (((2 + S.g_szybkosc)) * S.g_kierunek)), S.y, 1)):
 				S.g_kierunek = 1
@@ -2615,7 +2615,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 				S.g_kierunek = -(1)
 			S.g_timer += 1
 			if R.eqv(S, S.g_timer, 30):
-				P2.SXMS_SFX_PlayExt(S, [161, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [161, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_iyor = -(20)
 				var _n1 = int(3)
 				while _n1 > 0:
@@ -2629,7 +2629,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 			if ((S.g_iyor >= 0) and R.lnot(R.place_meeting(S, S.x, S.y, 1))):
 				S.y = (S.y + S.g_iyor)
 			if ((S.g_iyor >= 0) and R.place_meeting(S, S.x, S.y, 1)):
-				P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				var _n2 = int(3)
 				while _n2 > 0:
 					R.part_particles_create(S, G.particle_map_sterring, S.x, (S.y + 30), G.part_BOOMBOOM_smoke2, 1)
@@ -2678,7 +2678,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 				S.g_kierunek = (S.g_kierunek * -(1))
 			if (S.x < R.aget(R.view_xview, 0)):
 				S.g_kierunek = 1
-			if (S.x > (R.aget(R.view_xview, 0) + 800)):
+			if (S.x > (R.anum(R.aget(R.view_xview, 0)) + 800)):
 				S.g_kierunek = -(1)
 			if (R.random(S, 100) > 95):
 				R.part_particles_create(S, G.particle_map_sterring, S.x, (S.y + 30), G.part_BOOMBOOM_smoke, 1)
@@ -2791,7 +2791,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 				S.g_kierunek = (S.g_kierunek * -(1))
 			if (S.x < R.aget(R.view_xview, 0)):
 				S.g_kierunek = 1
-			if (S.x > (R.aget(R.view_xview, 0) + 800)):
+			if (S.x > (R.anum(R.aget(R.view_xview, 0)) + 800)):
 				S.g_kierunek = 1
 			if (S.g_szybkosc > 0):
 				S.g_szybkosc = (S.g_szybkosc / 1.1)
@@ -2806,7 +2806,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 				S.g_rozdeptywalny = 1
 		if R.eqv(S, S.g_sekwencja, 9):
 			if R.eqv(S, S.g_skok_tytana, 0):
-				P2.SXMS_SFX_PlayExt(S, [82, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [82, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_skok_tytana = 1
 				S.g_kokoz = R.instance_create(S, (S.x - 50), S.y, 368)
 				S.g_kokoz2 = R.instance_create(S, (S.x + 50), S.y, 368)
@@ -2845,7 +2845,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 				R.inst_set(S.g_kokoz2, "kierunek", -(S.g_kierunek))
 				R.inst_set(S.g_kokoz2, "y", (S.y - (S.g_skok_tytana2 / 2)))
 			if R.eqv(S, S.g_skok_tytana, 20):
-				P2.SXMS_SFX_PlayExt(S, [160, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [160, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if R.eqv(S, S.g_skok_tytana, 21):
 				S.g_skok_tytana2 = (S.g_skok_tytana2 / 1.2)
 				S.g_skacze_delay += 1
@@ -2855,7 +2855,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 			S.g_stream += 0.01
 		if R.eqv(S, S.g_sekwencja, 8):
 			if R.eqv(S, S.g_skok_tytana, 0):
-				P2.SXMS_SFX_PlayExt(S, [82, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [82, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_skok_tytana = 1
 				S.g_kokoz = R.instance_create(S, S.x, S.y, 368)
 			if R.eqv(S, S.g_skok_tytana, 1):
@@ -2876,7 +2876,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 				R.inst_set(S.g_kokoz, "szybkosc", 2)
 				R.inst_set(S.g_kokoz, "kierunek", S.g_kierunek)
 			if R.eqv(S, S.g_skok_tytana, 20):
-				P2.SXMS_SFX_PlayExt(S, [160, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [160, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if R.eqv(S, S.g_skok_tytana, 21):
 				S.g_skok_tytana2 = (S.g_skok_tytana2 / 1.2)
 				S.g_skacze_delay += 1
@@ -2896,7 +2896,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 				if (S.g_skok_tytana < 60):
 					S.g_skok_tytana += 2
 			if ((R.eqv(S, S.g_skok_tytana2, 0) and (S.g_skok_tytana >= 60)) and (S.g_skacze3razy > 0)):
-				P2.SXMS_SFX_PlayExt(S, [161, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [161, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_skok_tytana2 = 1
 				S.g_iyor = -(20)
 				S.g_skok_tytana3 = S.y
@@ -2907,7 +2907,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 				S.g_iyor += 0.5
 				S.y = (S.y + S.g_iyor)
 				if (S.y > S.g_skok_tytana3):
-					P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 					R.inst_set(S.g_boss_blur_controller, "distance", 20)
 					G.earth_quake = 50
 					S.g_skacze3razy -= 1
@@ -2936,7 +2936,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 				if (S.g_skok_tytana < 60):
 					S.g_skok_tytana += 2
 			if (R.eqv(S, S.g_skok_tytana2, 0) and (S.g_skok_tytana >= 60)):
-				P2.SXMS_SFX_PlayExt(S, [161, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [161, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.inst_set(S.g_boss_blur_controller, "distance", 20)
 				S.g_skok_tytana2 = 1
 				S.g_iyor = -(20)
@@ -2947,7 +2947,7 @@ static func script_boomboom(S, A: Array) -> Variant:
 				S.g_iyor += 0.5
 				S.y = (S.y + S.g_iyor)
 				if (S.y > S.g_skok_tytana3):
-					P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 					G.earth_quake = 20
 					S.y = S.g_skok_tytana3
 					S.g_skok_tytana2 = 0
@@ -2967,12 +2967,12 @@ static func script_boomboom(S, A: Array) -> Variant:
 				S.g_kierunek = (S.g_kierunek * -(1))
 			if (S.x < R.aget(R.view_xview, 0)):
 				S.g_kierunek = 1
-			if (S.x > (R.aget(R.view_xview, 0) + 800)):
+			if (S.x > (R.anum(R.aget(R.view_xview, 0)) + 800)):
 				S.g_kierunek = -(1)
 			if ((S.g_szybkosc > 0) and R.eqv(S, S.g_uderza, 0)):
 				S.g_szybkosc = (S.g_szybkosc / 1.1)
 			if (((S.g_obracanie_reka3 <= -(2000)) or (S.g_obracanie_reka <= -(2000))) and R.eqv(S, S.g_uderza, 0)):
-				P2.SXMS_SFX_PlayExt(S, [163, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [163, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				G.earth_quake = 20
 				var _n5 = int(10)
 				while _n5 > 0:
@@ -3016,56 +3016,56 @@ static func script_boomboom(S, A: Array) -> Variant:
 				if (S.g_sampel1 >= S.g_sampel2):
 					S.g_sampel2 -= 1
 					S.g_sampel1 = 0
-					P2.SXMS_SFX_PlayExt(S, [164, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [164, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 	if R.eqv(S, S.g_sekwencja, 9):
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 1, 90, 0xFFFFFF, 0.225)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), -(S.g_iyor), 2, 90, 0xFFFFFF, 0.01)
-		R.draw_sprite_ext(S, 289, 0, (S.x + 10), ((((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), 1, 1, (((R.sin(S, (S.g_stream * 5)) * 2) / ((R.abs(S, S.g_iyor) + 1))) + S.g_skok_tytana), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 289, 0, (S.x - 10), ((((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), -(1), 1, ((((-(R.cos(S, (S.g_stream * 5))) * 2) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) - S.g_skok_tytana), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 293, 0, S.x, (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x + 30), (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (((((((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor) + S.g_iyor) + S.g_obracanie_reka) - (S.g_skok_tytana * 2)) + S.g_skok_tytana2), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x - 30), (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), -(1), 1, ((((((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) + S.g_obracanie_reka3) + (S.g_skok_tytana * 2)) - S.g_skok_tytana2), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 1, 90, 0xFFFFFF, 0.225)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), -(S.g_iyor), 2, 90, 0xFFFFFF, 0.01)
+		R.draw_sprite_ext(S, 289, 0, (S.x + 10), ((((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), 1, 1, (((R.sin(S, (S.g_stream * 5)) * 2) / ((R.abs(S, S.g_iyor) + 1))) + S.g_skok_tytana), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x - 10), ((((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), -(1), 1, ((((-(R.cos(S, (S.g_stream * 5))) * 2) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) - S.g_skok_tytana), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 293, 0, S.x, (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x + 30), (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (((((((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor) + S.g_iyor) + S.g_obracanie_reka) - (S.g_skok_tytana * 2)) + S.g_skok_tytana2), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x - 30), (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), -(1), 1, ((((((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) + S.g_obracanie_reka3) + (S.g_skok_tytana * 2)) - S.g_skok_tytana2), 0xFFFFFF, 1)
 	if R.eqv(S, S.g_sekwencja, 8):
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 1, 90, 0xFFFFFF, 0.225)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), -(S.g_iyor), 2, 90, 0xFFFFFF, 0.01)
-		R.draw_sprite_ext(S, 289, 0, (S.x + 10), ((((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), 1, 1, (((R.sin(S, (S.g_stream * 5)) * 2) / ((R.abs(S, S.g_iyor) + 1))) + S.g_skok_tytana), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 289, 0, (S.x - 10), ((((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), -(1), 1, ((((-(R.cos(S, (S.g_stream * 5))) * 2) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) - S.g_skok_tytana), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 293, 0, S.x, (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x + 30), (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (((((((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor) + S.g_iyor) + S.g_obracanie_reka) - (S.g_skok_tytana * 2)) + S.g_skok_tytana2), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x - 30), (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), -(1), 1, ((((((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) + S.g_obracanie_reka3) + (S.g_skok_tytana * 2)) - S.g_skok_tytana2), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 1, 90, 0xFFFFFF, 0.225)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), -(S.g_iyor), 2, 90, 0xFFFFFF, 0.01)
+		R.draw_sprite_ext(S, 289, 0, (S.x + 10), ((((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), 1, 1, (((R.sin(S, (S.g_stream * 5)) * 2) / ((R.abs(S, S.g_iyor) + 1))) + S.g_skok_tytana), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x - 10), ((((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), -(1), 1, ((((-(R.cos(S, (S.g_stream * 5))) * 2) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) - S.g_skok_tytana), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 293, 0, S.x, (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x + 30), (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (((((((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor) + S.g_iyor) + S.g_obracanie_reka) - (S.g_skok_tytana * 2)) + S.g_skok_tytana2), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x - 30), (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), -(1), 1, ((((((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) + S.g_obracanie_reka3) + (S.g_skok_tytana * 2)) - S.g_skok_tytana2), 0xFFFFFF, 1)
 	if R.eqv(S, S.g_sekwencja, 7):
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 1, 90, 0xFFFFFF, 0.225)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), -(S.g_iyor), 2, 90, 0xFFFFFF, 0.01)
-		R.draw_sprite_ext(S, 289, 0, (S.x + 10), ((((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), 1, 1, (((R.sin(S, (S.g_stream * 5)) * 2) / ((R.abs(S, S.g_iyor) + 1))) + S.g_skok_tytana), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 289, 0, (S.x - 10), ((((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), -(1), 1, ((((-(R.cos(S, (S.g_stream * 5))) * 2) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) - S.g_skok_tytana), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 293, 0, S.x, (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x + 30), (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, ((((((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor) + S.g_iyor) + S.g_obracanie_reka) - (S.g_skok_tytana * 2)), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x - 30), (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), -(1), 1, (((((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) + S.g_obracanie_reka3) + (S.g_skok_tytana * 2)), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 1, 90, 0xFFFFFF, 0.225)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), -(S.g_iyor), 2, 90, 0xFFFFFF, 0.01)
+		R.draw_sprite_ext(S, 289, 0, (S.x + 10), ((((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), 1, 1, (((R.sin(S, (S.g_stream * 5)) * 2) / ((R.abs(S, S.g_iyor) + 1))) + S.g_skok_tytana), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x - 10), ((((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), -(1), 1, ((((-(R.cos(S, (S.g_stream * 5))) * 2) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) - S.g_skok_tytana), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 293, 0, S.x, (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x + 30), (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, ((((((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor) + S.g_iyor) + S.g_obracanie_reka) - (S.g_skok_tytana * 2)), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x - 30), (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), -(1), 1, (((((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) + S.g_obracanie_reka3) + (S.g_skok_tytana * 2)), 0xFFFFFF, 1)
 	if R.eqv(S, S.g_sekwencja, 6):
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 1, 90, 0xFFFFFF, 0.225)
-		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), -(S.g_iyor), 2, 90, 0xFFFFFF, 0.01)
-		R.draw_sprite_ext(S, 289, 0, (S.x + 10), ((((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), 1, 1, (((R.sin(S, (S.g_stream * 5)) * 2) / ((R.abs(S, S.g_iyor) + 1))) + S.g_skok_tytana), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 289, 0, (S.x - 10), ((((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), -(1), 1, ((((-(R.cos(S, (S.g_stream * 5))) * 2) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) - S.g_skok_tytana), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 293, 0, S.x, (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x + 30), (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, ((((((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor) + S.g_iyor) + S.g_obracanie_reka) - (S.g_skok_tytana * 2)), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x - 30), (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), -(1), 1, (((((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) + S.g_obracanie_reka3) + (S.g_skok_tytana * 2)), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 1, 90, 0xFFFFFF, 0.225)
+		R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), -(S.g_iyor), 2, 90, 0xFFFFFF, 0.01)
+		R.draw_sprite_ext(S, 289, 0, (S.x + 10), ((((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), 1, 1, (((R.sin(S, (S.g_stream * 5)) * 2) / ((R.abs(S, S.g_iyor) + 1))) + S.g_skok_tytana), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x - 10), ((((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)) + (S.g_skok_tytana / 2)), -(1), 1, ((((-(R.cos(S, (S.g_stream * 5))) * 2) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) - S.g_skok_tytana), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 293, 0, S.x, (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x + 30), (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), 1, 1, ((((((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor) + S.g_iyor) + S.g_obracanie_reka) - (S.g_skok_tytana * 2)), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x - 30), (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + (S.g_skok_tytana / 2)), -(1), 1, (((((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) + S.g_obracanie_reka3) + (S.g_skok_tytana * 2)), 0xFFFFFF, 1)
 	if R.eqv(S, R.aget(S.g_animacja, 0), 5):
-		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
-		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 3, 90, 0xFFFFFF, 0.225)
-		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 2), 3, 90, 0xFFFFFF, 0.01)
-		R.draw_sprite_ext(S, 289, 0, (S.x + 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), 1, 1, ((R.sin(S, (S.g_stream * 5)) * 2) / ((R.abs(S, S.g_iyor) + 1))), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 289, 0, (S.x - 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), -(1), 1, (((-(R.cos(S, (S.g_stream * 5))) * 2) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 293, 0, S.x, ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x + 30), ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), 1, 1, (((((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor) + S.g_iyor) + S.g_obracanie_reka), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x - 30), ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), -(1), 1, ((((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) + S.g_obracanie_reka3), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
+		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 3, 90, 0xFFFFFF, 0.225)
+		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 2), 3, 90, 0xFFFFFF, 0.01)
+		R.draw_sprite_ext(S, 289, 0, (S.x + 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), 1, 1, ((R.sin(S, (S.g_stream * 5)) * 2) / ((R.abs(S, S.g_iyor) + 1))), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x - 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), -(1), 1, (((-(R.cos(S, (S.g_stream * 5))) * 2) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 293, 0, S.x, ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x + 30), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), 1, 1, (((((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor) + S.g_iyor) + S.g_obracanie_reka), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x - 30), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), -(1), 1, ((((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor) + S.g_obracanie_reka3), 0xFFFFFF, 1)
 		if R.eqv(S, S.g_uderza, 1):
 			R.draw_sprite_ext(S, 296, 0, (S.x + (120 * S.g_kierunek)), S.y, ((S.g_image_xscale * S.g_kierunek) * 4), 2, 0, 0xFFFFFF, (S.g_szybkosc / 10))
 		if R.eqv(S, S.g_uderza, 1):
@@ -3079,44 +3079,44 @@ static func script_boomboom(S, A: Array) -> Variant:
 	if R.eqv(S, R.aget(S.g_animacja, 0), 3):
 		R.aset(S.g_dodo, 0, -(10))
 		S.g_stream += 0.15
-		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
-		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 3, 90, 0xFFFFFF, 0.225)
-		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 2), 3, 90, 0xFFFFFF, 0.01)
-		R.draw_sprite_ext(S, 289, 0, (S.x + 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), 1, 1, (((R.sin(S, (S.g_stream * 5)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 289, 0, (S.x - 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), -(1), 1, (((-(R.cos(S, (S.g_stream * 5))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 293, 0, S.x, ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x + 30), ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), 1, 1, (((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x - 30), ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), -(1), 1, (((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 8), 2, 90, 0xFFFFFF, 0.35)
+		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 5), 3, 90, 0xFFFFFF, 0.225)
+		R.draw_sprite_ext(S, 51, 0, (S.x + 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_iyor) / 2), 3, 90, 0xFFFFFF, 0.01)
+		R.draw_sprite_ext(S, 289, 0, (S.x + 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), 1, 1, (((R.sin(S, (S.g_stream * 5)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x - 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), -(1), 1, (((-(R.cos(S, (S.g_stream * 5))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 293, 0, S.x, ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x + 30), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), 1, 1, (((R.sin(S, (S.g_stream * 4)) * 20) / ((R.abs(S, S.g_iyor) + 1))) + S.g_iyor), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x - 30), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), -(1), 1, (((-(R.sin(S, (S.g_stream * 4))) * 20) / ((R.abs(S, S.g_iyor) + 1))) - S.g_iyor), 0xFFFFFF, 1)
 	if (1 - R.eqv(S, R.aget(S.g_animacja, 0), 2)):
 		S.g_rozdeptywalny = 1
 	if R.eqv(S, R.aget(S.g_animacja, 0), 2):
 		S.g_rozdeptywalny = 0
 		R.aset(S.g_dodo, 0, -(10))
-		R.draw_sprite_ext(S, 295, 0, S.x, ((((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) - S.g_anim_chowanie) + 10), 1, 1, 90, 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 295, 0, (S.x + S.g_anim_chowanie), ((((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) - S.g_anim_chowanie) + 10), 1, 1, 45, 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 295, 0, (S.x - S.g_anim_chowanie), ((((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) - S.g_anim_chowanie) + 10), 1, 1, (45 + 90), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 295, 0, (S.x - (S.g_anim_chowanie * 1.2)), (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + 10), 1, 1, ((45 + 90) + 22), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 295, 0, (S.x + (S.g_anim_chowanie * 1.2)), (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + 10), 1, 1, (45 - 22), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 289, 0, (S.x + 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), 1, 1, (R.sin(S, (S.g_stream * 5)) * 2), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 289, 0, (S.x - 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), -(1), 1, (-(R.cos(S, (S.g_stream * 5))) * 2), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, ((S.x + 30) - S.g_anim_chowanie), ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), 1, 1, (R.sin(S, (S.g_stream * 4)) * 20), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, ((S.x - 30) + S.g_anim_chowanie), ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), -(1), 1, (-(R.sin(S, (S.g_stream * 4))) * 20), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 292, 0, S.x, (((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)) + S.g_anim_chowanie), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 295, 0, S.x, ((((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) - S.g_anim_chowanie) + 10), 1, 1, 90, 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 295, 0, (S.x + S.g_anim_chowanie), ((((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) - S.g_anim_chowanie) + 10), 1, 1, 45, 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 295, 0, (S.x - S.g_anim_chowanie), ((((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) - S.g_anim_chowanie) + 10), 1, 1, (45 + 90), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 295, 0, (S.x - (S.g_anim_chowanie * 1.2)), (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + 10), 1, 1, ((45 + 90) + 22), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 295, 0, (S.x + (S.g_anim_chowanie * 1.2)), (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + 10), 1, 1, (45 - 22), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x + 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), 1, 1, (R.sin(S, (S.g_stream * 5)) * 2), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x - 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), -(1), 1, (-(R.cos(S, (S.g_stream * 5))) * 2), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, ((S.x + 30) - S.g_anim_chowanie), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), 1, 1, (R.sin(S, (S.g_stream * 4)) * 20), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, ((S.x - 30) + S.g_anim_chowanie), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), -(1), 1, (-(R.sin(S, (S.g_stream * 4))) * 20), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 292, 0, S.x, (((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)) + S.g_anim_chowanie), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
 	if R.eqv(S, R.aget(S.g_animacja, 0), 1):
 		R.aset(S.g_dodo, 0, -(10))
-		R.draw_sprite_ext(S, 289, 0, (S.x + 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), 1, 1, (R.sin(S, (S.g_stream * 5)) * 20), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 289, 0, (S.x - 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), -(1), 1, (-(R.cos(S, (S.g_stream * 5))) * 20), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 293, 0, S.x, ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x + 30), ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), 1, 1, (R.sin(S, (S.g_stream * 4)) * 20), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x - 30), ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), -(1), 1, (-(R.sin(S, (S.g_stream * 4))) * 20), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x + 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), 1, 1, (R.sin(S, (S.g_stream * 5)) * 20), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x - 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), -(1), 1, (-(R.cos(S, (S.g_stream * 5))) * 20), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 293, 0, S.x, ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x + 30), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), 1, 1, (R.sin(S, (S.g_stream * 4)) * 20), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x - 30), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), -(1), 1, (-(R.sin(S, (S.g_stream * 4))) * 20), 0xFFFFFF, 1)
 	if R.eqv(S, R.aget(S.g_animacja, 0), 0):
 		R.aset(S.g_dodo, 0, -(10))
 		S.g_stream += 0.1
-		R.draw_sprite_ext(S, 289, 0, (S.x + 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), 1, 1, (R.sin(S, S.g_stream) * 5), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 289, 0, (S.x - 10), (((S.y + 30) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), -(1), 1, (-(R.sin(S, S.g_stream)) * 5), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 293, 0, S.x, ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x + 30), ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), 1, 1, (R.sin(S, S.g_stream) * 5), 0xFFFFFF, 1)
-		R.draw_sprite_ext(S, 291, 0, (S.x - 30), ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), -(1), 1, (-(R.sin(S, S.g_stream)) * 5), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x + 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), 1, 1, (R.sin(S, S.g_stream) * 5), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 289, 0, (S.x - 10), (((S.y + 30) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), -(1), 1, (-(R.sin(S, S.g_stream)) * 5), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 293, 0, S.x, ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), 1, 1, (S.g_kierunek * S.g_szybkosc), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x + 30), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), 1, 1, (R.sin(S, S.g_stream) * 5), 0xFFFFFF, 1)
+		R.draw_sprite_ext(S, 291, 0, (S.x - 30), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), -(1), 1, (-(R.sin(S, S.g_stream)) * 5), 0xFFFFFF, 1)
 	return 0
 
 
@@ -3131,7 +3131,7 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 			S.g_timer += 1
 			if (S.g_timer > 200):
 				S.g_sekwencja = 1
-				P2.SXMS_SFX_PlayExt(S, [(152 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(152 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 		if R.eqv(S, S.g_sekwencja, 1):
 			S.y = -(300)
 			R.aset(S.g_animacja, 0, 6)
@@ -3146,7 +3146,7 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 			if (S.g_grawitacja < 20):
 				S.g_grawitacja += 0.5
 			if R.place_meeting(S, S.x, S.y, 1):
-				P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_animacja, 0, 0)
 				G.earth_quake = 50
 				S.g_grawitacja = 0
@@ -3164,7 +3164,7 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 			if (S.g_timer > 40):
 				S.g_sekwencja = 4
 				R.aset(S.g_animacja, 0, 3)
-				P2.SXMS_SFX_PlayExt(S, [151, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [151, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 		if R.eqv(S, S.g_sekwencja, 4):
 			if R.eqv(S, S.g_ryk_sekwencja, 1):
 				S.g_sekwencja = 5
@@ -3240,8 +3240,8 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 						S.x = (S.x + 5)
 				if ((S.x >= 780) and (S.x <= 820)):
 					S.g_sekwencja = 71
-					P2.SXMS_SFX_PlayExt(S, [157, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
-					P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [157, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if R.eqv(S, S.g_sekwencja, 71):
 				R.aset(S.g_animacja, 0, 4)
 				S.g_sekwencja = 72
@@ -3273,7 +3273,7 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 					S.g_grawitacja += 0.5
 				if R.place_meeting(S, S.x, S.y, 1):
 					S.g_sek_jumping = 1
-					P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				if R.eqv(S, S.g_sek_jumping, 1):
 					var _n1 = int(3)
 					while _n1 > 0:
@@ -3441,7 +3441,7 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 				S.g_timer = 0
 				S.g_zianie_direction = 180
 		if R.eqv(S, S.g_sekwencja, 43):
-			S.g_wafelkos = P2.SXMS_SFX_PlayExt(S, [159, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			S.g_wafelkos = P2.SXMS_SFX_PlayExt(S, [159, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			S.g_sekwencja = 44
 			R.aset(S.g_animacja, 0, 5)
 			S.g_ryk_sekwencja = 0
@@ -3499,7 +3499,7 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 				S.g_timer = 0
 				S.g_zianie_direction = 0
 		if R.eqv(S, S.g_sekwencja, 33):
-			S.g_wafelkos = P2.SXMS_SFX_PlayExt(S, [159, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			S.g_wafelkos = P2.SXMS_SFX_PlayExt(S, [159, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			S.g_sekwencja = 34
 			R.aset(S.g_animacja, 0, 5)
 			S.g_ryk_sekwencja = 0
@@ -3538,8 +3538,8 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 		if R.eqv(S, S.g_sekwencja, 20):
 			S.g_timer += 1
 			if (S.g_timer > 50):
-				P2.SXMS_SFX_PlayExt(S, [157, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
-				P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [157, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_timer = 0
 				S.g_sekwencja = 21
 				R.aset(S.g_animacja, 0, 4)
@@ -3573,22 +3573,22 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 				S.g_kula_sekwencja = 1
 				S.g_kula_speed = -(10)
 				S.g_kierunek = -(1)
-				P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if (R.eqv(S, S.g_kula_sekwencja, 1) and (S.x < -(300))):
 				S.g_kula_sekwencja = 2
 				S.g_kula_speed = 30
 				S.g_kierunek = 1
-				P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if (R.eqv(S, S.g_kula_sekwencja, 2) and (S.x > (R.room_width + 300))):
 				S.g_kula_sekwencja = 3
 				S.g_kula_speed = -(20)
 				S.g_kierunek = -(1)
-				P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if (R.eqv(S, S.g_kula_sekwencja, 3) and (S.x < -(300))):
 				S.g_kula_speed = 20
 				S.g_kierunek = 1
 				S.g_kula_sekwencja = 4
-				P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [158, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if R.eqv(S, S.g_kula_sekwencja, 4):
 				if (S.x > 300):
 					S.g_kula_speed = (S.g_kula_speed / 1.1)
@@ -3615,7 +3615,7 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 				S.g_sek_jumping = 1
 				R.aset(S.g_animacja, 0, 6)
 				S.g_grawitacja = -(30)
-				P2.SXMS_SFX_PlayExt(S, [(152 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(152 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if ((S.g_sek_jumps_numb <= 0) and R.eqv(S, S.g_sek_jumping, 0)):
 				S.g_sekwencja_wykonal_ruch = 1
 				S.g_timer = 0
@@ -3631,7 +3631,7 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 				if (S.x > (R.get_obj_var(303, "g_x") + 20)):
 					S.x = (S.x - S.g_sek_jump_speed)
 				if R.place_meeting(S, S.x, S.y, 1):
-					P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 					S.g_sek_jumping = 2
 					S.g_grawitacja = 0
 					S.g_timer = 0
@@ -3671,7 +3671,7 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 				S.g_sek_fireballs_numb -= 1
 				S.g_timer = 0
 				S.g_ryk_sekwencja = 0
-				P2.SXMS_SFX_PlayExt(S, [(154 + R.round(S, R.random(S, 2))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(154 + R.round(S, R.random(S, 2))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if ((S.g_timer > 50) and (S.g_sek_fireballs_numb <= 0)):
 				S.g_sekwencja_wykonal_ruch = 1
 				S.g_sekwencja = -(10)
@@ -3689,7 +3689,7 @@ static func script_boss_bowser(S, A: Array) -> Variant:
 				R.inst_set(S.g_kokon, "speed", 10)
 				R.inst_set(S.g_kokon, "direction", R.point_direction(S, R.inst_get(S.g_kokon, "x"), R.inst_get(S.g_kokon, "y"), R.get_obj_var(303, "g_x"), (R.get_obj_var(303, "g_y") - 32)))
 			if (R.eqv(S, S.g_ryk_sekwencja, 10) and R.eqv(S, S.g_sek_is_fireballs, 2)):
-				P2.SXMS_SFX_PlayExt(S, [(154 + R.round(S, R.random(S, 2))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(154 + R.round(S, R.random(S, 2))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_kokon = R.instance_create(S, (S.x + (R.sin(S, R.degtorad(S, (115 * S.g_kierunek))) * 65)), ((S.y + (R.sin(S, S.g_stream) * 10)) + (R.cos(S, R.degtorad(S, (115 * S.g_kierunek))) * 65)), 377)
 				R.inst_set(S.g_kokon, "speed", 2)
 				R.inst_set(S.g_kokon, "direction", R.point_direction(S, R.inst_get(S.g_kokon, "x"), R.inst_get(S.g_kokon, "y"), R.get_obj_var(303, "g_x"), (R.get_obj_var(303, "g_y") - 32)))
@@ -3982,14 +3982,14 @@ static func script_enemy_Cheep_Chomp_sterowany2(S, A: Array) -> Variant:
 			if (R.place_meeting(S, S.x, S.y, 303) and R.eqv(S, G.oberwal, 0)):
 				if (R.eqv(S, S.g_kierunek, 1) and (R.get_obj_var(303, "g_x") > S.x)):
 					G.oberwal = 2
-					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				if (R.eqv(S, S.g_kierunek, 1) and (R.get_obj_var(303, "g_x") < S.x)):
 					G.oberwal = 1
 				if (R.eqv(S, S.g_kierunek, -(1)) and (R.get_obj_var(303, "g_x") > S.x)):
 					G.oberwal = 1
 				if (R.eqv(S, S.g_kierunek, -(1)) and (R.get_obj_var(303, "g_x") < S.x)):
 					G.oberwal = 2
-					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+					P2.SXMS_SFX_PlayExt(S, [96, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			if (S.x < 0):
 				R.set_speed(S, 0)
 				S.x = 1
@@ -4037,12 +4037,12 @@ static func script_enemy_Cheep_Chomp_sterowany2(S, A: Array) -> Variant:
 				R.set_speed(S, (R.get_speed(S) * -(1)))
 				S.x = S.g_xprevious
 			if (R.lnot(R.place_meeting(S, S.x, S.y, 182)) and R.eqv(S, S.g_plusknie, 0)):
-				P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_plusknie = 1
 				R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 0), 3)
 				R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 1), 3)
 			if (R.place_meeting(S, S.x, S.y, 182) and R.eqv(S, S.g_plusknie, 1)):
-				P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_plusknie = 0
 				R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 0), 3)
 				R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 1), 3)
@@ -4056,7 +4056,7 @@ static func script_enemy_Cheep_Chomp_sterowany2(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 10):
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.inst_set(R.aget(S.g_lolo, 0), "wodne_spadanie", 2)
@@ -4067,7 +4067,7 @@ static func script_enemy_Cheep_Chomp_sterowany2(S, A: Array) -> Variant:
 				R.inst_set(S.g_fifi, "iyor", S.g_ystart)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
 				R.inst_set(R.aget(S.g_lolo, 0), "wodne_spadanie", 2)
@@ -4105,7 +4105,7 @@ static func script_enemy_big_cannon2(S, A: Array) -> Variant:
 			if R.eqv(S, S.g_wachacz, 1):
 				S.g_kierunek = (S.g_kierunek + R.sin(S, R.degtorad(S, S.g_wacha)))
 			if (S.g_reload >= S.g_reload_shot):
-				P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				S.g_reload = 0
 				S.g_koko = R.instance_create(S, S.x, S.y, 591)
 				R.inst_set(S.g_koko, "direction", S.g_kierunek)
@@ -4176,7 +4176,7 @@ static func script_enemy_bulletball_3plus(S, A: Array) -> Variant:
 			if (S.g_energy <= 0):
 				S.g_kill = 10
 			if R.eqv(S, S.g_kill, 1):
-				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 63)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -4185,7 +4185,7 @@ static func script_enemy_bulletball_3plus(S, A: Array) -> Variant:
 				R.instance_destroy(S)
 			if R.eqv(S, S.g_kill, 1000):
 				R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+				P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 				R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 				R.inst_set(R.aget(S.g_lolo, 0), "grafika", 63)
 				R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -4212,9 +4212,9 @@ static func script_enemy_bulletball_3_samoczynny(S, A: Array) -> Variant:
 		R.set_speed(S, S.g_nagraj_speed)
 		S.g_nagraj_speed = 0
 	if ((R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 2)) and R.eqv(S, S.g_aktywowany, 0)):
-		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
-		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
-		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 		S.g_aktywowany = 1
 	if (R.eqv(S, G.pauza, 0) and R.eqv(S, S.g_aktywowany, 1)):
 		if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) > (G.odleglosc_ekranu * 3)):
@@ -4233,7 +4233,7 @@ static func script_enemy_bulletball_3_samoczynny(S, A: Array) -> Variant:
 		if (S.g_energy <= 0):
 			S.g_kill = 10
 		if R.eqv(S, S.g_kill, 1):
-			P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [68, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 			R.inst_set(R.aget(S.g_lolo, 0), "grafika", 63)
 			R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -4242,7 +4242,7 @@ static func script_enemy_bulletball_3_samoczynny(S, A: Array) -> Variant:
 			R.instance_destroy(S)
 		if R.eqv(S, S.g_kill, 1000):
 			R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+			P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 			R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
 			R.inst_set(R.aget(S.g_lolo, 0), "grafika", 63)
 			R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -4278,9 +4278,9 @@ static func script_enemy_bulletball_3_samoczynny2(S, A: Array) -> Variant:
 		R.set_speed(S, S.g_nagraj_speed)
 		S.g_nagraj_speed = 0
 	if ((R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 1.2)) and R.eqv(S, S.g_aktywowany, 0)):
-		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
-		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
-		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+		P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
 		S.g_aktywowany = 1
 	if (R.eqv(S, G.pauza, 0) and R.eqv(S, S.g_aktywowany, 1)):
 		if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) > (G.odleglosc_ekranu * 2)):

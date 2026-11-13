@@ -23,7 +23,7 @@ static func ev_3_0(S, A: Array) -> Variant:
                 S.g_koko = R.instance_create(S, S.x, S.y, 356)
                 R.inst_set(S.g_koko, "ixor", -(4))
                 R.inst_set(S.g_koko, "iyor", -(10))
-                P2.SXMS_SFX_PlayExt(S, [45, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [45, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if (S.g_timer >= 300):
             S.g_timer = 0
     return 0

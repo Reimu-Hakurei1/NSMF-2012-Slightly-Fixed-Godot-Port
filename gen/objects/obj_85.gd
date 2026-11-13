@@ -30,7 +30,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_seened = 1
             S.g_timer1 += 2
             if R.eqv(S, S.g_timer1, 110):
-                P2.SXMS_SFX_PlayExt(S, [98, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [98, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if ((S.g_timer1 > 100) and (S.g_timer1 < 200)):
                 S.g_timer2 += 1
             if (S.g_timer2 > 5):
@@ -45,6 +45,6 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.instance_create(S, S.x, S.y, 86)
             if (S.g_timer1 > 300):
                 S.g_timer3 = (S.g_timer3 / 1.03)
-    if ((((S.x < (R.aget(R.view_xview, 0) + 840)) and (S.x > (R.aget(R.view_xview, 0) - 80))) and (S.y > (R.aget(R.view_yview, 0) - 80))) and (S.y < (R.aget(R.view_yview, 0) + 640))):
+    if ((((S.x < (R.anum(R.aget(R.view_xview, 0)) + 840)) and (S.x > (R.anum(R.aget(R.view_xview, 0)) - 80))) and (S.y > (R.anum(R.aget(R.view_yview, 0)) - 80))) and (S.y < (R.anum(R.aget(R.view_yview, 0)) + 640))):
         R.draw_sprite_ext(S, 123, 0, S.x, S.y, S.g_timer4, S.g_timer4, S.g_kierunek, 0xFFFFFF, S.g_timer3)
     return 0

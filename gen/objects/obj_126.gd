@@ -5,20 +5,20 @@ static var R = load("res://runtime/r.gd")
 static var G = load("res://gen/globals.gd")
 static var P2 = load("res://gen/scripts/part_2.gd")
 static func ev_0_0(S, A: Array) -> Variant:
-    P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+    P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     S.g_mario_cieszy_sie = R.round(S, R.random(S, 6))
     if R.eqv(S, S.g_mario_cieszy_sie, 1):
-        P2.SXMS_SFX_PlayExt(S, [60, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [60, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_mario_cieszy_sie, 2):
-        P2.SXMS_SFX_PlayExt(S, [61, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [61, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_mario_cieszy_sie, 3):
-        P2.SXMS_SFX_PlayExt(S, [10, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [10, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_mario_cieszy_sie, 4):
-        P2.SXMS_SFX_PlayExt(S, [11, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [11, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_mario_cieszy_sie, 5):
-        P2.SXMS_SFX_PlayExt(S, [12, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [12, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_mario_cieszy_sie, 6):
-        P2.SXMS_SFX_PlayExt(S, [13, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [13, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     S.g_muszluje = 1
     S.g_kierunek = 0
     S.g_stream = 0
@@ -51,7 +51,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _w3
                 S.g_energy -= 1
             S = _sv2
-            P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.instance_destroy(S)
             R.instance_create(S, S.x, S.y, 314)
             R.part_particles_create(S, G.particle_sys_2, (S.x + 32), (S.y + 32), G.part_effect_kick, 1)
@@ -60,7 +60,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.part_particles_create(S, G.particle_sys_2, (S.x + R.random(S, 50)), (S.y + R.random(S, 50)), G.part_effect_star5_gravity, 1)
                 _n4 -= 1
         if (S.g_timer > 60):
-            P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.instance_destroy(S)
             R.instance_create(S, S.x, S.y, 314)
             R.part_particles_create(S, G.particle_sys_2, (S.x + 32), (S.y + 32), G.part_effect_kick, 1)

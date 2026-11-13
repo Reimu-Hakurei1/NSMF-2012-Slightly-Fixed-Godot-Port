@@ -13,16 +13,16 @@ static func ev_8_0(S, A: Array) -> Variant:
     if (1 - R.eqv(S, S.g_ixor, G.ekran_srodek_x)):
         S.g_x_przesunieto = 0
         if R.eqv(S, S.g_starting, 1):
-            S.g_x_przesunieto += ((S.g_ixor - R.aget(R.view_xview, 0)))
+            S.g_x_przesunieto += ((S.g_ixor - R.anum(R.aget(R.view_xview, 0))))
             S.g_ixor = R.aget(R.view_xview, 0)
         if R.eqv(S, S.g_starting, 0):
             S.g_starting = 1
             S.g_ixor = R.aget(R.view_xview, 0)
         S.x = (S.x - ((S.g_x_przesunieto / S.g_dzielnik) - (S.g_x_przesunieto * S.g_mnoznik)))
-    if (S.x < (R.aget(R.view_xview, 0) - (S.g_odleglosc_przemijania * G.ekran_size_act))):
-        S.x = ((R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)) + (S.g_odleglosc_przemijania * G.ekran_size_act))
-    if (S.x > ((R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)) + (S.g_odleglosc_przemijania * G.ekran_size_act))):
-        S.x = (R.aget(R.view_xview, 0) - (S.g_odleglosc_przemijania * G.ekran_size_act))
+    if (S.x < (R.anum(R.aget(R.view_xview, 0)) - (S.g_odleglosc_przemijania * G.ekran_size_act))):
+        S.x = ((R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))) + (S.g_odleglosc_przemijania * G.ekran_size_act))
+    if (S.x > ((R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))) + (S.g_odleglosc_przemijania * G.ekran_size_act))):
+        S.x = (R.anum(R.aget(R.view_xview, 0)) - (S.g_odleglosc_przemijania * G.ekran_size_act))
     if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (((G.odleglosc_ekranu * S.g_visible_size) * S.g_image_yscale) * 1.1)):
         R.draw_set_blend_mode(S, 1)
         R.draw_sprite_ext(S, S.g_sprite_index, 0, S.x, S.y, S.g_image_xscale, S.g_image_yscale, S.g_image_angle, 0xFFFFFF, S.g_image_alpha)

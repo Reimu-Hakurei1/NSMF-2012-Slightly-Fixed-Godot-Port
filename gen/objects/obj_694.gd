@@ -41,7 +41,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.set_speed(S, S.g_nagraj_speed)
         S.g_nagraj_speed = 0
     if ((R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 1.2)) and R.eqv(S, S.g_aktywowany, 0)):
-        P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), (G.glosnosc_dzwieku / 2), -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), (G.glosnosc_dzwieku / 2), -(1), 0, 0])
         S.g_aktywowany = 1
     if (R.eqv(S, G.pauza, 0) and R.eqv(S, S.g_aktywowany, 1)):
         if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) > (G.odleglosc_ekranu * 2)):

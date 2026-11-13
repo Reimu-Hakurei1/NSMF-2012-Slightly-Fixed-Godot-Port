@@ -13,12 +13,12 @@ static func ev_0_0(S, A: Array) -> Variant:
     return 0
 
 static func ev_8_0(S, A: Array) -> Variant:
-    S.x = (R.aget(R.view_xview, 0) + (150 * G.ekran_size_act))
-    S.y = (R.aget(R.view_yview, 0) + (540 * G.ekran_size_act))
+    S.x = (R.anum(R.aget(R.view_xview, 0)) + (150 * G.ekran_size_act))
+    S.y = (R.anum(R.aget(R.view_yview, 0)) + (540 * G.ekran_size_act))
     R.aset(R.bg_foreground, 3, 0)
-    R.draw_sprite_ext(S, G.title_facebook, 0, (R.aget(R.view_xview, 0) + (150 * G.ekran_size_act)), (R.aget(R.view_yview, 0) + (560 * G.ekran_size_act)), (S.g_wielkosc * G.ekran_size_act), (S.g_wielkosc * G.ekran_size_act), 0, 0xFFFFFF, S.g_image_alpha)
+    R.draw_sprite_ext(S, G.title_facebook, 0, (R.anum(R.aget(R.view_xview, 0)) + (150 * G.ekran_size_act)), (R.anum(R.aget(R.view_yview, 0)) + (560 * G.ekran_size_act)), (S.g_wielkosc * G.ekran_size_act), (S.g_wielkosc * G.ekran_size_act), 0, 0xFFFFFF, S.g_image_alpha)
     R.draw_set_blend_mode(S, 1)
-    R.draw_sprite_ext(S, G.title_facebook, 0, (R.aget(R.view_xview, 0) + (150 * G.ekran_size_act)), (R.aget(R.view_yview, 0) + (560 * G.ekran_size_act)), (S.g_wielkosc * G.ekran_size_act), (S.g_wielkosc * G.ekran_size_act), 0, 0xFFFFFF, (-(1) + S.g_wielkosc))
+    R.draw_sprite_ext(S, G.title_facebook, 0, (R.anum(R.aget(R.view_xview, 0)) + (150 * G.ekran_size_act)), (R.anum(R.aget(R.view_yview, 0)) + (560 * G.ekran_size_act)), (S.g_wielkosc * G.ekran_size_act), (S.g_wielkosc * G.ekran_size_act), 0, 0xFFFFFF, (-(1) + S.g_wielkosc))
     R.draw_set_blend_mode(S, 0)
     if R.lnot(R.mouse_check_button_pressed(S, 1)):
         S.g_klik = 0

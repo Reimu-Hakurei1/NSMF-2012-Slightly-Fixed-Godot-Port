@@ -10,7 +10,7 @@ static func ev_0_0(S, A: Array) -> Variant:
 
 static func ev_3_0(S, A: Array) -> Variant:
     S.x = 0
-    S.y = (R.aget(R.view_yview, 0) - 500)
+    S.y = (R.anum(R.aget(R.view_yview, 0)) - 500)
     S.g_image_yscale = -(20)
     S.g_image_xscale = 3
     if R.place_meeting(S, S.x, S.y, 550):

@@ -26,7 +26,7 @@ static func ev_8_0(S, A: Array) -> Variant:
     if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 1.5)):
         if (S.g_koko < 150):
             R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (1.5 + (S.g_alphar / 4)), (1.5 + (S.g_alphar / 4)), 0, 0xFFFFFF, (((150 - (S.g_koko))) / 100))
-            R.draw_sprite_ext(S, 413, 0, (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), R.aget(R.view_yview, 0), (-(1.5) - (S.g_alphar / 4)), (1.5 + (S.g_alphar / 4)), 0, 0xFFFFFF, (((150 - (S.g_koko))) / 100))
-            R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), (1.5 + (S.g_alphar / 4)), (-(1.5) - (S.g_alphar / 4)), 0, 0xFFFFFF, (((150 - (S.g_koko))) / 100))
-            R.draw_sprite_ext(S, 413, 0, (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), (-(1.5) - (S.g_alphar / 4)), (-(1.5) - (S.g_alphar / 4)), 0, 0xFFFFFF, (((150 - (S.g_koko))) / 100))
+            R.draw_sprite_ext(S, 413, 0, (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), R.aget(R.view_yview, 0), (-(1.5) - (S.g_alphar / 4)), (1.5 + (S.g_alphar / 4)), 0, 0xFFFFFF, (((150 - (S.g_koko))) / 100))
+            R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), (1.5 + (S.g_alphar / 4)), (-(1.5) - (S.g_alphar / 4)), 0, 0xFFFFFF, (((150 - (S.g_koko))) / 100))
+            R.draw_sprite_ext(S, 413, 0, (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), (-(1.5) - (S.g_alphar / 4)), (-(1.5) - (S.g_alphar / 4)), 0, 0xFFFFFF, (((150 - (S.g_koko))) / 100))
     return 0

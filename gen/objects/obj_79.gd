@@ -8,7 +8,7 @@ static func ev_0_0(S, A: Array) -> Variant:
     S.g_timer = 0
     S.g_efekt = 0
     S.g_migacz = 0
-    P2.SXMS_SFX_PlayExt(S, [69, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+    P2.SXMS_SFX_PlayExt(S, [69, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     return 0
 
 static func ev_8_0(S, A: Array) -> Variant:
@@ -25,5 +25,5 @@ static func ev_8_0(S, A: Array) -> Variant:
         if (S.g_migacz > (360 * 4)):
             R.instance_destroy(S)
             R.instance_create(S, S.x, S.y, 311)
-            P2.SXMS_SFX_PlayExt(S, [66, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [66, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     return 0

@@ -38,7 +38,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             R.draw_sprite_ext(S, 247, 0, (S.x + 20), (S.y + S.g_ygrek), (0.85 * S.g_kierunek), 0.85, ((R.sin(S, R.degtorad(S, ((-(S.g_stream) + 180) + 30))) * 50) + (60 * S.g_kierunek)), 0xFFFFFF, 1)
         if (1 - R.eqv(S, S.g_animsek, 2)):
             if R.eqv(S, S.g_hello, 0):
-                P2.SXMS_SFX_PlayExt(S, [(R.round(S, R.random(S, 1)) + 119), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [(R.round(S, R.random(S, 1)) + 119), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_hello = 1
             R.draw_sprite_ext(S, 244, 0, (S.x + 20), (S.y + S.g_ygrek), 1, 1, (R.sin(S, R.degtorad(S, S.g_stream)) / 2), 0xFFFFFF, 1)
             R.draw_sprite_ext(S, 245, 0, ((S.x + 20) - 11), ((S.y - 5) + S.g_ygrek), 1, 1, (R.sin(S, R.degtorad(S, ((-(S.g_stream) + 180) + 30))) * 50), 0xFFFFFF, 1)
@@ -122,7 +122,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             if R.variable_local_exists(S, "generuj_dialog"):
                 if R.eqv(S, S.g_generuj_dialog, 1):
                     if ((((S.x > (R.get_obj_var(303, "g_x") - 100)) and (S.x < (R.get_obj_var(303, "g_x") + 100))) and (S.y > (R.get_obj_var(303, "g_y") - 100))) and (S.y < (R.get_obj_var(303, "g_y") + 100))):
-                        P2.SXMS_SFX_PlayExt(S, [121, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                        P2.SXMS_SFX_PlayExt(S, [121, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                         S.g_generuj_dialog = 2
                 if R.eqv(S, S.g_generuj_dialog, 2):
                     S.g_generuj_dialog = 3
@@ -146,7 +146,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_chmurken_jest_w_zasiegu = 1
             if (R.eqv(S, S.g_chmurken_jest_w_zasiegu, 1) and R.eqv(S, S.g_sek_chmur, 0)):
                 S.g_sek_chmur = 1
-                P2.SXMS_SFX_PlayExt(S, [124, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [124, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.eqv(S, G.english_or_polish, 0):
                 S.g_fun += 0.25
                 if R.eqv(S, S.g_sek_chmur, 1):

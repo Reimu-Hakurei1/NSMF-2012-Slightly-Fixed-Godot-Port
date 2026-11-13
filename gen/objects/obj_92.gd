@@ -82,7 +82,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_iyor = 0
         S.g_krecenie -= S.g_ixor
         if ((((R.eqv(S, R.inst_get(S.g_element1, "sekwencja"), 1) and R.eqv(S, R.inst_get(S.g_element2, "sekwencja"), 1)) and R.eqv(S, R.inst_get(S.g_element3, "sekwencja"), 1)) and R.eqv(S, R.inst_get(S.g_element4, "sekwencja"), 1)) and R.eqv(S, R.inst_get(S.g_element5, "sekwencja"), 1)):
-            P2.SXMS_SFX_PlayExt(S, [53, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [53, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.instance_create(S, S.x, S.y, 91)
             R.instance_destroy(S)
             var _sv3 = S

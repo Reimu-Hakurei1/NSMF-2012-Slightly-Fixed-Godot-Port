@@ -39,15 +39,15 @@ static func ev_8_0(S, A: Array) -> Variant:
     if (1 - R.eqv(S, S.g_przesowanko2, 0)):
         S.g_przesowanko += S.g_przesowanko2
         S.g_przesowanko2 = (S.g_przesowanko2 / 1.1)
-    S.x = (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2))
-    S.y = (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2))
+    S.x = (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2))
+    S.y = (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2))
     S.g_merdacz_delay += 1
     if R.eqv(S, S.g_merdacz_delay, 100):
         S.g_merdacz_kat = 40
-        P2.SXMS_SFX_PlayExt(S, [31, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [31, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_merdacz_delay, 130):
         S.g_merdacz_kat = 40
-        P2.SXMS_SFX_PlayExt(S, [31, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [31, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if (S.g_merdacz_kat > 0):
         S.g_merdacz_kat = (S.g_merdacz_kat / 1.03)
     S.g_merdacz += (1 + S.g_merdacz_kat)
@@ -73,10 +73,10 @@ static func ev_8_0(S, A: Array) -> Variant:
     if (S.g_pompon2 > 0):
         S.g_pompon2 = (S.g_pompon2 / 1.05)
     if (R.eqv(S, S.g_sampleroza, 0) and (S.g_adder1 < 200)):
-        P2.SXMS_SFX_PlayExt(S, [411, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [411, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         S.g_sampleroza = 1
     if (R.eqv(S, S.g_sampleroza, 1) and (S.g_adder2 < 10)):
-        P2.SXMS_SFX_PlayExt(S, [412, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), (G.glosnosc_dzwieku / 1.2), -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [412, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), (G.glosnosc_dzwieku / 1.2), -(1), 0, 0])
         S.g_sampleroza = 2
     S.g_timer += 1
     if (S.g_timer > 20):
@@ -94,6 +94,6 @@ static func ev_8_0(S, A: Array) -> Variant:
     R.draw_set_halign(S, 0)
     R.draw_set_valign(S, 2)
     R.draw_set_alpha(S, S.g_credit_alpha)
-    R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + 10), ((R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)) - 10), R.concat(R.concat("ORIGINAL BY SOFTENDO\nMODDED BY CST1229 (", R.get_obj_var(925, "g_sfe_version")), ")"), (G.ekran_size_act * 0.75), (G.ekran_size_act * 0.75), 0)
+    R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + 10), ((R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))) - 10), R.concat(R.concat("ORIGINAL BY SOFTENDO\nMODDED BY CST1229 (", R.get_obj_var(925, "g_sfe_version")), ")"), (G.ekran_size_act * 0.75), (G.ekran_size_act * 0.75), 0)
     R.draw_set_alpha(S, 1)
     return 0

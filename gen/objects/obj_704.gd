@@ -17,9 +17,9 @@ static func ev_8_0(S, A: Array) -> Variant:
                 break
             if (S.g_i >= 10):
                 S.g_tuptus = 1
-            R.draw_sprite_ext(S, G.energy_boss_1, 0, (((R.aget(R.view_xview, 0) + (270 * G.ekran_size_act)) + ((S.g_i * 30) * G.ekran_size_act)) - (((S.g_tuptus * 30) * 10) * G.ekran_size_act)), ((R.aget(R.view_yview, 0) + (540 * G.ekran_size_act)) + ((S.g_tuptus * 40) * G.ekran_size_act)), ((0.8 * G.ekran_size_act) + ((R.sin(S, S.g_stream) / 20) * G.ekran_size_act)), ((0.8 * G.ekran_size_act) + ((R.sin(S, S.g_stream) / 20) * G.ekran_size_act)), 0, 0xFFFFFF, 1)
+            R.draw_sprite_ext(S, G.energy_boss_1, 0, (((R.anum(R.aget(R.view_xview, 0)) + (270 * G.ekran_size_act)) + ((S.g_i * 30) * G.ekran_size_act)) - (((S.g_tuptus * 30) * 10) * G.ekran_size_act)), ((R.anum(R.aget(R.view_yview, 0)) + (540 * G.ekran_size_act)) + ((S.g_tuptus * 40) * G.ekran_size_act)), ((0.8 * G.ekran_size_act) + ((R.sin(S, S.g_stream) / 20) * G.ekran_size_act)), ((0.8 * G.ekran_size_act) + ((R.sin(S, S.g_stream) / 20) * G.ekran_size_act)), 0, 0xFFFFFF, 1)
             R.draw_set_blend_mode(S, 1)
-            R.draw_sprite_ext(S, G.energy_boss_1, 0, (((R.aget(R.view_xview, 0) + (270 * G.ekran_size_act)) + ((S.g_i * 30) * G.ekran_size_act)) - (((S.g_tuptus * 30) * 10) * G.ekran_size_act)), ((R.aget(R.view_yview, 0) + (540 * G.ekran_size_act)) + ((S.g_tuptus * 40) * G.ekran_size_act)), ((0.8 * G.ekran_size_act) + ((R.sin(S, (S.g_stream + 1.7)) / 20) * G.ekran_size_act)), ((0.8 * G.ekran_size_act) + ((R.sin(S, (S.g_stream + 1.7)) / 20) * G.ekran_size_act)), 0, 0xFFFFFF, 1)
+            R.draw_sprite_ext(S, G.energy_boss_1, 0, (((R.anum(R.aget(R.view_xview, 0)) + (270 * G.ekran_size_act)) + ((S.g_i * 30) * G.ekran_size_act)) - (((S.g_tuptus * 30) * 10) * G.ekran_size_act)), ((R.anum(R.aget(R.view_yview, 0)) + (540 * G.ekran_size_act)) + ((S.g_tuptus * 40) * G.ekran_size_act)), ((0.8 * G.ekran_size_act) + ((R.sin(S, (S.g_stream + 1.7)) / 20) * G.ekran_size_act)), ((0.8 * G.ekran_size_act) + ((R.sin(S, (S.g_stream + 1.7)) / 20) * G.ekran_size_act)), 0, 0xFFFFFF, 1)
             R.draw_set_blend_mode(S, S.g_bm_norma)
             S.g_i += 1
     return 0

@@ -102,8 +102,8 @@ static func ev_8_0(S, A: Array) -> Variant:
                     R.instance_destroy(S)
                 if R.variable_local_exists(S, "rodzaj"):
                     if (1 - R.eqv(S, S.g_rodzaj, 0)):
-                        P2.SXMS_SFX_PlayExt(S, [43, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
-                        P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                        P2.SXMS_SFX_PlayExt(S, [43, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                        P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                         S.g_i = 0
                         while true:
                             if not ((S.g_i < 50)):

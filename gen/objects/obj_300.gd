@@ -95,7 +95,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 return 0
                 return 0
         if (S.g_timer > 250):
-            P2.SXMS_SFX_PlayExt(S, [66, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [66, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.instance_destroy(S)
             R.instance_create(S, S.x, S.y, 311)
             R.set_obj_var(303, "g_kont_noszenia", 360)

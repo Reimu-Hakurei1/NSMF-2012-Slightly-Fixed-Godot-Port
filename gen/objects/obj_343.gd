@@ -23,7 +23,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.x = (S.x + S.g_ixor)
             S.y = (S.y + S.g_iyor)
             S.g_iyor += 0.5
-            if (S.y > ((R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)) + 500)):
+            if (S.y > ((R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))) + 500)):
                 R.instance_destroy(S)
             S.g_obracator += S.g_ixor
     return 0

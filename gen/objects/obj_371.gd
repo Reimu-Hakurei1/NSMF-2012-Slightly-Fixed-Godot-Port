@@ -103,9 +103,9 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.x = (S.x + (S.g_szybkosc * S.g_kierunek))
             if R.place_meeting(S, (S.x + (((1 + S.g_szybkosc)) * S.g_kierunek)), S.y, 1):
                 S.g_kierunek = (S.g_kierunek * -(1))
-            if (S.x < (R.aget(R.view_xview, 0) - 300)):
+            if (S.x < (R.anum(R.aget(R.view_xview, 0)) - 300)):
                 S.g_kierunek = 1
-            if (S.x > ((R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)) + 300)):
+            if (S.x > ((R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))) + 300)):
                 S.g_kierunek = -(1)
             if (S.g_szybkosc < 10):
                 S.g_szybkosc += 0.1
@@ -170,18 +170,18 @@ static func ev_8_0(S, A: Array) -> Variant:
     R.draw_sprite_ext(S, 51, 0, S.x, S.y, S.g_efekter_prawo, 1, 0, 0xFFFFFF, 0.25)
     R.draw_sprite_ext(S, 51, 0, S.x, S.y, -(S.g_efekter_lewo), 2, 0, 0xFFFFFF, 0.25)
     R.draw_sprite_ext(S, 51, 0, S.x, S.y, -(S.g_efekter_lewo), 1, 0, 0xFFFFFF, 0.25)
-    R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_grawitacja) / 10), 2, 90, 0xFFFFFF, 0.35)
-    R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_grawitacja) / 10), 2, 90, 0xFFFFFF, 0.35)
-    R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), (-(S.g_grawitacja) / 15), 1, 90, 0xFFFFFF, 0.225)
-    R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), -(S.g_grawitacja), 2, 90, 0xFFFFFF, 0.01)
+    R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_grawitacja) / 10), 2, 90, 0xFFFFFF, 0.35)
+    R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_grawitacja) / 10), 2, 90, 0xFFFFFF, 0.35)
+    R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), (-(S.g_grawitacja) / 15), 1, 90, 0xFFFFFF, 0.225)
+    R.draw_sprite_ext(S, 51, 0, S.x, (((S.y + 10) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), -(S.g_grawitacja), 2, 90, 0xFFFFFF, 0.01)
     R.draw_sprite_ext(S, 290, 0, S.x, S.y, 1, 1, ((R.sin(S, S.g_efekt) * S.g_efekt2) + S.g_obracanie), 0xFFFFFF, 1)
     R.draw_sprite_ext(S, 296, 0, (S.x + (80 * S.g_kierunek)), S.y, ((S.g_kierunek * S.g_szybkosc) / 10), (S.g_szybkosc / 5), 0, 0xFFFFFF, ((S.g_szybkosc / 10) * R.random(S, 1)))
     R.draw_sprite_ext(S, 296, 0, (S.x + (80 * S.g_kierunek)), S.y, ((S.g_kierunek * S.g_szybkosc) / 10), ((S.g_szybkosc / 5) * R.random(S, 1)), 0, 0xFFFFFF, ((S.g_szybkosc / 10) * R.random(S, 1)))
     R.draw_sprite_ext(S, 296, 0, (S.x + (80 * S.g_kierunek)), S.y, ((S.g_kierunek * S.g_szybkosc) / 15), ((S.g_szybkosc / 5) * R.random(S, 1)), 0, 0xFFFFFF, ((S.g_szybkosc / 10) * R.random(S, 1)))
-    R.draw_sprite_ext(S, 289, 0, (S.x + (10 / S.g_dzielnik)), (((S.y + (30 / S.g_dzielnik)) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), 1, 1, ((R.sin(S, (S.g_stream * 5)) * 20) + S.g_obracanie), 0xFFFFFF, (1 / S.g_dzielnik))
-    R.draw_sprite_ext(S, 289, 0, (S.x - (10 / S.g_dzielnik)), (((S.y + (30 / S.g_dzielnik)) + R.aget(S.g_dodo, 0)) + R.sin(S, S.g_stream)), -(1), 1, ((-(R.cos(S, (S.g_stream * 5))) * 20) + S.g_obracanie), 0xFFFFFF, (1 / S.g_dzielnik))
-    R.draw_sprite_ext(S, 293, 0, S.x, ((S.y + R.aget(S.g_dodo, 0)) + (R.sin(S, S.g_stream) * 5)), 1, 1, ((S.g_kierunek * S.g_szybkosc) + S.g_obracanie), 0xFFFFFF, (1 / S.g_dzielnik))
-    R.draw_sprite_ext(S, 291, 0, (S.x + (30 / S.g_dzielnik)), ((S.y + R.aget(S.g_dodo, 0)) + ((R.sin(S, S.g_stream) * 5) / S.g_dzielnik)), 1, 1, ((R.sin(S, (S.g_stream * 4)) * 20) + S.g_obracanie), 0xFFFFFF, (1 / S.g_dzielnik))
-    R.draw_sprite_ext(S, 291, 0, (S.x - (30 / S.g_dzielnik)), ((S.y + R.aget(S.g_dodo, 0)) + ((R.sin(S, S.g_stream) * 5) / S.g_dzielnik)), -(1), 1, ((-(R.sin(S, (S.g_stream * 4))) * 20) + S.g_obracanie), 0xFFFFFF, (1 / S.g_dzielnik))
+    R.draw_sprite_ext(S, 289, 0, (S.x + (10 / S.g_dzielnik)), (((S.y + (30 / S.g_dzielnik)) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), 1, 1, ((R.sin(S, (S.g_stream * 5)) * 20) + S.g_obracanie), 0xFFFFFF, (1 / S.g_dzielnik))
+    R.draw_sprite_ext(S, 289, 0, (S.x - (10 / S.g_dzielnik)), (((S.y + (30 / S.g_dzielnik)) + R.anum(R.aget(S.g_dodo, 0))) + R.sin(S, S.g_stream)), -(1), 1, ((-(R.cos(S, (S.g_stream * 5))) * 20) + S.g_obracanie), 0xFFFFFF, (1 / S.g_dzielnik))
+    R.draw_sprite_ext(S, 293, 0, S.x, ((S.y + R.anum(R.aget(S.g_dodo, 0))) + (R.sin(S, S.g_stream) * 5)), 1, 1, ((S.g_kierunek * S.g_szybkosc) + S.g_obracanie), 0xFFFFFF, (1 / S.g_dzielnik))
+    R.draw_sprite_ext(S, 291, 0, (S.x + (30 / S.g_dzielnik)), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + ((R.sin(S, S.g_stream) * 5) / S.g_dzielnik)), 1, 1, ((R.sin(S, (S.g_stream * 4)) * 20) + S.g_obracanie), 0xFFFFFF, (1 / S.g_dzielnik))
+    R.draw_sprite_ext(S, 291, 0, (S.x - (30 / S.g_dzielnik)), ((S.y + R.anum(R.aget(S.g_dodo, 0))) + ((R.sin(S, S.g_stream) * 5) / S.g_dzielnik)), -(1), 1, ((-(R.sin(S, (S.g_stream * 4))) * 20) + S.g_obracanie), 0xFFFFFF, (1 / S.g_dzielnik))
     R.draw_sprite_ext(S, 20, 0, S.x, S.y, S.g_image_xscale, S.g_image_yscale, 0, 0xFFFFFF, (0.05 / S.g_dzielnik))
     return 0

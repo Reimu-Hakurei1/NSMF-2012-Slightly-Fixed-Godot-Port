@@ -26,10 +26,10 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.draw_sprite_ext(S, 409, 0, S.x, (S.y - 60), (1 + (R.sin(S, ((S.g_koko * 5) + 2)) / 50)), (1 - (R.sin(S, ((S.g_koko * 5) + 4)) / 40)), 0, 0xFFFFFF, 1)
         R.draw_sprite_ext(S, 408, 0, S.x, S.y, (1 + (R.sin(S, (S.g_koko * 5)) / 50)), (1 - (R.sin(S, ((S.g_koko * 5) + 2)) / 40)), 0, 0xFFFFFF, 1)
         R.aset(S.g_dodo, 0, (R.sin(S, ((S.g_koko * 5) + 2)) * 4))
-        R.draw_sprite_ext(S, 411, 0, (S.x - 72), (((S.y - 160) + (R.sin(S, S.g_koko) * 3)) + R.aget(S.g_dodo, 0)), (-(1) + (R.sin(S, (S.g_koko * 30)) / 10)), (1 + (R.sin(S, (S.g_koko * 20)) / 20)), (360 + (R.sin(S, (S.g_koko * 25)) * 10)), 0xFFFFFF, 1)
-        R.draw_sprite_ext(S, 411, 0, (S.x + 66), (((S.y - 160) + (R.sin(S, (S.g_koko + 1)) * 4)) + R.aget(S.g_dodo, 0)), (-(1) + (R.sin(S, ((S.g_koko * 30) + 3)) / 10)), (1 - (R.sin(S, S.g_koko) / 100)), (360 + (R.sin(S, ((S.g_koko * 25) + 1)) * 10)), 0xFFFFFF, 1)
-        R.draw_sprite_ext(S, 411, 0, ((S.x + 26) - 70), ((((S.y - 265) + 38) + (R.sin(S, (S.g_koko + 2)) * 2)) + R.aget(S.g_dodo, 0)), (-(1) + (R.sin(S, ((S.g_koko * 30) + 1)) / 100)), (1 - (R.sin(S, S.g_koko) / 100)), (360 + (R.sin(S, ((S.g_koko * 25) + 2)) * 10)), 0xFFFFFF, 1)
-        R.draw_sprite_ext(S, 411, 0, (S.x + 44), ((((S.y - 265) + 38) + (R.sin(S, (S.g_koko + 3)) * 3)) + R.aget(S.g_dodo, 0)), (-(1) + (R.sin(S, ((S.g_koko * 30) + 2)) / 10)), (1 - (R.sin(S, S.g_koko) / 100)), (360 + (R.sin(S, ((S.g_koko * 25) + 3)) * 10)), 0xFFFFFF, 1)
+        R.draw_sprite_ext(S, 411, 0, (S.x - 72), (((S.y - 160) + (R.sin(S, S.g_koko) * 3)) + R.anum(R.aget(S.g_dodo, 0))), (-(1) + (R.sin(S, (S.g_koko * 30)) / 10)), (1 + (R.sin(S, (S.g_koko * 20)) / 20)), (360 + (R.sin(S, (S.g_koko * 25)) * 10)), 0xFFFFFF, 1)
+        R.draw_sprite_ext(S, 411, 0, (S.x + 66), (((S.y - 160) + (R.sin(S, (S.g_koko + 1)) * 4)) + R.anum(R.aget(S.g_dodo, 0))), (-(1) + (R.sin(S, ((S.g_koko * 30) + 3)) / 10)), (1 - (R.sin(S, S.g_koko) / 100)), (360 + (R.sin(S, ((S.g_koko * 25) + 1)) * 10)), 0xFFFFFF, 1)
+        R.draw_sprite_ext(S, 411, 0, ((S.x + 26) - 70), ((((S.y - 265) + 38) + (R.sin(S, (S.g_koko + 2)) * 2)) + R.anum(R.aget(S.g_dodo, 0))), (-(1) + (R.sin(S, ((S.g_koko * 30) + 1)) / 100)), (1 - (R.sin(S, S.g_koko) / 100)), (360 + (R.sin(S, ((S.g_koko * 25) + 2)) * 10)), 0xFFFFFF, 1)
+        R.draw_sprite_ext(S, 411, 0, (S.x + 44), ((((S.y - 265) + 38) + (R.sin(S, (S.g_koko + 3)) * 3)) + R.anum(R.aget(S.g_dodo, 0))), (-(1) + (R.sin(S, ((S.g_koko * 30) + 2)) / 10)), (1 - (R.sin(S, S.g_koko) / 100)), (360 + (R.sin(S, ((S.g_koko * 25) + 3)) * 10)), 0xFFFFFF, 1)
         R.draw_sprite_ext(S, 412, 0, (S.x + 80), (S.y - 150), (S.g_lolok + ((S.g_lolok * R.sin(S, (S.g_koko * 20))) / 5)), (S.g_lolok + ((S.g_lolok * R.sin(S, (S.g_koko * 20))) / 5)), 360, 0xFFFFFF, 1)
         if (S.g_sekwencja < 100):
             S.g_sekwencja += 1

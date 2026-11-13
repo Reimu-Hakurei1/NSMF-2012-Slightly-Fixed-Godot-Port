@@ -31,7 +31,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         S.g_iyor += (0.25 / S.g_wodne_spadanie)
         S.y = (S.y + S.g_iyor)
         S.x = (S.x + S.g_ixor)
-        if (S.y > (R.aget(R.view_yview, 0) + 800)):
+        if (S.y > (R.anum(R.aget(R.view_yview, 0)) + 800)):
             R.instance_destroy(S)
         if R.eqv(S, S.g_fifluj, 0):
             if (R.eqv(S, S.g_kierunek_idzie, -(1)) and (S.g_kierunek > -(180))):

@@ -89,7 +89,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_torpeda += 1
         S.g_kat -= 5
     if R.eqv(S, S.g_timer, 150):
-        P2.SXMS_SFX_PlayExt(S, [130, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [130, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_timer, 300):
         R.instance_create(S, S.x, S.y, 333)
     return 0

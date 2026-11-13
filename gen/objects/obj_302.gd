@@ -8,8 +8,8 @@ static func ev_8_0(S, A: Array) -> Variant:
     R.draw_set_alpha(S, 1)
     R.draw_set_color(S, 0xFFFFFF)
     R.draw_set_valign(S, 1)
-    R.draw_text_ext_transformed(S, (R.aget(R.view_xview, 0) + 32), (R.aget(R.view_yview, 0) + 32), "Mario", 0, 0, 1, 1, 0)
-    R.draw_text_ext_transformed(S, (R.aget(R.view_xview, 0) + 32), (R.aget(R.view_yview, 0) + 62), R.concat("FPS:_", R.string(S, R.fps)), 0, 0, 1, 1, 0)
+    R.draw_text_ext_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + 32), (R.anum(R.aget(R.view_yview, 0)) + 32), "Mario", 0, 0, 1, 1, 0)
+    R.draw_text_ext_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + 32), (R.anum(R.aget(R.view_yview, 0)) + 62), R.concat("FPS:_", R.string(S, R.fps)), 0, 0, 1, 1, 0)
     R.draw_set_blend_mode(S, 0)
     R.draw_set_valign(S, 0)
     return 0

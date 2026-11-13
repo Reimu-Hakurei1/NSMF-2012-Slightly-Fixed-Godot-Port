@@ -35,7 +35,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                     S.g_adder = 1
                     S.g_sekwencja = 1
                     G.punkty += 1000
-                    P2.SXMS_SFX_PlayExt(S, [118, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                    P2.SXMS_SFX_PlayExt(S, [118, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                     G.check_point_slot = G.last_level_played
                     G.chpoint_id = S.g_id
                     G.chpoint_sublevel = R.room

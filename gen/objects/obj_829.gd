@@ -25,7 +25,7 @@ static func ev_3_0(S, A: Array) -> Variant:
         if ((S.g_timer > 20) and (S.g_ilosc_tilesow > 0)):
             S.g_timer = 0
             S.g_ilosc_tilesow -= 1
-            P2.SXMS_SFX_PlayExt(S, [147, (((S.x - R.aget(R.view_xview, 0))) / ((R.aget(R.view_xview, 0) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [147, (((S.x - R.anum(R.aget(R.view_xview, 0)))) / ((R.anum(R.aget(R.view_xview, 0)) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.eqv(S, S.g_kierunek, 1):
                 S.g_odleglosc_x -= 1
                 S.g_randomuj_tiles = R.round(S, R.random(S, 1))

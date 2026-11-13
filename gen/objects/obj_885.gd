@@ -19,7 +19,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.draw_sprite_ext(S, G.zjadacz_buziowy_2, 0, (S.x + (R.sin(S, R.degtorad(S, (0 + (R.sin(S, R.degtorad(S, S.g_stream)) * 20)))) * ((80 + (20 * R.sin(S, R.degtorad(S, (S.g_stream * 2)))))))), (S.y + (R.cos(S, R.degtorad(S, (0 + (R.sin(S, R.degtorad(S, S.g_stream)) * 20)))) * ((80 + (20 * R.sin(S, R.degtorad(S, (S.g_stream * 2)))))))), 1, (1 + (R.sin(S, R.degtorad(S, (S.g_stream * 2))) / 2)), (R.sin(S, R.degtorad(S, S.g_stream)) * 20), 0xFFFFFF, 1)
         S.g_stream += 10
     if R.eqv(S, G.pauza, 0):
-        if (S.y > ((R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)) + 400)):
+        if (S.y > ((R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))) + 400)):
             R.instance_destroy(S)
         G.earth_quake = 30
         S.g_cien = 0
@@ -44,7 +44,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_i += 1
         if R.eqv(S, S.g_sampluj_zniszczenie, 1):
             S.g_sampluj_zniszczenie = 0
-            P2.SXMS_SFX_PlayExt(S, [21, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [21, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         S.y = (S.y + S.g_grawitacja)
         S.g_grawitacja += 0.5
         S.g_i = 0

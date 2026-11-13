@@ -23,7 +23,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_sounder += 1
         if R.eqv(S, S.g_sounder, 15):
             S.g_sounder = 100
-            P2.SXMS_SFX_PlayExt(S, [40, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [40, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         S.g_animowanie += 5
         if (S.g_obrotnis < 90):
             S.g_obrotnis += 2
@@ -37,6 +37,6 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.x = (S.x + (R.sin(S, R.degtorad(S, (S.g_animowanie / 2.5))) * 2))
             S.y = (S.y + 1)
             S.g_animer += 2.5
-        if ((((S.x > (R.aget(R.view_xview, 0) + 1040)) or (S.x < (R.aget(R.view_xview, 0) - 240))) or (S.y > (R.aget(R.view_yview, 0) + 1040))) or (S.y < (R.aget(R.view_yview, 0) - 240))):
+        if ((((S.x > (R.anum(R.aget(R.view_xview, 0)) + 1040)) or (S.x < (R.anum(R.aget(R.view_xview, 0)) - 240))) or (S.y > (R.anum(R.aget(R.view_yview, 0)) + 1040))) or (S.y < (R.anum(R.aget(R.view_yview, 0)) - 240))):
             R.instance_destroy(S)
     return 0

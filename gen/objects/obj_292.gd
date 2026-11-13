@@ -26,7 +26,7 @@ static func ev_3_0(S, A: Array) -> Variant:
         S.g_sampel += R.abs(S, S.g_kreciuj)
         if (S.g_sampel > 20):
             S.g_sampel = 0
-            P2.SXMS_SFX_PlayExt(S, [115, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [115, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         S.g_kreciuj = (S.g_kreciuj / 1.01)
         if R.eqv(S, S.g_krec, 1):
             if (R.get_obj_var(303, "g_x") > S.x):

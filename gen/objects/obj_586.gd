@@ -14,7 +14,7 @@ static func ev_0_0(S, A: Array) -> Variant:
 
 static func ev_8_0(S, A: Array) -> Variant:
     R.draw_set_blend_mode(S, 1)
-    R.draw_sprite_ext(S, G.lightning, 0, (R.aget(R.view_xview, 0) + S.g_ixor), (R.aget(R.view_yview, 0) + S.g_iyor), S.g_image_xscale, S.g_image_yscale, S.g_image_angle, 0xFFFFFF, S.g_stream)
+    R.draw_sprite_ext(S, G.lightning, 0, (R.anum(R.aget(R.view_xview, 0)) + S.g_ixor), (R.anum(R.aget(R.view_yview, 0)) + S.g_iyor), S.g_image_xscale, S.g_image_yscale, S.g_image_angle, 0xFFFFFF, S.g_stream)
     R.draw_set_blend_mode(S, 0)
     if R.eqv(S, G.pauza, 0):
         S.g_stream -= 0.1

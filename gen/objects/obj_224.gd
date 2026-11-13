@@ -35,7 +35,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                     S.g_timer = 0
                     S.g_sekwencja = 1
                     S.g_kat = R.random(S, 360)
-                    P2.SXMS_SFX_PlayExt(S, [99, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                    P2.SXMS_SFX_PlayExt(S, [99, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.eqv(S, S.g_sekwencja, 1):
                 S.g_strzela_sizer = (S.g_strzela_sizer / 1.1)
                 S.g_kat += S.g_obracaj_ile_co_step
@@ -46,7 +46,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                     R.inst_set(S.g_koko, "energy", S.g_zasieg_pociskow)
                     R.inst_set(S.g_koko, "speed", S.g_szybkosc_pociskow)
                     R.inst_set(S.g_koko, "direction", R.point_direction(S, S.x, S.y, R.get_obj_var(303, "g_x"), (R.get_obj_var(303, "g_y") - 30)))
-                    P2.SXMS_SFX_PlayExt(S, [73, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                    P2.SXMS_SFX_PlayExt(S, [73, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.x = (R.get_obj_var(303, "g_x") + (R.sin(S, R.degtorad(S, S.g_kat)) * S.g_zasieg_od_gracza))
                 S.y = ((R.get_obj_var(303, "g_y") + (R.cos(S, R.degtorad(S, S.g_kat)) * S.g_zasieg_od_gracza)) + (R.sin(S, R.degtorad(S, (S.g_stream * 5))) * 10))
                 S.g_dire = R.point_direction(S, S.x, S.y, R.get_obj_var(303, "g_x"), R.get_obj_var(303, "g_y"))

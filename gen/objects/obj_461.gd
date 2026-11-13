@@ -12,7 +12,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         if (R.random(S, 100) > 95):
             R.part_particles_create(S, G.particle_sys_przed_morkami, (S.g_odx + (R.max(S, 0, (R.random(S, S.g_dox) - 250)))), (S.y - 60), G.part_woda_efektoz, 1)
     S.g_anim += 1
-    if (((((S.x + (S.g_image_xscale * 40)) > R.aget(R.view_xview, 0)) and (S.x < (R.aget(R.view_xview, 0) + (800 * G.odleglosc_ekranu)))) and ((S.y + (S.g_image_yscale * 40)) > R.aget(R.view_yview, 0))) and (S.y < (R.aget(R.view_yview, 0) + (600 * G.odleglosc_ekranu)))):
+    if (((((S.x + (S.g_image_xscale * 40)) > R.aget(R.view_xview, 0)) and (S.x < (R.anum(R.aget(R.view_xview, 0)) + (800 * G.odleglosc_ekranu)))) and ((S.y + (S.g_image_yscale * 40)) > R.aget(R.view_yview, 0))) and (S.y < (R.anum(R.aget(R.view_yview, 0)) + (600 * G.odleglosc_ekranu)))):
         R.draw_sprite_ext(S, G.gfx_water_1, 0, S.x, S.y, S.g_image_xscale, S.g_image_yscale, 0, 0xFFFFFF, 0.5)
         S.g_i = 0
         while true:
@@ -28,10 +28,10 @@ static func ev_8_0(S, A: Array) -> Variant:
                     S.g_odx = R.aget(R.view_xview, 0)
                 if (S.x > R.aget(R.view_xview, 0)):
                     S.g_odx = S.x
-                if ((S.x + (S.g_image_xscale * 40)) > (R.aget(R.view_xview, 0) + 800)):
+                if ((S.x + (S.g_image_xscale * 40)) > (R.anum(R.aget(R.view_xview, 0)) + 800)):
                     S.g_dox = 800
-                if ((S.x + (S.g_image_xscale * 40)) < (R.aget(R.view_xview, 0) + 800)):
-                    S.g_dox = (((S.x + (S.g_image_xscale * 40))) - R.aget(R.view_xview, 0))
+                if ((S.x + (S.g_image_xscale * 40)) < (R.anum(R.aget(R.view_xview, 0)) + 800)):
+                    S.g_dox = (((S.x + (S.g_image_xscale * 40))) - R.anum(R.aget(R.view_xview, 0)))
                 R.part_particles_create(S, G.particle_sys_1, (S.g_odx + (R.max(S, 0, (R.random(S, S.g_dox) - 250)))), (S.y - 60), G.part_water_waves, 1)
             if (R.random(S, 100) > 95):
                 S.g_odx = 0
@@ -40,9 +40,9 @@ static func ev_8_0(S, A: Array) -> Variant:
                     S.g_odx = R.aget(R.view_xview, 0)
                 if (S.x > R.aget(R.view_xview, 0)):
                     S.g_odx = S.x
-                if ((S.x + (S.g_image_xscale * 40)) > (R.aget(R.view_xview, 0) + 800)):
+                if ((S.x + (S.g_image_xscale * 40)) > (R.anum(R.aget(R.view_xview, 0)) + 800)):
                     S.g_dox = 800
-                if ((S.x + (S.g_image_xscale * 40)) < (R.aget(R.view_xview, 0) + 800)):
-                    S.g_dox = (((S.x + (S.g_image_xscale * 40))) - R.aget(R.view_xview, 0))
+                if ((S.x + (S.g_image_xscale * 40)) < (R.anum(R.aget(R.view_xview, 0)) + 800)):
+                    S.g_dox = (((S.x + (S.g_image_xscale * 40))) - R.anum(R.aget(R.view_xview, 0)))
                 R.part_particles_create(S, G.particle_sys_1, (S.g_odx + (R.random(S, S.g_dox))), ((S.y - 70) + R.random(S, 80)), G.part_effect_water_1, 1)
     return 0

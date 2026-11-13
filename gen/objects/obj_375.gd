@@ -94,9 +94,9 @@ static func ev_8_0(S, A: Array) -> Variant:
                 P0.SXMS_C_Stop(S, [])
                 S.g_kefcior = R.round(S, R.random(S, 1))
                 if R.eqv(S, S.g_kefcior, 0):
-                    P2.SXMS_SFX_PlayExt(S, [25, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                    P2.SXMS_SFX_PlayExt(S, [25, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 if R.eqv(S, S.g_kefcior, 1):
-                    P2.SXMS_SFX_PlayExt(S, [27, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                    P2.SXMS_SFX_PlayExt(S, [27, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_collected = 1
                 R.part_particles_create(S, G.particle_map_sterring, S.x, S.y, G.part_BOOMBOOM_starr, 1)
                 R.part_particles_create(S, G.particle_map_sterring, S.x, S.y, G.part_BOOMBOOM_starr2, 1)
@@ -110,7 +110,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.part_particles_create(S, G.particle_map_sterring, S.x, S.y, G.part_BOOMBOOM_starr5, 1)
                 S.g_sekwencja = 10000
                 S.g_grawitacja = 0
-                P2.SXMS_SFX_PlayExt(S, [202, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [202, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         R.part_type_direction(S, G.part_BOOMBOOM_starr41, R.random(S, 360), R.random(S, 360), 0, 0)
         R.part_type_orientation(S, G.part_BOOMBOOM_starr41, R.random(S, 360), R.random(S, 360), 10, 10, 1)
         if ((R.random(S, 50) > 25) and R.eqv(S, S.g_collected, 0)):
@@ -131,7 +131,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                     S.g_sekwencja = 1
                     if (S.g_samples <= 10):
                         S.g_samples += 1
-                        P2.SXMS_SFX_PlayExt(S, [165, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                        P2.SXMS_SFX_PlayExt(S, [165, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.eqv(S, S.g_sekwencja, 1):
                 S.g_i = 0
                 while true:
@@ -148,11 +148,11 @@ static func ev_8_0(S, A: Array) -> Variant:
                             R.part_particles_create(S, G.particle_map_sterring, ((S.x + R.random(S, 30)) - R.random(S, 30)), (S.y + 30), G.part_BOOMBOOM_smoke5, 1)
                             _n1 -= 1
                     S.g_i += 1
-        if (S.y > (R.aget(R.view_yview, 0) + 1000)):
+        if (S.y > (R.anum(R.aget(R.view_yview, 0)) + 1000)):
             S.g_spadl = 1
         if R.eqv(S, S.g_spadl, 1):
             S.g_odbijator = (S.g_odbijator / 1.3)
-            if (S.y > (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2))):
+            if (S.y > (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2))):
                 S.y = (S.y - 5)
             S.g_kokoss += 0.05
     if R.eqv(S, S.g_collected, 1):
@@ -166,7 +166,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             G.punkty += 100
             if (S.g_ciurp > 5):
                 S.g_ciurp = 0
-                P2.SXMS_SFX_PlayExt(S, [108, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [108, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if ((S.g_timer >= 500) and (G.time > 20)):
             G.time -= 10
             G.punkty += 1000

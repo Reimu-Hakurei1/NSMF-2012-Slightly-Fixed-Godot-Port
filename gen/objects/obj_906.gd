@@ -50,8 +50,8 @@ static func ev_8_0(S, A: Array) -> Variant:
     if ((S.g_zaczyna_sie >= 400) and (S.y > -(1000))):
         S.g_kaczypcio -= S.g_koktail
     if (S.g_zaczyna_sie > 220):
-        S.x = (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2))
-        S.y = (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) - 150) + S.g_kaczypcio)
+        S.x = (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2))
+        S.y = (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) - 150) + S.g_kaczypcio)
         R.inst_set(S.g_lustro, "x", S.x)
         R.inst_set(S.g_lustro, "y", (S.y + ((200 * G.ekran_size_act) * S.g_wielkosc)))
         R.inst_set(S.g_lustro, "wielkosc", S.g_wielkosc)

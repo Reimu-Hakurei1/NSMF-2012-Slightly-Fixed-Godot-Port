@@ -12,7 +12,7 @@ static func ev_3_0(S, A: Array) -> Variant:
     if R.place_meeting(S, S.x, S.y, 303):
         if R.eqv(S, S.g_mario_ok, 0):
             S.g_mario_ok = 1
-            P2.SXMS_SFX_PlayExt(S, [313, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [313, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) > (G.odleglosc_ekranu * 2)):
         S.g_mario_ok = 0
     return 0

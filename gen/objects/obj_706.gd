@@ -16,7 +16,7 @@ static func ev_0_0(S, A: Array) -> Variant:
     S.g_kierunek = 1
     P0.SXMS_C_Stop(S, [])
     P3.SXMS_WAP_Stop(S, [])
-    P2.SXMS_SFX_PlayExt(S, [322, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+    P2.SXMS_SFX_PlayExt(S, [322, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     S.g_koncz = 0
     return 0
 
@@ -42,7 +42,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_grawitacja = 0
         S.g_timer += 1
         if R.eqv(S, S.g_timer, 200):
-            P2.SXMS_SFX_PlayExt(S, [323, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [323, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         S.g_koncz += 1
         if (S.g_koncz > 700):
             R.room_goto(S, 310)

@@ -15,7 +15,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.draw_set_alpha(S, 1)
         R.draw_set_halign(S, 1)
         R.draw_set_valign(S, 1)
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + (400 * G.ekran_size_act)), (R.aget(R.view_yview, 0) + (300 * G.ekran_size_act)), "PAUSE", ((1 + R.abs(S, ((R.sin(S, R.degtorad(S, S.g_stream)) * S.g_sizer) / 5))) + (S.g_sizer / 10)), ((1 - R.abs(S, ((R.sin(S, R.degtorad(S, S.g_stream)) * S.g_sizer) / 5))) + (S.g_sizer / 10)), 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + (400 * G.ekran_size_act)), (R.anum(R.aget(R.view_yview, 0)) + (300 * G.ekran_size_act)), "PAUSE", ((1 + R.abs(S, ((R.sin(S, R.degtorad(S, S.g_stream)) * S.g_sizer) / 5))) + (S.g_sizer / 10)), ((1 - R.abs(S, ((R.sin(S, R.degtorad(S, S.g_stream)) * S.g_sizer) / 5))) + (S.g_sizer / 10)), 0)
         R.draw_set_alpha(S, 1)
     if R.eqv(S, G.english_or_polish, 1):
         R.draw_set_font(S, G.map_fonts_1)
@@ -23,7 +23,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.draw_set_alpha(S, 1)
         R.draw_set_halign(S, 1)
         R.draw_set_valign(S, 1)
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + (400 * G.ekran_size_act)), (R.aget(R.view_yview, 0) + (300 * G.ekran_size_act)), "PAUZA", ((1 + R.abs(S, ((R.sin(S, R.degtorad(S, S.g_stream)) * S.g_sizer) / 5))) + (S.g_sizer / 10)), ((1 - R.abs(S, ((R.sin(S, R.degtorad(S, S.g_stream)) * S.g_sizer) / 5))) + (S.g_sizer / 10)), 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + (400 * G.ekran_size_act)), (R.anum(R.aget(R.view_yview, 0)) + (300 * G.ekran_size_act)), "PAUZA", ((1 + R.abs(S, ((R.sin(S, R.degtorad(S, S.g_stream)) * S.g_sizer) / 5))) + (S.g_sizer / 10)), ((1 - R.abs(S, ((R.sin(S, R.degtorad(S, S.g_stream)) * S.g_sizer) / 5))) + (S.g_sizer / 10)), 0)
         R.draw_set_alpha(S, 1)
     S.g_stream += (5 + (S.g_sizer * 2))
     S.g_sizer = (S.g_sizer / 1.1)

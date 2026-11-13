@@ -25,59 +25,59 @@ static func ev_8_0(S, A: Array) -> Variant:
             if R.keyboard_check(S, 46):
                 if R.place_meeting(S, S.x, S.y, 303):
                     S.g_kasowanie += 1
-                    R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), 1, 1, 0, 0xFFFFFF, 1)
+                    R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), 1, 1, 0, 0xFFFFFF, 1)
                     R.draw_set_blend_mode(S, 1)
-                    R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), (1.5 + (R.sin(S, S.g_stream) / 2)), (1.5 + (R.sin(S, S.g_stream) / 2)), 0, 0xFFFFFF, 0.15)
+                    R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), (1.5 + (R.sin(S, S.g_stream) / 2)), (1.5 + (R.sin(S, S.g_stream) / 2)), 0, 0xFFFFFF, 0.15)
                     R.draw_set_blend_mode(S, 0)
                     R.draw_set_font(S, G.map_fonts_1)
                     R.draw_set_alpha(S, S.g_image_alpha)
                     R.draw_set_color(S, 0xFFFFFF)
                     R.draw_set_halign(S, 0)
                     R.draw_set_valign(S, 1)
-                    R.draw_text_transformed(S, (S.x - 80), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), R.concat("KASOWANIE", R.aget(S.g_textor, R.round(S, S.g_adder))), 1, 1, 0)
+                    R.draw_text_transformed(S, (S.x - 80), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), R.concat("KASOWANIE", R.anum(R.aget(S.g_textor, R.round(S, S.g_adder)))), 1, 1, 0)
         if (S.g_deleted > 0):
             S.g_deleted -= 1
             if R.place_meeting(S, S.x, S.y, 303):
                 S.g_kasowanie += 1
-                R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), 1, 1, 0, 0xFFFFFF, 1)
+                R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), 1, 1, 0, 0xFFFFFF, 1)
                 R.draw_set_blend_mode(S, 1)
-                R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), (1.5 + (R.sin(S, S.g_stream) / 2)), (1.5 + (R.sin(S, S.g_stream) / 2)), 0, 0xFFFFFF, 0.15)
+                R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), (1.5 + (R.sin(S, S.g_stream) / 2)), (1.5 + (R.sin(S, S.g_stream) / 2)), 0, 0xFFFFFF, 0.15)
                 R.draw_set_blend_mode(S, 0)
                 R.draw_set_font(S, G.map_fonts_1)
                 R.draw_set_alpha(S, S.g_image_alpha)
                 R.draw_set_color(S, 0xFFFFFF)
                 R.draw_set_halign(S, 0)
                 R.draw_set_valign(S, 1)
-                R.draw_text_transformed(S, (S.x - 80), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), "SKASOWANY!", 1, 1, 0)
+                R.draw_text_transformed(S, (S.x - 80), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), "SKASOWANY!", 1, 1, 0)
     if R.eqv(S, G.english_or_polish, 0):
         if R.eqv(S, S.g_deleted, 0):
             if R.keyboard_check(S, 46):
                 if R.place_meeting(S, S.x, S.y, 303):
                     S.g_kasowanie += 1
-                    R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), 1, 1, 0, 0xFFFFFF, 1)
+                    R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), 1, 1, 0, 0xFFFFFF, 1)
                     R.draw_set_blend_mode(S, 1)
-                    R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), (1.5 + (R.sin(S, S.g_stream) / 2)), (1.5 + (R.sin(S, S.g_stream) / 2)), 0, 0xFFFFFF, 0.15)
+                    R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), (1.5 + (R.sin(S, S.g_stream) / 2)), (1.5 + (R.sin(S, S.g_stream) / 2)), 0, 0xFFFFFF, 0.15)
                     R.draw_set_blend_mode(S, 0)
                     R.draw_set_font(S, G.map_fonts_1)
                     R.draw_set_alpha(S, S.g_image_alpha)
                     R.draw_set_color(S, 0xFFFFFF)
                     R.draw_set_halign(S, 0)
                     R.draw_set_valign(S, 1)
-                    R.draw_text_transformed(S, (S.x - 80), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), R.concat("DELETING", R.aget(S.g_textor, R.round(S, S.g_adder))), 1, 1, 0)
+                    R.draw_text_transformed(S, (S.x - 80), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), R.concat("DELETING", R.anum(R.aget(S.g_textor, R.round(S, S.g_adder)))), 1, 1, 0)
         if (S.g_deleted > 0):
             S.g_deleted -= 1
             if R.place_meeting(S, S.x, S.y, 303):
                 S.g_kasowanie += 1
-                R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), 1, 1, 0, 0xFFFFFF, 1)
+                R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), 1, 1, 0, 0xFFFFFF, 1)
                 R.draw_set_blend_mode(S, 1)
-                R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), (1.5 + (R.sin(S, S.g_stream) / 2)), (1.5 + (R.sin(S, S.g_stream) / 2)), 0, 0xFFFFFF, 0.15)
+                R.draw_sprite_ext(S, 86, 0, (S.x - 100), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), (1.5 + (R.sin(S, S.g_stream) / 2)), (1.5 + (R.sin(S, S.g_stream) / 2)), 0, 0xFFFFFF, 0.15)
                 R.draw_set_blend_mode(S, 0)
                 R.draw_set_font(S, G.map_fonts_1)
                 R.draw_set_alpha(S, S.g_image_alpha)
                 R.draw_set_color(S, 0xFFFFFF)
                 R.draw_set_halign(S, 0)
                 R.draw_set_valign(S, 1)
-                R.draw_text_transformed(S, (S.x - 80), (((S.y - 40) + R.aget(S.g_wysow, 0)) + (R.sin(S, S.g_stream) * 20)), "DELETED!", 1, 1, 0)
+                R.draw_text_transformed(S, (S.x - 80), (((S.y - 40) + R.anum(R.aget(S.g_wysow, 0))) + (R.sin(S, S.g_stream) * 20)), "DELETED!", 1, 1, 0)
     S.g_adder += 0.1
     if (S.g_adder > 3):
         S.g_adder = 0
@@ -86,7 +86,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         S.g_deleting_sequence = 1
         S.g_kasowanie = 0
         S.g_deleted = 100
-        P2.SXMS_SFX_PlayExt(S, [118, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [118, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.lnot(R.keyboard_check(S, 46)):
         S.g_kasowanie = 0
     if R.eqv(S, S.g_deleting_sequence, 1):

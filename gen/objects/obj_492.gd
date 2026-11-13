@@ -4,5 +4,5 @@ extends RefCounted
 static var R = load("res://runtime/r.gd")
 static var G = load("res://gen/globals.gd")
 static func ev_8_0(S, A: Array) -> Variant:
-    R.draw_sprite_ext(S, G.big_tlo_1, 0, (R.aget(R.view_xview, 0) + (800 * G.ekran_size_act)), R.aget(R.view_yview, 0), (1 * G.ekran_size_act), (1 * G.ekran_size_act), (180 - 45), 0xFFFFFF, 0.5)
+    R.draw_sprite_ext(S, G.big_tlo_1, 0, (R.anum(R.aget(R.view_xview, 0)) + (800 * G.ekran_size_act)), R.aget(R.view_yview, 0), (1 * G.ekran_size_act), (1 * G.ekran_size_act), (180 - 45), 0xFFFFFF, 0.5)
     return 0

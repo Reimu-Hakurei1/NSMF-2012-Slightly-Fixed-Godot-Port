@@ -19,6 +19,6 @@ static func ev_0_0(S, A: Array) -> Variant:
     return 0
 
 static func ev_8_0(S, A: Array) -> Variant:
-    R.draw_sprite_ext(S, S.g_sprite_index, 0, (R.aget(R.view_xview, 0) + (400 * G.ekran_size_act)), (R.aget(R.view_yview, 0) + (200 * G.ekran_size_act)), (3 + (R.sin(S, S.g_stream) / 8)), (3 - (R.sin(S, S.g_stream) / 8)), (R.sin(S, S.g_stream) * 2), 0xFFFFFF, R.abs(S, R.sin(S, S.g_stream)))
+    R.draw_sprite_ext(S, S.g_sprite_index, 0, (R.anum(R.aget(R.view_xview, 0)) + (400 * G.ekran_size_act)), (R.anum(R.aget(R.view_yview, 0)) + (200 * G.ekran_size_act)), (3 + (R.sin(S, S.g_stream) / 8)), (3 - (R.sin(S, S.g_stream) / 8)), (R.sin(S, S.g_stream) * 2), 0xFFFFFF, R.abs(S, R.sin(S, S.g_stream)))
     S.g_stream += 0.005
     return 0

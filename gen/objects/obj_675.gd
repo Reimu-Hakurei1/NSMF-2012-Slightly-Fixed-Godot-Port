@@ -26,10 +26,10 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_odx = R.aget(R.view_xview, 0)
             if (S.x > R.aget(R.view_xview, 0)):
                 S.g_odx = S.x
-            if ((S.x + (S.g_image_xscale * 40)) > (R.aget(R.view_xview, 0) + 800)):
+            if ((S.x + (S.g_image_xscale * 40)) > (R.anum(R.aget(R.view_xview, 0)) + 800)):
                 S.g_dox = 800
-            if ((S.x + (S.g_image_xscale * 40)) < (R.aget(R.view_xview, 0) + 800)):
-                S.g_dox = (((S.x + (S.g_image_xscale * 40))) - R.aget(R.view_xview, 0))
+            if ((S.x + (S.g_image_xscale * 40)) < (R.anum(R.aget(R.view_xview, 0)) + 800)):
+                S.g_dox = (((S.x + (S.g_image_xscale * 40))) - R.anum(R.aget(R.view_xview, 0)))
             if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 1.1)):
                 if (R.random(S, 100) > 5):
                     R.part_particles_create(S, G.particle_sys_1, (S.g_odx + (R.random(S, S.g_dox))), ((S.y - 20) + R.random(S, 20)), G.part_effect_water_sparkle_lawa, 1)

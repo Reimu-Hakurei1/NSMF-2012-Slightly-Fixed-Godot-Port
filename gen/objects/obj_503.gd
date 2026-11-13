@@ -26,7 +26,7 @@ static func ev_8_0(S, A: Array) -> Variant:
     if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 1.8)):
         if (S.g_koko < 450):
             R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), ((2 * G.ekran_size_act) + (S.g_alphar / 4)), ((2 * G.ekran_size_act) + (S.g_alphar / 4)), 0, 0xFFFFFF, (((450 - (S.g_koko))) / 400))
-            R.draw_sprite_ext(S, 413, 0, (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), R.aget(R.view_yview, 0), ((-(2) * G.ekran_size_act) - (S.g_alphar / 4)), ((2 * G.ekran_size_act) + (S.g_alphar / 4)), 0, 0xFFFFFF, (((450 - (S.g_koko))) / 400))
-            R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), ((2 * G.ekran_size_act) + (S.g_alphar / 4)), ((-(2) * G.ekran_size_act) - (S.g_alphar / 4)), 0, 0xFFFFFF, (((450 - (S.g_koko))) / 400))
-            R.draw_sprite_ext(S, 413, 0, (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), ((-(2) * G.ekran_size_act) - (S.g_alphar / 4)), ((-(2) * G.ekran_size_act) - (S.g_alphar / 4)), 0, 0xFFFFFF, (((450 - (S.g_koko))) / 400))
+            R.draw_sprite_ext(S, 413, 0, (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), R.aget(R.view_yview, 0), ((-(2) * G.ekran_size_act) - (S.g_alphar / 4)), ((2 * G.ekran_size_act) + (S.g_alphar / 4)), 0, 0xFFFFFF, (((450 - (S.g_koko))) / 400))
+            R.draw_sprite_ext(S, 413, 0, R.aget(R.view_xview, 0), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), ((2 * G.ekran_size_act) + (S.g_alphar / 4)), ((-(2) * G.ekran_size_act) - (S.g_alphar / 4)), 0, 0xFFFFFF, (((450 - (S.g_koko))) / 400))
+            R.draw_sprite_ext(S, 413, 0, (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), ((-(2) * G.ekran_size_act) - (S.g_alphar / 4)), ((-(2) * G.ekran_size_act) - (S.g_alphar / 4)), 0, 0xFFFFFF, (((450 - (S.g_koko))) / 400))
     return 0

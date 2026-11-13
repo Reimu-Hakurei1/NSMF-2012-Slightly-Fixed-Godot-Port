@@ -16,7 +16,7 @@ static func ev_3_0(S, A: Array) -> Variant:
 static func ev_8_0(S, A: Array) -> Variant:
     if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 1.5)):
         if R.eqv(S, S.g_samplowanie, 0):
-            S.g_sampel = P2.SXMS_SFX_PlayExt(S, [103, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            S.g_sampel = P2.SXMS_SFX_PlayExt(S, [103, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             S.g_samplowanie = 1
         if (P2.SXMS_SFX_Position(S, [1, S.g_sampel, 0]) > 70000):
             P2.SXMS_SFX_Position(S, [0, S.g_sampel, 0])

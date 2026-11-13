@@ -37,7 +37,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_bump3 += 0.20
             if R.eqv(S, S.g_zniszczony_od_muszli, 1):
                 G.punkty += 200
-                P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.instance_create(S, S.x, S.y, 20)
                 R.instance_destroy(S)
                 if R.variable_local_exists(S, "rodzaj"):
@@ -45,7 +45,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                     R.inst_set(R.aget(S.g_lolo, 0), "rodzaj", S.g_rodzaj)
             if (R.eqv(S, S.g_destroy, 1) and R.eqv(S, S.g_bump3, 0)):
                 G.punkty += 200
-                P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.instance_create(S, S.x, S.y, 20)
                 R.instance_destroy(S)
                 if R.variable_local_exists(S, "rodzaj"):

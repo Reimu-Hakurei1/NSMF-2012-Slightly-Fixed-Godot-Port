@@ -10,7 +10,7 @@ static func ev_0_0(S, A: Array) -> Variant:
 static func ev_8_0(S, A: Array) -> Variant:
     R.draw_set_color(S, 0x000000)
     R.draw_set_alpha(S, S.g_life)
-    R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), 0)
+    R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), 0)
     R.draw_set_alpha(S, 1)
     S.g_life += 0.02
     if (S.g_life >= 5):

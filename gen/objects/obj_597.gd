@@ -8,7 +8,7 @@ static func ev_0_0(S, A: Array) -> Variant:
     return 0
 
 static func ev_8_0(S, A: Array) -> Variant:
-    if ((S.x > (R.aget(R.view_xview, 0) - (80 * G.ekran_size_act))) and (S.x < ((R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)) + (80 * G.ekran_size_act)))):
+    if ((S.x > (R.anum(R.aget(R.view_xview, 0)) - (80 * G.ekran_size_act))) and (S.x < ((R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))) + (80 * G.ekran_size_act)))):
         S.g_i = 0
         while true:
             if not ((S.g_i < (R.ceil(S, (R.room_height / 151)) + 1))):

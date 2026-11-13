@@ -19,7 +19,7 @@ static func ev_8_0(S, A: Array) -> Variant:
     if R.eqv(S, G.pauza, 0):
         S.g_timer += 1
         if R.eqv(S, S.g_timer, 210):
-            P2.SXMS_SFX_PlayExt(S, [208, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [208, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if (S.g_timer > 200):
             S.g_dzielnik = (S.g_dzielnik / 1.1)
         if (S.g_dzielnik <= 1):

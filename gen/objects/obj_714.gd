@@ -78,7 +78,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_gucio_sampel -= 1
             if (((((R.eqv(S, S.g_gucio_sampel, 0) and R.place_meeting(S, S.x, S.y, 303)) and R.eqv(S, R.get_obj_var(303, "g_zdobyl_skrzynke_z_trzech"), 0)) and ((R.keyboard_check(S, G.ster_up) or R.keyboard_check(S, G.ster_fire)))) and (G.happy_stars < S.g_wymaga_gwiazdek)) and R.eqv(S, G.odejmuj_gwiazdeczki, 0)):
                 S.g_gucio_sampel = 50
-                P2.SXMS_SFX_PlayExt(S, [324, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [324, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if ((((R.place_meeting(S, S.x, S.y, 303) and R.eqv(S, R.get_obj_var(303, "g_zdobyl_skrzynke_z_trzech"), 0)) and ((R.keyboard_check(S, G.ster_up) or R.keyboard_check(S, G.ster_fire)))) and (G.happy_stars >= S.g_wymaga_gwiazdek)) and R.eqv(S, G.odejmuj_gwiazdeczki, 0)):
                 G.odejmuj_gwiazdeczki = S.g_wymaga_gwiazdek
                 R.set_obj_var(303, "g_zdobyl_skrzynke_z_trzech", 1)

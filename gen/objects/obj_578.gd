@@ -11,6 +11,6 @@ static func ev_0_0(S, A: Array) -> Variant:
 static func ev_3_0(S, A: Array) -> Variant:
     if R.place_meeting(S, S.x, S.y, 303):
         R.set_obj_var(303, "g_x", S.g_cofaj)
-        P2.SXMS_SFX_PlayExt(S, [314, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [314, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         R.instance_create(S, S.x, S.y, 337)
     return 0

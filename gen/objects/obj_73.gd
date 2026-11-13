@@ -34,7 +34,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         S.g_image_index += 0.1
         if R.eqv(S, G.pauza, 0):
             if R.place_meeting(S, (S.x + 1), S.y, 303):
-                P2.SXMS_SFX_PlayExt(S, [112, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [112, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.set_obj_var(303, "g_szybkosc", 20)
                 R.set_obj_var(303, "g_speeded", 20)
                 S.g_downed = 20
@@ -42,7 +42,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.aset(S.g_lolo, 0, R.instance_create(S, (S.x - 20), (S.y + 38), 326))
                 R.inst_set(R.aget(S.g_lolo, 0), "image_angle", 90)
             if R.place_meeting(S, (S.x - 1), S.y, 303):
-                P2.SXMS_SFX_PlayExt(S, [112, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [112, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.set_obj_var(303, "g_szybkosc", -(20))
                 R.set_obj_var(303, "g_speeded", 20)
                 S.g_downed = 20
@@ -50,14 +50,14 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.aset(S.g_lolo, 0, R.instance_create(S, (S.x + 40), (S.y + 38), 326))
                 R.inst_set(R.aget(S.g_lolo, 0), "image_angle", 90)
             if R.place_meeting(S, S.x, (S.y - 2), 303):
-                P2.SXMS_SFX_PlayExt(S, [112, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [112, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.set_obj_var(303, "g_grawitacja", -(20))
                 R.set_obj_var(303, "g_sekwencja", 1)
                 S.g_downed = 20
                 S.g_kicked = 1
                 R.instance_create(S, S.x, (S.y + 36), 326)
             if R.eqv(S, S.g_destroy, 1):
-                P2.SXMS_SFX_PlayExt(S, [112, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [112, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_destroy = 0
                 R.set_obj_var(303, "g_grawitacja", 10)
                 R.set_obj_var(303, "g_sekwencja", 1)
@@ -66,7 +66,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.set_obj_var(303, "g_szybkosc", (R.random(S, 5) - R.random(S, 5)))
                 R.instance_create(S, S.x, (S.y - 16), 326)
             if R.eqv(S, S.g_destroy, 2):
-                P2.SXMS_SFX_PlayExt(S, [112, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [112, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_destroy = 0
                 S.g_downed = -(20)
                 S.g_kicked = 1

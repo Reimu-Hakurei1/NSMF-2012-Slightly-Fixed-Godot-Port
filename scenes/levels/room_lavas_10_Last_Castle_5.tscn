@@ -1,1179 +1,3138 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene format=4]
 
-[ext_resource type="Texture2D" id="t1" path="res://images/backgrounds/background42.42.png"]
-[ext_resource type="Texture2D" id="t2" path="res://images/sprites/s_sceneriowy_grzybnix.261.0.png"]
-[ext_resource type="Texture2D" id="t3" path="res://images/sprites/s_door_place.269.0.png"]
-[ext_resource type="Texture2D" id="t4" path="res://images/sprites/s_marker_160x160.314.0.png"]
-[ext_resource type="Texture2D" id="t5" path="res://images/sprites/s_40x40_marker.27.0.png"]
-[ext_resource type="Texture2D" id="t6" path="res://images/sprites/s_noner.210.0.png"]
-[ext_resource type="Texture2D" id="t7" path="res://images/sprites/s_slide_block_mask.235.0.png"]
-[ext_resource type="Texture2D" id="t8" path="res://images/sprites/s_kwadrat_maker.6.0.png"]
-[ext_resource type="Texture2D" id="t9" path="res://images/sprites/s_paralax_chmurol_1.262.0.png"]
-[ext_resource type="Texture2D" id="t10" path="res://images/sprites/sprite_big_marker.38.0.png"]
-[ext_resource type="Texture2D" id="t11" path="res://images/sprites/sprite_big_marker_2.39.0.png"]
-[ext_resource type="Texture2D" id="t12" path="res://images/sprites/sprite_guru.37.0.png"]
-[ext_resource type="Texture2D" id="t13" path="res://images/sprites/sprite11.211.0.png"]
 [ext_resource type="Script" path="res://runtime/room_preview_boot.gd" id="boot"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/b100447.png" id="t1"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_sceneriowy_grzybnix.261.0.png" id="t3"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_door_place.269.0.png" id="t4"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_marker_160x160.314.0.png" id="t5"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_40x40_marker.27.0.png" id="t6"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_noner.210.0.png" id="t7"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_slide_block_mask.235.0.png" id="t8"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_kwadrat_maker.6.0.png" id="t9"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_paralax_chmurol_1.262.0.png" id="t10"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite_big_marker.38.0.png" id="t11"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite_big_marker_2.39.0.png" id="t12"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite_guru.37.0.png" id="t13"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite11.211.1.png" id="t14"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_point_wind_marker.376.0.png" id="t15"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite11.211.0.png" id="t16"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite17.218.0.png" id="t17"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite88.213.0.png" id="t18"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_linelapacz.212.0.png" id="t19"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/s102222.png" id="t20"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/s102224.png" id="t21"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_chain.136.0.png" id="t22"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_chain.136.1.png" id="t23"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_enut_1.104.0.png" id="t24"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_enut_2.105.0.png" id="t25"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_enut_4.107.0.png" id="t26"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_enut_3.106.0.png" id="t27"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/s102595.png" id="t28"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_check_point_1.100.0.png" id="t29"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_mega_lava_blur.337.0.png" id="t30"]
+[ext_resource type="TileSet" path="res://tilesets/background42_42.tres" id="tileset_42"]
 
-[node name="room_lavas_10_Last_Castle_5" type="Node2D"]
+[node name="room_lavas_10_Last_Castle_5" type="Node2D" unique_id=911399282]
 script = ExtResource("boot")
 metadata/gm_room = "room_lavas_10_Last_Castle_5"
 metadata/gm_bg_colour = 12632256
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(400, 300)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1381397932]
+position = Vector2(400, 900)
 limit_left = 0
 limit_top = 0
 limit_right = 10000
 limit_bottom = 1200
 
-[node name="RoomColour" type="ColorRect" parent="."]
+[node name="RoomColour" type="ColorRect" parent="." unique_id=178103004]
 z_index = -4096
-offset_right = 10000
-offset_bottom = 1200
+offset_right = 10000.0
+offset_bottom = 1200.0
 color = Color(0.753, 0.753, 0.753, 1)
 
-[node name="Tiles_20000" type="Node2D" parent="."]
-z_index = 2
-metadata/gm_depth = 20000
+[node name="Bg0___data_gfx_castle_1_jpg" type="Node2D" parent="." unique_id=740126831]
+z_index = -104
+metadata/gm_background_slot = 0
+metadata/gm_source_bg = 100447
+metadata/gm_tile_horz = 1
+metadata/gm_tile_vert = 1
+metadata/gm_foreground = 0
+metadata/gm_hspeed = 0.0
+metadata/gm_vspeed = 0.0
+metadata/gm_bg_xscale = 1.0
+metadata/gm_bg_yscale = 1.0
+metadata/gm_bg_alpha = 1.0
 
-[node name="tile_0" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(120, 960)
+[node name="t0_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=863216614]
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_1" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(240, 960)
+[node name="t1_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=971106177]
+position = Vector2(800, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_2" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(0, 960)
+[node name="t2_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1106248196]
+position = Vector2(1600, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_3" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(360, 960)
+[node name="t3_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1689500504]
+position = Vector2(2400, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_4" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(480, 960)
+[node name="t4_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=645346766]
+position = Vector2(3200, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_5" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(400, 1000)
+[node name="t5_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1307007411]
+position = Vector2(4000, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
 centered = false
 
-[node name="tile_6" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(240, 1000)
+[node name="t6_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=448564103]
+position = Vector2(4800, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
 centered = false
 
-[node name="tile_7" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(80, 1000)
+[node name="t7_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=115831758]
+position = Vector2(5600, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
 centered = false
 
-[node name="tile_8" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(-80, 1000)
+[node name="t8_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1443601188]
+position = Vector2(6400, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
 centered = false
 
-[node name="tile_9" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(600, 960)
+[node name="t9_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1000237198]
+position = Vector2(7200, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_10" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(720, 960)
+[node name="t10_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=642502362]
+position = Vector2(8000, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_11" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(840, 960)
+[node name="t11_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=2057424919]
+position = Vector2(8800, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_12" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(960, 960)
+[node name="t12_0" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1244823936]
+position = Vector2(9600, 0)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_13" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(1080, 960)
+[node name="t0_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1462985928]
+position = Vector2(0, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_14" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(1200, 960)
+[node name="t1_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=291291122]
+position = Vector2(800, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_15" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(1320, 960)
+[node name="t2_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=978224280]
+position = Vector2(1600, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_16" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(1440, 960)
+[node name="t3_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1294131264]
+position = Vector2(2400, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_17" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(1560, 960)
+[node name="t4_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1527091834]
+position = Vector2(3200, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_18" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(1680, 960)
+[node name="t5_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=793540111]
+position = Vector2(4000, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_19" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(1800, 960)
+[node name="t6_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1630932925]
+position = Vector2(4800, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_20" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(1920, 960)
+[node name="t7_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=538659196]
+position = Vector2(5600, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_21" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(2040, 960)
+[node name="t8_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=247336883]
+position = Vector2(6400, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_22" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(2160, 960)
+[node name="t9_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1847952805]
+position = Vector2(7200, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_23" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(2280, 960)
+[node name="t10_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1942748427]
+position = Vector2(8000, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_24" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(2400, 960)
+[node name="t11_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=327061354]
+position = Vector2(8800, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_25" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(2520, 960)
+[node name="t12_1" type="Sprite2D" parent="Bg0___data_gfx_castle_1_jpg" unique_id=1178629699]
+position = Vector2(9600, 600)
 texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
 centered = false
 
-[node name="tile_26" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(2640, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_27" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(2760, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_28" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(2880, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_29" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3000, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_30" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3120, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_31" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3240, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_32" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3360, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_33" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3480, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_34" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3600, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_35" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3720, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_36" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3840, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_37" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3960, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_38" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(4080, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_39" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(4200, 960)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(0, 0, 120, 40)
-centered = false
-
-[node name="tile_40" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(4160, 1000)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_41" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(4160, 1080)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_42" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(4160, 1160)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_43" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(4000, 1000)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_44" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(4000, 1080)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_45" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(4000, 1160)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_46" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3840, 1000)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_47" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3840, 1080)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_48" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(3840, 1160)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_49" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(-80, 1080)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_50" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(80, 1080)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_51" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(240, 1080)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_52" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(400, 1080)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_53" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(400, 1160)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_54" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(240, 1160)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_55" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(80, 1160)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="tile_56" type="Sprite2D" parent="Tiles_20000"]
-position = Vector2(-80, 1160)
-texture = ExtResource("t1")
-region_enabled = true
-region_rect = Rect2(120, 0, 160, 80)
-centered = false
-
-[node name="Objects_-1000000" type="Node2D" parent="."]
-z_index = -4
-metadata/gm_depth = -1000000
-
-[node name="obj_mario_0" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "obj_mario"
-position = Vector2(318, 895)
-texture = ExtResource("t13")
-offset = Vector2(-32, -32)
-centered = false
-visible = false
-
-[node name="Objects_-10000" type="Node2D" parent="."]
+[node name="Tiles_20000_42_0" type="TileMapLayer" parent="." unique_id=712644072]
 z_index = -3
-metadata/gm_depth = -10000
+tile_map_data = PackedByteArray("AAADABgAAAAsAAAAAAAGABgAAAAsAAAAAAAAABgAAAAsAAAAAAAJABgAAAAsAAAAAAAMABgAAAAsAAAAAAAKABkAAAAAAAAAAAAGABkAAAAAAAAAAAACABkAAAAAAAAAAAD+/xkAAAAAAAAAAAAPABgAAAAsAAAAAAASABgAAAAsAAAAAAAVABgAAAAsAAAAAAAYABgAAAAsAAAAAAAbABgAAAAsAAAAAAAeABgAAAAsAAAAAAAhABgAAAAsAAAAAAAkABgAAAAsAAAAAAAnABgAAAAsAAAAAAAqABgAAAAsAAAAAAAtABgAAAAsAAAAAAAwABgAAAAsAAAAAAAzABgAAAAsAAAAAAA2ABgAAAAsAAAAAAA5ABgAAAAsAAAAAAA8ABgAAAAsAAAAAAA/ABgAAAAsAAAAAABCABgAAAAsAAAAAABFABgAAAAsAAAAAABIABgAAAAsAAAAAABLABgAAAAsAAAAAABOABgAAAAsAAAAAABRABgAAAAsAAAAAABUABgAAAAsAAAAAABXABgAAAAsAAAAAABaABgAAAAsAAAAAABdABgAAAAsAAAAAABgABgAAAAsAAAAAABjABgAAAAsAAAAAABmABgAAAAsAAAAAABpABgAAAAsAAAAAABoABkAAAAAAAAAAABoABsAAAAAAAAAAABoAB0AAAAAAAAAAABkABkAAAAAAAAAAABkABsAAAAAAAAAAABkAB0AAAAAAAAAAABgABkAAAAAAAAAAABgABsAAAAAAAAAAABgAB0AAAAAAAAAAAD+/xsAAAAAAAAAAAACABsAAAAAAAAAAAAGABsAAAAAAAAAAAAKABsAAAAAAAAAAAAKAB0AAAAAAAAAAAAGAB0AAAAAAAAAAAACAB0AAAAAAAAAAAD+/x0AAAAAAAAAAAA=")
+tile_set = ExtResource("tileset_42")
+collision_enabled = false
+navigation_enabled = false
+metadata/gm_depth = 20000
+metadata/gm_tile_ids = {
+"-2,25": 10044355,
+"-2,27": 10060587,
+"-2,29": 10060595,
+"0,24": 10044349,
+"10,25": 10044352,
+"10,27": 10060590,
+"10,29": 10060591,
+"100,25": 10060581,
+"100,27": 10060582,
+"100,29": 10060583,
+"102,24": 10060576,
+"104,25": 10060578,
+"104,27": 10060579,
+"104,29": 10060580,
+"105,24": 10060577,
+"12,24": 10044351,
+"15,24": 10060547,
+"18,24": 10060548,
+"2,25": 10044354,
+"2,27": 10060588,
+"2,29": 10060593,
+"21,24": 10060549,
+"24,24": 10060550,
+"27,24": 10060551,
+"3,24": 10044347,
+"30,24": 10060552,
+"33,24": 10060553,
+"36,24": 10060554,
+"39,24": 10060555,
+"42,24": 10060556,
+"45,24": 10060557,
+"48,24": 10060558,
+"51,24": 10060559,
+"54,24": 10060560,
+"57,24": 10060561,
+"6,24": 10044348,
+"6,25": 10044353,
+"6,27": 10060589,
+"6,29": 10060592,
+"60,24": 10060562,
+"63,24": 10060563,
+"66,24": 10060564,
+"69,24": 10060565,
+"72,24": 10060566,
+"75,24": 10060567,
+"78,24": 10060568,
+"81,24": 10060569,
+"84,24": 10060570,
+"87,24": 10060571,
+"9,24": 10044350,
+"90,24": 10060572,
+"93,24": 10060573,
+"96,24": 10060574,
+"96,25": 10060584,
+"96,27": 10060585,
+"96,29": 10060586,
+"99,24": 10060575
+}
 
-[node name="o_big_marker_0" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
+[node name="Objects_-10000000.0" type="Node2D" parent="." unique_id=70937883]
+z_index = 5
+metadata/gm_depth = -10000000.0
+
+[node name="obj_mario_line_marker_0" type="Sprite2D" parent="Objects_-10000000.0" unique_id=368712764]
+visible = false
+position = Vector2(334, 895)
+texture = ExtResource("t19")
+centered = false
+offset = Vector2(-15, -15)
+metadata/gm_object = "obj_mario_line_marker"
+metadata/gm_object_index = 309
+metadata/gm_runtime_spawned = true
+
+[node name="Objects_-1000000.0" type="Node2D" parent="." unique_id=545182556]
+z_index = 4
+metadata/gm_depth = -1000000.0
+
+[node name="obj_mario_0" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1914695636]
+visible = false
+position = Vector2(318, 895)
+texture = ExtResource("t14")
+centered = false
+offset = Vector2(-32, -32)
+metadata/gm_object = "obj_mario"
+metadata/gm_object_index = 303
+metadata/gm_instance = 101358
+
+[node name="o_HUD_tworzony_przez_gracza_1" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1808576120]
+position = Vector2(318, 895)
+texture = ExtResource("t16")
+centered = false
+offset = Vector2(-32, -32)
+metadata/gm_object = "o_HUD_tworzony_przez_gracza"
+metadata/gm_object_index = 304
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_2" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2022611358]
+position = Vector2(0, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_3" type="Sprite2D" parent="Objects_-1000000.0" unique_id=321763362]
+position = Vector2(400, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_4" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1311134042]
+position = Vector2(800, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_5" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1942350939]
+position = Vector2(1200, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_6" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1117868236]
+position = Vector2(1600, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_7" type="Sprite2D" parent="Objects_-1000000.0" unique_id=669222176]
+position = Vector2(2000, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_8" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1603954144]
+position = Vector2(2400, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_9" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1919008104]
+position = Vector2(2800, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_10" type="Sprite2D" parent="Objects_-1000000.0" unique_id=97744526]
+position = Vector2(3200, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_11" type="Sprite2D" parent="Objects_-1000000.0" unique_id=191461178]
+position = Vector2(3600, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_12" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2045431416]
+position = Vector2(4000, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_13" type="Sprite2D" parent="Objects_-1000000.0" unique_id=244309992]
+position = Vector2(4400, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_14" type="Sprite2D" parent="Objects_-1000000.0" unique_id=521580328]
+position = Vector2(4800, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_15" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2031369681]
+position = Vector2(5200, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_16" type="Sprite2D" parent="Objects_-1000000.0" unique_id=678992278]
+position = Vector2(5600, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_17" type="Sprite2D" parent="Objects_-1000000.0" unique_id=325180896]
+position = Vector2(6000, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_18" type="Sprite2D" parent="Objects_-1000000.0" unique_id=325341385]
+position = Vector2(6400, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_19" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1466065919]
+position = Vector2(6800, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_20" type="Sprite2D" parent="Objects_-1000000.0" unique_id=433198257]
+position = Vector2(7200, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_21" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2031338344]
+position = Vector2(7600, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_22" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1228813089]
+position = Vector2(8000, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_23" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2092753332]
+position = Vector2(8400, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_24" type="Sprite2D" parent="Objects_-1000000.0" unique_id=774268956]
+position = Vector2(8800, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_25" type="Sprite2D" parent="Objects_-1000000.0" unique_id=162516912]
+position = Vector2(9200, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="o_lava_define_26" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1888857437]
+position = Vector2(9600, 1120)
+scale = Vector2(9, 4)
+texture = ExtResource("t6")
+centered = false
+metadata/gm_object = "o_lava_define"
+metadata/gm_object_index = 355
+metadata/gm_runtime_spawned = true
+
+[node name="Objects_-99999.0" type="Node2D" parent="." unique_id=950776339]
+z_index = 3
+metadata/gm_depth = -99999.0
+
+[node name="obj_mario_windor_0" type="Sprite2D" parent="Objects_-99999.0" unique_id=415455825]
+visible = false
+position = Vector2(318, 895)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "obj_mario_windor"
+metadata/gm_object_index = 310
+metadata/gm_runtime_spawned = true
+
+[node name="Objects_-10000.0" type="Node2D" parent="." unique_id=1250862105]
+z_index = 2
+metadata/gm_depth = -10000.0
+
+[node name="o_big_marker_0" type="Sprite2D" parent="Objects_-10000.0" unique_id=1198751564]
+visible = false
+modulate = Color(1, 1, 1, 0)
 position = Vector2(0, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
+texture = ExtResource("t11")
 centered = false
-visible = false
-
-[node name="o_big_marker_1" type="Sprite2D" parent="Objects_-10000"]
 metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 141530
+
+[node name="o_big_marker_1" type="Sprite2D" parent="Objects_-10000.0" unique_id=234118431]
+visible = false
+modulate = Color(1, 1, 1, 0)
 position = Vector2(200, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
+texture = ExtResource("t11")
 centered = false
-visible = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 141531
 
-[node name="o_big_marker_2_2" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker_2"
+[node name="o_big_marker_2_2" type="Sprite2D" parent="Objects_-10000.0" unique_id=1986606725]
+visible = false
+modulate = Color(1, 1, 1, 0)
 position = Vector2(-40, 560)
-texture = ExtResource("t11")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_2_3" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker_2"
-position = Vector2(-40, 160)
-texture = ExtResource("t11")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_2_4" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker_2"
-position = Vector2(-40, -240)
-texture = ExtResource("t11")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="obj_wall_5" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "obj_wall"
-position = Vector2(-40, 960)
 texture = ExtResource("t12")
-offset = Vector2(0, 0)
 centered = false
-visible = false
-
-[node name="o_big_marker_6" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(600, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_7" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(1000, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_8" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(1400, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_9" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(1800, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_10" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(2200, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_11" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(2600, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_12" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(3000, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_13" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(3400, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_14" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(3800, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_15" type="Sprite2D" parent="Objects_-10000"]
-metadata/gm_object = "o_big_marker"
-position = Vector2(3920, 960)
-texture = ExtResource("t10")
-offset = Vector2(0, 0)
-centered = false
-visible = false
-
-[node name="o_big_marker_2_16" type="Sprite2D" parent="Objects_-10000"]
 metadata/gm_object = "o_big_marker_2"
-position = Vector2(4280, 1000)
-texture = ExtResource("t11")
-offset = Vector2(0, 0)
-centered = false
+metadata/gm_object_index = 12
+metadata/gm_instance = 141532
+
+[node name="o_big_marker_2_3" type="Sprite2D" parent="Objects_-10000.0" unique_id=1290210691]
 visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-40, 160)
+texture = ExtResource("t12")
+centered = false
+metadata/gm_object = "o_big_marker_2"
+metadata/gm_object_index = 12
+metadata/gm_instance = 141533
 
-[node name="Objects_-1000" type="Node2D" parent="."]
-z_index = -2
-metadata/gm_depth = -1000
+[node name="o_big_marker_2_4" type="Sprite2D" parent="Objects_-10000.0" unique_id=1142998984]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-40, -240)
+texture = ExtResource("t12")
+centered = false
+metadata/gm_object = "o_big_marker_2"
+metadata/gm_object_index = 12
+metadata/gm_instance = 141534
 
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_0" type="Sprite2D" parent="Objects_-1000"]
-metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+[node name="obj_wall_5" type="Sprite2D" parent="Objects_-10000.0" unique_id=1230847938]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-40, 960)
+texture = ExtResource("t13")
+centered = false
+metadata/gm_object = "obj_wall"
+metadata/gm_object_index = 1
+metadata/gm_instance = 141543
+
+[node name="o_big_marker_6" type="Sprite2D" parent="Objects_-10000.0" unique_id=1853696643]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(600, 960)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 163336
+
+[node name="o_big_marker_7" type="Sprite2D" parent="Objects_-10000.0" unique_id=1744731326]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1000, 960)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 163337
+
+[node name="o_big_marker_8" type="Sprite2D" parent="Objects_-10000.0" unique_id=1341976161]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1400, 960)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 163338
+
+[node name="o_big_marker_9" type="Sprite2D" parent="Objects_-10000.0" unique_id=410291099]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1800, 960)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 163339
+
+[node name="o_big_marker_10" type="Sprite2D" parent="Objects_-10000.0" unique_id=1316606404]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2200, 960)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 163340
+
+[node name="o_big_marker_11" type="Sprite2D" parent="Objects_-10000.0" unique_id=448289907]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(2600, 960)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 163341
+
+[node name="o_big_marker_12" type="Sprite2D" parent="Objects_-10000.0" unique_id=828992007]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(3000, 960)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 163342
+
+[node name="o_big_marker_13" type="Sprite2D" parent="Objects_-10000.0" unique_id=518617380]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(3400, 960)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 163343
+
+[node name="o_big_marker_14" type="Sprite2D" parent="Objects_-10000.0" unique_id=1351881468]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(3800, 960)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 163344
+
+[node name="o_big_marker_15" type="Sprite2D" parent="Objects_-10000.0" unique_id=413493849]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(3920, 960)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "o_big_marker"
+metadata/gm_object_index = 11
+metadata/gm_instance = 163345
+
+[node name="o_big_marker_2_16" type="Sprite2D" parent="Objects_-10000.0" unique_id=1150857859]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(4280, 1000)
+texture = ExtResource("t12")
+centered = false
+metadata/gm_object = "o_big_marker_2"
+metadata/gm_object_index = 12
+metadata/gm_instance = 163346
+
+[node name="Objects_-1000.0" type="Node2D" parent="." unique_id=217398345]
+z_index = 1
+metadata/gm_depth = -1000.0
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_0" type="Sprite2D" parent="Objects_-1000.0" unique_id=1263508926]
+visible = false
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(280, 480)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_1" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163348
+metadata/gm_draw_base = true
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_1" type="Sprite2D" parent="Objects_-1000.0" unique_id=546134225]
+visible = false
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(560, 400)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_2" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163349
+metadata/gm_draw_base = true
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_2" type="Sprite2D" parent="Objects_-1000.0" unique_id=360599259]
+visible = false
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(0, 320)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_3" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163350
+metadata/gm_draw_base = true
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_3" type="Sprite2D" parent="Objects_-1000.0" unique_id=1358981318]
+visible = false
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(800, 520)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_4" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163351
+metadata/gm_draw_base = true
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_4" type="Sprite2D" parent="Objects_-1000.0" unique_id=1718313551]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(1400, 320)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_5" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163352
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_5" type="Sprite2D" parent="Objects_-1000.0" unique_id=1474942597]
+visible = false
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(1080, 360)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_6" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163353
+metadata/gm_draw_base = true
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_6" type="Sprite2D" parent="Objects_-1000.0" unique_id=599499579]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(1640, 520)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_7" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163354
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_7" type="Sprite2D" parent="Objects_-1000.0" unique_id=1105026961]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(2000, 360)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_8" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163355
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_8" type="Sprite2D" parent="Objects_-1000.0" unique_id=597320865]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(2480, 480)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_9" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163356
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_9" type="Sprite2D" parent="Objects_-1000.0" unique_id=1604876393]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(2920, 360)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_10" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163357
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_10" type="Sprite2D" parent="Objects_-1000.0" unique_id=274909165]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(2440, 320)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_11" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163358
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_11" type="Sprite2D" parent="Objects_-1000.0" unique_id=45937231]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(3520, 360)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_12" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163359
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_12" type="Sprite2D" parent="Objects_-1000.0" unique_id=658614948]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(4240, 400)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_13" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163360
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_13" type="Sprite2D" parent="Objects_-1000.0" unique_id=603625655]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(4520, 320)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_14" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163361
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_14" type="Sprite2D" parent="Objects_-1000.0" unique_id=2078881740]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(3880, 240)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_15" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163362
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_15" type="Sprite2D" parent="Objects_-1000.0" unique_id=21480438]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(4040, 440)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_16" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163363
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_16" type="Sprite2D" parent="Objects_-1000.0" unique_id=1927360508]
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(3240, 480)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
-
-[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_17" type="Sprite2D" parent="Objects_-1000"]
+offset = Vector2(-196, -99)
 metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163364
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_17" type="Sprite2D" parent="Objects_-1000.0" unique_id=1582296495]
+visible = false
+modulate = Color(1, 1, 1, 0.75)
 position = Vector2(1280, 480)
-texture = ExtResource("t9")
-offset = Vector2(-196, -99)
+scale = Vector2(3, 3)
+texture = ExtResource("t10")
 centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_instance = 163365
+metadata/gm_draw_base = true
 
-[node name="Objects_-99" type="Node2D" parent="."]
-z_index = -1
-metadata/gm_depth = -99
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_18" type="Sprite2D" parent="Objects_-1000.0" unique_id=1847679955]
+modulate = Color(1, 1, 1, 0.488)
+position = Vector2(280, 480)
+rotation = -0.009609
+scale = Vector2(3.0344102, 2.9655898)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163348
+metadata/gm_preview_pos = Vector2(280, 480)
+metadata/gm_base_pos = Vector2(280, 480)
 
-[node name="o_LAVA_MEGA_BLUR_0" type="Sprite2D" parent="Objects_-99"]
-metadata/gm_object = "o_LAVA_MEGA_BLUR"
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_19" type="Sprite2D" parent="Objects_-1000.0" unique_id=981517125]
+modulate = Color(1, 1, 1, 0.49)
+position = Vector2(280, 480)
+rotation = -0.009777
+scale = Vector2(3.0350106, 2.9649894)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163348
+metadata/gm_preview_pos = Vector2(280, 480)
+metadata/gm_base_pos = Vector2(280, 480)
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_20" type="Sprite2D" parent="Objects_-1000.0" unique_id=1655189859]
+modulate = Color(1, 1, 1, 0.757)
+position = Vector2(560, 400)
+rotation = -0.028386
+scale = Vector2(3.1016505, 2.8983495)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163349
+metadata/gm_preview_pos = Vector2(560, 400)
+metadata/gm_base_pos = Vector2(560, 400)
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_21" type="Sprite2D" parent="Objects_-1000.0" unique_id=2146636175]
+modulate = Color(1, 1, 1, 0.755)
+position = Vector2(560, 400)
+rotation = -0.028284
+scale = Vector2(3.1012855, 2.8987145)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163349
+metadata/gm_preview_pos = Vector2(560, 400)
+metadata/gm_base_pos = Vector2(560, 400)
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_22" type="Sprite2D" parent="Objects_-1000.0" unique_id=1777613999]
+modulate = Color(1, 1, 1, 0.773)
+position = Vector2(0, 320)
+rotation = -0.0295
+scale = Vector2(3.1056402, 2.8943598)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163350
+metadata/gm_preview_pos = Vector2(0, 320)
+metadata/gm_base_pos = Vector2(0, 320)
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_23" type="Sprite2D" parent="Objects_-1000.0" unique_id=1003016572]
+modulate = Color(1, 1, 1, 0.771)
+position = Vector2(0, 320)
+rotation = -0.029407
+scale = Vector2(3.1053047, 2.8946953)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163350
+metadata/gm_preview_pos = Vector2(0, 320)
+metadata/gm_base_pos = Vector2(0, 320)
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_24" type="Sprite2D" parent="Objects_-1000.0" unique_id=337081681]
+modulate = Color(1, 1, 1, 0.656)
+position = Vector2(800, 520)
+rotation = -0.02136
+scale = Vector2(3.0764897, 2.9235103)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163351
+metadata/gm_preview_pos = Vector2(800, 520)
+metadata/gm_base_pos = Vector2(800, 520)
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_25" type="Sprite2D" parent="Objects_-1000.0" unique_id=219346807]
+modulate = Color(1, 1, 1, 0.658)
+position = Vector2(800, 520)
+rotation = -0.021498
+scale = Vector2(3.076983, 2.923017)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163351
+metadata/gm_preview_pos = Vector2(800, 520)
+metadata/gm_base_pos = Vector2(800, 520)
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_26" type="Sprite2D" parent="Objects_-1000.0" unique_id=39998418]
+modulate = Color(1, 1, 1, 0.602)
+position = Vector2(1080, 360)
+rotation = -0.017597
+scale = Vector2(3.0630128, 2.9369872)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163353
+metadata/gm_preview_pos = Vector2(1080, 360)
+metadata/gm_base_pos = Vector2(1080, 360)
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_27" type="Sprite2D" parent="Objects_-1000.0" unique_id=1782243379]
+modulate = Color(1, 1, 1, 0.604)
+position = Vector2(1080, 360)
+rotation = -0.017747
+scale = Vector2(3.063552, 2.936448)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163353
+metadata/gm_preview_pos = Vector2(1080, 360)
+metadata/gm_base_pos = Vector2(1080, 360)
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_28" type="Sprite2D" parent="Objects_-1000.0" unique_id=377730999]
+modulate = Color(1, 1, 1, 0.525)
+position = Vector2(1280, 480)
+rotation = 0.01221
+scale = Vector2(2.9562764, 3.0437236)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163365
+metadata/gm_preview_pos = Vector2(1280, 480)
+metadata/gm_base_pos = Vector2(1280, 480)
+
+[node name="o_DARK_CHMURKA_3x3_CLOUD_SMOKE_29" type="Sprite2D" parent="Objects_-1000.0" unique_id=1501709789]
+modulate = Color(1, 1, 1, 0.523)
+position = Vector2(1280, 480)
+rotation = 0.012046
+scale = Vector2(2.9568627, 3.0431373)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-196, -99)
+metadata/gm_object = "o_DARK_CHMURKA_3x3_CLOUD_SMOKE"
+metadata/gm_object_index = 608
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163365
+metadata/gm_preview_pos = Vector2(1280, 480)
+metadata/gm_base_pos = Vector2(1280, 480)
+
+[node name="Objects_-99.0" type="Node2D" parent="." unique_id=570665732]
+metadata/gm_depth = -99.0
+
+[node name="o_LAVA_MEGA_BLUR_0" type="Sprite2D" parent="Objects_-99.0" unique_id=737953603]
+visible = false
 position = Vector2(120, 1120)
-
-[node name="o_LAVA_MEGA_BLUR_1" type="Sprite2D" parent="Objects_-99"]
 metadata/gm_object = "o_LAVA_MEGA_BLUR"
+metadata/gm_object_index = 436
+metadata/gm_instance = 163383
+metadata/gm_draw_base = true
+
+[node name="o_LAVA_MEGA_BLUR_1" type="Sprite2D" parent="Objects_-99.0" unique_id=1270926328]
+visible = false
 position = Vector2(960, 1160)
-
-[node name="o_LAVA_MEGA_BLUR_2" type="Sprite2D" parent="Objects_-99"]
 metadata/gm_object = "o_LAVA_MEGA_BLUR"
+metadata/gm_object_index = 436
+metadata/gm_instance = 163384
+metadata/gm_draw_base = true
+
+[node name="o_LAVA_MEGA_BLUR_2" type="Sprite2D" parent="Objects_-99.0" unique_id=916402656]
 position = Vector2(1640, 1160)
-
-[node name="o_LAVA_MEGA_BLUR_3" type="Sprite2D" parent="Objects_-99"]
 metadata/gm_object = "o_LAVA_MEGA_BLUR"
+metadata/gm_object_index = 436
+metadata/gm_instance = 163385
+
+[node name="o_LAVA_MEGA_BLUR_3" type="Sprite2D" parent="Objects_-99.0" unique_id=352639630]
 position = Vector2(2320, 1120)
-
-[node name="o_LAVA_MEGA_BLUR_4" type="Sprite2D" parent="Objects_-99"]
 metadata/gm_object = "o_LAVA_MEGA_BLUR"
+metadata/gm_object_index = 436
+metadata/gm_instance = 163386
+
+[node name="o_LAVA_MEGA_BLUR_4" type="Sprite2D" parent="Objects_-99.0" unique_id=2115365637]
 position = Vector2(2840, 1120)
-
-[node name="o_LAVA_MEGA_BLUR_5" type="Sprite2D" parent="Objects_-99"]
 metadata/gm_object = "o_LAVA_MEGA_BLUR"
+metadata/gm_object_index = 436
+metadata/gm_instance = 163387
+
+[node name="o_LAVA_MEGA_BLUR_5" type="Sprite2D" parent="Objects_-99.0" unique_id=90060320]
 position = Vector2(3720, 1160)
-
-[node name="o_LAVA_MEGA_BLUR_6" type="Sprite2D" parent="Objects_-99"]
 metadata/gm_object = "o_LAVA_MEGA_BLUR"
+metadata/gm_object_index = 436
+metadata/gm_instance = 163388
+
+[node name="o_LAVA_MEGA_BLUR_6" type="Sprite2D" parent="Objects_-99.0" unique_id=1975450977]
 position = Vector2(4560, 1160)
-
-[node name="o_LAVA_MEGA_BLUR_7" type="Sprite2D" parent="Objects_-99"]
 metadata/gm_object = "o_LAVA_MEGA_BLUR"
-position = Vector2(5120, 1120)
+metadata/gm_object_index = 436
+metadata/gm_instance = 163389
 
-[node name="Objects_0" type="Node2D" parent="."]
-z_index = 0
+[node name="o_LAVA_MEGA_BLUR_7" type="Sprite2D" parent="Objects_-99.0" unique_id=1116153000]
+position = Vector2(5120, 1120)
+metadata/gm_object = "o_LAVA_MEGA_BLUR"
+metadata/gm_object_index = 436
+metadata/gm_instance = 163390
+
+[node name="o_LAVA_MEGA_BLUR_8" type="Sprite2D" parent="Objects_-99.0" unique_id=1293395448]
+modulate = Color(1, 1, 1, 0.667)
+position = Vector2(120, 1120)
+rotation = -0.486903
+scale = Vector2(19.966736, 20.033264)
+texture = ExtResource("t30")
+centered = false
+offset = Vector2(-30, -21)
+metadata/gm_object = "o_LAVA_MEGA_BLUR"
+metadata/gm_object_index = 436
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163383
+metadata/gm_preview_pos = Vector2(120, 1120)
+metadata/gm_base_pos = Vector2(120, 1120)
+
+[node name="o_LAVA_MEGA_BLUR_9" type="Sprite2D" parent="Objects_-99.0" unique_id=1565089234]
+modulate = Color(1, 1, 1, 0.668)
+position = Vector2(120, 1120)
+rotation = -0.487739
+scale = Vector2(19.966778, 20.033222)
+texture = ExtResource("t30")
+centered = false
+offset = Vector2(-30, -21)
+metadata/gm_object = "o_LAVA_MEGA_BLUR"
+metadata/gm_object_index = 436
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163383
+metadata/gm_preview_pos = Vector2(120, 1120)
+metadata/gm_base_pos = Vector2(120, 1120)
+
+[node name="o_LAVA_MEGA_BLUR_10" type="Sprite2D" parent="Objects_-99.0" unique_id=703293691]
+modulate = Color(1, 1, 1, 0.668)
+position = Vector2(960, 1160)
+rotation = -0.478714
+scale = Vector2(19.966825, 20.033175)
+texture = ExtResource("t30")
+centered = false
+offset = Vector2(-30, -21)
+metadata/gm_object = "o_LAVA_MEGA_BLUR"
+metadata/gm_object_index = 436
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163384
+metadata/gm_preview_pos = Vector2(960, 1160)
+metadata/gm_base_pos = Vector2(960, 1160)
+
+[node name="o_LAVA_MEGA_BLUR_11" type="Sprite2D" parent="Objects_-99.0" unique_id=331264495]
+modulate = Color(1, 1, 1, 0.668)
+position = Vector2(960, 1160)
+rotation = -0.479635
+scale = Vector2(19.966774, 20.033226)
+texture = ExtResource("t30")
+centered = false
+offset = Vector2(-30, -21)
+metadata/gm_object = "o_LAVA_MEGA_BLUR"
+metadata/gm_object_index = 436
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163384
+metadata/gm_preview_pos = Vector2(960, 1160)
+metadata/gm_base_pos = Vector2(960, 1160)
+
+[node name="Objects_0" type="Node2D" parent="." unique_id=863022351]
+z_index = -1
 metadata/gm_depth = 0
 
-[node name="o_tworzy_lave_przez_caly_etap_GLEBOKOSC_4_0" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_tworzy_lave_przez_caly_etap_GLEBOKOSC_4"
+[node name="o_tworzy_lave_przez_caly_etap_GLEBOKOSC_4_0" type="Sprite2D" parent="Objects_0" unique_id=1583450800]
 position = Vector2(640, 1120)
-texture = ExtResource("t4")
-offset = Vector2(-80, -80)
+texture = ExtResource("t5")
 centered = false
+offset = Vector2(-80, -80)
+metadata/gm_object = "o_tworzy_lave_przez_caly_etap_GLEBOKOSC_4"
+metadata/gm_object_index = 665
+metadata/gm_instance = 163347
 
-[node name="o_CASTLE_bujany_z_parametrami_1" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+[node name="o_CASTLE_bujany_z_parametrami_1" type="Sprite2D" parent="Objects_0" unique_id=16355859]
+visible = false
 position = Vector2(271, 479)
-
-[node name="o_CASTLE_bujany_z_parametrami_2" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163366
+metadata/gm_draw_base = true
+
+[node name="o_CASTLE_bujany_z_parametrami_2" type="Sprite2D" parent="Objects_0" unique_id=1058812621]
+visible = false
 position = Vector2(554, 391)
-
-[node name="o_CASTLE_bujany_z_parametrami_3" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163367
+metadata/gm_draw_base = true
+
+[node name="o_CASTLE_bujany_z_parametrami_3" type="Sprite2D" parent="Objects_0" unique_id=91434078]
+visible = false
 position = Vector2(808, 503)
-
-[node name="o_CASTLE_bujany_z_parametrami_4" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163368
+metadata/gm_draw_base = true
+
+[node name="o_CASTLE_bujany_z_parametrami_4" type="Sprite2D" parent="Objects_0" unique_id=858864363]
 position = Vector2(1086, 342)
-
-[node name="o_CASTLE_bujany_z_parametrami_5" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163369
+
+[node name="o_CASTLE_bujany_z_parametrami_5" type="Sprite2D" parent="Objects_0" unique_id=171718666]
 position = Vector2(1279, 474)
-
-[node name="o_CASTLE_bujany_z_parametrami_6" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163370
+
+[node name="o_CASTLE_bujany_z_parametrami_6" type="Sprite2D" parent="Objects_0" unique_id=1088591566]
 position = Vector2(1404, 322)
-
-[node name="o_CASTLE_bujany_z_parametrami_7" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163371
+
+[node name="o_CASTLE_bujany_z_parametrami_7" type="Sprite2D" parent="Objects_0" unique_id=1314409046]
 position = Vector2(1636, 503)
-
-[node name="o_CASTLE_bujany_z_parametrami_8" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163372
+
+[node name="o_CASTLE_bujany_z_parametrami_8" type="Sprite2D" parent="Objects_0" unique_id=669841040]
 position = Vector2(2007, 347)
-
-[node name="o_CASTLE_bujany_z_parametrami_9" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163373
+
+[node name="o_CASTLE_bujany_z_parametrami_9" type="Sprite2D" parent="Objects_0" unique_id=545050715]
 position = Vector2(2488, 488)
-
-[node name="o_CASTLE_bujany_z_parametrami_10" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163374
+
+[node name="o_CASTLE_bujany_z_parametrami_10" type="Sprite2D" parent="Objects_0" unique_id=184556133]
 position = Vector2(2451, 313)
-
-[node name="o_CASTLE_bujany_z_parametrami_11" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163375
+
+[node name="o_CASTLE_bujany_z_parametrami_11" type="Sprite2D" parent="Objects_0" unique_id=1820855088]
 position = Vector2(2920, 354)
-
-[node name="o_CASTLE_bujany_z_parametrami_12" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163376
+
+[node name="o_CASTLE_bujany_z_parametrami_12" type="Sprite2D" parent="Objects_0" unique_id=309199782]
 position = Vector2(3176, 505)
-
-[node name="o_CASTLE_bujany_z_parametrami_13" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163377
+
+[node name="o_CASTLE_bujany_z_parametrami_13" type="Sprite2D" parent="Objects_0" unique_id=1072335578]
 position = Vector2(3481, 432)
-
-[node name="o_CASTLE_bujany_z_parametrami_14" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163378
+
+[node name="o_CASTLE_bujany_z_parametrami_14" type="Sprite2D" parent="Objects_0" unique_id=546103150]
 position = Vector2(3887, 249)
-
-[node name="o_CASTLE_bujany_z_parametrami_15" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163379
+
+[node name="o_CASTLE_bujany_z_parametrami_15" type="Sprite2D" parent="Objects_0" unique_id=1038130246]
 position = Vector2(3999, 466)
-
-[node name="o_CASTLE_bujany_z_parametrami_16" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163380
+
+[node name="o_CASTLE_bujany_z_parametrami_16" type="Sprite2D" parent="Objects_0" unique_id=537238569]
 position = Vector2(4292, 405)
-
-[node name="o_CASTLE_bujany_z_parametrami_17" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163381
+
+[node name="o_CASTLE_bujany_z_parametrami_17" type="Sprite2D" parent="Objects_0" unique_id=269480993]
 position = Vector2(4504, 332)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_instance = 163382
 
-[node name="o_smoke_creator_18" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_smoke_creator"
+[node name="o_smoke_creator_18" type="Sprite2D" parent="Objects_0" unique_id=16925808]
+visible = false
 position = Vector2(800, 1080)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
+texture = ExtResource("t6")
 centered = false
-visible = false
-
-[node name="o_smoke_creator_19" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_smoke_creator"
+metadata/gm_object_index = 599
+metadata/gm_instance = 163391
+
+[node name="o_smoke_creator_19" type="Sprite2D" parent="Objects_0" unique_id=1173153945]
+visible = false
 position = Vector2(1920, 1120)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
+texture = ExtResource("t6")
 centered = false
-visible = false
-
-[node name="o_smoke_creator_20" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_smoke_creator"
+metadata/gm_object_index = 599
+metadata/gm_instance = 163392
+
+[node name="o_smoke_creator_20" type="Sprite2D" parent="Objects_0" unique_id=955590561]
+visible = false
 position = Vector2(3160, 1120)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
+texture = ExtResource("t6")
 centered = false
-visible = false
-
-[node name="o_smoke_creator_21" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_smoke_creator"
+metadata/gm_object_index = 599
+metadata/gm_instance = 163393
+
+[node name="o_smoke_creator_21" type="Sprite2D" parent="Objects_0" unique_id=1621783855]
+visible = false
 position = Vector2(3720, 1120)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
+texture = ExtResource("t6")
 centered = false
-visible = false
-
-[node name="o_smoke_creator_22" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_smoke_creator"
+metadata/gm_object_index = 599
+metadata/gm_instance = 163394
+
+[node name="o_smoke_creator_22" type="Sprite2D" parent="Objects_0" unique_id=13837060]
+visible = false
 position = Vector2(4520, 1240)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
+texture = ExtResource("t6")
 centered = false
-visible = false
-
-[node name="o_smoke_creator_23" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_smoke_creator"
+metadata/gm_object_index = 599
+metadata/gm_instance = 163395
+
+[node name="o_smoke_creator_23" type="Sprite2D" parent="Objects_0" unique_id=850600604]
+visible = false
 position = Vector2(5280, 1280)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
+texture = ExtResource("t6")
 centered = false
-visible = false
+metadata/gm_object = "o_smoke_creator"
+metadata/gm_object_index = 599
+metadata/gm_instance = 163396
 
-[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_24" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_24" type="Sprite2D" parent="Objects_0" unique_id=1429472754]
+visible = false
 position = Vector2(640, 880)
-texture = ExtResource("t4")
-offset = Vector2(-80, -80)
+scale = Vector2(3, 3)
+texture = ExtResource("t5")
 centered = false
-visible = false
-
-[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_25" type="Sprite2D" parent="Objects_0"]
+offset = Vector2(-80, -80)
 metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+metadata/gm_object_index = 666
+metadata/gm_instance = 163397
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_25" type="Sprite2D" parent="Objects_0" unique_id=1396532080]
+visible = false
 position = Vector2(1080, 880)
-texture = ExtResource("t4")
-offset = Vector2(-80, -80)
+scale = Vector2(3, 3)
+texture = ExtResource("t5")
 centered = false
-visible = false
-
-[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_26" type="Sprite2D" parent="Objects_0"]
+offset = Vector2(-80, -80)
 metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+metadata/gm_object_index = 666
+metadata/gm_instance = 163398
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_26" type="Sprite2D" parent="Objects_0" unique_id=377640275]
+visible = false
 position = Vector2(1560, 880)
-texture = ExtResource("t4")
-offset = Vector2(-80, -80)
+scale = Vector2(3, 3)
+texture = ExtResource("t5")
 centered = false
-visible = false
-
-[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_27" type="Sprite2D" parent="Objects_0"]
+offset = Vector2(-80, -80)
 metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+metadata/gm_object_index = 666
+metadata/gm_instance = 163399
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_27" type="Sprite2D" parent="Objects_0" unique_id=881370118]
+visible = false
 position = Vector2(2120, 880)
-texture = ExtResource("t4")
-offset = Vector2(-80, -80)
+scale = Vector2(3, 3)
+texture = ExtResource("t5")
 centered = false
-visible = false
-
-[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_28" type="Sprite2D" parent="Objects_0"]
+offset = Vector2(-80, -80)
 metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+metadata/gm_object_index = 666
+metadata/gm_instance = 163400
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_28" type="Sprite2D" parent="Objects_0" unique_id=1531030369]
+visible = false
 position = Vector2(2640, 880)
-texture = ExtResource("t4")
-offset = Vector2(-80, -80)
+scale = Vector2(3, 3)
+texture = ExtResource("t5")
 centered = false
-visible = false
-
-[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_29" type="Sprite2D" parent="Objects_0"]
+offset = Vector2(-80, -80)
 metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+metadata/gm_object_index = 666
+metadata/gm_instance = 163401
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_29" type="Sprite2D" parent="Objects_0" unique_id=515842552]
+visible = false
 position = Vector2(3120, 880)
-texture = ExtResource("t4")
-offset = Vector2(-80, -80)
+scale = Vector2(3, 3)
+texture = ExtResource("t5")
 centered = false
-visible = false
-
-[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_30" type="Sprite2D" parent="Objects_0"]
+offset = Vector2(-80, -80)
 metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
-position = Vector2(3600, 880)
-texture = ExtResource("t4")
-offset = Vector2(-80, -80)
-centered = false
+metadata/gm_object_index = 666
+metadata/gm_instance = 163402
+
+[node name="o_wielki_kwadrat_oddalajacy_scroolin_1100_30" type="Sprite2D" parent="Objects_0" unique_id=698748760]
 visible = false
+position = Vector2(3600, 880)
+scale = Vector2(3, 3)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-80, -80)
+metadata/gm_object = "o_wielki_kwadrat_oddalajacy_scroolin_1100"
+metadata/gm_object_index = 666
+metadata/gm_instance = 163403
 
-[node name="o_enut_31" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_enut"
-metadata/gm_creation_code = "zasieg_w_pikselach=500\r\nwielkosc_enuta=1.2"
+[node name="o_enut_31" type="Sprite2D" parent="Objects_0" unique_id=885656873]
+visible = false
 position = Vector2(1160, 1200)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t7")
 centered = false
-
-[node name="o_enut_32" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_enut"
-metadata/gm_creation_code = "zasieg_w_pikselach=500\r\nwielkosc_enuta=1.2"
+metadata/gm_object_index = 180
+metadata/gm_instance = 163455
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "zasieg_w_pikselach=500
+wielkosc_enuta=1.2"
+
+[node name="o_enut_32" type="Sprite2D" parent="Objects_0" unique_id=803886880]
 position = Vector2(1920, 1200)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
+texture = ExtResource("t7")
 centered = false
-
-[node name="o_enut_33" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_enut"
-metadata/gm_creation_code = "zasieg_w_pikselach=500\r\nwielkosc_enuta=1.2"
+metadata/gm_object_index = 180
+metadata/gm_instance = 163456
+metadata/gm_creation_code = "zasieg_w_pikselach=500
+wielkosc_enuta=1.2"
+
+[node name="o_enut_33" type="Sprite2D" parent="Objects_0" unique_id=349915987]
 position = Vector2(2840, 1200)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
+texture = ExtResource("t7")
 centered = false
-
-[node name="o_enut_34" type="Sprite2D" parent="Objects_0"]
 metadata/gm_object = "o_enut"
-metadata/gm_creation_code = "zasieg_w_pikselach=500\r\nwielkosc_enuta=1.2"
+metadata/gm_object_index = 180
+metadata/gm_instance = 163457
+metadata/gm_creation_code = "zasieg_w_pikselach=500
+wielkosc_enuta=1.2"
+
+[node name="o_enut_34" type="Sprite2D" parent="Objects_0" unique_id=1751236342]
 position = Vector2(3560, 1200)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
+texture = ExtResource("t7")
 centered = false
+metadata/gm_object = "o_enut"
+metadata/gm_object_index = 180
+metadata/gm_instance = 163458
+metadata/gm_creation_code = "zasieg_w_pikselach=500
+wielkosc_enuta=1.2"
 
-[node name="o_point_brick_alone_35" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
+[node name="o_point_brick_alone_35" type="Sprite2D" parent="Objects_0" unique_id=1280174757]
+visible = false
 position = Vector2(760, 800)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_36" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(800, 800)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_37" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(880, 640)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_38" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(920, 640)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_39" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(640, 600)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_40" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(600, 600)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_41" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(1760, 800)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_42" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(1800, 800)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_43" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(1360, 800)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_44" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(1400, 760)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_45" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(1440, 720)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_46" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(2240, 800)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_47" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(2280, 760)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_48" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(2320, 720)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_49" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(2760, 640)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_50" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(2800, 680)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_51" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(2840, 720)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_52" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(2520, 640)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_53" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(3360, 760)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_54" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(3400, 760)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_55" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(3560, 640)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_point_brick_alone_56" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_point_brick_alone"
-position = Vector2(3600, 640)
-texture = ExtResource("t7")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_check_point_1_57" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_check_point_1"
-position = Vector2(520, 960)
 texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163459
+metadata/gm_draw_base = true
+
+[node name="o_point_brick_alone_36" type="Sprite2D" parent="Objects_0" unique_id=1156230813]
+visible = false
+position = Vector2(800, 800)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163460
+metadata/gm_draw_base = true
+
+[node name="o_point_brick_alone_37" type="Sprite2D" parent="Objects_0" unique_id=915166251]
+visible = false
+position = Vector2(880, 640)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163461
+metadata/gm_draw_base = true
+
+[node name="o_point_brick_alone_38" type="Sprite2D" parent="Objects_0" unique_id=2096154223]
+position = Vector2(920, 640)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163462
+
+[node name="o_point_brick_alone_39" type="Sprite2D" parent="Objects_0" unique_id=1213175292]
+visible = false
+position = Vector2(640, 600)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163463
+metadata/gm_draw_base = true
+
+[node name="o_point_brick_alone_40" type="Sprite2D" parent="Objects_0" unique_id=567864728]
+visible = false
+position = Vector2(600, 600)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163464
+metadata/gm_draw_base = true
+
+[node name="o_point_brick_alone_41" type="Sprite2D" parent="Objects_0" unique_id=1433161140]
+position = Vector2(1760, 800)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163465
+
+[node name="o_point_brick_alone_42" type="Sprite2D" parent="Objects_0" unique_id=549357006]
+position = Vector2(1800, 800)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163466
+
+[node name="o_point_brick_alone_43" type="Sprite2D" parent="Objects_0" unique_id=1821890134]
+position = Vector2(1360, 800)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163467
+
+[node name="o_point_brick_alone_44" type="Sprite2D" parent="Objects_0" unique_id=127043372]
+position = Vector2(1400, 760)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163468
+
+[node name="o_point_brick_alone_45" type="Sprite2D" parent="Objects_0" unique_id=1626640587]
+position = Vector2(1440, 720)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163469
+
+[node name="o_point_brick_alone_46" type="Sprite2D" parent="Objects_0" unique_id=1937967409]
+position = Vector2(2240, 800)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163470
+
+[node name="o_point_brick_alone_47" type="Sprite2D" parent="Objects_0" unique_id=1321883422]
+position = Vector2(2280, 760)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163471
+
+[node name="o_point_brick_alone_48" type="Sprite2D" parent="Objects_0" unique_id=65458018]
+position = Vector2(2320, 720)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163472
+
+[node name="o_point_brick_alone_49" type="Sprite2D" parent="Objects_0" unique_id=1120119941]
+position = Vector2(2760, 640)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163473
+
+[node name="o_point_brick_alone_50" type="Sprite2D" parent="Objects_0" unique_id=979987601]
+position = Vector2(2800, 680)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163474
+
+[node name="o_point_brick_alone_51" type="Sprite2D" parent="Objects_0" unique_id=1593409202]
+position = Vector2(2840, 720)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163475
+
+[node name="o_point_brick_alone_52" type="Sprite2D" parent="Objects_0" unique_id=1206914371]
+position = Vector2(2520, 640)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163476
+
+[node name="o_point_brick_alone_53" type="Sprite2D" parent="Objects_0" unique_id=532306051]
+position = Vector2(3360, 760)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163477
+
+[node name="o_point_brick_alone_54" type="Sprite2D" parent="Objects_0" unique_id=1769954835]
+position = Vector2(3400, 760)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163478
+
+[node name="o_point_brick_alone_55" type="Sprite2D" parent="Objects_0" unique_id=890911133]
+position = Vector2(3560, 640)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163479
+
+[node name="o_point_brick_alone_56" type="Sprite2D" parent="Objects_0" unique_id=2042378916]
+position = Vector2(3600, 640)
+texture = ExtResource("t8")
+centered = false
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_instance = 163480
+
+[node name="o_check_point_1_57" type="Sprite2D" parent="Objects_0" unique_id=565290772]
+visible = false
+position = Vector2(520, 960)
+texture = ExtResource("t9")
+centered = false
 offset = Vector2(-20, -40)
+metadata/gm_object = "o_check_point_1"
+metadata/gm_object_index = 329
+metadata/gm_instance = 163637
+metadata/gm_draw_base = true
+
+[node name="o_wind_fix_marker_58" type="Sprite2D" parent="Objects_0" unique_id=465095454]
+visible = false
+position = Vector2(334, 963)
+texture = ExtResource("t15")
 centered = false
+metadata/gm_object = "o_wind_fix_marker"
+metadata/gm_object_index = 668
+metadata/gm_runtime_spawned = true
 
-[node name="Objects_10000" type="Node2D" parent="."]
-z_index = 1
-metadata/gm_depth = 10000
+[node name="obj_mario_anim_59" type="Sprite2D" parent="Objects_0" unique_id=398609722]
+position = Vector2(334, 934)
+texture = ExtResource("t17")
+centered = false
+metadata/gm_object = "obj_mario_anim"
+metadata/gm_object_index = 306
+metadata/gm_runtime_spawned = true
 
-[node name="o_door_0" type="Sprite2D" parent="Objects_10000"]
-metadata/gm_object = "o_door"
-metadata/gm_creation_code = "idzie_do_etapu=room_lavas_10_Last_Castle_6"
+[node name="o_koniec_etapu_60" type="Sprite2D" parent="Objects_0" unique_id=1543310861]
+position = Vector2(-10000, -10000)
+scale = Vector2(0.1, 1)
+texture = ExtResource("t12")
+centered = false
+metadata/gm_object = "o_koniec_etapu"
+metadata/gm_object_index = 288
+metadata/gm_runtime_spawned = true
+
+[node name="o_CASTLE_bujany_z_parametrami_61" type="Sprite2D" parent="Objects_0" unique_id=1836450858]
+position = Vector2(271, 479)
+rotation = -1.339973
+texture = ExtResource("t22")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163366
+metadata/gm_preview_pos = Vector2(271, 479)
+metadata/gm_base_pos = Vector2(271, 479)
+
+[node name="o_CASTLE_bujany_z_parametrami_62" type="Sprite2D" parent="Objects_0" unique_id=1233535931]
+position = Vector2(263.90363, 508.14862)
+rotation = -1.324001
+texture = ExtResource("t23")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163366
+metadata/gm_preview_pos = Vector2(263.90363, 508.14862)
+metadata/gm_base_pos = Vector2(271, 479)
+
+[node name="o_CASTLE_bujany_z_parametrami_63" type="Sprite2D" parent="Objects_0" unique_id=141539267]
+position = Vector2(271, 479)
+rotation = -1.343269
+texture = ExtResource("t22")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163366
+metadata/gm_preview_pos = Vector2(271, 479)
+metadata/gm_base_pos = Vector2(271, 479)
+
+[node name="o_CASTLE_bujany_z_parametrami_64" type="Sprite2D" parent="Objects_0" unique_id=114196575]
+position = Vector2(264.003, 508.17264)
+rotation = -1.327521
+texture = ExtResource("t23")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163366
+metadata/gm_preview_pos = Vector2(264.003, 508.17264)
+metadata/gm_base_pos = Vector2(271, 479)
+
+[node name="o_CASTLE_bujany_z_parametrami_65" type="Sprite2D" parent="Objects_0" unique_id=595164055]
+position = Vector2(554, 391)
+rotation = -1.527694
+texture = ExtResource("t22")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163367
+metadata/gm_preview_pos = Vector2(554, 391)
+metadata/gm_base_pos = Vector2(554, 391)
+
+[node name="o_CASTLE_bujany_z_parametrami_66" type="Sprite2D" parent="Objects_0" unique_id=184909462]
+position = Vector2(552.66223, 420.97015)
+rotation = -1.524686
+texture = ExtResource("t23")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163367
+metadata/gm_preview_pos = Vector2(552.66223, 420.97015)
+metadata/gm_base_pos = Vector2(554, 391)
+
+[node name="o_CASTLE_bujany_z_parametrami_67" type="Sprite2D" parent="Objects_0" unique_id=1273789237]
+position = Vector2(554, 391)
+rotation = -1.530575
+texture = ExtResource("t22")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163367
+metadata/gm_preview_pos = Vector2(554, 391)
+metadata/gm_base_pos = Vector2(554, 391)
+
+[node name="o_CASTLE_bujany_z_parametrami_68" type="Sprite2D" parent="Objects_0" unique_id=1330268201]
+position = Vector2(552.7516, 420.974)
+rotation = -1.527768
+texture = ExtResource("t23")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163367
+metadata/gm_preview_pos = Vector2(552.7516, 420.974)
+metadata/gm_base_pos = Vector2(554, 391)
+
+[node name="o_CASTLE_bujany_z_parametrami_69" type="Sprite2D" parent="Objects_0" unique_id=1965741478]
+position = Vector2(808, 503)
+rotation = -1.509648
+texture = ExtResource("t22")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163368
+metadata/gm_preview_pos = Vector2(808, 503)
+metadata/gm_base_pos = Vector2(808, 503)
+
+[node name="o_CASTLE_bujany_z_parametrami_70" type="Sprite2D" parent="Objects_0" unique_id=1513970287]
+position = Vector2(806.10284, 532.93994)
+rotation = -1.505382
+texture = ExtResource("t23")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163368
+metadata/gm_preview_pos = Vector2(806.10284, 532.93994)
+metadata/gm_base_pos = Vector2(808, 503)
+
+[node name="o_CASTLE_bujany_z_parametrami_71" type="Sprite2D" parent="Objects_0" unique_id=1190017919]
+position = Vector2(808, 503)
+rotation = -1.508652
+texture = ExtResource("t22")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163368
+metadata/gm_preview_pos = Vector2(808, 503)
+metadata/gm_base_pos = Vector2(808, 503)
+
+[node name="o_CASTLE_bujany_z_parametrami_72" type="Sprite2D" parent="Objects_0" unique_id=1168505339]
+position = Vector2(806.07196, 532.938)
+rotation = -1.504316
+texture = ExtResource("t23")
+centered = false
+offset = Vector2(-27, -16)
+metadata/gm_object = "o_CASTLE_bujany_z_parametrami"
+metadata/gm_object_index = 451
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163368
+metadata/gm_preview_pos = Vector2(806.07196, 532.938)
+metadata/gm_base_pos = Vector2(808, 503)
+
+[node name="o_enut_73" type="Sprite2D" parent="Objects_0" unique_id=151107108]
+position = Vector2(1160, 1200)
+scale = Vector2(0.6, 1e-05)
+texture = ExtResource("t24")
+centered = false
+offset = Vector2(-155, -435)
+metadata/gm_object = "o_enut"
+metadata/gm_object_index = 180
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163455
+metadata/gm_preview_pos = Vector2(1160, 1200)
+metadata/gm_base_pos = Vector2(1160, 1200)
+
+[node name="o_enut_74" type="Sprite2D" parent="Objects_0" unique_id=1230171201]
+position = Vector2(1160, 1200)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t25")
+centered = false
+offset = Vector2(-124, -125)
+metadata/gm_object = "o_enut"
+metadata/gm_object_index = 180
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163455
+metadata/gm_preview_pos = Vector2(1160, 1200)
+metadata/gm_base_pos = Vector2(1160, 1200)
+
+[node name="o_enut_75" type="Sprite2D" parent="Objects_0" unique_id=803275363]
+position = Vector2(1180, 1200)
+scale = Vector2(0.6, 1e-05)
+texture = ExtResource("t26")
+centered = false
+offset = Vector2(-86, -92)
+metadata/gm_object = "o_enut"
+metadata/gm_object_index = 180
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163455
+metadata/gm_preview_pos = Vector2(1180, 1200)
+metadata/gm_base_pos = Vector2(1160, 1200)
+
+[node name="o_enut_76" type="Sprite2D" parent="Objects_0" unique_id=665877582]
+position = Vector2(1161, 1200)
+scale = Vector2(0.6, 1e-05)
+texture = ExtResource("t27")
+centered = false
+offset = Vector2(-19, -66)
+metadata/gm_object = "o_enut"
+metadata/gm_object_index = 180
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163455
+metadata/gm_preview_pos = Vector2(1161, 1200)
+metadata/gm_base_pos = Vector2(1160, 1200)
+
+[node name="o_enut_77" type="Sprite2D" parent="Objects_0" unique_id=813085848]
+position = Vector2(1200, 1200)
+scale = Vector2(0.6, 1e-05)
+texture = ExtResource("t27")
+centered = false
+offset = Vector2(-19, -66)
+metadata/gm_object = "o_enut"
+metadata/gm_object_index = 180
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163455
+metadata/gm_preview_pos = Vector2(1200, 1200)
+metadata/gm_base_pos = Vector2(1160, 1200)
+
+[node name="o_enut_78" type="Sprite2D" parent="Objects_0" unique_id=1957525423]
+position = Vector2(1160, 1200)
+scale = Vector2(0.6, 1e-05)
+texture = ExtResource("t24")
+centered = false
+offset = Vector2(-155, -435)
+metadata/gm_object = "o_enut"
+metadata/gm_object_index = 180
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163455
+metadata/gm_preview_pos = Vector2(1160, 1200)
+metadata/gm_base_pos = Vector2(1160, 1200)
+
+[node name="o_enut_79" type="Sprite2D" parent="Objects_0" unique_id=1958450137]
+position = Vector2(1160, 1200)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t25")
+centered = false
+offset = Vector2(-124, -125)
+metadata/gm_object = "o_enut"
+metadata/gm_object_index = 180
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163455
+metadata/gm_preview_pos = Vector2(1160, 1200)
+metadata/gm_base_pos = Vector2(1160, 1200)
+
+[node name="o_enut_80" type="Sprite2D" parent="Objects_0" unique_id=1374982929]
+position = Vector2(1180, 1200)
+scale = Vector2(0.6, 1e-05)
+texture = ExtResource("t26")
+centered = false
+offset = Vector2(-86, -92)
+metadata/gm_object = "o_enut"
+metadata/gm_object_index = 180
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163455
+metadata/gm_preview_pos = Vector2(1180, 1200)
+metadata/gm_base_pos = Vector2(1160, 1200)
+
+[node name="o_enut_81" type="Sprite2D" parent="Objects_0" unique_id=84478084]
+position = Vector2(1161, 1200)
+scale = Vector2(0.6, 1e-05)
+texture = ExtResource("t27")
+centered = false
+offset = Vector2(-19, -66)
+metadata/gm_object = "o_enut"
+metadata/gm_object_index = 180
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163455
+metadata/gm_preview_pos = Vector2(1161, 1200)
+metadata/gm_base_pos = Vector2(1160, 1200)
+
+[node name="o_enut_82" type="Sprite2D" parent="Objects_0" unique_id=565308792]
+position = Vector2(1200, 1200)
+scale = Vector2(0.6, 1e-05)
+texture = ExtResource("t27")
+centered = false
+offset = Vector2(-19, -66)
+metadata/gm_object = "o_enut"
+metadata/gm_object_index = 180
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163455
+metadata/gm_preview_pos = Vector2(1200, 1200)
+metadata/gm_base_pos = Vector2(1160, 1200)
+
+[node name="o_point_brick_alone_83" type="Sprite2D" parent="Objects_0" unique_id=954955326]
+position = Vector2(780, 820)
+texture = ExtResource("t28")
+centered = false
+offset = Vector2(-25, -25)
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163459
+metadata/gm_preview_pos = Vector2(780, 820)
+metadata/gm_base_pos = Vector2(760, 800)
+
+[node name="o_point_brick_alone_84" type="Sprite2D" parent="Objects_0" unique_id=626118141]
+position = Vector2(780, 820)
+texture = ExtResource("t28")
+centered = false
+offset = Vector2(-25, -25)
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163459
+metadata/gm_preview_pos = Vector2(780, 820)
+metadata/gm_base_pos = Vector2(760, 800)
+
+[node name="o_point_brick_alone_85" type="Sprite2D" parent="Objects_0" unique_id=1926026228]
+position = Vector2(820, 820)
+texture = ExtResource("t28")
+centered = false
+offset = Vector2(-25, -25)
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163460
+metadata/gm_preview_pos = Vector2(820, 820)
+metadata/gm_base_pos = Vector2(800, 800)
+
+[node name="o_point_brick_alone_86" type="Sprite2D" parent="Objects_0" unique_id=1887663433]
+position = Vector2(820, 820)
+texture = ExtResource("t28")
+centered = false
+offset = Vector2(-25, -25)
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163460
+metadata/gm_preview_pos = Vector2(820, 820)
+metadata/gm_base_pos = Vector2(800, 800)
+
+[node name="o_point_brick_alone_87" type="Sprite2D" parent="Objects_0" unique_id=1507553153]
+position = Vector2(900, 660)
+texture = ExtResource("t28")
+centered = false
+offset = Vector2(-25, -25)
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163461
+metadata/gm_preview_pos = Vector2(900, 660)
+metadata/gm_base_pos = Vector2(880, 640)
+
+[node name="o_point_brick_alone_88" type="Sprite2D" parent="Objects_0" unique_id=1745932109]
+position = Vector2(900, 660)
+texture = ExtResource("t28")
+centered = false
+offset = Vector2(-25, -25)
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163461
+metadata/gm_preview_pos = Vector2(900, 660)
+metadata/gm_base_pos = Vector2(880, 640)
+
+[node name="o_point_brick_alone_89" type="Sprite2D" parent="Objects_0" unique_id=2077886630]
+position = Vector2(660, 620)
+texture = ExtResource("t28")
+centered = false
+offset = Vector2(-25, -25)
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163463
+metadata/gm_preview_pos = Vector2(660, 620)
+metadata/gm_base_pos = Vector2(640, 600)
+
+[node name="o_point_brick_alone_90" type="Sprite2D" parent="Objects_0" unique_id=1843357448]
+position = Vector2(660, 620)
+texture = ExtResource("t28")
+centered = false
+offset = Vector2(-25, -25)
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163463
+metadata/gm_preview_pos = Vector2(660, 620)
+metadata/gm_base_pos = Vector2(640, 600)
+
+[node name="o_point_brick_alone_91" type="Sprite2D" parent="Objects_0" unique_id=2013568873]
+position = Vector2(620, 620)
+texture = ExtResource("t28")
+centered = false
+offset = Vector2(-25, -25)
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163464
+metadata/gm_preview_pos = Vector2(620, 620)
+metadata/gm_base_pos = Vector2(600, 600)
+
+[node name="o_point_brick_alone_92" type="Sprite2D" parent="Objects_0" unique_id=360304313]
+position = Vector2(620, 620)
+texture = ExtResource("t28")
+centered = false
+offset = Vector2(-25, -25)
+metadata/gm_object = "o_point_brick_alone"
+metadata/gm_object_index = 47
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163464
+metadata/gm_preview_pos = Vector2(620, 620)
+metadata/gm_base_pos = Vector2(600, 600)
+
+[node name="o_check_point_1_93" type="Sprite2D" parent="Objects_0" unique_id=296362083]
+position = Vector2(520, 960)
+rotation = -0.064738
+texture = ExtResource("t29")
+centered = false
+offset = Vector2(-59, -128)
+metadata/gm_object = "o_check_point_1"
+metadata/gm_object_index = 329
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163637
+metadata/gm_preview_pos = Vector2(520, 960)
+metadata/gm_base_pos = Vector2(520, 960)
+
+[node name="o_check_point_1_94" type="Sprite2D" parent="Objects_0" unique_id=626910785]
+position = Vector2(520, 960)
+rotation = -0.066355
+texture = ExtResource("t29")
+centered = false
+offset = Vector2(-59, -128)
+metadata/gm_object = "o_check_point_1"
+metadata/gm_object_index = 329
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163637
+metadata/gm_preview_pos = Vector2(520, 960)
+metadata/gm_base_pos = Vector2(520, 960)
+
+[node name="Objects_10000.0" type="Node2D" parent="." unique_id=1936948871]
+z_index = -2
+metadata/gm_depth = 10000.0
+
+[node name="o_door_0" type="Sprite2D" parent="Objects_10000.0" unique_id=852936707]
 position = Vector2(4080, 960)
-texture = ExtResource("t3")
+texture = ExtResource("t4")
+centered = false
 offset = Vector2(-33, -24)
-centered = false
+metadata/gm_object = "o_door"
+metadata/gm_object_index = 364
+metadata/gm_instance = 163481
+metadata/gm_creation_code = "idzie_do_etapu=room_lavas_10_Last_Castle_6"
 
-[node name="Objects_90000" type="Node2D" parent="."]
-z_index = 3
-metadata/gm_depth = 90000
+[node name="Objects_9100000.0" type="Node2D" parent="." unique_id=1714526482]
+z_index = -4
+metadata/gm_depth = 9100000.0
 
-[node name="o_bowser_statue_1_0" type="Sprite2D" parent="Objects_90000"]
-metadata/gm_object = "o_bowser_statue_1"
-metadata/gm_creation_code = "image_xscale=1\r\nimage_yscale=1\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=3\r\nmnoznik=0\r\ndepth=9100000\r\nodleglosc_przemijania=1212400\r\n\r\npromien_bujania=10\r\nszybkosc_bujania=1"
+[node name="o_bowser_statue_1_0" type="Sprite2D" parent="Objects_9100000.0" unique_id=792929062]
+visible = false
 position = Vector2(800, 1200)
-texture = ExtResource("t2")
-offset = Vector2(-103, -477)
+texture = ExtResource("t3")
 centered = false
-
-[node name="o_bowser_statue_1_1" type="Sprite2D" parent="Objects_90000"]
+offset = Vector2(-103, -477)
 metadata/gm_object = "o_bowser_statue_1"
-metadata/gm_creation_code = "image_xscale=1\r\nimage_yscale=1\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=3\r\nmnoznik=0\r\ndepth=9100000\r\nodleglosc_przemijania=1212400\r\n\r\npromien_bujania=10\r\nszybkosc_bujania=1"
+metadata/gm_object_index = 701
+metadata/gm_instance = 163421
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1
+image_yscale=1
+image_angle=0
+image_alpha=1
+dzielnik=3
+mnoznik=0
+depth=9100000
+odleglosc_przemijania=1212400
+
+promien_bujania=10
+szybkosc_bujania=1"
+
+[node name="o_bowser_statue_1_1" type="Sprite2D" parent="Objects_9100000.0" unique_id=1245464150]
+visible = false
 position = Vector2(480, 1280)
-texture = ExtResource("t2")
-offset = Vector2(-103, -477)
+texture = ExtResource("t3")
 centered = false
-
-[node name="o_bowser_statue_1_2" type="Sprite2D" parent="Objects_90000"]
+offset = Vector2(-103, -477)
 metadata/gm_object = "o_bowser_statue_1"
-metadata/gm_creation_code = "image_xscale=1\r\nimage_yscale=1\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=3\r\nmnoznik=0\r\ndepth=9100000\r\nodleglosc_przemijania=1212400\r\n\r\npromien_bujania=10\r\nszybkosc_bujania=1"
+metadata/gm_object_index = 701
+metadata/gm_instance = 163422
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1
+image_yscale=1
+image_angle=0
+image_alpha=1
+dzielnik=3
+mnoznik=0
+depth=9100000
+odleglosc_przemijania=1212400
+
+promien_bujania=10
+szybkosc_bujania=1"
+
+[node name="o_bowser_statue_1_2" type="Sprite2D" parent="Objects_9100000.0" unique_id=1233965290]
+visible = false
 position = Vector2(120, 1200)
-texture = ExtResource("t2")
-offset = Vector2(-103, -477)
+texture = ExtResource("t3")
 centered = false
-
-[node name="o_bowser_statue_1_3" type="Sprite2D" parent="Objects_90000"]
+offset = Vector2(-103, -477)
 metadata/gm_object = "o_bowser_statue_1"
-metadata/gm_creation_code = "image_xscale=1\r\nimage_yscale=1\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=3\r\nmnoznik=0\r\ndepth=9100000\r\nodleglosc_przemijania=1212400\r\n\r\npromien_bujania=10\r\nszybkosc_bujania=1"
+metadata/gm_object_index = 701
+metadata/gm_instance = 163423
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1
+image_yscale=1
+image_angle=0
+image_alpha=1
+dzielnik=3
+mnoznik=0
+depth=9100000
+odleglosc_przemijania=1212400
+
+promien_bujania=10
+szybkosc_bujania=1"
+
+[node name="o_bowser_statue_1_3" type="Sprite2D" parent="Objects_9100000.0" unique_id=1615811203]
+visible = false
 position = Vector2(960, 1400)
-texture = ExtResource("t2")
-offset = Vector2(-103, -477)
+texture = ExtResource("t3")
 centered = false
+offset = Vector2(-103, -477)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_instance = 163424
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1
+image_yscale=1
+image_angle=0
+image_alpha=1
+dzielnik=3
+mnoznik=0
+depth=9100000
+odleglosc_przemijania=1212400
+
+promien_bujania=10
+szybkosc_bujania=1"
+
+[node name="o_bowser_statue_1_4" type="Sprite2D" parent="Objects_9100000.0" unique_id=736164954]
+position = Vector2(800, 850)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 850)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_5" type="Sprite2D" parent="Objects_9100000.0" unique_id=1896429200]
+position = Vector2(800, 900)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 900)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_6" type="Sprite2D" parent="Objects_9100000.0" unique_id=2048828466]
+position = Vector2(800, 950)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 950)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_7" type="Sprite2D" parent="Objects_9100000.0" unique_id=786660557]
+position = Vector2(800, 1000)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 1000)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_8" type="Sprite2D" parent="Objects_9100000.0" unique_id=1716365927]
+position = Vector2(800, 1050)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 1050)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_9" type="Sprite2D" parent="Objects_9100000.0" unique_id=1344420538]
+position = Vector2(800, 1100)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 1100)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_10" type="Sprite2D" parent="Objects_9100000.0" unique_id=1663371523]
+position = Vector2(800, 1150)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 1150)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_11" type="Sprite2D" parent="Objects_9100000.0" unique_id=1045886755]
+position = Vector2(800, 1200)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 1200)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_12" type="Sprite2D" parent="Objects_9100000.0" unique_id=1371462239]
+position = Vector2(800, 820)
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-102, -180)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 820)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_13" type="Sprite2D" parent="Objects_9100000.0" unique_id=2098553372]
+position = Vector2(800, 850)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 850)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_14" type="Sprite2D" parent="Objects_9100000.0" unique_id=418897975]
+position = Vector2(800, 900)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 900)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_15" type="Sprite2D" parent="Objects_9100000.0" unique_id=382685353]
+position = Vector2(800, 950)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 950)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_16" type="Sprite2D" parent="Objects_9100000.0" unique_id=770624098]
+position = Vector2(800, 1000)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 1000)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_17" type="Sprite2D" parent="Objects_9100000.0" unique_id=2139294577]
+position = Vector2(800, 1050)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 1050)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_18" type="Sprite2D" parent="Objects_9100000.0" unique_id=210115576]
+position = Vector2(800, 1100)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 1100)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_19" type="Sprite2D" parent="Objects_9100000.0" unique_id=1063613001]
+position = Vector2(800, 1150)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 1150)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_20" type="Sprite2D" parent="Objects_9100000.0" unique_id=1070060340]
+position = Vector2(800, 1200)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 1200)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_21" type="Sprite2D" parent="Objects_9100000.0" unique_id=1964363581]
+position = Vector2(800, 820)
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-102, -180)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163421
+metadata/gm_preview_pos = Vector2(800, 820)
+metadata/gm_base_pos = Vector2(800, 1200)
+
+[node name="o_bowser_statue_1_22" type="Sprite2D" parent="Objects_9100000.0" unique_id=910070223]
+position = Vector2(480, 930)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 930)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_23" type="Sprite2D" parent="Objects_9100000.0" unique_id=1431398065]
+position = Vector2(480, 980)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 980)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_24" type="Sprite2D" parent="Objects_9100000.0" unique_id=268557248]
+position = Vector2(480, 1030)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1030)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_25" type="Sprite2D" parent="Objects_9100000.0" unique_id=710079810]
+position = Vector2(480, 1080)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1080)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_26" type="Sprite2D" parent="Objects_9100000.0" unique_id=37906678]
+position = Vector2(480, 1130)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1130)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_27" type="Sprite2D" parent="Objects_9100000.0" unique_id=719327502]
+position = Vector2(480, 1180)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1180)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_28" type="Sprite2D" parent="Objects_9100000.0" unique_id=684385367]
+position = Vector2(480, 1230)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1230)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_29" type="Sprite2D" parent="Objects_9100000.0" unique_id=1524145379]
+position = Vector2(480, 1280)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1280)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_30" type="Sprite2D" parent="Objects_9100000.0" unique_id=1727147943]
+position = Vector2(480, 900)
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-102, -180)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 900)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_31" type="Sprite2D" parent="Objects_9100000.0" unique_id=1344926398]
+position = Vector2(480, 930)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 930)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_32" type="Sprite2D" parent="Objects_9100000.0" unique_id=522812365]
+position = Vector2(480, 980)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 980)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_33" type="Sprite2D" parent="Objects_9100000.0" unique_id=1473355484]
+position = Vector2(480, 1030)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1030)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_34" type="Sprite2D" parent="Objects_9100000.0" unique_id=398303481]
+position = Vector2(480, 1080)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1080)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_35" type="Sprite2D" parent="Objects_9100000.0" unique_id=44112247]
+position = Vector2(480, 1130)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1130)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_36" type="Sprite2D" parent="Objects_9100000.0" unique_id=1308797505]
+position = Vector2(480, 1180)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1180)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_37" type="Sprite2D" parent="Objects_9100000.0" unique_id=1877940776]
+position = Vector2(480, 1230)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1230)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_38" type="Sprite2D" parent="Objects_9100000.0" unique_id=1973867102]
+position = Vector2(480, 1280)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 1280)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_39" type="Sprite2D" parent="Objects_9100000.0" unique_id=893192301]
+position = Vector2(480, 900)
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-102, -180)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163422
+metadata/gm_preview_pos = Vector2(480, 900)
+metadata/gm_base_pos = Vector2(480, 1280)
+
+[node name="o_bowser_statue_1_40" type="Sprite2D" parent="Objects_9100000.0" unique_id=1533243171]
+position = Vector2(120, 850)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 850)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_41" type="Sprite2D" parent="Objects_9100000.0" unique_id=1578816807]
+position = Vector2(120, 900)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 900)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_42" type="Sprite2D" parent="Objects_9100000.0" unique_id=1555171348]
+position = Vector2(120, 950)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 950)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_43" type="Sprite2D" parent="Objects_9100000.0" unique_id=1059257150]
+position = Vector2(120, 1000)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 1000)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_44" type="Sprite2D" parent="Objects_9100000.0" unique_id=1073003724]
+position = Vector2(120, 1050)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 1050)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_45" type="Sprite2D" parent="Objects_9100000.0" unique_id=1840161616]
+position = Vector2(120, 1100)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 1100)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_46" type="Sprite2D" parent="Objects_9100000.0" unique_id=123228822]
+position = Vector2(120, 1150)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 1150)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_47" type="Sprite2D" parent="Objects_9100000.0" unique_id=89440219]
+position = Vector2(120, 1200)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 1200)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_48" type="Sprite2D" parent="Objects_9100000.0" unique_id=1481815295]
+position = Vector2(120, 820)
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-102, -180)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 820)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_49" type="Sprite2D" parent="Objects_9100000.0" unique_id=726372510]
+position = Vector2(120, 850)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 850)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_50" type="Sprite2D" parent="Objects_9100000.0" unique_id=751951895]
+position = Vector2(120, 900)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 900)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_51" type="Sprite2D" parent="Objects_9100000.0" unique_id=1597757661]
+position = Vector2(120, 950)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 950)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_52" type="Sprite2D" parent="Objects_9100000.0" unique_id=693579326]
+position = Vector2(120, 1000)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 1000)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_53" type="Sprite2D" parent="Objects_9100000.0" unique_id=882732942]
+position = Vector2(120, 1050)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 1050)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_54" type="Sprite2D" parent="Objects_9100000.0" unique_id=756499387]
+position = Vector2(120, 1100)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 1100)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_55" type="Sprite2D" parent="Objects_9100000.0" unique_id=1770961011]
+position = Vector2(120, 1150)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 1150)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_56" type="Sprite2D" parent="Objects_9100000.0" unique_id=1011020875]
+position = Vector2(120, 1200)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 1200)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_57" type="Sprite2D" parent="Objects_9100000.0" unique_id=2084468862]
+position = Vector2(120, 820)
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-102, -180)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163423
+metadata/gm_preview_pos = Vector2(120, 820)
+metadata/gm_base_pos = Vector2(120, 1200)
+
+[node name="o_bowser_statue_1_58" type="Sprite2D" parent="Objects_9100000.0" unique_id=1576182315]
+position = Vector2(960, 1050)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1050)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_59" type="Sprite2D" parent="Objects_9100000.0" unique_id=2021471341]
+position = Vector2(960, 1100)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1100)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_60" type="Sprite2D" parent="Objects_9100000.0" unique_id=33966045]
+position = Vector2(960, 1150)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1150)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_61" type="Sprite2D" parent="Objects_9100000.0" unique_id=434196152]
+position = Vector2(960, 1200)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1200)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_62" type="Sprite2D" parent="Objects_9100000.0" unique_id=1032845567]
+position = Vector2(960, 1250)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1250)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_63" type="Sprite2D" parent="Objects_9100000.0" unique_id=1380692622]
+position = Vector2(960, 1300)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1300)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_64" type="Sprite2D" parent="Objects_9100000.0" unique_id=332312804]
+position = Vector2(960, 1350)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1350)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_65" type="Sprite2D" parent="Objects_9100000.0" unique_id=1386225175]
+position = Vector2(960, 1400)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1400)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_66" type="Sprite2D" parent="Objects_9100000.0" unique_id=1396381940]
+position = Vector2(960, 1020)
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-102, -180)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1020)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_67" type="Sprite2D" parent="Objects_9100000.0" unique_id=1016687891]
+position = Vector2(960, 1050)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1050)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_68" type="Sprite2D" parent="Objects_9100000.0" unique_id=695425926]
+position = Vector2(960, 1100)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1100)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_69" type="Sprite2D" parent="Objects_9100000.0" unique_id=202814359]
+position = Vector2(960, 1150)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1150)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_70" type="Sprite2D" parent="Objects_9100000.0" unique_id=1733224276]
+position = Vector2(960, 1200)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1200)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_71" type="Sprite2D" parent="Objects_9100000.0" unique_id=1436951802]
+position = Vector2(960, 1250)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1250)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_72" type="Sprite2D" parent="Objects_9100000.0" unique_id=360989252]
+position = Vector2(960, 1300)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1300)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_73" type="Sprite2D" parent="Objects_9100000.0" unique_id=640054013]
+position = Vector2(960, 1350)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1350)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_74" type="Sprite2D" parent="Objects_9100000.0" unique_id=1245473384]
+position = Vector2(960, 1400)
+texture = ExtResource("t20")
+centered = false
+offset = Vector2(-70, -40)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1400)
+metadata/gm_base_pos = Vector2(960, 1400)
+
+[node name="o_bowser_statue_1_75" type="Sprite2D" parent="Objects_9100000.0" unique_id=1816350237]
+position = Vector2(960, 1020)
+texture = ExtResource("t21")
+centered = false
+offset = Vector2(-102, -180)
+metadata/gm_object = "o_bowser_statue_1"
+metadata/gm_object_index = 701
+metadata/gm_draw_preview = true
+metadata/gm_instance = 163424
+metadata/gm_preview_pos = Vector2(960, 1020)
+metadata/gm_base_pos = Vector2(960, 1400)

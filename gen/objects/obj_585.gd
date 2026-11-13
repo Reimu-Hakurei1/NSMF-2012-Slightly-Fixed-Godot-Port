@@ -23,7 +23,7 @@ static func ev_8_0(S, A: Array) -> Variant:
     if (S.g_blank > 0):
         R.draw_set_color(S, 0xFFFFFF)
         R.draw_set_alpha(S, S.g_blank)
-        R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.aget(R.view_xview, 0) + R.aget(R.view_wview, 0)), (R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)), 0)
+        R.draw_rectangle(S, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (R.anum(R.aget(R.view_xview, 0)) + R.anum(R.aget(R.view_wview, 0))), (R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))), 0)
         R.draw_set_alpha(S, 1)
         S.g_blank = (S.g_blank / 1.3)
     return 0

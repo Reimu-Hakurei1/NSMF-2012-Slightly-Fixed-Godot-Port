@@ -25,7 +25,7 @@ static func ev_0_0(S, A: Array) -> Variant:
     return 0
 
 static func ev_8_0(S, A: Array) -> Variant:
-    S.g_pos_offset = (-(400) + (R.aget(R.view_wview, 0) / 2))
+    S.g_pos_offset = (-(400) + (R.anum(R.aget(R.view_wview, 0)) / 2))
     R.set_obj_var(306, "g_animacja", 6)
     if (S.g_wybrano >= 1):
         S.g_wybrano += 1
@@ -39,16 +39,16 @@ static func ev_8_0(S, A: Array) -> Variant:
             if (R.eqv(S, S.g_wybor, 1) and ((R.keyboard_check(S, 13) or R.mouse_check_button(S, 1)))):
                 G.english_or_polish = 0
                 S.g_wybrano = 1
-                P2.SXMS_SFX_PlayExt(S, [25, (((((S.x - R.aget(R.view_xview, 0))) / R.aget(R.view_wview, 0))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [25, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / R.anum(R.aget(R.view_wview, 0)))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if (R.eqv(S, S.g_wybor, 2) and ((R.keyboard_check(S, 13) or R.mouse_check_button(S, 1)))):
                 G.english_or_polish = 1
                 S.g_wybrano = 1
-                P2.SXMS_SFX_PlayExt(S, [25, (((((S.x - R.aget(R.view_xview, 0))) / R.aget(R.view_wview, 0))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [25, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / R.anum(R.aget(R.view_wview, 0)))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         S.g_wybor = 0
-        S.g_real_mouse_x = (((R.mouse_x(S) - R.aget(R.view_xview, 0))) / ((R.aget(R.view_wview, 0) / R.aget(R.view_wport, 0))))
-        if (((R.abs(S, (S.g_real_mouse_x - (((R.aget(R.view_wview, 0) / 2) - 100)))) <= 100) and (R.mouse_y(S) > (S.y - 100))) and (R.mouse_y(S) < (S.y + 100))):
+        S.g_real_mouse_x = (((R.mouse_x(S) - R.anum(R.aget(R.view_xview, 0)))) / ((R.anum(R.aget(R.view_wview, 0)) / R.anum(R.aget(R.view_wport, 0)))))
+        if (((R.abs(S, (S.g_real_mouse_x - (((R.anum(R.aget(R.view_wview, 0)) / 2) - 100)))) <= 100) and (R.mouse_y(S) > (S.y - 100))) and (R.mouse_y(S) < (S.y + 100))):
             S.g_wybor = 1
-        if (((R.abs(S, (S.g_real_mouse_x - (((R.aget(R.view_wview, 0) / 2) + 100)))) <= 100) and (R.mouse_y(S) > (S.y - 100))) and (R.mouse_y(S) < (S.y + 100))):
+        if (((R.abs(S, (S.g_real_mouse_x - (((R.anum(R.aget(R.view_wview, 0)) / 2) + 100)))) <= 100) and (R.mouse_y(S) > (S.y - 100))) and (R.mouse_y(S) < (S.y + 100))):
             S.g_wybor = 2
         if R.eqv(S, S.g_wybor, 0):
             S.g_wybor2 = 0
@@ -56,9 +56,9 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_wybor2 = S.g_wybor
             if R.window_has_focus(S):
                 if R.eqv(S, S.g_wybor, 1):
-                    P2.SXMS_SFX_PlayExt(S, [108, (((((S.x - R.aget(R.view_xview, 0))) / R.aget(R.view_wview, 0))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                    P2.SXMS_SFX_PlayExt(S, [108, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / R.anum(R.aget(R.view_wview, 0)))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 if R.eqv(S, S.g_wybor, 2):
-                    P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.aget(R.view_xview, 0))) / R.aget(R.view_wview, 0))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                    P2.SXMS_SFX_PlayExt(S, [20, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / R.anum(R.aget(R.view_wview, 0)))) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if R.eqv(S, S.g_wybor, 1):
             if (S.g_powiekszator1 < 0.5):
                 S.g_powiekszator1 += 0.05
@@ -71,17 +71,17 @@ static func ev_8_0(S, A: Array) -> Variant:
         if (1 - R.eqv(S, S.g_wybor, 2)):
             if (S.g_powiekszator2 > 0):
                 S.g_powiekszator2 -= 0.05
-    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (((S.x + S.g_pos_offset) - 100) + R.aget(R.view_xview, 0)), S.y, 2, 2, S.g_image_angle, 0xFFFFFF, 0.5)
-    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (((S.x + S.g_pos_offset) + 100) + R.aget(R.view_xview, 0)), S.y, 2, 2, (S.g_image_angle + 20), 0xFFFFFF, 0.5)
-    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (((S.x + S.g_pos_offset) - 100) + R.aget(R.view_xview, 0)), S.y, 1, 1, (S.g_image_angle * 1.4), 0xFFFFFF, 0.75)
-    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (((S.x + S.g_pos_offset) + 100) + R.aget(R.view_xview, 0)), S.y, 1, 1, ((S.g_image_angle * 1.4) + 20), 0xFFFFFF, 0.75)
+    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (((S.x + S.g_pos_offset) - 100) + R.anum(R.aget(R.view_xview, 0))), S.y, 2, 2, S.g_image_angle, 0xFFFFFF, 0.5)
+    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (((S.x + S.g_pos_offset) + 100) + R.anum(R.aget(R.view_xview, 0))), S.y, 2, 2, (S.g_image_angle + 20), 0xFFFFFF, 0.5)
+    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (((S.x + S.g_pos_offset) - 100) + R.anum(R.aget(R.view_xview, 0))), S.y, 1, 1, (S.g_image_angle * 1.4), 0xFFFFFF, 0.75)
+    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (((S.x + S.g_pos_offset) + 100) + R.anum(R.aget(R.view_xview, 0))), S.y, 1, 1, ((S.g_image_angle * 1.4) + 20), 0xFFFFFF, 0.75)
     S.g_image_angle += 0.5
     R.draw_set_blend_mode(S, 1)
-    R.draw_sprite_ext(S, G.flaga_english, 0, (((S.x + S.g_pos_offset) - 100) + R.aget(R.view_xview, 0)), S.y, ((S.g_wielkosc * 1.3) + (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), ((S.g_wielkosc * 1.3) - (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), 0, 0xFFFFFF, 0.1)
-    R.draw_sprite_ext(S, G.flaga_polish, 0, (((S.x + S.g_pos_offset) + 100) + R.aget(R.view_xview, 0)), S.y, ((S.g_wielkosc * 1.3) - (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), ((S.g_wielkosc * 1.3) + (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), 0, 0xFFFFFF, 0.1)
+    R.draw_sprite_ext(S, G.flaga_english, 0, (((S.x + S.g_pos_offset) - 100) + R.anum(R.aget(R.view_xview, 0))), S.y, ((S.g_wielkosc * 1.3) + (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), ((S.g_wielkosc * 1.3) - (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), 0, 0xFFFFFF, 0.1)
+    R.draw_sprite_ext(S, G.flaga_polish, 0, (((S.x + S.g_pos_offset) + 100) + R.anum(R.aget(R.view_xview, 0))), S.y, ((S.g_wielkosc * 1.3) - (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), ((S.g_wielkosc * 1.3) + (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), 0, 0xFFFFFF, 0.1)
     R.draw_set_blend_mode(S, 0)
-    R.draw_sprite_ext(S, G.flaga_english, 0, (((S.x + S.g_pos_offset) - 100) + R.aget(R.view_xview, 0)), S.y, ((S.g_powiekszator1 + S.g_wielkosc) + (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), ((S.g_powiekszator1 + S.g_wielkosc) - (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), 0, 0xFFFFFF, 1)
-    R.draw_sprite_ext(S, G.flaga_polish, 0, (((S.x + S.g_pos_offset) + 100) + R.aget(R.view_xview, 0)), S.y, ((S.g_powiekszator2 + S.g_wielkosc) - (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), ((S.g_powiekszator2 + S.g_wielkosc) + (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), 0, 0xFFFFFF, 1)
+    R.draw_sprite_ext(S, G.flaga_english, 0, (((S.x + S.g_pos_offset) - 100) + R.anum(R.aget(R.view_xview, 0))), S.y, ((S.g_powiekszator1 + S.g_wielkosc) + (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), ((S.g_powiekszator1 + S.g_wielkosc) - (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), 0, 0xFFFFFF, 1)
+    R.draw_sprite_ext(S, G.flaga_polish, 0, (((S.x + S.g_pos_offset) + 100) + R.anum(R.aget(R.view_xview, 0))), S.y, ((S.g_powiekszator2 + S.g_wielkosc) - (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), ((S.g_powiekszator2 + S.g_wielkosc) + (R.sin(S, R.degtorad(S, S.g_stream)) / ((S.g_dzielnik + 15)))), 0, 0xFFFFFF, 1)
     S.g_stream += 5
     if (S.g_wielkosc < 1):
         S.g_wielkosc += 0.01
@@ -91,9 +91,9 @@ static func ev_8_0(S, A: Array) -> Variant:
     R.draw_set_alpha(S, S.g_alphar1)
     R.draw_set_halign(S, 1)
     R.draw_set_valign(S, 1)
-    R.draw_text_transformed(S, ((R.aget(R.view_xview, 0) + 400) + S.g_pos_offset), (R.aget(R.view_yview, 0) + 350), "Please Choose language", (S.g_wielkosc + S.g_wielkor), (S.g_wielkosc + S.g_wielkor), 0)
+    R.draw_text_transformed(S, ((R.anum(R.aget(R.view_xview, 0)) + 400) + S.g_pos_offset), (R.anum(R.aget(R.view_yview, 0)) + 350), "Please Choose language", (S.g_wielkosc + S.g_wielkor), (S.g_wielkosc + S.g_wielkor), 0)
     R.draw_set_alpha(S, S.g_alphar2)
-    R.draw_text_transformed(S, ((R.aget(R.view_xview, 0) + 400) + S.g_pos_offset), (R.aget(R.view_yview, 0) + 350), "ProszÄ™ Wybierz JÄ™zyk", (S.g_wielkosc + S.g_wielkor), (S.g_wielkosc + S.g_wielkor), 0)
+    R.draw_text_transformed(S, ((R.anum(R.aget(R.view_xview, 0)) + 400) + S.g_pos_offset), (R.anum(R.aget(R.view_yview, 0)) + 350), "ProszÄ™ Wybierz JÄ™zyk", (S.g_wielkosc + S.g_wielkor), (S.g_wielkosc + S.g_wielkor), 0)
     R.draw_set_alpha(S, S.g_alphar0)
     S.g_timer += 1
     if ((S.g_timer > 0) and (S.g_timer < 200)):
@@ -119,5 +119,5 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.draw_set_alpha(S, 1)
         R.draw_set_halign(S, 0)
         R.draw_set_valign(S, 0)
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + 10), (R.aget(R.view_yview, 0) + 10), "DEBUG MODE ENABLED.\nF1 TO EXECUTE GML CODE\nF2 TO RUN COMMANDS", 0.5, 0.5, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + 10), (R.anum(R.aget(R.view_yview, 0)) + 10), "DEBUG MODE ENABLED.\nF1 TO EXECUTE GML CODE\nF2 TO RUN COMMANDS", 0.5, 0.5, 0)
     return 0

@@ -4,6 +4,6 @@ extends RefCounted
 static var R = load("res://runtime/r.gd")
 static var G = load("res://gen/globals.gd")
 static func ev_8_0(S, A: Array) -> Variant:
-    R.draw_background_part_ext(S, 30, 80, 0, 40, 80, R.aget(R.view_xview, 0), (R.aget(R.view_yview, 0) + (540 * G.ekran_size_act)), (20 * G.ekran_size_act), 1, 0xFFFFFF, 1)
+    R.draw_background_part_ext(S, 30, 80, 0, 40, 80, R.aget(R.view_xview, 0), (R.anum(R.aget(R.view_yview, 0)) + (540 * G.ekran_size_act)), (20 * G.ekran_size_act), 1, 0xFFFFFF, 1)
     R.draw_background_part_ext(S, 30, 0, 0, 40, 80, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), (20 * G.ekran_size_act), 1, 0xFFFFFF, 1)
     return 0

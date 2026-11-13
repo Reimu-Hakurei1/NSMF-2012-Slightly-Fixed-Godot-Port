@@ -1,37 +1,545 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3]
 
-[ext_resource type="Texture2D" id="t1" path="res://images/sprites/s_loading.512.0.png"]
 [ext_resource type="Script" path="res://runtime/room_preview_boot.gd" id="boot"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_loading.512.0.png" id="t1"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/s102973.png" id="t2"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_arrow_head.350.0.png" id="t3"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_golden_bigga.498.0.png" id="t4"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_happy_star.335.0.png" id="t5"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_windon_1.91.0.png" id="t6"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_bullet.54.0.png" id="t7"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_castle_end_1.88.0.png" id="t8"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_boomer_salad_2.150.0.png" id="t9"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_mario_clock.479.0.png" id="t10"]
 
-[node name="room_initialize_and_loading" type="Node2D"]
+[node name="room_initialize_and_loading" type="Node2D" unique_id=792715045]
 script = ExtResource("boot")
 metadata/gm_room = "room_initialize_and_loading"
 metadata/gm_bg_colour = 16777215
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1268465206]
 position = Vector2(400, 300)
 limit_left = 0
 limit_top = 0
 limit_right = 800
 limit_bottom = 600
 
-[node name="RoomColour" type="ColorRect" parent="."]
+[node name="RoomColour" type="ColorRect" parent="." unique_id=1667263417]
 z_index = -4096
-offset_right = 800
-offset_bottom = 600
-color = Color(1.000, 1.000, 1.000, 1)
+offset_right = 800.0
+offset_bottom = 600.0
 
-[node name="Objects_0" type="Node2D" parent="."]
-z_index = 0
-metadata/gm_depth = 0
+[node name="Objects_0.0" type="Node2D" parent="." unique_id=167881017]
+metadata/gm_depth = 0.0
 
-[node name="o_initialize_0" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_initialize"
+[node name="o_initialize_0" type="Sprite2D" parent="Objects_0.0" unique_id=1286063140]
+visible = false
 position = Vector2(32, 32)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_instance = 101356
+metadata/gm_draw_base = true
 
-[node name="o_LOADING_1" type="Sprite2D" parent="Objects_0"]
-metadata/gm_object = "o_LOADING"
+[node name="o_LOADING_1" type="Sprite2D" parent="Objects_0.0" unique_id=1086133399]
+visible = false
 position = Vector2(384, 512)
 texture = ExtResource("t1")
-offset = Vector2(-98, -47)
 centered = false
+offset = Vector2(-98, -47)
+metadata/gm_object = "o_LOADING"
+metadata/gm_object_index = 923
+metadata/gm_instance = 187726
+metadata/gm_draw_base = true
+
+[node name="o_initialize_2" type="Sprite2D" parent="Objects_0.0" unique_id=819010680]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(400, 300)
+rotation = -0.087266
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t2")
+centered = false
+offset = Vector2(-196, -199)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(400, 300)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_3" type="Sprite2D" parent="Objects_0.0" unique_id=1443492050]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(400, 300)
+rotation = -0.174533
+texture = ExtResource("t2")
+centered = false
+offset = Vector2(-196, -199)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(400, 300)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_4" type="Sprite2D" parent="Objects_0.0" unique_id=106121547]
+position = Vector2(498, 313)
+rotation = -0.508046
+texture = ExtResource("t3")
+centered = false
+offset = Vector2(-19, -22)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(498, 313)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_5" type="Sprite2D" parent="Objects_0.0" unique_id=1211237527]
+position = Vector2(512.6186, 288.3814)
+rotation = -0.045635
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("t4")
+centered = false
+offset = Vector2(-18, -20)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(512.6186, 288.3814)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_6" type="Sprite2D" parent="Objects_0.0" unique_id=18886146]
+position = Vector2(243, 333)
+rotation = -7.539822
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-37, -38)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(243, 333)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_7" type="Sprite2D" parent="Objects_0.0" unique_id=1593749527]
+position = Vector2(576, 256)
+rotation = -0.174533
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-37, -38)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(576, 256)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_8" type="Sprite2D" parent="Objects_0.0" unique_id=1383172958]
+position = Vector2(465, 390)
+texture = ExtResource("t6")
+centered = false
+offset = Vector2(-46, -5)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(465, 390)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_9" type="Sprite2D" parent="Objects_0.0" unique_id=376029620]
+position = Vector2(696, 300)
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-25, -19)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(696, 300)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_10" type="Sprite2D" parent="Objects_0.0" unique_id=1413321490]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(296, 300)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-25, -19)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(296, 300)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_11" type="Sprite2D" parent="Objects_0.0" unique_id=841899477]
+position = Vector2(531.51135, 569.6382)
+rotation = -3.595378
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-25, -19)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(531.51135, 569.6382)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_12" type="Sprite2D" parent="Objects_0.0" unique_id=1372707309]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(400, 295)
+rotation = 0.017453
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("t8")
+centered = false
+offset = Vector2(-112, -175)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(400, 295)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_13" type="Sprite2D" parent="Objects_0.0" unique_id=1723518364]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(200, 294)
+rotation = -0.045635
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("t9")
+centered = false
+offset = Vector2(-50, -116)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(200, 294)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_14" type="Sprite2D" parent="Objects_0.0" unique_id=1995240943]
+position = Vector2(120, 300)
+rotation = 5.72468
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-37, -38)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(120, 300)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_15" type="Sprite2D" parent="Objects_0.0" unique_id=240116633]
+position = Vector2(631, 201)
+rotation = -0.174533
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-37, -38)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(631, 201)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_16" type="Sprite2D" parent="Objects_0.0" unique_id=1081558794]
+position = Vector2(686, 303)
+rotation = 0.174533
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-37, -38)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(686, 303)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_17" type="Sprite2D" parent="Objects_0.0" unique_id=755773250]
+position = Vector2(276, 286)
+rotation = -0.179081
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-37, -44)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(276, 286)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_18" type="Sprite2D" parent="Objects_0.0" unique_id=534724504]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(400, 300)
+rotation = -0.122173
+texture = ExtResource("t2")
+centered = false
+offset = Vector2(-196, -199)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(400, 300)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_19" type="Sprite2D" parent="Objects_0.0" unique_id=856456362]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(400, 300)
+rotation = -0.244346
+scale = Vector2(2, 2)
+texture = ExtResource("t2")
+centered = false
+offset = Vector2(-196, -199)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(400, 300)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_20" type="Sprite2D" parent="Objects_0.0" unique_id=562415679]
+position = Vector2(498, 317)
+rotation = -0.307764
+texture = ExtResource("t3")
+centered = false
+offset = Vector2(-19, -22)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(498, 317)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_21" type="Sprite2D" parent="Objects_0.0" unique_id=1615821303]
+position = Vector2(518.33685, 282.66318)
+rotation = -0.063811
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("t4")
+centered = false
+offset = Vector2(-18, -20)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(518.33685, 282.66318)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_22" type="Sprite2D" parent="Objects_0.0" unique_id=1802769469]
+position = Vector2(243, 333)
+rotation = -7.888888
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-37, -38)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(243, 333)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_23" type="Sprite2D" parent="Objects_0.0" unique_id=742424736]
+position = Vector2(576, 256)
+rotation = -0.244346
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-37, -38)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(576, 256)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_24" type="Sprite2D" parent="Objects_0.0" unique_id=782711119]
+position = Vector2(465, 386)
+texture = ExtResource("t6")
+centered = false
+offset = Vector2(-46, -5)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(465, 386)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_25" type="Sprite2D" parent="Objects_0.0" unique_id=1454099397]
+position = Vector2(656, 300)
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-25, -19)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(656, 300)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_26" type="Sprite2D" parent="Objects_0.0" unique_id=847545273]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(256, 300)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-25, -19)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(256, 300)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_27" type="Sprite2D" parent="Objects_0.0" unique_id=1579100559]
+position = Vector2(576.3356, 542.7051)
+rotation = -3.769911
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-25, -19)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(576.3356, 542.7051)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_28" type="Sprite2D" parent="Objects_0.0" unique_id=446957694]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(400, 293)
+rotation = 0.017453
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("t8")
+centered = false
+offset = Vector2(-112, -175)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(400, 293)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_29" type="Sprite2D" parent="Objects_0.0" unique_id=321006723]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(200, 291)
+rotation = -0.063811
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("t9")
+centered = false
+offset = Vector2(-50, -116)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(200, 291)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_30" type="Sprite2D" parent="Objects_0.0" unique_id=1855656713]
+position = Vector2(120, 300)
+rotation = 5.375614
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-37, -38)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(120, 300)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_31" type="Sprite2D" parent="Objects_0.0" unique_id=1264985108]
+position = Vector2(631, 201)
+rotation = -0.244346
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-37, -38)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(631, 201)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_32" type="Sprite2D" parent="Objects_0.0" unique_id=252089092]
+position = Vector2(686, 303)
+rotation = 0.244346
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-37, -38)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(686, 303)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_initialize_33" type="Sprite2D" parent="Objects_0.0" unique_id=390877359]
+position = Vector2(276, 279)
+texture = ExtResource("t10")
+centered = false
+offset = Vector2(-37, -44)
+metadata/gm_object = "o_initialize"
+metadata/gm_object_index = 301
+metadata/gm_draw_preview = true
+metadata/gm_instance = 101356
+metadata/gm_preview_pos = Vector2(276, 279)
+metadata/gm_base_pos = Vector2(32, 32)
+
+[node name="o_LOADING_34" type="Sprite2D" parent="Objects_0.0" unique_id=630822218]
+modulate = Color(1, 1, 1, 0.1)
+position = Vector2(384, 512)
+scale = Vector2(3.1517036, 3.2482963)
+texture = ExtResource("t1")
+centered = false
+offset = Vector2(-98, -47)
+metadata/gm_object = "o_LOADING"
+metadata/gm_object_index = 923
+metadata/gm_draw_preview = true
+metadata/gm_instance = 187726
+metadata/gm_preview_pos = Vector2(384, 512)
+metadata/gm_base_pos = Vector2(384, 512)
+
+[node name="o_LOADING_35" type="Sprite2D" parent="Objects_0.0" unique_id=1965466193]
+position = Vector2(384, 512)
+scale = Vector2(1.1517037, 1.2482963)
+texture = ExtResource("t1")
+centered = false
+offset = Vector2(-98, -47)
+metadata/gm_object = "o_LOADING"
+metadata/gm_object_index = 923
+metadata/gm_draw_preview = true
+metadata/gm_instance = 187726
+metadata/gm_preview_pos = Vector2(384, 512)
+metadata/gm_base_pos = Vector2(384, 512)
+
+[node name="o_LOADING_36" type="Sprite2D" parent="Objects_0.0" unique_id=1450563851]
+modulate = Color(1, 1, 1, 0.1)
+position = Vector2(384, 512)
+scale = Vector2(3.1956422, 3.2043579)
+texture = ExtResource("t1")
+centered = false
+offset = Vector2(-98, -47)
+metadata/gm_object = "o_LOADING"
+metadata/gm_object_index = 923
+metadata/gm_draw_preview = true
+metadata/gm_instance = 187726
+metadata/gm_preview_pos = Vector2(384, 512)
+metadata/gm_base_pos = Vector2(384, 512)
+
+[node name="o_LOADING_37" type="Sprite2D" parent="Objects_0.0" unique_id=934594198]
+position = Vector2(384, 512)
+scale = Vector2(1.1956422, 1.2043577)
+texture = ExtResource("t1")
+centered = false
+offset = Vector2(-98, -47)
+metadata/gm_object = "o_LOADING"
+metadata/gm_object_index = 923
+metadata/gm_draw_preview = true
+metadata/gm_instance = 187726
+metadata/gm_preview_pos = Vector2(384, 512)
+metadata/gm_base_pos = Vector2(384, 512)

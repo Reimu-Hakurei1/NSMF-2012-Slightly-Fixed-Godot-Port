@@ -141,6 +141,8 @@ static var draw_halign: int = 0
 static var draw_valign: int = 0
 static var draw_font: Variant = -1
 static var draw_blend: int = 0
+static var draw_record_on: bool = false
+static var draw_record: Array = []
 # Additive draws go through a child CanvasItem with an ADD material; the draw event
 # buffers them here because Godot 4 has no per-draw blend mode on one canvas item.
 static var draw_offset_override: Variant = null
@@ -153,11 +155,18 @@ static var fallback_font: Font = null
 static var ext_funcs: Dictionary = {}
 static var next_ext: int = 1
 static var sfx_bank: Dictionary = {}
+static var sound_paths: Dictionary = {}
 static var sfx_players: Array = []
 static var music_player: AudioStreamPlayer = null
+static var wap_player: AudioStreamPlayer = null
+static var wap_volume: float = 255.0
 static var music_path: String = ""
 static var sfx_master: float = 1.0
-static var music_volume: float = 1.0
+static var music_volume: float = 255.0
+static var _sfx_next_handle: int = 1
+static var _sfx_handle_player: Dictionary = {}
+static var _panners: Dictionary = {}
+static var _pan_bus_count: int = 0
 static var ds_maps: Dictionary = {}
 static var next_ds: int = 1
 static var bin_files: Dictionary = {}
@@ -214,7 +223,9 @@ static func _json(path: String) -> Dictionary:
 
 
 # ---------------------------------------------------------------- boot
-static func boot(scene_root: Node2D) -> void:
+static var editor_open_pending: bool = false
+
+static func boot(scene_root: Node2D, save_directory: String = "") -> void:
 	root = scene_root
 	start_ms = Time.get_ticks_msec()
 	var _bt := Time.get_ticks_msec()
@@ -241,7 +252,8 @@ static func boot(scene_root: Node2D) -> void:
 	_init_audio()
 	print("BOOT init=%dms" % (Time.get_ticks_msec() - _bt2))
 	_bt2 = Time.get_ticks_msec()
-	working_directory = OS.get_user_data_dir()
+	working_directory = save_directory if not save_directory.is_empty() else OS.get_user_data_dir()
+	DirAccess.make_dir_recursive_absolute(working_directory)
 	program_directory = OS.get_executable_path().get_base_dir()
 	temp_directory = OS.get_temp_dir()
 	room_first = int(room_order[0]) if room_order.size() > 0 else 0
@@ -317,15 +329,38 @@ static func _init_sprites() -> void:
 		backgrounds[int(key)] = {"paths": b.get("frames", []), "tex": null,
 			"loaded": false, "name": b.get("name", "")}
 	runtime_paths = assets.get("runtime_paths", {})
+	sound_paths = assets.get("sounds", {})
 
 
 static func _init_audio() -> void:
-	music_player = AudioStreamPlayer.new()
-	root.add_child(music_player)
+	music_player = _new_panned_player()
+	wap_player = _new_panned_player()
 	for i in range(24):
-		var p := AudioStreamPlayer.new()
-		root.add_child(p)
-		sfx_players.append(p)
+		sfx_players.append(_new_panned_player())
+
+
+# GM8's SXMS pans each sound by its on-screen x; give every player its own bus
+# with a panner effect so per-instance pan can be applied without touching volume.
+static func _new_panned_player() -> AudioStreamPlayer:
+	var p := AudioStreamPlayer.new()
+	var bus_idx := AudioServer.bus_count
+	AudioServer.add_bus(bus_idx)
+	var bus_name := "gmpan%d" % _pan_bus_count
+	_pan_bus_count += 1
+	AudioServer.set_bus_name(bus_idx, bus_name)
+	AudioServer.set_bus_send(bus_idx, "Master")
+	var panner := AudioEffectPanner.new()
+	AudioServer.add_bus_effect(bus_idx, panner)
+	p.bus = bus_name
+	_panners[p] = panner
+	root.add_child(p)
+	return p
+
+
+static func _apply_pan(p: AudioStreamPlayer, pan: float) -> void:
+	var panner: AudioEffectPanner = _panners.get(p)
+	if panner != null:
+		panner.pan = clampf(pan, -1.0, 1.0)
 
 
 # ---------------------------------------------------------------- sprites
@@ -1585,6 +1620,17 @@ static func aget(arr: Variant, i: Variant) -> Variant:
 	return 0
 
 
+# GM8 uses instance ids as plain numbers in arithmetic; the port stores live
+# instances instead. A scalar array slot (e.g. lolo) can hold either, so coerce
+# handles to their id before numeric use instead of throwing int + Object.
+static func anum(v: Variant) -> Variant:
+	if v is int or v is float:
+		return v
+	if _is_inst(v):
+		return v.inst_id
+	return 0
+
+
 static func aset(arr: Variant, i: Variant, v: Variant) -> Variant:
 	if arr is Array:
 		var idx: int = int(i)
@@ -1626,74 +1672,83 @@ static func gm_string(S, v: Variant) -> String:
 	return str(v)
 
 
+# GM8's string functions treat a numeric 0 as an empty string (the explicit
+# string() builtin still yields "0"). The dialog line-wrapper resets its
+# accumulator with `tekst2 = 0`, so string_insert must not prepend "0".
+static func gm_str_arg(S, v: Variant) -> String:
+	if (v is int or v is float) and v == 0:
+		return ""
+	return gm_string(S, v)
+
+
 static func string(S, v: Variant) -> Variant:
 	return gm_string(S, v)
 
 
 static func string_length(S, s: Variant) -> Variant:
-	return gm_string(S, s).length()
+	return gm_str_arg(S, s).length()
 
 
 static func string_pos(S, sub: Variant, s: Variant) -> Variant:
-	return gm_string(S, s).find(gm_string(S, sub)) + 1
+	return gm_str_arg(S, s).find(gm_str_arg(S, sub)) + 1
 
 
 static func string_copy(S, s: Variant, index: float, count: float) -> Variant:
-	var text := gm_string(S, s)
+	var text := gm_str_arg(S, s)
 	var i: int = maxi(0, int(index) - 1)
 	return text.substr(i, maxi(0, int(count)))
 
 
 static func string_char_at(S, s: Variant, index: float) -> Variant:
-	var text := gm_string(S, s)
+	var text := gm_str_arg(S, s)
 	var i: int = int(index) - 1
 	return text.substr(i, 1) if i >= 0 and i < text.length() else ""
 
 
 static func string_delete(S, s: Variant, index: float, count: float) -> Variant:
-	var text := gm_string(S, s)
+	var text := gm_str_arg(S, s)
 	var i: int = maxi(0, int(index) - 1)
 	return text.substr(0, i) + text.substr(i + maxi(0, int(count)))
 
 
 static func string_insert(S, sub: Variant, s: Variant, index: float) -> Variant:
-	var text := gm_string(S, s)
-	var add := gm_string(S, sub)
+	var text := gm_str_arg(S, s)
+	var add := gm_str_arg(S, sub)
 	var i: int = maxi(0, int(index) - 1)
 	return text.substr(0, i) + add + text.substr(i)
 
 
 static func string_replace(S, s: Variant, sub: Variant, by: Variant) -> Variant:
-	var text := gm_string(S, s)
-	var find := gm_string(S, sub)
+	var text := gm_str_arg(S, s)
+	var find := gm_str_arg(S, sub)
 	var i := text.find(find)
 	if i < 0:
 		return text
-	return text.substr(0, i) + gm_string(S, by) + text.substr(i + find.length())
+	return text.substr(0, i) + gm_str_arg(S, by) + text.substr(i + find.length())
 
 
 static func string_replace_all(S, s: Variant, sub: Variant, by: Variant) -> Variant:
-	return gm_string(S, s).replace(gm_string(S, sub), gm_string(S, by))
+	return gm_str_arg(S, s).replace(gm_str_arg(S, sub), gm_str_arg(S, by))
 
 
 static func string_count(S, sub: Variant, s: Variant) -> Variant:
-	return gm_string(S, s).count(gm_string(S, sub))
+	return gm_str_arg(S, s).count(gm_str_arg(S, sub))
 
 
 static func string_lower(S, s: Variant) -> Variant:
-	return gm_string(S, s).to_lower()
+	return gm_str_arg(S, s).to_lower()
 
 
 static func string_digits(S, s: Variant) -> Variant:
 	var out := ""
-	for c in gm_string(S, s):
+	for c in gm_str_arg(S, s):
 		if c >= "0" and c <= "9":
 			out += c
 	return out
 
 
 static func string_width(S, s: Variant) -> Variant:
-	return _text_width(gm_string(S, s))
+	return _text_width(gm_str_arg(S, s))
 
 
 static func string_height(S, s: Variant = "") -> Variant:
@@ -1789,11 +1844,185 @@ static func _start_pipe_intro_if_embedded() -> void:
 	G.wychodz_z_rury_nastepny_etap = 1
 
 
+static var _scene_index: Dictionary = {}
+static var _atlas_cache: Dictionary = {}
+static var _obj_by_name: Dictionary = {}
+
+
+static func _atlas_map(res_path: String) -> Dictionary:
+	if _atlas_cache.has(res_path):
+		return _atlas_cache[res_path]
+	var d: Dictionary = {}
+	var f := FileAccess.open(res_path.get_basename() + ".json", FileAccess.READ)
+	if f != null:
+		var v: Variant = JSON.parse_string(f.get_as_text())
+		if v is Dictionary:
+			d = v
+	_atlas_cache[res_path] = d
+	return d
+
+
+static func _object_by_name(n: String) -> int:
+	if _obj_by_name.is_empty():
+		for k in objects:
+			_obj_by_name[str(objects[k].get("name", ""))] = int(k)
+	return int(_obj_by_name.get(n, -1))
+
+
+## The Godot editor room scenes are the editable layout: when a scene exists for
+## the room, its nodes (positions, added/removed objects, painted tiles, background
+## offsets, room colour) override the baked JSON so editor edits reach the game.
+static func _scene_layout(idx: int, meta: Dictionary) -> Dictionary:
+	if _scene_index.is_empty():
+		var f := FileAccess.open("res://data/levels/index.json", FileAccess.READ)
+		if f == null:
+			return meta
+		var list: Variant = JSON.parse_string(f.get_as_text())
+		if not list is Array:
+			return meta
+		for e in list:
+			_scene_index[str(e.name)] = str(e.scene)
+	var path: String = _scene_index.get(str(meta.get("name", "")), "")
+	if path == "" or not FileAccess.file_exists(path):
+		return meta
+	var ps: PackedScene = load(path)
+	if ps == null:
+		return meta
+	var node: Node = ps.instantiate()
+	var out: Dictionary = meta.duplicate(true)
+	var bgs: Array = out.get("backgrounds", [])
+	var instances: Array = []
+	var tiles: Array = []
+	var next_inst: int = 1
+	for im in meta.get("instances", []):
+		next_inst = maxi(next_inst, int(im[3]) + 1)
+	var next_tile: int = 1
+	for t in meta.get("tiles", []):
+		next_tile = maxi(next_tile, int(t[8]) + 1)
+	var base_nodes: Dictionary = {}
+	var preview_info: Dictionary = {}
+	var preview_delta: Dictionary = {}
+	for child in node.get_children():
+		if child is ColorRect and child.name == "RoomColour":
+			var c: Color = child.color
+			out.bg_colour = int(round(c.r * 255.0)) + (int(round(c.g * 255.0)) << 8) + (int(round(c.b * 255.0)) << 16)
+		elif child is TileMapLayer:
+			var ts: TileSet = child.tile_set
+			if ts == null or ts.get_source_count() == 0:
+				continue
+			var src: TileSetAtlasSource = ts.get_source(0) as TileSetAtlasSource
+			if src == null:
+				continue
+			var manifest: Dictionary = _atlas_map(ts.resource_path)
+			var atlas: Dictionary = manifest.get("atlas", {})
+			var bg: int = int(manifest.get("bg", -1))
+			if bg < 0:
+				var parts: PackedStringArray = str(child.name).split("_")
+				bg = int(parts[2]) if parts.size() > 2 else -1
+			var depth: float = float(child.get_meta("gm_depth", 0))
+			var ids: Dictionary = child.get_meta("gm_tile_ids", {})
+			var cells: Array = child.get_used_cells()
+			for c in cells:
+				var ac: Vector2i = child.get_cell_atlas_coords(c)
+				var region: Array = atlas.get("%d,%d" % [ac.x, ac.y], [])
+				if region.is_empty():
+					continue
+				var id: int = int(ids.get("%d,%d" % [c.x, c.y], -1))
+				if id < 0:
+					id = next_tile
+					next_tile += 1
+				tiles.append([child.position.x + c.x * ts.tile_size.x,
+					child.position.y + c.y * ts.tile_size.y, bg,
+					region[0], region[1], region[2], region[3], depth, id])
+		elif str(child.name).begins_with("Bg"):
+			var slot: int = int(child.get_meta("gm_background_slot", -1))
+			if slot < 0 or slot >= bgs.size():
+				continue
+			if child.get_child_count() == 0 or not child.visible:
+				bgs[slot].visible = 0
+			else:
+				bgs[slot].visible = 1
+				var first: Node = child.get_child(0)
+				if first is Node2D:
+					bgs[slot].xoffset = first.position.x
+					bgs[slot].yoffset = first.position.y
+				bgs[slot].hspeed = float(child.get_meta("gm_hspeed", 0))
+				bgs[slot].vspeed = float(child.get_meta("gm_vspeed", 0))
+			if child.has_meta("gm_source_bg"):
+				bgs[slot].source_bg = int(child.get_meta("gm_source_bg"))
+			if child.has_meta("gm_tile_horz"):
+				bgs[slot].tile_horz = int(child.get_meta("gm_tile_horz"))
+			if child.has_meta("gm_tile_vert"):
+				bgs[slot].tile_vert = int(child.get_meta("gm_tile_vert"))
+			if child.has_meta("gm_foreground"):
+				bgs[slot].foreground = int(child.get_meta("gm_foreground"))
+			if child.has_meta("gm_bg_xscale"):
+				bgs[slot].xscale = float(child.get_meta("gm_bg_xscale"))
+			if child.has_meta("gm_bg_yscale"):
+				bgs[slot].yscale = float(child.get_meta("gm_bg_yscale"))
+			if child.has_meta("gm_bg_alpha"):
+				bgs[slot].alpha = float(child.get_meta("gm_bg_alpha"))
+		elif str(child.name).begins_with("Objects_"):
+			for spr in child.get_children():
+				if not spr is Sprite2D or spr.get_meta("gm_runtime_spawned", false):
+					continue
+				var obj: int = int(spr.get_meta("gm_object_index", -1))
+				if obj < 0:
+					obj = _object_by_name(str(spr.get_meta("gm_object", "")))
+				if obj < 0 or not objects.has(obj):
+					continue
+				var id: int = int(spr.get_meta("gm_instance", -1))
+				if spr.get_meta("gm_draw_preview", false):
+					# Draw-event objects are edited through their visible preview
+					# sprites: apply the preview's move delta to the instance, and
+					# keep the object alive if only the hidden base node was deleted.
+					if id < 0 or not spr.visible:
+						continue
+					var baked: Vector2 = spr.get_meta("gm_preview_pos", spr.position)
+					var d: Vector2 = spr.position - baked
+					if d != Vector2.ZERO and not preview_delta.has(id):
+						preview_delta[id] = d
+					if not preview_info.has(id):
+						preview_info[id] = [spr.get_meta("gm_base_pos", spr.position), obj]
+					continue
+				if id < 0:
+					id = next_inst
+					next_inst += 1
+					instances.append([spr.position.x, spr.position.y, obj, id])
+				else:
+					base_nodes[id] = [spr.position.x, spr.position.y, obj, spr.visible,
+						spr.get_meta("gm_draw_base", false)]
+	for id in base_nodes:
+		var b: Array = base_nodes[id]
+		if preview_info.has(id):
+			var d2: Vector2 = preview_delta.get(id, Vector2.ZERO)
+			instances.append([b[0] + d2.x, b[1] + d2.y, b[2], id])
+		elif b[3] or not b[4]:
+			# Hidden bases are invisible logic instances unless they were hidden
+			# because draw previews represent them; those disappear when the
+			# previews are deleted in the editor.
+			instances.append([b[0], b[1], b[2], id])
+	for id in preview_info:
+		if base_nodes.has(id):
+			continue
+		var info: Array = preview_info[id]
+		var bp: Vector2 = info[0]
+		var d3: Vector2 = preview_delta.get(id, Vector2.ZERO)
+		instances.append([bp.x + d3.x, bp.y + d3.y, info[1], id])
+	node.free()
+	instances.sort_custom(func(a, b): return int(a[3]) < int(b[3]))
+	out.instances = instances
+	out.tiles = tiles
+	out.backgrounds = bgs
+	return out
+
+
 static func _load_room(idx: int) -> void:
 	var meta: Dictionary = room_data.get("rooms", {}).get(str(idx), {})
 	if meta.is_empty():
 		warn("room_missing:%d" % idx)
 		return
+	meta = _scene_layout(idx, meta)
 	var _lt := Time.get_ticks_usec()
 	if debug_load:
 		debug_create_usec.clear()
@@ -1845,6 +2074,8 @@ static func _load_room(idx: int) -> void:
 		depths[float(objects.get(int(im[2]), {}).get("depth", 0))] = true
 	for t in meta.get("tiles", []):
 		depths[float(t[7])] = true
+	for decoration in meta.get("editor_decorations", []):
+		depths[float(decoration[3])] = true
 	for inst in keep:
 		depths[float(inst.g_depth)] = true
 	var sorted_d: Array = depths.keys()
@@ -1892,9 +2123,9 @@ static func _load_room(idx: int) -> void:
 		bg_vtiled[i] = int(b.get("tile_vert", 1)) != 0
 		bg_hspeed[i] = float(b.get("hspeed", 0))
 		bg_vspeed[i] = float(b.get("vspeed", 0))
-		bg_alpha[i] = 1.0
-		bg_xscale[i] = 1.0
-		bg_yscale[i] = 1.0
+		bg_alpha[i] = float(b.get("alpha", 1.0))
+		bg_xscale[i] = float(b.get("xscale", 1.0))
+		bg_yscale[i] = float(b.get("yscale", 1.0))
 	var _meta_us := Time.get_ticks_usec() - _lt
 	_lt = Time.get_ticks_usec()
 	room_root = Node2D.new()
@@ -1912,6 +2143,17 @@ static func _load_room(idx: int) -> void:
 	for t in meta.get("tiles", []):
 		_tile_new(float(t[0]), float(t[1]), int(t[2]), float(t[3]), float(t[4]),
 			float(t[5]), float(t[6]), float(t[7]), int(t[8]))
+	for decoration in meta.get("editor_decorations", []):
+		var info := sprite_info(int(decoration[2]))
+		if info.frames.is_empty() or info.frames[0] == null:
+			continue
+		var art := Sprite2D.new()
+		art.texture = info.frames[0]
+		art.centered = false
+		art.offset = -Vector2(info.origin)
+		art.position = Vector2(float(decoration[0]), float(decoration[1]))
+		art.z_index = _depth_z(float(decoration[3]))
+		room_root.add_child(art)
 	var _tiles_us := Time.get_ticks_usec() - _lt
 	_lt = Time.get_ticks_usec()
 	room_ci = GMInstance.new()
@@ -2313,6 +2555,10 @@ static func draw_sprite_ext(S, spr: int, subimg: float, x: float, y: float,
 		xscale: float, yscale: float, rot: float, color: Variant, alpha: float) -> Variant:
 	if draw_ci == null:
 		return 0
+	if draw_record_on and draw_ci is GMInstance:
+		draw_record.append({"id": (draw_ci as GMInstance).inst_id, "spr": int(spr),
+			"fr": int(subimg), "x": float(x), "y": float(y), "xs": float(xscale),
+			"ys": float(yscale), "an": float(rot), "al": float(alpha)})
 	if draw_blend == 1 and draw_ci is GMInstance:
 		(draw_ci as GMInstance).add_cmds.append([0, S, spr, subimg, x, y, xscale, yscale,
 			rot, color, alpha])
@@ -3243,6 +3489,10 @@ static func external_free(S, id: int) -> Variant:
 
 static func _load_stream(path: String) -> AudioStream:
 	var p := _resolve_file(path)
+	if p.get_extension().to_lower() in ["psf", "psf2"]:
+		p += ".ogg"
+	if p.get_extension().to_lower() == "snd" and FileAccess.file_exists(p):
+		return AudioStreamOggVorbis.load_from_file(p)
 	if not ResourceLoader.exists(p):
 		warn("sound:" + p)
 		return null
@@ -3254,20 +3504,48 @@ static func _vol_db(v: float) -> float:
 	return linear_to_db(clampf(float(v) / 255.0, 0.0, 1.0)) if float(v) > 0 else -80.0
 
 
-static func _sfx_play(idx: int, vol: float, pan: float, loop: bool) -> void:
+static func _sfx_play(idx: int, vol: float, pan: float, loop: bool) -> int:
 	var stream: AudioStream = sfx_bank.get(idx, null)
 	if stream == null:
-		return
+		return 0
 	for p in sfx_players:
 		if not p.playing:
+			var old: Variant = p.get_meta("sfx_handle", 0)
+			if int(old) != 0:
+				_sfx_handle_player.erase(int(old))
+			stream = stream.duplicate()
 			p.stream = stream
 			p.volume_db = _vol_db(vol * sfx_master)
 			p.set_meta("sfx_idx", idx)
+			var handle := _sfx_next_handle
+			_sfx_next_handle += 1
+			p.set_meta("sfx_handle", handle)
+			_sfx_handle_player[handle] = p
+			_apply_pan(p, pan / 127.5 - 1.0)
 			if stream is AudioStreamWAV:
 				(stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD if loop else AudioStreamWAV.LOOP_DISABLED
+			elif stream is AudioStreamOggVorbis:
+				(stream as AudioStreamOggVorbis).loop = loop
+			elif stream is AudioStreamMP3:
+				(stream as AudioStreamMP3).loop = loop
+			p.stream_paused = false
 			p.play()
-			return
+			return handle
 	warn("sfx_pool_full")
+	return 0
+
+
+# SXMS addresses a playing sound by the handle PlayExt returned; older calls may
+# pass the asset index instead, so fall back to matching sfx_idx.
+static func _sfx_targets(key: int) -> Array:
+	var p: Variant = _sfx_handle_player.get(key)
+	if p is AudioStreamPlayer and is_instance_valid(p):
+		return [p]
+	var out: Array = []
+	for q in sfx_players:
+		if q.has_meta("sfx_idx") and int(q.get_meta("sfx_idx")) == key:
+			out.append(q)
+	return out
 
 
 static func external_call(S, id: int, a0: Variant = null, a1: Variant = null,
@@ -3281,32 +3559,42 @@ static func external_call(S, id: int, a0: Variant = null, a1: Variant = null,
 		"SXMS_I_Close", "SXMS_I_About":
 			return 0
 		"SXMS_SFX_Load":
-			var stream := _load_stream(str(a1))
+			var path: String = str(a1)
+			var resolved := _resolve_file(path)
+			if not ResourceLoader.exists(resolved) and not FileAccess.file_exists(resolved):
+				var mapped: Variant = sound_paths.get(str(int(a0)), null)
+				if mapped != null:
+					path = str(mapped)
+			var stream := _load_stream(path)
 			if stream != null:
 				sfx_bank[int(a0)] = stream
 			return 1
 		"SXMS_SFX_LoadBank":
 			return 1
 		"SXMS_SFX_Play":
-			_sfx_play(int(a0), 255.0, 128.0, float(a1) != 0)
-			return 1
+			return _sfx_play(int(a0), 255.0, 128.0, float(a1) != 0)
 		"SXMS_SFX_PlayExt":
-			_sfx_play(int(a0), float(a2), float(a1), false)
-			return 1
+			return _sfx_play(int(a0), float(a2), float(a1), false)
 		"SXMS_SFX_Stop":
-			for p in sfx_players:
-				if p.has_meta("sfx_idx") and int(p.get_meta("sfx_idx")) == int(a0):
-					p.stop()
+			for p in _sfx_targets(int(a0)):
+				p.stop()
 			return 0
 		"SXMS_SFX_Pause":
-			for p in sfx_players:
-				if p.has_meta("sfx_idx") and int(p.get_meta("sfx_idx")) == int(a0):
-					p.stream_paused = float(a1) != 0
+			for p in _sfx_targets(int(a0)):
+				p.stream_paused = float(a1) != 0
 			return 0
 		"SXMS_SFX_Volume", "SXMS_SFX_VolumeAbsolute":
-			for p in sfx_players:
-				if p.has_meta("sfx_idx") and int(p.get_meta("sfx_idx")) == int(a0):
-					p.volume_db = _vol_db(float(a1))
+			for p in _sfx_targets(int(a0)):
+				p.volume_db = _vol_db(float(a1))
+			return 0
+		"SXMS_SFX_Pan":
+			for p in _sfx_targets(int(a0)):
+				_apply_pan(p, float(a1) / 127.5 - 1.0)
+			return 0
+		"SXMS_SFX_Position":
+			var hp: Variant = _sfx_handle_player.get(int(a1))
+			if hp is AudioStreamPlayer and is_instance_valid(hp):
+				return hp.get_playback_position() * 1000.0
 			return 0
 		"SXMS_SFX_MasterVolume":
 			sfx_master = clampf(float(a0) / 255.0, 0.0, 1.0)
@@ -3323,11 +3611,13 @@ static func external_call(S, id: int, a0: Variant = null, a1: Variant = null,
 			var stream := _load_stream(str(a0))
 			if stream == null:
 				return 0
+			stream = stream.duplicate()
 			if stream is AudioStreamMP3:
 				(stream as AudioStreamMP3).loop = true
 			elif stream is AudioStreamOggVorbis:
 				(stream as AudioStreamOggVorbis).loop = true
 			music_player.stream = stream
+			music_player.stream_paused = false
 			music_player.volume_db = _vol_db(music_volume)
 			music_player.play()
 			music_path = str(a0)
@@ -3348,21 +3638,63 @@ static func external_call(S, id: int, a0: Variant = null, a1: Variant = null,
 			music_volume = clampf(float(a0), 0.0, 255.0)
 			music_player.volume_db = _vol_db(music_volume)
 			return 0
+		"SXMS_C_Pan", "SXMS_C_Surround":
+			_apply_pan(music_player, float(a0) / 100.0)
+			return 0
 		"SXMS_C_IsPlaying":
 			return 1 if music_player.playing else 0
 		"SXMS_C_PercentComplete":
 			if music_player.stream != null and music_player.stream.get_length() > 0:
 				return music_player.get_playback_position() / music_player.stream.get_length() * 100.0
 			return 0
+		"SXMS_S_Position":
+			if music_player.stream != null:
+				music_player.seek(float(a0) / 1000.0)
+			return 0
 		"SXMS_C_Time":
 			return music_player.get_playback_position() * 1000.0
 		"SXMS_C_Current":
 			return music_path
-		"SXMS_WAP_Init":
+		"SXMS_WAP_Init", "SXMS_WAP_LoadPlugIn", "SXMS_WAP_LoadPlugOut":
+			return 1
+		"SXMS_WAP_Play":
+			var stream := _load_stream(str(a0))
+			if stream == null:
+				return 0
+			stream = stream.duplicate()
+			if stream is AudioStreamOggVorbis:
+				(stream as AudioStreamOggVorbis).loop = false
+			elif stream is AudioStreamMP3:
+				(stream as AudioStreamMP3).loop = false
+			wap_player.stream = stream
+			wap_player.stream_paused = false
+			wap_player.volume_db = _vol_db(wap_volume)
+			wap_player.play()
+			return 1
+		"SXMS_WAP_Stop", "SXMS_WAP_Close":
+			wap_player.stop()
+			return 0
+		"SXMS_WAP_Pause":
+			wap_player.stream_paused = float(a0) != 0
+			return 0
+		"SXMS_WAP_Volume":
+			wap_volume = clampf(float(a1), 0.0, 255.0)
+			wap_player.volume_db = _vol_db(wap_volume)
+			return 0
+		"SXMS_WAP_SetPan":
+			_apply_pan(wap_player, float(a0) / 100.0)
 			return 0
 		"SXMS_WAP_IsPlaying":
+			return 1 if wap_player.playing else 0
+		"SXMS_WAP_GetLength":
+			return wap_player.stream.get_length() * 1000.0 if wap_player.stream != null else 0
+		"SXMS_WAP_GetOutputTime":
+			return wap_player.get_playback_position() * 1000.0
+		"SXMS_WAP_SetOutputTime":
+			if wap_player.stream != null:
+				wap_player.seek(float(a0) / 1000.0)
 			return 0
-		"SXMS_WAP_GetLength", "SXMS_WAP_GetOutputTime":
+		"SXMS_WAP_RemovePlugIn", "SXMS_WAP_RemovePlugOut":
 			return 0
 	if fname.begins_with("SXMS_"):
 		warn("sxms_noop:" + fname)
@@ -3904,6 +4236,8 @@ static func window_has_focus(S) -> Variant:
 
 # ---------------------------------------------------------------- misc builtins
 static func game_end(S) -> Variant:
+	if editor_open_pending:
+		return 0
 	game_running = false
 	if root != null:
 		root.get_tree().quit()
@@ -3925,6 +4259,11 @@ static func execute_shell(S, cmd: String, wait: Variant) -> Variant:
 
 
 static func execute_program(S, prog: String, args: String, wait: Variant) -> Variant:
+	if prog.replace("\\", "/").get_file().to_lower() == "nsmfslightlyfixedworldmaker.exe" and root != null and root.has_method("open_level_editor"):
+		if not editor_open_pending:
+			editor_open_pending = true
+			root.call_deferred("open_level_editor")
+		return 0
 	var path := prog
 	if not FileAccess.file_exists(path):
 		path = program_directory.path_join(prog)

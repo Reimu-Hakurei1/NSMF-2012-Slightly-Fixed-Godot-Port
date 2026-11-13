@@ -38,11 +38,11 @@ static func ev_8_0(S, A: Array) -> Variant:
         S.g_stream += 0.1
         S.y = (S.y + R.sin(S, S.g_stream))
         if R.eqv(S, S.g_kapciuj_maliny, 1):
-            P2.SXMS_SFX_PlayExt(S, [207, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [207, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.instance_destroy(S)
             R.part_emitter_burst(S, S.g_explosion, S.g_emit1, S.g_prt3, 10)
         if R.place_meeting(S, S.x, S.y, 303):
-            P2.SXMS_SFX_PlayExt(S, [207, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [207, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.instance_destroy(S)
             R.part_emitter_burst(S, S.g_explosion, S.g_emit1, S.g_prt3, 10)
     return 0

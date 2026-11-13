@@ -12,8 +12,8 @@ static func ev_3_0(S, A: Array) -> Variant:
         S.g_tworz = 1
         var _n1 = int(5)
         while _n1 > 0:
-            R.instance_create(S, (R.aget(R.view_xview, 0) + R.random(S, 800)), (R.aget(R.view_yview, 0) + R.random(S, 600)), 834)
+            R.instance_create(S, (R.anum(R.aget(R.view_xview, 0)) + R.random(S, 800)), (R.anum(R.aget(R.view_yview, 0)) + R.random(S, 600)), 834)
             _n1 -= 1
     if (R.random(S, 10000) > 9890):
-        R.instance_create(S, (R.aget(R.view_xview, 0) + 890), ((R.aget(R.view_yview, 0) + R.random(S, 1000)) - R.random(S, 300)), 834)
+        R.instance_create(S, (R.anum(R.aget(R.view_xview, 0)) + 890), ((R.anum(R.aget(R.view_yview, 0)) + R.random(S, 1000)) - R.random(S, 300)), 834)
     return 0

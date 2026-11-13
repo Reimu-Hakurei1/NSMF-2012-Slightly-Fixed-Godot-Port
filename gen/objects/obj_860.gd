@@ -37,18 +37,18 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.set_obj_var(306, "g_animacja", 6)
     S.g_sampluj1 += 1
     if (R.eqv(S, S.g_sampluj1, 200) and R.eqv(S, G.english_or_polish, 0)):
-        G.bufor = P2.SXMS_SFX_PlayExt(S, [402, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        G.bufor = P2.SXMS_SFX_PlayExt(S, [402, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         G.sciszacz_sekwencyjny_muzyki = 5
     if (R.eqv(S, S.g_sampluj1, 200) and R.eqv(S, G.english_or_polish, 1)):
-        G.bufor = P2.SXMS_SFX_PlayExt(S, [400, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        G.bufor = P2.SXMS_SFX_PlayExt(S, [400, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         G.sciszacz_sekwencyjny_muzyki = 5
     if (S.g_sampluj2 >= 1):
         S.g_sampluj2 += 1
     if (R.eqv(S, S.g_sampluj2, 60) and R.eqv(S, G.english_or_polish, 0)):
-        G.bufor = P2.SXMS_SFX_PlayExt(S, [403, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        G.bufor = P2.SXMS_SFX_PlayExt(S, [403, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         G.sciszacz_sekwencyjny_muzyki = 5
     if (R.eqv(S, S.g_sampluj2, 60) and R.eqv(S, G.english_or_polish, 1)):
-        G.bufor = P2.SXMS_SFX_PlayExt(S, [401, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        G.bufor = P2.SXMS_SFX_PlayExt(S, [401, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         G.sciszacz_sekwencyjny_muzyki = 5
     S.g_ygrek = +(15)
     if R.eqv(S, S.g_animsek, 2):
@@ -101,7 +101,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_sekwencor += 1
             S.g_kierunek = -(1)
         if R.eqv(S, S.g_sekwencja, 90):
-            P2.SXMS_SFX_PlayExt(S, [(R.round(S, R.random(S, 1)) + 119), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [(R.round(S, R.random(S, 1)) + 119), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if R.eqv(S, S.g_sekwencor, 100):
             S.g_kierunek = -(1)
             S.g_animsek = 2
@@ -183,7 +183,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             if R.variable_local_exists(S, "generuj_dialog"):
                 if (R.eqv(S, S.g_generuj_dialog, 1) and (S.g_sekwencor < 103)):
                     if (((((S.x > (R.get_obj_var(303, "g_x") - 100)) and (S.x < (R.get_obj_var(303, "g_x") + 100))) and (S.y > (R.get_obj_var(303, "g_y") - 100))) and (S.y < (R.get_obj_var(303, "g_y") + 100))) and R.eqv(S, S.g_wygenerowal, 0)):
-                        P2.SXMS_SFX_PlayExt(S, [121, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                        P2.SXMS_SFX_PlayExt(S, [121, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                         S.g_generuj_dialog = 2
                         S.g_wygenerowal = 1
                         S.g_sampluj2 = 1
@@ -209,7 +209,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_chmurken_jest_w_zasiegu = 1
             if (R.eqv(S, S.g_chmurken_jest_w_zasiegu, 1) and R.eqv(S, S.g_sek_chmur, 0)):
                 S.g_sek_chmur = 1
-                P2.SXMS_SFX_PlayExt(S, [124, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [124, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.eqv(S, G.english_or_polish, 0):
                 S.g_fun += 0.25
                 if R.eqv(S, S.g_sek_chmur, 1):

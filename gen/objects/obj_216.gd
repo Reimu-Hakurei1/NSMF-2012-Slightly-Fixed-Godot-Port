@@ -57,7 +57,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         if R.eqv(S, S.g_sekwencja, 1):
             S.g_timer += 1
         if (R.eqv(S, S.g_sekwencja, 1) and R.eqv(S, S.g_timer, 150)):
-            P2.SXMS_SFX_PlayExt(S, [107, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [107, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if ((S.g_timer > 150) and R.eqv(S, S.g_sekwencja, 1)):
             S.g_wielkosc += 0.01
             if (S.g_wielkosc >= 1):

@@ -69,7 +69,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                     R.aset(S.g_dodo, 0, (R.aget(S.g_dodo, 0) + 1))
                 if (R.eqv(S, R.string_char_at(S, S.g_iii, 1), " ") and R.eqv(S, S.g_slowo, 0)):
                     S.g_slowo = 1
-                if (R.eqv(S, S.g_slowo, 1) and ((S.g_kiedy_kolejna_linijka + R.aget(S.g_dodo, 0)) < 19)):
+                if (R.eqv(S, S.g_slowo, 1) and ((S.g_kiedy_kolejna_linijka + R.anum(R.aget(S.g_dodo, 0))) < 19)):
                     S.g_kopiuj = R.string_copy(S, S.g_tekst, S.g_start_kopiuj, R.aget(S.g_dodo, 0))
                     S.g_tekst2 = R.string_insert(S, S.g_kopiuj, S.g_tekst2, S.g_pozycja)
                     S.g_slowo = 0
@@ -77,7 +77,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                     S.g_pozycja += R.aget(S.g_dodo, 0)
                     S.g_kiedy_kolejna_linijka += R.aget(S.g_dodo, 0)
                     R.aset(S.g_dodo, 0, 1)
-                if (R.eqv(S, S.g_slowo, 1) and ((S.g_kiedy_kolejna_linijka + R.aget(S.g_dodo, 0)) >= 19)):
+                if (R.eqv(S, S.g_slowo, 1) and ((S.g_kiedy_kolejna_linijka + R.anum(R.aget(S.g_dodo, 0))) >= 19)):
                     R.aset(S.g_dialog, S.g_ilosc_linijek, S.g_tekst2)
                     S.g_ilosc_linijek += 1
                     S.g_tekst2 = 0
@@ -85,7 +85,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                     S.g_tekst2 = R.string_insert(S, S.g_kopiuj, S.g_tekst2, S.g_pozycja)
                     S.g_slowo = 0
                     S.g_start_kopiuj += R.aget(S.g_dodo, 0)
-                    S.g_pozycja += (R.aget(S.g_dodo, 0) + 1)
+                    S.g_pozycja += (R.anum(R.aget(S.g_dodo, 0)) + 1)
                     S.g_kiedy_kolejna_linijka = R.string_length(S, R.concat("#", S.g_kopiuj))
                     R.aset(S.g_dodo, 0, 1)
                 S.g_i += 1
@@ -98,7 +98,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_tekst2 = R.string_insert(S, S.g_kopiuj, S.g_tekst2, S.g_pozycja)
                 S.g_slowo = 0
                 S.g_start_kopiuj += R.aget(S.g_dodo, 0)
-                S.g_pozycja += (R.aget(S.g_dodo, 0) + 1)
+                S.g_pozycja += (R.anum(R.aget(S.g_dodo, 0)) + 1)
                 S.g_kiedy_kolejna_linijka = R.string_length(S, R.concat("#", S.g_kopiuj))
                 R.aset(S.g_dodo, 0, 1)
             S.g_ilosc_literek_policzonych += 1
@@ -116,9 +116,9 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_przesuniecie_linijki = 0
             S.g_przesuniety_tekst += 1
         S.g_animator_chmurki += 0.25
-        if (S.y <= (R.aget(R.view_yview, 0) + 300)):
+        if (S.y <= (R.anum(R.aget(R.view_yview, 0)) + 300)):
             S.g_wafelki = 450
-        if (S.y > (R.aget(R.view_yview, 0) + 300)):
+        if (S.y > (R.anum(R.aget(R.view_yview, 0)) + 300)):
             S.g_wafelki = 0
         if (1 - R.eqv(S, S.g_show_pic, 0)):
             R.draw_sprite_ext(S, 249, S.g_animator_chmurki, (R.inst_get(S.g_nalezy_do, "x") + 85), ((R.inst_get(S.g_nalezy_do, "y") - 350) + S.g_wafelki), (S.g_wielkosc / S.g_dodawaj_wylacz), (S.g_wielkosc / S.g_dodawaj_wylacz), 0, 0xFFFFFF, 1)
@@ -175,7 +175,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         if ((((R.keyboard_check(S, 1) and R.eqv(S, S.g_kliknieto, 0)) and R.eqv(S, S.g_zmiana_linijki, 0)) and (S.g_przesuniety_tekst < (S.g_ilosc_linijek - 4))) and (S.g_timer > 50)):
             S.g_kliknieto = 1
             S.g_zmiana_linijki = 1
-            P2.SXMS_SFX_PlayExt(S, [122, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [122, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if R.lnot(R.keyboard_check(S, 1)):
             S.g_kliknieto = 0
         if (((R.keyboard_check(S, 1) and R.eqv(S, S.g_kliknieto, 0)) and R.eqv(S, S.g_zmiana_linijki, 0)) and (S.g_przesuniety_tekst >= (S.g_ilosc_linijek - 4))):
@@ -189,7 +189,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_alpha_tekstu -= 0.01
             if R.eqv(S, S.g_sampeluj, 0):
                 S.g_sampeluj = 1
-                P2.SXMS_SFX_PlayExt(S, [123, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [123, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if ((S.g_dodawaj_wylacz > 500) and R.eqv(S, S.g_goto_level_idz, 0)):
             R.instance_destroy(S)
             G.pauza = 0

@@ -38,9 +38,9 @@ static func ev_3_2(S, A: Array) -> Variant:
         S.g_dodawaj_sampel += 1
         if (R.eqv(S, S.g_sampluj_machine, 2) and (S.g_dodawaj_sampel > (60 * 5))):
             S.g_dodawaj_sampel = 0
-            S.g_kanal = P2.SXMS_SFX_PlayExt(S, [318, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            S.g_kanal = P2.SXMS_SFX_PlayExt(S, [318, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if (R.eqv(S, S.g_sampluj_machine, 2) and (S.g_dodawaj_sampel > 0)):
-            P2.SXMS_SFX_Pan(S, [S.g_kanal, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255)])
+            P2.SXMS_SFX_Pan(S, [S.g_kanal, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255)])
         if R.place_meeting(S, S.x, S.y, 659):
             S.g_rodzaj = 4
             S.g_kat = 180

@@ -21,7 +21,7 @@ static func ev_8_0(S, A: Array) -> Variant:
     if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 1.4)):
         S.g_poszedl = (S.g_dlugosc * 40)
         S.g_anim += 1
-        if ((((S.x < ((R.aget(R.view_xview, 0) + 840) + S.g_poszedl)) and (S.x > ((R.aget(R.view_xview, 0) - 80) - S.g_poszedl))) and (S.y > ((R.aget(R.view_yview, 0) - 80) - S.g_poszedl))) and (S.y < ((R.aget(R.view_yview, 0) + 640) + S.g_poszedl))):
+        if ((((S.x < ((R.anum(R.aget(R.view_xview, 0)) + 840) + S.g_poszedl)) and (S.x > ((R.anum(R.aget(R.view_xview, 0)) - 80) - S.g_poszedl))) and (S.y > ((R.anum(R.aget(R.view_yview, 0)) - 80) - S.g_poszedl))) and (S.y < ((R.anum(R.aget(R.view_yview, 0)) + 640) + S.g_poszedl))):
             S.g_image_yscale = (1 + (S.g_poszedl / 40))
             S.g_image_angle = (S.g_kierunek_wychodzenia + 180)
         S.g_i = 0

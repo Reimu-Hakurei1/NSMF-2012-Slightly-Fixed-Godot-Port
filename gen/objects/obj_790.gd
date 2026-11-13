@@ -36,7 +36,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         if (S.g_energy <= 0):
             S.g_kill = 10
         S.g_anim += 10
-        if ((((S.x < ((R.aget(R.view_xview, 0) + 840) + S.g_poszedl)) and (S.x > ((R.aget(R.view_xview, 0) - 80) - S.g_poszedl))) and (S.y > ((R.aget(R.view_yview, 0) - 80) - S.g_poszedl))) and (S.y < ((R.aget(R.view_yview, 0) + 640) + S.g_poszedl))):
+        if ((((S.x < ((R.anum(R.aget(R.view_xview, 0)) + 840) + S.g_poszedl)) and (S.x > ((R.anum(R.aget(R.view_xview, 0)) - 80) - S.g_poszedl))) and (S.y > ((R.anum(R.aget(R.view_yview, 0)) - 80) - S.g_poszedl))) and (S.y < ((R.anum(R.aget(R.view_yview, 0)) + 640) + S.g_poszedl))):
             S.g_i = 0
             while true:
                 if not ((S.g_i < R.ceil(S, (S.g_poszedl / 40)))):

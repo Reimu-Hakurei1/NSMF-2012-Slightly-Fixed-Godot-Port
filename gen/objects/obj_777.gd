@@ -39,6 +39,6 @@ static func ev_8_0(S, A: Array) -> Variant:
         else:
             R.aset(S.g_dodo, 0, -(1))
         if R.eqv(S, S.g_sekwencja, 1):
-            R.draw_sprite_ext(S, G.gfx_padaboo, 0, S.x, S.y, 0.5, 0.5, ((((S.g_ixor * 10) - (9 * 10))) * R.aget(S.g_dodo, 0)), 0xFFFFFF, (((18 + S.g_ixor)) / 18))
-            R.draw_sprite_ext(S, G.gfx_padaboo, 0, S.x, S.y, (0.5 + (R.sin(S, S.g_stream) / 10)), (0.5 + (R.sin(S, S.g_stream) / 10)), ((((S.g_ixor * 10) - (9 * 10))) * R.aget(S.g_dodo, 0)), 0xFFFFFF, (((((18 + S.g_ixor)) / 18)) / 2))
+            R.draw_sprite_ext(S, G.gfx_padaboo, 0, S.x, S.y, 0.5, 0.5, ((((S.g_ixor * 10) - (9 * 10))) * R.anum(R.aget(S.g_dodo, 0))), 0xFFFFFF, (((18 + S.g_ixor)) / 18))
+            R.draw_sprite_ext(S, G.gfx_padaboo, 0, S.x, S.y, (0.5 + (R.sin(S, S.g_stream) / 10)), (0.5 + (R.sin(S, S.g_stream) / 10)), ((((S.g_ixor * 10) - (9 * 10))) * R.anum(R.aget(S.g_dodo, 0))), 0xFFFFFF, (((((18 + S.g_ixor)) / 18)) / 2))
     return 0

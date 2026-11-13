@@ -19,7 +19,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         while true:
             if not ((S.g_i < R.ceil(S, (R.get_obj_var(925, "g_sw") / 100)))):
                 break
-            R.draw_background_ext(S, 53, ((((-(40) - (R.sin(S, R.degtorad(S, S.g_stream)) * 10)) + R.aget(R.view_xview, 0)) + ((133 * S.g_i) * G.ekran_size_act)) + ((S.g_i * R.sin(S, R.degtorad(S, S.g_stream))) * 2)), (((((((((6 - S.g_ii)) * S.g_podniesione) / 10) + S.g_podniesione) + R.aget(R.view_yview, 0)) + (6 * 80)) - (S.g_ii * 80)) - 80), ((1 * G.ekran_size_act) + (R.sin(S, R.degtorad(S, S.g_stream)) / 40)), (1 * G.ekran_size_act), 0, 0xFFFFFF, 1)
+            R.draw_background_ext(S, 53, ((((-(40) - (R.sin(S, R.degtorad(S, S.g_stream)) * 10)) + R.anum(R.aget(R.view_xview, 0))) + ((133 * S.g_i) * G.ekran_size_act)) + ((S.g_i * R.sin(S, R.degtorad(S, S.g_stream))) * 2)), (((((((((6 - S.g_ii)) * S.g_podniesione) / 10) + S.g_podniesione) + R.anum(R.aget(R.view_yview, 0))) + (6 * 80)) - (S.g_ii * 80)) - 80), ((1 * G.ekran_size_act) + (R.sin(S, R.degtorad(S, S.g_stream)) / 40)), (1 * G.ekran_size_act), 0, 0xFFFFFF, 1)
             S.g_i += 1
         S.g_ii += 1
     S.g_stream += 2

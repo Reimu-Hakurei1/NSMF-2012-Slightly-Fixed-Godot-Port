@@ -37,9 +37,9 @@ static func ev_0_0(S, A: Array) -> Variant:
 static func ev_8_0(S, A: Array) -> Variant:
     if (R.point_distance(S, S.x, S.y, G.ekran_srodek_x, G.ekran_srodek_y) <= (G.odleglosc_ekranu * 200)):
         if R.eqv(S, G.pauza, 0):
-            if (S.x > (R.aget(R.view_xview, 0) + 1000)):
+            if (S.x > (R.anum(R.aget(R.view_xview, 0)) + 1000)):
                 R.instance_destroy(S)
-            if (S.x < (R.aget(R.view_xview, 0) - 200)):
+            if (S.x < (R.anum(R.aget(R.view_xview, 0)) - 200)):
                 R.instance_destroy(S)
             if (R.random(S, 100) > 95):
                 R.part_particles_create(S, G.particle_map_sterring, S.x, (S.y + 30), G.part_BOOMBOOM_smoke, 1)
@@ -110,7 +110,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                     S.y = (S.y + S.g_grawitacja)
             if ((R.eqv(S, S.g_sekwencja, 1) and R.place_meeting(S, S.x, S.y, 1)) and R.eqv(S, S.g_dziala, 1)):
                 S.g_sekwencja = 2
-                P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [84, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.eqv(S, S.g_sekwencja, 2):
                 S.g_i = 0
                 while true:

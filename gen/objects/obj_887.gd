@@ -53,7 +53,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             if (R.eqv(S, S.g_sekwencja_idzie, 1) and R.eqv(S, S.g_sekwencja_daleko, 0)):
                 S.g_sekwencja_idzie = 0
         if ((((R.get_obj_var(303, "g_x") > (S.x - 100)) and (R.get_obj_var(303, "g_x") < (S.x + 100))) and R.eqv(S, S.g_skacze_na_mario, 0)) and R.eqv(S, S.g_wyskok_sekwencja, 0)):
-            P2.SXMS_SFX_PlayExt(S, [405, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [405, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             S.g_skacze_na_mario = 1
             S.g_wyskok = -(10)
             S.g_wyskok_sekwencja = 1
@@ -64,8 +64,8 @@ static func ev_8_0(S, A: Array) -> Variant:
             if (S.g_wyskok >= -(5)):
                 S.g_wyskok = -(5)
             S.g_powiekszator += 0.01
-            if (S.y <= (R.aget(R.view_yview, 0) - 300)):
-                P2.SXMS_SFX_PlayExt(S, [406, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            if (S.y <= (R.anum(R.aget(R.view_yview, 0)) - 300)):
+                P2.SXMS_SFX_PlayExt(S, [406, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.instance_destroy(S)
                 R.instance_create(S, S.x, S.y, 885)
     return 0

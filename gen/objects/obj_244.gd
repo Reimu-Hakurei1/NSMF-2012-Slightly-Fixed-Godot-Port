@@ -50,7 +50,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             if (S.g_migacz > 0):
                 S.g_migacz -= 0.1
             if R.eqv(S, S.g_kill, 1):
-                P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
                 R.inst_set(R.aget(S.g_lolo, 0), "grafika", 142)
                 R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
@@ -59,19 +59,19 @@ static func ev_8_0(S, A: Array) -> Variant:
             if (S.g_energy <= 0):
                 S.g_kill = 10
             if R.eqv(S, S.g_kill, 10):
-                P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
                 R.inst_set(R.aget(S.g_lolo, 0), "grafika", 142)
                 R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)
                 R.inst_set(R.aget(S.g_lolo, 0), "specjalny_kill", 12)
                 R.instance_destroy(S)
             if (R.lnot(R.place_meeting(S, S.x, (S.y + 30), 182)) and R.eqv(S, S.g_plusknie, 0)):
-                P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_plusknie = 1
                 R.part_particles_create(S, G.particle_sys_1, S.x, (S.y - (S.g_image_xscale * 72)), R.aget(G.part_water_splash, 0), 3)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 1), (R.ceil(S, S.g_image_xscale) * 3))
             if (R.place_meeting(S, S.x, (S.y + 30), 182) and R.eqv(S, S.g_plusknie, 1)):
-                P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_plusknie = 0
                 R.part_particles_create(S, G.particle_sys_1, S.x, (S.y - (S.g_image_xscale * 72)), R.aget(G.part_water_splash, 0), 3)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 1), (R.ceil(S, S.g_image_xscale) * 3))
@@ -157,7 +157,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.y = (S.y + S.g_grawitacja)
             if (R.eqv(S, S.g_sekwencja, 1) and R.place_meeting(S, S.x, S.y, 1)):
                 S.g_sekwencja = 2
-                P2.SXMS_SFX_PlayExt(S, [106, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [106, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.eqv(S, S.g_sekwencja, 2):
                 S.g_i = 0
                 while true:

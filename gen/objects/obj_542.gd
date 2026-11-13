@@ -80,7 +80,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.draw_sprite_ext(S, G.buzzet_2, 0, (S.x + 28), (S.y + 15), (0.50 + (R.sin(S, R.degtorad(S, S.g_anim)) / 120)), (0.50 + (R.sin(S, R.degtorad(S, S.g_anim)) / 120)), (R.sin(S, R.degtorad(S, S.g_anim)) * 180), 0xFFFFFF, 1)
         S.g_anim += 10
         if R.eqv(S, S.g_kill, 1):
-            P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [56, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 125))
             if R.eqv(S, R.get_obj_var(306, "g_size2"), 1):
                 R.inst_set(R.aget(S.g_lolo, 0), "ixor", 8)
@@ -90,14 +90,14 @@ static func ev_8_0(S, A: Array) -> Variant:
         if (S.g_energy <= 0):
             S.g_kill = 10
         if R.eqv(S, S.g_kill, 10):
-            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
             R.inst_set(R.aget(S.g_lolo, 0), "specjalny_kill", 140)
             R.inst_set(R.aget(S.g_lolo, 0), "kierunek", S.g_kierunek)
             R.instance_destroy(S)
         if R.eqv(S, S.g_kill, 1000):
             R.set_obj_var(303, "g_power_star_combo", (R.get_obj_var(303, "g_power_star_combo") + 1))
-            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.aset(S.g_lolo, 0, R.instance_create(S, S.x, S.y, 298))
             R.inst_set(R.aget(S.g_lolo, 0), "specjalny_kill", 140)
             R.inst_set(R.aget(S.g_lolo, 0), "kierunek_idzie", S.g_kierunek)

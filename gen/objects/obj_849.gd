@@ -64,9 +64,9 @@ static func ev_8_0(S, A: Array) -> Variant:
         P0.SXMS_C_Stop(S, [])
         P3.SXMS_WAP_Stop(S, [])
         P0.SXMS_C_Play(S, ["./data/m/level_map_completed.mp3", 0, 0, 0, 0, 0, 0, 0, 0, 0])
-    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)), (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)), (3 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 5) * S.g_alphar)), (3 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 5) * S.g_alphar)), S.g_image_angle, 0xFFFFFF, S.g_alphar)
-    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)), (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)), (2 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 10) * S.g_alphar)), (2 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 10) * S.g_alphar)), -(S.g_image_angle), 0xFFFFFF, S.g_alphar)
-    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)), (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)), (1 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 5) * S.g_alphar)), (1 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 5) * S.g_alphar)), (S.g_image_angle * 2), 0xFFFFFF, (S.g_alphar * 2))
+    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)), (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)), (3 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 5) * S.g_alphar)), (3 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 5) * S.g_alphar)), S.g_image_angle, 0xFFFFFF, S.g_alphar)
+    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)), (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)), (2 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 10) * S.g_alphar)), (2 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 10) * S.g_alphar)), -(S.g_image_angle), 0xFFFFFF, S.g_alphar)
+    R.draw_sprite_ext(S, G.big_glow_sloneczny, 0, (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)), (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)), (1 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 5) * S.g_alphar)), (1 + ((R.sin(S, R.degtorad(S, S.g_stream)) / 5) * S.g_alphar)), (S.g_image_angle * 2), 0xFFFFFF, (S.g_alphar * 2))
     S.g_napis_efektor_1 += 25
     S.g_napis_efektor_2 = (S.g_napis_efektor_2 / 1.1)
     if (S.g_level_napis_efe < 100):
@@ -76,11 +76,11 @@ static func ev_8_0(S, A: Array) -> Variant:
         S.g_oddalaj_knypki = 1
     S.g_dzielniuj_knypki += 1
     R.draw_set_blend_mode(S, 1)
-    R.draw_sprite_ext(S, 483, 0, (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) - 100) - S.g_addered1), (2 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), (2 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 20))) * 30), 0xFFFFFF, ((R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 10) + 0.25))
+    R.draw_sprite_ext(S, 483, 0, (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) - 100) - S.g_addered1), (2 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), (2 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 20))) * 30), 0xFFFFFF, ((R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 10) + 0.25))
     R.draw_set_blend_mode(S, 0)
-    R.draw_sprite_ext(S, 483, 0, (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) - 100) - S.g_addered1), (1 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), (1 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 10))) * 30), 0xFFFFFF, 1)
+    R.draw_sprite_ext(S, 483, 0, (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) - 100) - S.g_addered1), (1 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), (1 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 10))) * 30), 0xFFFFFF, 1)
     R.draw_set_blend_mode(S, 1)
-    R.draw_sprite_ext(S, 483, 0, (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) - 100) - S.g_addered1), (1 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), (1 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), ((R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 10))) * 30) + 5), 0xFFFFFF, ((R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 2) + 0.25))
+    R.draw_sprite_ext(S, 483, 0, (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) - 100) - S.g_addered1), (1 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), (1 + (R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 5)), ((R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 10))) * 30) + 5), 0xFFFFFF, ((R.sin(S, R.degtorad(S, (S.g_napis_efektor_1 / 5))) / 2) + 0.25))
     R.draw_set_blend_mode(S, 0)
     if (S.g_efekciar < 45):
         S.g_efekciar += 1
@@ -93,8 +93,8 @@ static func ev_8_0(S, A: Array) -> Variant:
     R.draw_set_color(S, 0xFFFFFF)
     R.draw_set_halign(S, 1)
     R.draw_set_valign(S, 1)
-    R.draw_text_ext_transformed(S, (((R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)) + S.g_addered1) - 25), (R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)), R.aget(S.g_napis, 0), 0, 0, 1, 1, 0)
-    R.draw_text_ext_transformed(S, (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + 25) + S.g_addered1), R.aget(S.g_napis, 1), 0, 0, 1, 1, 0)
+    R.draw_text_ext_transformed(S, (((R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)) + S.g_addered1) - 25), (R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)), R.aget(S.g_napis, 0), 0, 0, 1, 1, 0)
+    R.draw_text_ext_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + 25) + S.g_addered1), R.aget(S.g_napis, 1), 0, 0, 1, 1, 0)
     S.g_timer += 1
     if (S.g_timer >= 30):
         S.g_addered1 = (S.g_addered1 / 1.1)

@@ -24,7 +24,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         if (R.place_meeting(S, S.x, S.y, 303) and R.eqv(S, S.g_touched, 0)):
             S.g_touched = 1
             S.g_touched_kat = 30
-            P2.SXMS_SFX_PlayExt(S, [140, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [140, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if (R.lnot(R.place_meeting(S, S.x, S.y, 303)) and R.eqv(S, S.g_touched, 1)):
             S.g_touched = 0
         if (S.g_touched_kat > 0):

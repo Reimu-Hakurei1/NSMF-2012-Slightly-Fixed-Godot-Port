@@ -1,302 +1,4566 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene format=3]
 
-[ext_resource type="Texture2D" id="t1" path="res://images/sprites/s_cloud_1.197.0.png"]
-[ext_resource type="Texture2D" id="t2" path="res://images/sprites/s_cloud_3.199.0.png"]
-[ext_resource type="Texture2D" id="t3" path="res://images/sprites/s_cloud_6.202.0.png"]
-[ext_resource type="Texture2D" id="t4" path="res://images/sprites/sprite11.211.0.png"]
-[ext_resource type="Texture2D" id="t5" path="res://images/sprites/s_40x40_marker.27.0.png"]
-[ext_resource type="Texture2D" id="t6" path="res://images/sprites/s_block_killa.2.0.png"]
 [ext_resource type="Script" path="res://runtime/room_preview_boot.gd" id="boot"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/b100445.png" id="t1"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/b100451.png" id="t2"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/b100442.png" id="t3"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/b100450.png" id="t4"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_cloud_1.197.0.png" id="t5"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_cloud_3.199.0.png" id="t6"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_cloud_6.202.0.png" id="t7"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite11.211.1.png" id="t8"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_40x40_marker.27.0.png" id="t9"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_block_killa.2.0.png" id="t10"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_point_wind_marker.376.0.png" id="t11"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite11.211.0.png" id="t12"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite17.218.0.png" id="t13"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite88.213.0.png" id="t14"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_linelapacz.212.0.png" id="t15"]
+[ext_resource type="Texture2D" path="res://images/sprites/sprite_big_marker_2.39.0.png" id="t16"]
+[ext_resource type="Texture2D" path="res://images/sprites/s_boo_glow.75.0.png" id="t17"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/s102717.png" id="t18"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/s102894.png" id="t19"]
+[ext_resource type="Texture2D" path="res://images/runtime_preview/s102906.png" id="t20"]
 
-[node name="room_UNDERWATER_COPY_ME" type="Node2D"]
+[node name="room_UNDERWATER_COPY_ME" type="Node2D" unique_id=1098282141]
 script = ExtResource("boot")
 metadata/gm_room = "room_UNDERWATER_COPY_ME"
 metadata/gm_bg_colour = 12632256
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(400, 300)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=624755499]
+position = Vector2(400.13483, 6095.34)
 limit_left = 0
 limit_top = 0
 limit_right = 10000
 limit_bottom = 8000
 
-[node name="RoomColour" type="ColorRect" parent="."]
+[node name="RoomColour" type="ColorRect" parent="." unique_id=1943124847]
 z_index = -4096
-offset_right = 10000
-offset_bottom = 8000
+offset_right = 10000.0
+offset_bottom = 8000.0
 color = Color(0.753, 0.753, 0.753, 1)
 
-[node name="Objects_-121575219" type="Node2D" parent="."]
-z_index = -1
-metadata/gm_depth = -121575219
+[node name="Bg0___data_gfx_beetle_back_1_jpg" type="Node2D" parent="." unique_id=701600619]
+z_index = -102
+metadata/gm_background_slot = 0
+metadata/gm_source_bg = 100445
+metadata/gm_tile_horz = 1
+metadata/gm_tile_vert = 0
+metadata/gm_foreground = 0
+metadata/gm_hspeed = 0.0
+metadata/gm_vspeed = 0.0
+metadata/gm_bg_xscale = 1.00033708587744
+metadata/gm_bg_yscale = 1.00033708587744
+metadata/gm_bg_alpha = 1.0
 
-[node name="o_PERMANENT_EFFECT_big_underwater_glow_0" type="Sprite2D" parent="Objects_-121575219"]
-metadata/gm_object = "o_PERMANENT_EFFECT_big_underwater_glow"
-position = Vector2(40, 80)
-texture = ExtResource("t6")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="Objects_-1000000" type="Node2D" parent="."]
-z_index = 0
-metadata/gm_depth = -1000000
-
-[node name="obj_mario_0" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "obj_mario"
-position = Vector2(120, 5480)
-texture = ExtResource("t4")
-offset = Vector2(-32, -32)
-centered = false
-visible = false
-
-[node name="o_water_define_mega_pionowa_1" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(0, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_2" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(400, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_3" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(800, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_4" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(1200, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_5" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(1600, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_6" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(2000, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_7" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(2400, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_8" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(2800, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_9" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(3200, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_10" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(3600, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_11" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(4000, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_12" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(4400, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_13" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(4800, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_14" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(5200, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_15" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(5600, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_16" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(6000, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_17" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(6400, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_18" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(6800, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_19" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(7200, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_20" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(7600, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_21" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(8000, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_22" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(8400, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_23" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(8800, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_24" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(9200, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_25" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(9600, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="o_water_define_mega_pionowa_26" type="Sprite2D" parent="Objects_-1000000"]
-metadata/gm_object = "o_water_define_mega_pionowa"
-metadata/gm_creation_code = "image_xscale=10\r\nimage_yscale=55"
-position = Vector2(10000, 5920)
-texture = ExtResource("t5")
-offset = Vector2(0, 0)
-centered = false
-
-[node name="Objects_90000" type="Node2D" parent="."]
-z_index = 1
-metadata/gm_depth = 90000
-
-[node name="o_hill_paralax_11_0" type="Sprite2D" parent="Objects_90000"]
-metadata/gm_object = "o_hill_paralax_11"
-metadata/gm_creation_code = "image_xscale=1\r\nimage_yscale=1\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=4\r\nmnoznik=0\r\ndepth=900000\r\nodleglosc_przemijania=400\r\n\r\nnagraj_scalex=1\r\nnagraj_scaley=1"
-position = Vector2(440, 5760)
+[node name="t0_0" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1453992220]
+position = Vector2(0, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
 texture = ExtResource("t1")
-offset = Vector2(-90, -43)
 centered = false
 
-[node name="o_hill_paralax_13_1" type="Sprite2D" parent="Objects_90000"]
-metadata/gm_object = "o_hill_paralax_13"
-metadata/gm_creation_code = "image_xscale=1\r\nimage_yscale=1\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=5\r\nmnoznik=0\r\ndepth=900000\r\nodleglosc_przemijania=400\r\n\r\nnagraj_scalex=1\r\nnagraj_scaley=1"
-position = Vector2(720, 5840)
+[node name="t1_0" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1348491310]
+position = Vector2(1010.34045, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_0" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=359493086]
+position = Vector2(2020.6809, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_0" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=996747065]
+position = Vector2(3031.0215, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_0" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=509434759]
+position = Vector2(4041.3618, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_0" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1797967469]
+position = Vector2(5051.702, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_0" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1677736561]
+position = Vector2(6062.043, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_0" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1151829355]
+position = Vector2(7072.3833, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_0" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1952642966]
+position = Vector2(8082.7236, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_0" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=985947503]
+position = Vector2(9093.064, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_1" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=684396073]
+position = Vector2(0, 6415.4478)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_1" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1685536506]
+position = Vector2(1010.34045, 6415.4478)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_1" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1966623262]
+position = Vector2(2020.6809, 6415.4478)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_1" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1902148968]
+position = Vector2(3031.0215, 6415.4478)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_1" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=742716073]
+position = Vector2(4041.3618, 6415.4478)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_1" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1451890234]
+position = Vector2(5051.702, 6415.4478)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_1" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1483757037]
+position = Vector2(6062.043, 6415.4478)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_1" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1157351488]
+position = Vector2(7072.3833, 6415.4478)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_1" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1588803684]
+position = Vector2(8082.7236, 6415.4478)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_1" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1461461558]
+position = Vector2(9093.064, 6415.4478)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_2" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1963818183]
+position = Vector2(0, 7035.6567)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_2" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=598264774]
+position = Vector2(1010.34045, 7035.6567)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_2" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=868168877]
+position = Vector2(2020.6809, 7035.6567)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_2" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1537992909]
+position = Vector2(3031.0215, 7035.6567)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_2" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1069056992]
+position = Vector2(4041.3618, 7035.6567)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_2" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=835965079]
+position = Vector2(5051.702, 7035.6567)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_2" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=899447007]
+position = Vector2(6062.043, 7035.6567)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_2" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=418471507]
+position = Vector2(7072.3833, 7035.6567)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_2" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=191085503]
+position = Vector2(8082.7236, 7035.6567)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_2" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1073490786]
+position = Vector2(9093.064, 7035.6567)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_3" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1226688056]
+position = Vector2(0, 7655.8657)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_3" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=115953821]
+position = Vector2(1010.34045, 7655.8657)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_3" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=941123189]
+position = Vector2(2020.6809, 7655.8657)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_3" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=197752917]
+position = Vector2(3031.0215, 7655.8657)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_3" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=215578757]
+position = Vector2(4041.3618, 7655.8657)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_3" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=591949262]
+position = Vector2(5051.702, 7655.8657)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_3" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=32333188]
+position = Vector2(6062.043, 7655.8657)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_3" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=993194735]
+position = Vector2(7072.3833, 7655.8657)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_3" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=530513292]
+position = Vector2(8082.7236, 7655.8657)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_3" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=18643073]
+position = Vector2(9093.064, 7655.8657)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_4" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1682479997]
+position = Vector2(0, 8276.075)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_4" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1762223216]
+position = Vector2(1010.34045, 8276.075)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_4" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=241796962]
+position = Vector2(2020.6809, 8276.075)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_4" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1244455625]
+position = Vector2(3031.0215, 8276.075)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_4" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1662257620]
+position = Vector2(4041.3618, 8276.075)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_4" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=2058925379]
+position = Vector2(5051.702, 8276.075)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_4" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1480244392]
+position = Vector2(6062.043, 8276.075)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_4" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1622858615]
+position = Vector2(7072.3833, 8276.075)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_4" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=470548129]
+position = Vector2(8082.7236, 8276.075)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_4" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1037699251]
+position = Vector2(9093.064, 8276.075)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_5" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1238727868]
+position = Vector2(0, 8896.284)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_5" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1687014527]
+position = Vector2(1010.34045, 8896.284)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_5" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=73839640]
+position = Vector2(2020.6809, 8896.284)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_5" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1101772183]
+position = Vector2(3031.0215, 8896.284)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_5" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=14987967]
+position = Vector2(4041.3618, 8896.284)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_5" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1163563982]
+position = Vector2(5051.702, 8896.284)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_5" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=117973003]
+position = Vector2(6062.043, 8896.284)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_5" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=857132179]
+position = Vector2(7072.3833, 8896.284)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_5" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1016801909]
+position = Vector2(8082.7236, 8896.284)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_5" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=149249689]
+position = Vector2(9093.064, 8896.284)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_6" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1815325451]
+position = Vector2(0, 9516.493)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_6" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1859400880]
+position = Vector2(1010.34045, 9516.493)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_6" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=511494381]
+position = Vector2(2020.6809, 9516.493)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_6" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=630448493]
+position = Vector2(3031.0215, 9516.493)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_6" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=2144631189]
+position = Vector2(4041.3618, 9516.493)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_6" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=76480790]
+position = Vector2(5051.702, 9516.493)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_6" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=2005597684]
+position = Vector2(6062.043, 9516.493)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_6" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=668975674]
+position = Vector2(7072.3833, 9516.493)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_6" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1509437635]
+position = Vector2(8082.7236, 9516.493)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_6" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1094545482]
+position = Vector2(9093.064, 9516.493)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_7" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=702606490]
+position = Vector2(0, 10136.702)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_7" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1914743303]
+position = Vector2(1010.34045, 10136.702)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_7" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1043017554]
+position = Vector2(2020.6809, 10136.702)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_7" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1383071354]
+position = Vector2(3031.0215, 10136.702)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_7" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=930998648]
+position = Vector2(4041.3618, 10136.702)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_7" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1928130902]
+position = Vector2(5051.702, 10136.702)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_7" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1312424533]
+position = Vector2(6062.043, 10136.702)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_7" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=837667798]
+position = Vector2(7072.3833, 10136.702)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_7" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=807378817]
+position = Vector2(8082.7236, 10136.702)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_7" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1432846459]
+position = Vector2(9093.064, 10136.702)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_8" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=879839261]
+position = Vector2(0, 10756.911)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_8" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=237113180]
+position = Vector2(1010.34045, 10756.911)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_8" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=325915790]
+position = Vector2(2020.6809, 10756.911)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_8" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1706855372]
+position = Vector2(3031.0215, 10756.911)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_8" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1170999585]
+position = Vector2(4041.3618, 10756.911)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_8" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=861712181]
+position = Vector2(5051.702, 10756.911)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_8" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1759834376]
+position = Vector2(6062.043, 10756.911)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_8" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1816601146]
+position = Vector2(7072.3833, 10756.911)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_8" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=972900375]
+position = Vector2(8082.7236, 10756.911)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_8" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=390515201]
+position = Vector2(9093.064, 10756.911)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_9" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1606199478]
+position = Vector2(0, 11377.12)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_9" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=981190364]
+position = Vector2(1010.34045, 11377.12)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_9" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1418169628]
+position = Vector2(2020.6809, 11377.12)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_9" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1135374998]
+position = Vector2(3031.0215, 11377.12)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_9" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=758488033]
+position = Vector2(4041.3618, 11377.12)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_9" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1964618605]
+position = Vector2(5051.702, 11377.12)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_9" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=234682542]
+position = Vector2(6062.043, 11377.12)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_9" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=292616410]
+position = Vector2(7072.3833, 11377.12)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_9" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1527521368]
+position = Vector2(8082.7236, 11377.12)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_9" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1239299102]
+position = Vector2(9093.064, 11377.12)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_10" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=565273706]
+position = Vector2(0, 11997.329)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_10" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=935785849]
+position = Vector2(1010.34045, 11997.329)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_10" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=380688780]
+position = Vector2(2020.6809, 11997.329)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_10" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1828960100]
+position = Vector2(3031.0215, 11997.329)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_10" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=238189297]
+position = Vector2(4041.3618, 11997.329)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_10" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=230869582]
+position = Vector2(5051.702, 11997.329)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_10" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=2003550090]
+position = Vector2(6062.043, 11997.329)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_10" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1530475403]
+position = Vector2(7072.3833, 11997.329)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_10" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1802831471]
+position = Vector2(8082.7236, 11997.329)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_10" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=194548434]
+position = Vector2(9093.064, 11997.329)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_11" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=351540964]
+position = Vector2(0, 12617.538)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_11" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=696539375]
+position = Vector2(1010.34045, 12617.538)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_11" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=921596657]
+position = Vector2(2020.6809, 12617.538)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_11" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=275781326]
+position = Vector2(3031.0215, 12617.538)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_11" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=290043681]
+position = Vector2(4041.3618, 12617.538)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_11" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=2041436418]
+position = Vector2(5051.702, 12617.538)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_11" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1546994319]
+position = Vector2(6062.043, 12617.538)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_11" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=789242504]
+position = Vector2(7072.3833, 12617.538)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_11" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=2044696305]
+position = Vector2(8082.7236, 12617.538)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_11" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=274724688]
+position = Vector2(9093.064, 12617.538)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t0_12" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1673788323]
+position = Vector2(0, 13237.747)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t1_12" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=827006329]
+position = Vector2(1010.34045, 13237.747)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t2_12" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=855401505]
+position = Vector2(2020.6809, 13237.747)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t3_12" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1255768476]
+position = Vector2(3031.0215, 13237.747)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t4_12" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=647316870]
+position = Vector2(4041.3618, 13237.747)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t5_12" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1370086297]
+position = Vector2(5051.702, 13237.747)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t6_12" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1930259754]
+position = Vector2(6062.043, 13237.747)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t7_12" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=642382701]
+position = Vector2(7072.3833, 13237.747)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t8_12" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1864798997]
+position = Vector2(8082.7236, 13237.747)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="t9_12" type="Sprite2D" parent="Bg0___data_gfx_beetle_back_1_jpg" unique_id=1727783376]
+position = Vector2(9093.064, 13237.747)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t1")
+centered = false
+
+[node name="Bg3___data_gfx_000_waterunder_firsplan_finish_png" type="Node2D" parent="." unique_id=329190753]
+z_index = -99
+metadata/gm_background_slot = 3
+metadata/gm_source_bg = 100451
+metadata/gm_tile_horz = 1
+metadata/gm_tile_vert = 0
+metadata/gm_foreground = 0
+metadata/gm_hspeed = 0.0
+metadata/gm_vspeed = 0.0
+metadata/gm_bg_xscale = 1.0
+metadata/gm_bg_yscale = 8
+metadata/gm_bg_alpha = 0.85
+
+[node name="t0_0" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=512415941]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 5855)
+scale = Vector2(1, 8)
 texture = ExtResource("t2")
+centered = false
+
+[node name="t1_0" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=646384898]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 5855)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_0" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1455047761]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 5855)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_0" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1463182015]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 5855)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_0" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=209489314]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 5855)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_0" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=286055936]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 5855)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_0" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1598461579]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 5855)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_0" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1903171497]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 5855)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_0" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=409646106]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 5855)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_0" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=491126226]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 5855)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_0" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=388796293]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 5855)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_1" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=666058272]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 6415)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_1" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1166912413]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 6415)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_1" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=194666465]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 6415)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_1" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2040376011]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 6415)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_1" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=622676407]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 6415)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_1" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1789124448]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 6415)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_1" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=436778240]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 6415)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_1" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1496358405]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 6415)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_1" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1770892784]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 6415)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_1" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=143326389]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 6415)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_1" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=216510564]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 6415)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_2" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2069434539]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 6975)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_2" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1325712557]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 6975)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_2" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=997586445]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 6975)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_2" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1041891558]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 6975)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_2" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1442304060]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 6975)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_2" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1130058422]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 6975)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_2" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=25947454]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 6975)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_2" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=427120919]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 6975)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_2" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1398339066]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 6975)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_2" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1262572934]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 6975)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_2" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=7204356]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 6975)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_3" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=6404839]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 7535)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_3" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1683224374]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 7535)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_3" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1404955343]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 7535)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_3" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1821219704]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 7535)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_3" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1975693711]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 7535)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_3" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1866017641]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 7535)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_3" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=934885071]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 7535)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_3" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1482992923]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 7535)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_3" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1817321480]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 7535)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_3" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1261536294]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 7535)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_3" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1535790866]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 7535)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_4" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1119181654]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 8095)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_4" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=423895290]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 8095)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_4" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2132895481]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 8095)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_4" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1530012034]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 8095)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_4" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=392606555]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 8095)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_4" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1599347125]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 8095)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_4" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=42769926]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 8095)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_4" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1462140991]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 8095)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_4" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=996423651]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 8095)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_4" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1530821950]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 8095)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_4" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=747733592]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 8095)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_5" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1549174917]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 8655)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_5" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1863020176]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 8655)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_5" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1206793988]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 8655)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_5" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=586979754]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 8655)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_5" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1951692697]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 8655)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_5" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1952245593]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 8655)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_5" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1404238965]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 8655)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_5" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=397470858]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 8655)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_5" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=81732947]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 8655)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_5" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1544126260]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 8655)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_5" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2141977225]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 8655)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_6" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1671058969]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 9215)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_6" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1162916967]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 9215)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_6" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1696613219]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 9215)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_6" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1380170772]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 9215)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_6" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=884149316]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 9215)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_6" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=903344767]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 9215)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_6" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=452997762]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 9215)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_6" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1805553663]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 9215)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_6" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1986859450]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 9215)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_6" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=671647266]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 9215)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_6" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1480279852]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 9215)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_7" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1823060751]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 9775)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_7" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=420579217]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 9775)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_7" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2058725584]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 9775)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_7" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1363356763]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 9775)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_7" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=167690186]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 9775)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_7" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=887444757]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 9775)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_7" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=195037920]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 9775)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_7" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1297728754]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 9775)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_7" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=899944653]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 9775)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_7" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=243871756]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 9775)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_7" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1644720114]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 9775)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_8" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1535804858]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 10335)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_8" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2062647548]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 10335)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_8" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=184845090]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 10335)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_8" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=954055772]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 10335)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_8" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=268855379]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 10335)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_8" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1629761765]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 10335)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_8" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1006856563]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 10335)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_8" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1978991817]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 10335)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_8" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=13988785]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 10335)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_8" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1828531962]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 10335)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_8" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=394906352]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 10335)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_9" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1206504249]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 10895)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_9" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=735995446]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 10895)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_9" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=521331718]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 10895)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_9" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2123919207]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 10895)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_9" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=692909724]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 10895)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_9" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1666694529]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 10895)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_9" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1747323872]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 10895)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_9" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1025415510]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 10895)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_9" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1841410306]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 10895)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_9" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=564642231]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 10895)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_9" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=300445079]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 10895)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_10" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1599360910]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 11455)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_10" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1320567176]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 11455)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_10" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1795677228]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 11455)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_10" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=380510359]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 11455)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_10" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=483778175]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 11455)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_10" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1508616430]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 11455)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_10" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1083366806]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 11455)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_10" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=4844028]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 11455)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_10" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1824201293]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 11455)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_10" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=814893828]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 11455)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_10" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=931723315]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 11455)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_11" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=582199436]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 12015)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_11" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1893907542]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 12015)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_11" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1772646103]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 12015)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_11" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=604128437]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 12015)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_11" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1060556613]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 12015)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_11" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=10023242]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 12015)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_11" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=748549669]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 12015)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_11" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1136453821]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 12015)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_11" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1288271635]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 12015)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_11" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=515237845]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 12015)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_11" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1740788465]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 12015)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_12" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1341285436]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 12575)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_12" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=364849680]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 12575)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_12" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1133015322]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 12575)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_12" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=96693403]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 12575)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_12" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=626949256]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 12575)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_12" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=353432089]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 12575)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_12" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1450730424]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 12575)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_12" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2097378811]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 12575)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_12" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2107567642]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 12575)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_12" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1990261010]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 12575)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_12" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1663222896]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 12575)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_13" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2109784545]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 13135)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_13" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1080675370]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 13135)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_13" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1539372744]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 13135)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_13" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1863036781]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 13135)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_13" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1508029581]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 13135)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_13" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1879232495]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 13135)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_13" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2043747666]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 13135)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_13" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1569980289]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 13135)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_13" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2027090604]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 13135)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_13" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=385726447]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 13135)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_13" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1120941953]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 13135)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t0_14" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=115300893]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 13695)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t1_14" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=488833820]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 13695)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t2_14" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=996119230]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 13695)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t3_14" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1860463940]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 13695)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t4_14" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1878760348]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 13695)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t5_14" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=2121843770]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 13695)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t6_14" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1745537228]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 13695)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t7_14" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=571474319]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 13695)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t8_14" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1812684382]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 13695)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t9_14" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=359789671]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 13695)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="t10_14" type="Sprite2D" parent="Bg3___data_gfx_000_waterunder_firsplan_finish_png" unique_id=1720314773]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 13695)
+scale = Vector2(1, 8)
+texture = ExtResource("t2")
+centered = false
+
+[node name="Bg6___data_gfx_waterpowdwodny_jpg" type="Node2D" parent="." unique_id=1229793057]
+z_index = -96
+metadata/gm_background_slot = 6
+metadata/gm_source_bg = 100442
+metadata/gm_tile_horz = 1
+metadata/gm_tile_vert = 0
+metadata/gm_foreground = 0
+metadata/gm_hspeed = 0.0
+metadata/gm_vspeed = 0.0
+metadata/gm_bg_xscale = 1.0
+metadata/gm_bg_yscale = 2.4
+metadata/gm_bg_alpha = 0.85
+
+[node name="t0_0" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=79909815]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 6415)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t1_0" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=660008769]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 6415)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t2_0" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=824483853]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 6415)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t3_0" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1406941743]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 6415)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t4_0" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=2079102426]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 6415)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t5_0" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1710338985]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 6415)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t6_0" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1373858175]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 6415)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t7_0" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1901363117]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 6415)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t8_0" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=773615054]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 6415)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t9_0" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1041459721]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 6415)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t10_0" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=541070271]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 6415)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t0_1" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1835747152]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 8152.6)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t1_1" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1873425023]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 8152.6)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t2_1" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1799692568]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 8152.6)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t3_1" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1791907923]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 8152.6)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t4_1" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=893313434]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 8152.6)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t5_1" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1994166613]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 8152.6)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t6_1" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1282766428]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 8152.6)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t7_1" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=2073674737]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 8152.6)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t8_1" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1877958839]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 8152.6)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t9_1" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1808825244]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 8152.6)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t10_1" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1195246885]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 8152.6)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t0_2" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=459973021]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 9890.2)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t1_2" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=354373060]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 9890.2)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t2_2" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=313907535]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 9890.2)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t3_2" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1574074299]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 9890.2)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t4_2" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1181679221]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 9890.2)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t5_2" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=2134875624]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 9890.2)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t6_2" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=536817307]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 9890.2)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t7_2" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1014298666]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 9890.2)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t8_2" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1666788110]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 9890.2)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t9_2" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=17785875]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 9890.2)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t10_2" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1435558027]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 9890.2)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t0_3" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=2089624871]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 11627.8)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t1_3" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1512787654]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 11627.8)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t2_3" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1055748493]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 11627.8)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t3_3" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=605940690]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 11627.8)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t4_3" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1896941053]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 11627.8)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t5_3" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1563853481]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 11627.8)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t6_3" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=148469467]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 11627.8)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t7_3" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1459491719]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 11627.8)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t8_3" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=577771530]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 11627.8)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t9_3" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=724933224]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 11627.8)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t10_3" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1072795635]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 11627.8)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t0_4" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1475974960]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(-19, 13365.4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t1_4" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=547645505]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(923, 13365.4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t2_4" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1131040918]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(1865, 13365.4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t3_4" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1079043418]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(2807, 13365.4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t4_4" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=277850008]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(3749, 13365.4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t5_4" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=482292283]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(4691, 13365.4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t6_4" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=198167104]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(5633, 13365.4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t7_4" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1411831826]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(6575, 13365.4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t8_4" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=1897441249]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(7517, 13365.4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t9_4" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=353302681]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(8459, 13365.4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="t10_4" type="Sprite2D" parent="Bg6___data_gfx_waterpowdwodny_jpg" unique_id=634228508]
+modulate = Color(1, 1, 1, 0.85)
+position = Vector2(9401, 13365.4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("t3")
+centered = false
+
+[node name="Bg7___data_gfx_000_waterunder_firsplan_png" type="Node2D" parent="." unique_id=516155102]
+z_index = -95
+metadata/gm_background_slot = 7
+metadata/gm_source_bg = 100450
+metadata/gm_tile_horz = 1
+metadata/gm_tile_vert = 0
+metadata/gm_foreground = 0
+metadata/gm_hspeed = 0.0
+metadata/gm_vspeed = 0.0
+metadata/gm_bg_xscale = 2
+metadata/gm_bg_yscale = 2
+metadata/gm_bg_alpha = 0.775815906117403
+
+[node name="t0_0" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=2128269003]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 7440)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_0" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1327913861]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 7440)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_0" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1184166910]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 7440)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_0" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1146867901]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 7440)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_0" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1196609476]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 7440)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_0" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=2100285644]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 7440)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_1" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=311087177]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 8000)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_1" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1220187038]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 8000)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_1" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=603851201]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 8000)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_1" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=249667788]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 8000)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_1" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=395003334]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 8000)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_1" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1367484777]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 8000)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_2" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1752689472]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 8560)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_2" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=833919871]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 8560)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_2" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=916054361]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 8560)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_2" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1579595652]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 8560)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_2" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1124184995]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 8560)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_2" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1646910004]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 8560)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_3" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1671417112]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 9120)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_3" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=964057091]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 9120)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_3" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1222519094]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 9120)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_3" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=24847011]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 9120)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_3" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=580236835]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 9120)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_3" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=851136654]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 9120)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_4" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=842865941]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 9680)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_4" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1130959215]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 9680)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_4" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1579780483]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 9680)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_4" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1561321180]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 9680)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_4" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1131237230]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 9680)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_4" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=661027839]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 9680)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_5" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1236069215]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 10240)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_5" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=962033873]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 10240)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_5" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=705617917]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 10240)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_5" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1150957077]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 10240)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_5" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1930564857]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 10240)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_5" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1975727708]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 10240)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_6" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1285297884]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 10800)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_6" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1891835683]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 10800)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_6" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1878980583]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 10800)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_6" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=413340687]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 10800)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_6" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1593598148]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 10800)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_6" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1717245998]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 10800)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_7" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1792733356]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 11360)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_7" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=713059985]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 11360)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_7" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1877866998]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 11360)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_7" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=860210855]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 11360)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_7" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1678125161]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 11360)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_7" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=2024066130]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 11360)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_8" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=356601752]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 11920)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_8" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1429183669]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 11920)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_8" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1898481503]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 11920)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_8" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=96124438]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 11920)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_8" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1635635742]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 11920)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_8" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1713676445]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 11920)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_9" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=966559674]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 12480)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_9" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1242578295]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 12480)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_9" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1388728527]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 12480)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_9" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=694676709]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 12480)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_9" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=381606564]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 12480)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_9" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=2032117901]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 12480)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_10" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1115294446]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 13040)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_10" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=488127864]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 13040)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_10" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1246327137]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 13040)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_10" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1849399515]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 13040)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_10" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=397488772]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 13040)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_10" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1898501955]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 13040)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_11" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=15364650]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 13600)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_11" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=50486592]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 13600)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_11" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=768202201]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 13600)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_11" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=978402854]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 13600)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_11" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1746323551]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 13600)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_11" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=761410128]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 13600)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_12" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=57872188]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 14160)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_12" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=188504054]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 14160)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_12" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1744300182]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 14160)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_12" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=926646566]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 14160)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_12" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=537316284]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 14160)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_12" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=590449442]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 14160)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_13" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1623124872]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 14720)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_13" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=2083730452]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 14720)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_13" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=616869933]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 14720)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_13" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1736319530]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 14720)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_13" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=78487741]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 14720)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_13" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=193371665]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 14720)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t0_14" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=326365412]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(-54.278408, 15280)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t1_14" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=715751575]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(1831.7216, 15280)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t2_14" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1366231489]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(3717.7217, 15280)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t3_14" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=2143720623]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(5603.7217, 15280)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t4_14" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1409001164]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(7489.7217, 15280)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="t5_14" type="Sprite2D" parent="Bg7___data_gfx_000_waterunder_firsplan_png" unique_id=1690837340]
+modulate = Color(1, 1, 1, 0.776)
+position = Vector2(9375.722, 15280)
+scale = Vector2(2, 2)
+texture = ExtResource("t4")
+centered = false
+
+[node name="Objects_-121575219.0" type="Node2D" parent="." unique_id=1827957137]
+z_index = 3
+metadata/gm_depth = -121575219.0
+
+[node name="o_PERMANENT_EFFECT_big_underwater_glow_0" type="Sprite2D" parent="Objects_-121575219.0" unique_id=2090231156]
+visible = false
+position = Vector2(40, 80)
+texture = ExtResource("t10")
+centered = false
+metadata/gm_object = "o_PERMANENT_EFFECT_big_underwater_glow"
+metadata/gm_object_index = 462
+metadata/gm_instance = 116341
+metadata/gm_draw_base = true
+
+[node name="o_PERMANENT_EFFECT_big_underwater_glow_1" type="Sprite2D" parent="Objects_-121575219.0" unique_id=1706456417]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t19")
+centered = false
+metadata/gm_object = "o_PERMANENT_EFFECT_big_underwater_glow"
+metadata/gm_object_index = 462
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116341
+metadata/gm_preview_pos = Vector2(0, 5795.239)
+metadata/gm_base_pos = Vector2(40, 80)
+
+[node name="o_PERMANENT_EFFECT_big_underwater_glow_2" type="Sprite2D" parent="Objects_-121575219.0" unique_id=708648973]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 5795.239)
+scale = Vector2(1.0003371, 1.0003371)
+texture = ExtResource("t20")
+centered = false
+metadata/gm_object = "o_PERMANENT_EFFECT_big_underwater_glow"
+metadata/gm_object_index = 462
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116341
+metadata/gm_preview_pos = Vector2(0, 5795.239)
+metadata/gm_base_pos = Vector2(40, 80)
+
+[node name="o_PERMANENT_EFFECT_big_underwater_glow_3" type="Sprite2D" parent="Objects_-121575219.0" unique_id=1807772888]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 5790.483)
+scale = Vector2(1.000357, 1.000357)
+texture = ExtResource("t19")
+centered = false
+metadata/gm_object = "o_PERMANENT_EFFECT_big_underwater_glow"
+metadata/gm_object_index = 462
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116341
+metadata/gm_preview_pos = Vector2(0, 5790.483)
+metadata/gm_base_pos = Vector2(40, 80)
+
+[node name="o_PERMANENT_EFFECT_big_underwater_glow_4" type="Sprite2D" parent="Objects_-121575219.0" unique_id=1025028346]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 5790.483)
+scale = Vector2(1.000357, 1.000357)
+texture = ExtResource("t20")
+centered = false
+metadata/gm_object = "o_PERMANENT_EFFECT_big_underwater_glow"
+metadata/gm_object_index = 462
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116341
+metadata/gm_preview_pos = Vector2(0, 5790.483)
+metadata/gm_base_pos = Vector2(40, 80)
+
+[node name="Objects_-10000000.0" type="Node2D" parent="." unique_id=70179765]
+z_index = 2
+metadata/gm_depth = -10000000.0
+
+[node name="obj_mario_line_marker_0" type="Sprite2D" parent="Objects_-10000000.0" unique_id=375734205]
+visible = false
+position = Vector2(136, 5948)
+texture = ExtResource("t15")
+centered = false
+offset = Vector2(-15, -15)
+metadata/gm_object = "obj_mario_line_marker"
+metadata/gm_object_index = 309
+metadata/gm_runtime_spawned = true
+
+[node name="Objects_-1000000.0" type="Node2D" parent="." unique_id=1674146588]
+z_index = 1
+metadata/gm_depth = -1000000.0
+
+[node name="obj_mario_0" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1822856118]
+visible = false
+position = Vector2(120, 5948)
+texture = ExtResource("t8")
+centered = false
+offset = Vector2(-32, -32)
+metadata/gm_object = "obj_mario"
+metadata/gm_object_index = 303
+metadata/gm_instance = 101358
+
+[node name="o_water_define_mega_pionowa_1" type="Sprite2D" parent="Objects_-1000000.0" unique_id=509484711]
+visible = false
+position = Vector2(0, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116288
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_2" type="Sprite2D" parent="Objects_-1000000.0" unique_id=602699720]
+visible = false
+position = Vector2(400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116289
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_3" type="Sprite2D" parent="Objects_-1000000.0" unique_id=278932675]
+visible = false
+position = Vector2(800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116290
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_4" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2035028570]
+visible = false
+position = Vector2(1200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116291
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_5" type="Sprite2D" parent="Objects_-1000000.0" unique_id=579045609]
+visible = false
+position = Vector2(1600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116292
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_6" type="Sprite2D" parent="Objects_-1000000.0" unique_id=553691207]
+visible = false
+position = Vector2(2000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116293
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_7" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1553655952]
+visible = false
+position = Vector2(2400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116294
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_8" type="Sprite2D" parent="Objects_-1000000.0" unique_id=560041555]
+visible = false
+position = Vector2(2800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116295
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_9" type="Sprite2D" parent="Objects_-1000000.0" unique_id=507442535]
+visible = false
+position = Vector2(3200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116296
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_10" type="Sprite2D" parent="Objects_-1000000.0" unique_id=237406427]
+visible = false
+position = Vector2(3600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116297
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_11" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2056664095]
+visible = false
+position = Vector2(4000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116298
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_12" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1106538110]
+visible = false
+position = Vector2(4400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116299
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_13" type="Sprite2D" parent="Objects_-1000000.0" unique_id=648733980]
+visible = false
+position = Vector2(4800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116300
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_14" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1762415383]
+visible = false
+position = Vector2(5200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116301
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_15" type="Sprite2D" parent="Objects_-1000000.0" unique_id=613839227]
+visible = false
+position = Vector2(5600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116302
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_16" type="Sprite2D" parent="Objects_-1000000.0" unique_id=175719832]
+visible = false
+position = Vector2(6000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116303
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_17" type="Sprite2D" parent="Objects_-1000000.0" unique_id=743485354]
+visible = false
+position = Vector2(6400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116304
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_18" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1853123858]
+visible = false
+position = Vector2(6800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116305
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_19" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1082565764]
+visible = false
+position = Vector2(7200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116306
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_20" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1338331683]
+visible = false
+position = Vector2(7600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116307
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_21" type="Sprite2D" parent="Objects_-1000000.0" unique_id=23966142]
+visible = false
+position = Vector2(8000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116308
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_22" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1712923565]
+visible = false
+position = Vector2(8400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116309
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_23" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1456464152]
+visible = false
+position = Vector2(8800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116311
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_24" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2082855351]
+visible = false
+position = Vector2(9200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116312
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_25" type="Sprite2D" parent="Objects_-1000000.0" unique_id=849917789]
+visible = false
+position = Vector2(9600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116313
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_water_define_mega_pionowa_26" type="Sprite2D" parent="Objects_-1000000.0" unique_id=336688998]
+visible = false
+position = Vector2(10000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t9")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_instance = 116314
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=10
+image_yscale=55"
+
+[node name="o_HUD_tworzony_przez_gracza_27" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1842085072]
+position = Vector2(120, 5876)
+texture = ExtResource("t12")
+centered = false
+offset = Vector2(-32, -32)
+metadata/gm_object = "o_HUD_tworzony_przez_gracza"
+metadata/gm_object_index = 304
+metadata/gm_runtime_spawned = true
+
+[node name="o_water_define_mega_pionowa_28" type="Sprite2D" parent="Objects_-1000000.0" unique_id=778863027]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(0, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116288
+metadata/gm_preview_pos = Vector2(0, 5920)
+metadata/gm_base_pos = Vector2(0, 5920)
+
+[node name="o_water_define_mega_pionowa_29" type="Sprite2D" parent="Objects_-1000000.0" unique_id=539053277]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(0, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116288
+metadata/gm_preview_pos = Vector2(0, 5920)
+metadata/gm_base_pos = Vector2(0, 5920)
+
+[node name="o_water_define_mega_pionowa_30" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1334204385]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116289
+metadata/gm_preview_pos = Vector2(400, 5920)
+metadata/gm_base_pos = Vector2(400, 5920)
+
+[node name="o_water_define_mega_pionowa_31" type="Sprite2D" parent="Objects_-1000000.0" unique_id=505651224]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116289
+metadata/gm_preview_pos = Vector2(400, 5920)
+metadata/gm_base_pos = Vector2(400, 5920)
+
+[node name="o_water_define_mega_pionowa_32" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1892065403]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116290
+metadata/gm_preview_pos = Vector2(800, 5920)
+metadata/gm_base_pos = Vector2(800, 5920)
+
+[node name="o_water_define_mega_pionowa_33" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1999111506]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116290
+metadata/gm_preview_pos = Vector2(800, 5920)
+metadata/gm_base_pos = Vector2(800, 5920)
+
+[node name="o_water_define_mega_pionowa_34" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1461563874]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(1200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116291
+metadata/gm_preview_pos = Vector2(1200, 5920)
+metadata/gm_base_pos = Vector2(1200, 5920)
+
+[node name="o_water_define_mega_pionowa_35" type="Sprite2D" parent="Objects_-1000000.0" unique_id=865165304]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(1200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116291
+metadata/gm_preview_pos = Vector2(1200, 5920)
+metadata/gm_base_pos = Vector2(1200, 5920)
+
+[node name="o_water_define_mega_pionowa_36" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2064359173]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(1600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116292
+metadata/gm_preview_pos = Vector2(1600, 5920)
+metadata/gm_base_pos = Vector2(1600, 5920)
+
+[node name="o_water_define_mega_pionowa_37" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2014642097]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(1600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116292
+metadata/gm_preview_pos = Vector2(1600, 5920)
+metadata/gm_base_pos = Vector2(1600, 5920)
+
+[node name="o_water_define_mega_pionowa_38" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1840740074]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(2000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116293
+metadata/gm_preview_pos = Vector2(2000, 5920)
+metadata/gm_base_pos = Vector2(2000, 5920)
+
+[node name="o_water_define_mega_pionowa_39" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1414846791]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(2000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116293
+metadata/gm_preview_pos = Vector2(2000, 5920)
+metadata/gm_base_pos = Vector2(2000, 5920)
+
+[node name="o_water_define_mega_pionowa_40" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1256261912]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(2400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116294
+metadata/gm_preview_pos = Vector2(2400, 5920)
+metadata/gm_base_pos = Vector2(2400, 5920)
+
+[node name="o_water_define_mega_pionowa_41" type="Sprite2D" parent="Objects_-1000000.0" unique_id=358392663]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(2400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116294
+metadata/gm_preview_pos = Vector2(2400, 5920)
+metadata/gm_base_pos = Vector2(2400, 5920)
+
+[node name="o_water_define_mega_pionowa_42" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2098460198]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(2800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116295
+metadata/gm_preview_pos = Vector2(2800, 5920)
+metadata/gm_base_pos = Vector2(2800, 5920)
+
+[node name="o_water_define_mega_pionowa_43" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2120155147]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(2800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116295
+metadata/gm_preview_pos = Vector2(2800, 5920)
+metadata/gm_base_pos = Vector2(2800, 5920)
+
+[node name="o_water_define_mega_pionowa_44" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1002440331]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(3200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116296
+metadata/gm_preview_pos = Vector2(3200, 5920)
+metadata/gm_base_pos = Vector2(3200, 5920)
+
+[node name="o_water_define_mega_pionowa_45" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2094213139]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(3200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116296
+metadata/gm_preview_pos = Vector2(3200, 5920)
+metadata/gm_base_pos = Vector2(3200, 5920)
+
+[node name="o_water_define_mega_pionowa_46" type="Sprite2D" parent="Objects_-1000000.0" unique_id=335133930]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(3600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116297
+metadata/gm_preview_pos = Vector2(3600, 5920)
+metadata/gm_base_pos = Vector2(3600, 5920)
+
+[node name="o_water_define_mega_pionowa_47" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1391890728]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(3600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116297
+metadata/gm_preview_pos = Vector2(3600, 5920)
+metadata/gm_base_pos = Vector2(3600, 5920)
+
+[node name="o_water_define_mega_pionowa_48" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2023567259]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(4000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116298
+metadata/gm_preview_pos = Vector2(4000, 5920)
+metadata/gm_base_pos = Vector2(4000, 5920)
+
+[node name="o_water_define_mega_pionowa_49" type="Sprite2D" parent="Objects_-1000000.0" unique_id=809213439]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(4000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116298
+metadata/gm_preview_pos = Vector2(4000, 5920)
+metadata/gm_base_pos = Vector2(4000, 5920)
+
+[node name="o_water_define_mega_pionowa_50" type="Sprite2D" parent="Objects_-1000000.0" unique_id=37014196]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(4400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116299
+metadata/gm_preview_pos = Vector2(4400, 5920)
+metadata/gm_base_pos = Vector2(4400, 5920)
+
+[node name="o_water_define_mega_pionowa_51" type="Sprite2D" parent="Objects_-1000000.0" unique_id=707412222]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(4400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116299
+metadata/gm_preview_pos = Vector2(4400, 5920)
+metadata/gm_base_pos = Vector2(4400, 5920)
+
+[node name="o_water_define_mega_pionowa_52" type="Sprite2D" parent="Objects_-1000000.0" unique_id=783208266]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(4800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116300
+metadata/gm_preview_pos = Vector2(4800, 5920)
+metadata/gm_base_pos = Vector2(4800, 5920)
+
+[node name="o_water_define_mega_pionowa_53" type="Sprite2D" parent="Objects_-1000000.0" unique_id=693095687]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(4800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116300
+metadata/gm_preview_pos = Vector2(4800, 5920)
+metadata/gm_base_pos = Vector2(4800, 5920)
+
+[node name="o_water_define_mega_pionowa_54" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1140403948]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(5200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116301
+metadata/gm_preview_pos = Vector2(5200, 5920)
+metadata/gm_base_pos = Vector2(5200, 5920)
+
+[node name="o_water_define_mega_pionowa_55" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1924666771]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(5200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116301
+metadata/gm_preview_pos = Vector2(5200, 5920)
+metadata/gm_base_pos = Vector2(5200, 5920)
+
+[node name="o_water_define_mega_pionowa_56" type="Sprite2D" parent="Objects_-1000000.0" unique_id=976149822]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(5600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116302
+metadata/gm_preview_pos = Vector2(5600, 5920)
+metadata/gm_base_pos = Vector2(5600, 5920)
+
+[node name="o_water_define_mega_pionowa_57" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1031181317]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(5600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116302
+metadata/gm_preview_pos = Vector2(5600, 5920)
+metadata/gm_base_pos = Vector2(5600, 5920)
+
+[node name="o_water_define_mega_pionowa_58" type="Sprite2D" parent="Objects_-1000000.0" unique_id=135352174]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(6000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116303
+metadata/gm_preview_pos = Vector2(6000, 5920)
+metadata/gm_base_pos = Vector2(6000, 5920)
+
+[node name="o_water_define_mega_pionowa_59" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1935358377]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(6000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116303
+metadata/gm_preview_pos = Vector2(6000, 5920)
+metadata/gm_base_pos = Vector2(6000, 5920)
+
+[node name="o_water_define_mega_pionowa_60" type="Sprite2D" parent="Objects_-1000000.0" unique_id=352097954]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(6400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116304
+metadata/gm_preview_pos = Vector2(6400, 5920)
+metadata/gm_base_pos = Vector2(6400, 5920)
+
+[node name="o_water_define_mega_pionowa_61" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1411708110]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(6400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116304
+metadata/gm_preview_pos = Vector2(6400, 5920)
+metadata/gm_base_pos = Vector2(6400, 5920)
+
+[node name="o_water_define_mega_pionowa_62" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2104770454]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(6800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116305
+metadata/gm_preview_pos = Vector2(6800, 5920)
+metadata/gm_base_pos = Vector2(6800, 5920)
+
+[node name="o_water_define_mega_pionowa_63" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1003439986]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(6800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116305
+metadata/gm_preview_pos = Vector2(6800, 5920)
+metadata/gm_base_pos = Vector2(6800, 5920)
+
+[node name="o_water_define_mega_pionowa_64" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1205144941]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(7200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116306
+metadata/gm_preview_pos = Vector2(7200, 5920)
+metadata/gm_base_pos = Vector2(7200, 5920)
+
+[node name="o_water_define_mega_pionowa_65" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1986109913]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(7200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116306
+metadata/gm_preview_pos = Vector2(7200, 5920)
+metadata/gm_base_pos = Vector2(7200, 5920)
+
+[node name="o_water_define_mega_pionowa_66" type="Sprite2D" parent="Objects_-1000000.0" unique_id=452192042]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(7600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116307
+metadata/gm_preview_pos = Vector2(7600, 5920)
+metadata/gm_base_pos = Vector2(7600, 5920)
+
+[node name="o_water_define_mega_pionowa_67" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1568692836]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(7600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116307
+metadata/gm_preview_pos = Vector2(7600, 5920)
+metadata/gm_base_pos = Vector2(7600, 5920)
+
+[node name="o_water_define_mega_pionowa_68" type="Sprite2D" parent="Objects_-1000000.0" unique_id=294318097]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(8000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116308
+metadata/gm_preview_pos = Vector2(8000, 5920)
+metadata/gm_base_pos = Vector2(8000, 5920)
+
+[node name="o_water_define_mega_pionowa_69" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1184217722]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(8000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116308
+metadata/gm_preview_pos = Vector2(8000, 5920)
+metadata/gm_base_pos = Vector2(8000, 5920)
+
+[node name="o_water_define_mega_pionowa_70" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1674987222]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(8400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116309
+metadata/gm_preview_pos = Vector2(8400, 5920)
+metadata/gm_base_pos = Vector2(8400, 5920)
+
+[node name="o_water_define_mega_pionowa_71" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1453521768]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(8400, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116309
+metadata/gm_preview_pos = Vector2(8400, 5920)
+metadata/gm_base_pos = Vector2(8400, 5920)
+
+[node name="o_water_define_mega_pionowa_72" type="Sprite2D" parent="Objects_-1000000.0" unique_id=196724325]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(8800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116311
+metadata/gm_preview_pos = Vector2(8800, 5920)
+metadata/gm_base_pos = Vector2(8800, 5920)
+
+[node name="o_water_define_mega_pionowa_73" type="Sprite2D" parent="Objects_-1000000.0" unique_id=796880161]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(8800, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116311
+metadata/gm_preview_pos = Vector2(8800, 5920)
+metadata/gm_base_pos = Vector2(8800, 5920)
+
+[node name="o_water_define_mega_pionowa_74" type="Sprite2D" parent="Objects_-1000000.0" unique_id=204428838]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(9200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116312
+metadata/gm_preview_pos = Vector2(9200, 5920)
+metadata/gm_base_pos = Vector2(9200, 5920)
+
+[node name="o_water_define_mega_pionowa_75" type="Sprite2D" parent="Objects_-1000000.0" unique_id=1945917780]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(9200, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116312
+metadata/gm_preview_pos = Vector2(9200, 5920)
+metadata/gm_base_pos = Vector2(9200, 5920)
+
+[node name="o_water_define_mega_pionowa_76" type="Sprite2D" parent="Objects_-1000000.0" unique_id=785238518]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(9600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116313
+metadata/gm_preview_pos = Vector2(9600, 5920)
+metadata/gm_base_pos = Vector2(9600, 5920)
+
+[node name="o_water_define_mega_pionowa_77" type="Sprite2D" parent="Objects_-1000000.0" unique_id=60160412]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(9600, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116313
+metadata/gm_preview_pos = Vector2(9600, 5920)
+metadata/gm_base_pos = Vector2(9600, 5920)
+
+[node name="o_water_define_mega_pionowa_78" type="Sprite2D" parent="Objects_-1000000.0" unique_id=588157388]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(10000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116314
+metadata/gm_preview_pos = Vector2(10000, 5920)
+metadata/gm_base_pos = Vector2(10000, 5920)
+
+[node name="o_water_define_mega_pionowa_79" type="Sprite2D" parent="Objects_-1000000.0" unique_id=2105155351]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(10000, 5920)
+scale = Vector2(10, 55)
+texture = ExtResource("t18")
+centered = false
+metadata/gm_object = "o_water_define_mega_pionowa"
+metadata/gm_object_index = 461
+metadata/gm_draw_preview = true
+metadata/gm_instance = 116314
+metadata/gm_preview_pos = Vector2(10000, 5920)
+metadata/gm_base_pos = Vector2(10000, 5920)
+
+[node name="Objects_-99999.0" type="Node2D" parent="." unique_id=1491556591]
+metadata/gm_depth = -99999.0
+
+[node name="obj_mario_windor_0" type="Sprite2D" parent="Objects_-99999.0" unique_id=1581689570]
+visible = false
+position = Vector2(120, 5948)
+texture = ExtResource("t14")
+centered = false
+metadata/gm_object = "obj_mario_windor"
+metadata/gm_object_index = 310
+metadata/gm_runtime_spawned = true
+
+[node name="Objects_0.0" type="Node2D" parent="." unique_id=2083913422]
+z_index = -1
+metadata/gm_depth = 0.0
+
+[node name="o_wind_fix_marker_0" type="Sprite2D" parent="Objects_0.0" unique_id=303982895]
+visible = false
+position = Vector2(136, 6016)
+texture = ExtResource("t11")
+centered = false
+metadata/gm_object = "o_wind_fix_marker"
+metadata/gm_object_index = 668
+metadata/gm_runtime_spawned = true
+
+[node name="obj_mario_anim_1" type="Sprite2D" parent="Objects_0.0" unique_id=47937070]
+position = Vector2(136, 5983)
+texture = ExtResource("t13")
+centered = false
+metadata/gm_object = "obj_mario_anim"
+metadata/gm_object_index = 306
+metadata/gm_runtime_spawned = true
+
+[node name="o_koniec_etapu_2" type="Sprite2D" parent="Objects_0.0" unique_id=1060612615]
+position = Vector2(-10000, -10000)
+scale = Vector2(0.1, 1)
+texture = ExtResource("t16")
+centered = false
+metadata/gm_object = "o_koniec_etapu"
+metadata/gm_object_index = 288
+metadata/gm_runtime_spawned = true
+
+[node name="Objects_900000.0" type="Node2D" parent="." unique_id=1979876973]
+z_index = -2
+metadata/gm_depth = 900000.0
+
+[node name="o_hill_paralax_11_0" type="Sprite2D" parent="Objects_900000.0" unique_id=1432153128]
+visible = false
+position = Vector2(440, 5760)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-90, -43)
+metadata/gm_object = "o_hill_paralax_11"
+metadata/gm_object_index = 281
+metadata/gm_instance = 108446
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1
+image_yscale=1
+image_angle=0
+image_alpha=1
+dzielnik=4
+mnoznik=0
+depth=900000
+odleglosc_przemijania=400
+
+nagraj_scalex=1
+nagraj_scaley=1"
+
+[node name="o_hill_paralax_13_1" type="Sprite2D" parent="Objects_900000.0" unique_id=269027100]
+visible = false
+position = Vector2(720, 5840)
+texture = ExtResource("t6")
+centered = false
 offset = Vector2(-121, -47)
-centered = false
+metadata/gm_object = "o_hill_paralax_13"
+metadata/gm_object_index = 283
+metadata/gm_instance = 108448
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1
+image_yscale=1
+image_angle=0
+image_alpha=1
+dzielnik=5
+mnoznik=0
+depth=900000
+odleglosc_przemijania=400
 
-[node name="o_hill_paralax_16_2" type="Sprite2D" parent="Objects_90000"]
-metadata/gm_object = "o_hill_paralax_16"
-metadata/gm_creation_code = "image_xscale=1\r\nimage_yscale=1\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=2\r\nmnoznik=0\r\ndepth=900000\r\nodleglosc_przemijania=400\r\n\r\nnagraj_scalex=1\r\nnagraj_scaley=1"
+nagraj_scalex=1
+nagraj_scaley=1"
+
+[node name="o_hill_paralax_16_2" type="Sprite2D" parent="Objects_900000.0" unique_id=770736904]
+visible = false
 position = Vector2(120, 5640)
-texture = ExtResource("t3")
-offset = Vector2(-149, -60)
+texture = ExtResource("t7")
 centered = false
-
-[node name="o_hill_paralax_16_3" type="Sprite2D" parent="Objects_90000"]
+offset = Vector2(-149, -60)
 metadata/gm_object = "o_hill_paralax_16"
-metadata/gm_creation_code = "image_xscale=1\r\nimage_yscale=1\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=2\r\nmnoznik=0\r\ndepth=900000\r\nodleglosc_przemijania=400\r\n\r\nnagraj_scalex=1\r\nnagraj_scaley=1"
+metadata/gm_object_index = 286
+metadata/gm_instance = 108450
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1
+image_yscale=1
+image_angle=0
+image_alpha=1
+dzielnik=2
+mnoznik=0
+depth=900000
+odleglosc_przemijania=400
+
+nagraj_scalex=1
+nagraj_scaley=1"
+
+[node name="o_hill_paralax_16_3" type="Sprite2D" parent="Objects_900000.0" unique_id=533770472]
+visible = false
 position = Vector2(760, 5680)
-texture = ExtResource("t3")
-offset = Vector2(-149, -60)
+texture = ExtResource("t7")
 centered = false
-
-[node name="o_hill_paralax_16_4" type="Sprite2D" parent="Objects_90000"]
+offset = Vector2(-149, -60)
 metadata/gm_object = "o_hill_paralax_16"
-metadata/gm_creation_code = "image_xscale=1\r\nimage_yscale=1\r\nimage_angle=0\r\nimage_alpha=1\r\ndzielnik=2\r\nmnoznik=0\r\ndepth=900000\r\nodleglosc_przemijania=400\r\n\r\nnagraj_scalex=1\r\nnagraj_scaley=1"
+metadata/gm_object_index = 286
+metadata/gm_instance = 108451
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1
+image_yscale=1
+image_angle=0
+image_alpha=1
+dzielnik=2
+mnoznik=0
+depth=900000
+odleglosc_przemijania=400
+
+nagraj_scalex=1
+nagraj_scaley=1"
+
+[node name="o_hill_paralax_16_4" type="Sprite2D" parent="Objects_900000.0" unique_id=1128996276]
+visible = false
 position = Vector2(520, 5600)
-texture = ExtResource("t3")
-offset = Vector2(-149, -60)
+texture = ExtResource("t7")
 centered = false
+offset = Vector2(-149, -60)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_instance = 108452
+metadata/gm_draw_base = true
+metadata/gm_creation_code = "image_xscale=1
+image_yscale=1
+image_angle=0
+image_alpha=1
+dzielnik=2
+mnoznik=0
+depth=900000
+odleglosc_przemijania=400
+
+nagraj_scalex=1
+nagraj_scaley=1"
+
+[node name="o_hill_paralax_11_5" type="Sprite2D" parent="Objects_900000.0" unique_id=1105540831]
+position = Vector2(440, 5760)
+scale = Vector2(3, 3)
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-44, -44)
+metadata/gm_object = "o_hill_paralax_11"
+metadata/gm_object_index = 281
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108446
+metadata/gm_preview_pos = Vector2(440, 5760)
+metadata/gm_base_pos = Vector2(440, 5760)
+
+[node name="o_hill_paralax_11_6" type="Sprite2D" parent="Objects_900000.0" unique_id=1789973592]
+position = Vector2(440, 5760)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-90, -43)
+metadata/gm_object = "o_hill_paralax_11"
+metadata/gm_object_index = 281
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108446
+metadata/gm_preview_pos = Vector2(440, 5760)
+metadata/gm_base_pos = Vector2(440, 5760)
+
+[node name="o_hill_paralax_11_7" type="Sprite2D" parent="Objects_900000.0" unique_id=776605405]
+position = Vector2(440, 5760)
+scale = Vector2(3, 3)
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-44, -44)
+metadata/gm_object = "o_hill_paralax_11"
+metadata/gm_object_index = 281
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108446
+metadata/gm_preview_pos = Vector2(440, 5760)
+metadata/gm_base_pos = Vector2(440, 5760)
+
+[node name="o_hill_paralax_11_8" type="Sprite2D" parent="Objects_900000.0" unique_id=1600806494]
+position = Vector2(440, 5760)
+texture = ExtResource("t5")
+centered = false
+offset = Vector2(-90, -43)
+metadata/gm_object = "o_hill_paralax_11"
+metadata/gm_object_index = 281
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108446
+metadata/gm_preview_pos = Vector2(440, 5760)
+metadata/gm_base_pos = Vector2(440, 5760)
+
+[node name="o_hill_paralax_13_9" type="Sprite2D" parent="Objects_900000.0" unique_id=1059083951]
+position = Vector2(720, 5840)
+scale = Vector2(3, 3)
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-44, -44)
+metadata/gm_object = "o_hill_paralax_13"
+metadata/gm_object_index = 283
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108448
+metadata/gm_preview_pos = Vector2(720, 5840)
+metadata/gm_base_pos = Vector2(720, 5840)
+
+[node name="o_hill_paralax_13_10" type="Sprite2D" parent="Objects_900000.0" unique_id=1554714508]
+position = Vector2(720, 5840)
+texture = ExtResource("t6")
+centered = false
+offset = Vector2(-121, -47)
+metadata/gm_object = "o_hill_paralax_13"
+metadata/gm_object_index = 283
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108448
+metadata/gm_preview_pos = Vector2(720, 5840)
+metadata/gm_base_pos = Vector2(720, 5840)
+
+[node name="o_hill_paralax_13_11" type="Sprite2D" parent="Objects_900000.0" unique_id=90822564]
+position = Vector2(720, 5840)
+scale = Vector2(3, 3)
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-44, -44)
+metadata/gm_object = "o_hill_paralax_13"
+metadata/gm_object_index = 283
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108448
+metadata/gm_preview_pos = Vector2(720, 5840)
+metadata/gm_base_pos = Vector2(720, 5840)
+
+[node name="o_hill_paralax_13_12" type="Sprite2D" parent="Objects_900000.0" unique_id=1326627347]
+position = Vector2(720, 5840)
+texture = ExtResource("t6")
+centered = false
+offset = Vector2(-121, -47)
+metadata/gm_object = "o_hill_paralax_13"
+metadata/gm_object_index = 283
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108448
+metadata/gm_preview_pos = Vector2(720, 5840)
+metadata/gm_base_pos = Vector2(720, 5840)
+
+[node name="o_hill_paralax_16_13" type="Sprite2D" parent="Objects_900000.0" unique_id=48086227]
+position = Vector2(120, 5640)
+scale = Vector2(3, 3)
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-44, -44)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108450
+metadata/gm_preview_pos = Vector2(120, 5640)
+metadata/gm_base_pos = Vector2(120, 5640)
+
+[node name="o_hill_paralax_16_14" type="Sprite2D" parent="Objects_900000.0" unique_id=688822761]
+position = Vector2(120, 5640)
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-149, -60)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108450
+metadata/gm_preview_pos = Vector2(120, 5640)
+metadata/gm_base_pos = Vector2(120, 5640)
+
+[node name="o_hill_paralax_16_15" type="Sprite2D" parent="Objects_900000.0" unique_id=293637837]
+position = Vector2(120, 5640)
+scale = Vector2(3, 3)
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-44, -44)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108450
+metadata/gm_preview_pos = Vector2(120, 5640)
+metadata/gm_base_pos = Vector2(120, 5640)
+
+[node name="o_hill_paralax_16_16" type="Sprite2D" parent="Objects_900000.0" unique_id=1059386613]
+position = Vector2(120, 5640)
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-149, -60)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108450
+metadata/gm_preview_pos = Vector2(120, 5640)
+metadata/gm_base_pos = Vector2(120, 5640)
+
+[node name="o_hill_paralax_16_17" type="Sprite2D" parent="Objects_900000.0" unique_id=1651004525]
+position = Vector2(760, 5680)
+scale = Vector2(3, 3)
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-44, -44)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108451
+metadata/gm_preview_pos = Vector2(760, 5680)
+metadata/gm_base_pos = Vector2(760, 5680)
+
+[node name="o_hill_paralax_16_18" type="Sprite2D" parent="Objects_900000.0" unique_id=921417321]
+position = Vector2(760, 5680)
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-149, -60)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108451
+metadata/gm_preview_pos = Vector2(760, 5680)
+metadata/gm_base_pos = Vector2(760, 5680)
+
+[node name="o_hill_paralax_16_19" type="Sprite2D" parent="Objects_900000.0" unique_id=2147480015]
+position = Vector2(760, 5680)
+scale = Vector2(3, 3)
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-44, -44)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108451
+metadata/gm_preview_pos = Vector2(760, 5680)
+metadata/gm_base_pos = Vector2(760, 5680)
+
+[node name="o_hill_paralax_16_20" type="Sprite2D" parent="Objects_900000.0" unique_id=2133300370]
+position = Vector2(760, 5680)
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-149, -60)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108451
+metadata/gm_preview_pos = Vector2(760, 5680)
+metadata/gm_base_pos = Vector2(760, 5680)
+
+[node name="o_hill_paralax_16_21" type="Sprite2D" parent="Objects_900000.0" unique_id=599265073]
+position = Vector2(520, 5600)
+scale = Vector2(3, 3)
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-44, -44)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108452
+metadata/gm_preview_pos = Vector2(520, 5600)
+metadata/gm_base_pos = Vector2(520, 5600)
+
+[node name="o_hill_paralax_16_22" type="Sprite2D" parent="Objects_900000.0" unique_id=748531011]
+position = Vector2(520, 5600)
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-149, -60)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108452
+metadata/gm_preview_pos = Vector2(520, 5600)
+metadata/gm_base_pos = Vector2(520, 5600)
+
+[node name="o_hill_paralax_16_23" type="Sprite2D" parent="Objects_900000.0" unique_id=1844282024]
+position = Vector2(520, 5600)
+scale = Vector2(3, 3)
+texture = ExtResource("t17")
+centered = false
+offset = Vector2(-44, -44)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108452
+metadata/gm_preview_pos = Vector2(520, 5600)
+metadata/gm_base_pos = Vector2(520, 5600)
+
+[node name="o_hill_paralax_16_24" type="Sprite2D" parent="Objects_900000.0" unique_id=1696303656]
+position = Vector2(520, 5600)
+texture = ExtResource("t7")
+centered = false
+offset = Vector2(-149, -60)
+metadata/gm_object = "o_hill_paralax_16"
+metadata/gm_object_index = 286
+metadata/gm_draw_preview = true
+metadata/gm_instance = 108452
+metadata/gm_preview_pos = Vector2(520, 5600)
+metadata/gm_base_pos = Vector2(520, 5600)

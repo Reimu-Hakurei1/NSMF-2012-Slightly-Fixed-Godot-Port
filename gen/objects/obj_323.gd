@@ -20,7 +20,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         if (1 - R.eqv(S, S.g_gogo, 0)):
             S.g_gogo = (S.g_gogo / 1.2)
         if (S.g_gogo <= 3):
-            R.aset(S.g_dodo, 0, (R.aget(S.g_dodo, 0) / 1.3))
+            R.aset(S.g_dodo, 0, (R.anum(R.aget(S.g_dodo, 0)) / 1.3))
         if (R.aget(S.g_dodo, 0) <= 0.01):
             R.part_particles_create(S, G.particle_sys_1, (S.x + 16), S.y, G.part_effect_star2, 3)
             R.instance_destroy(S)

@@ -13,14 +13,14 @@ static func ev_0_0(S, A: Array) -> Variant:
 
 static func ev_8_0(S, A: Array) -> Variant:
     S.x = (S.x - S.g_koko)
-    if (((S.g_image_alpha < 1) and (R.lnot(S.x) < (R.aget(R.view_xview, 0) - 200))) and (R.lnot(S.x) > (R.aget(R.view_xview, 0) + 1200))):
+    if (((S.g_image_alpha < 1) and (R.lnot(S.x) < (R.anum(R.aget(R.view_xview, 0)) - 200))) and (R.lnot(S.x) > (R.anum(R.aget(R.view_xview, 0)) + 1200))):
         S.g_image_alpha += 0.01
-    if (S.x < (R.aget(R.view_xview, 0) - 200)):
+    if (S.x < (R.anum(R.aget(R.view_xview, 0)) - 200)):
         if (S.g_image_alpha > 0):
             S.g_image_alpha -= 0.05
         if (S.g_image_alpha <= 0):
             R.instance_destroy(S)
-    if (S.x > (R.aget(R.view_xview, 0) + 1200)):
+    if (S.x > (R.anum(R.aget(R.view_xview, 0)) + 1200)):
         if (S.g_image_alpha > 0):
             S.g_image_alpha -= 0.05
         if (S.g_image_alpha <= 0):

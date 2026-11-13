@@ -51,7 +51,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_jeden_atak = 1
             R.inst_set(S.g_koko, "stream", 0)
             R.inst_set(S.g_koko, "timer", 0)
-            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if ((R.place_meeting(S, S.x, S.y, 103) and R.eqv(S, S.g_jeden_atak, 0)) and R.eqv(S, S.g_niezabija, 0)):
             S.g_koko = R.instance_place(S, S.x, S.y, 103)
             R.inst_set(S.g_koko, "kill", 1)
@@ -73,7 +73,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_jeden_atak = 1
             R.inst_set(S.g_koko, "stream", 0)
             R.inst_set(S.g_koko, "timer", 0)
-            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [51, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if ((R.place_meeting(S, S.x, S.y, 128) and R.eqv(S, S.g_jeden_atak, 0)) and R.eqv(S, S.g_niezabija, 0)):
             S.g_koko = R.instance_place(S, S.x, S.y, 128)
             R.inst_set(S.g_koko, "kill", 1)

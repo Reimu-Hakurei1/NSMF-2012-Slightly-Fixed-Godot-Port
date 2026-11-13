@@ -16,7 +16,7 @@ static func ev_3_0(S, A: Array) -> Variant:
         S.x = R.get_obj_var(303, "g_x")
         if ((S.g_czas >= 623575) or R.eqv(S, S.g_timer, 0)):
             S.g_czas = 0
-            S.g_sampel = P2.SXMS_SFX_PlayExt(S, [319, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            S.g_sampel = P2.SXMS_SFX_PlayExt(S, [319, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             S.g_timer = 1
         if (S.g_czas < P2.SXMS_SFX_Position(S, [1, S.g_sampel, 0])):
             S.g_czas = P2.SXMS_SFX_Position(S, [1, S.g_sampel, 0])
@@ -27,8 +27,8 @@ static func ev_3_0(S, A: Array) -> Variant:
             S.g_graj_od_nowa2 += 1
         if (S.g_graj_od_nowa2 >= 10):
             S.g_graj_od_nowa2 = 0
-            S.g_sampel = P2.SXMS_SFX_PlayExt(S, [319, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
-        P2.SXMS_SFX_Pan(S, [S.g_sampel, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255)])
+            S.g_sampel = P2.SXMS_SFX_PlayExt(S, [319, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_Pan(S, [S.g_sampel, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255)])
         S.g_koko = R.point_distance(S, S.x, S.y, R.get_obj_var(303, "g_x"), R.get_obj_var(303, "g_y"))
         P2.SXMS_SFX_VolumeAbsolute(S, [S.g_sampel, (((((650 - (S.g_koko))) / 600)) * 255)])
     return 0

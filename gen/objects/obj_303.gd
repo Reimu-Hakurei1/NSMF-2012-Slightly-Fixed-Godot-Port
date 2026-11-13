@@ -198,7 +198,7 @@ static func ev_3_2(S, A: Array) -> Variant:
         R.set_obj_var(306, "g_y", ((((((S.y + 32) + (R.random(S, S.g_trzesator) / 10)) - (R.random(S, S.g_trzesator) / 5)) + S.g_biega_po_scianach_cofacz_y) - (R.get_obj_var(306, "g_size") * 40)) + 35))
     P6_7_8.script_player(S, [])
     if R.eqv(S, G.one_sample_pirania_bite, 1):
-        P2.SXMS_SFX_PlayExt(S, [70, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [70, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         G.one_sample_pirania_bite = 0
     if (1 - R.eqv(S, G.przetransferuj_czas_slot, 0)):
         G.time = G.przetransferuj_czas_slot
@@ -212,7 +212,7 @@ static func ev_3_2(S, A: Array) -> Variant:
             G.used_power_star_on_start = 0
             S.g_star_music_tick_switch = 1
             R.instance_create(S, S.x, S.y, 335)
-            P2.SXMS_SFX_PlayExt(S, [116, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [116, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             S.g_koko = R.instance_place(S, S.x, S.y, 26)
             S.g_music_tick = 2
             S.g_power_star_time = 660
@@ -220,7 +220,7 @@ static func ev_3_2(S, A: Array) -> Variant:
         R.instance_create(S, S.x, S.y, 928)
         G.pauza = 72
         S.g_click_pauzing = 1
-        P2.SXMS_SFX_PlayExt(S, [121, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [121, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if (((R.keyboard_check(S, 80) or R.keyboard_check(S, 27)) and R.eqv(S, G.pauza, 72)) and R.eqv(S, S.g_click_pauzing, 0)):
         var _sv2 = S
         var _ws1 = R.with_ids(S, 928)
@@ -231,7 +231,7 @@ static func ev_3_2(S, A: Array) -> Variant:
         G.pauza = 0
         S.g_click_pauzing = 1
         S.g_click_pauzing = 1
-        P2.SXMS_SFX_PlayExt(S, [123, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [123, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if (R.lnot(R.keyboard_check(S, 80)) and R.lnot(R.keyboard_check(S, 27))):
         S.g_click_pauzing = 0
     if R.eqv(S, R.room_get_name(S, R.room), "room_title_screen_and_options"):

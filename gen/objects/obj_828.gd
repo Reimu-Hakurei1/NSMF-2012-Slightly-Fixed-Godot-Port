@@ -57,7 +57,7 @@ static func ev_8_0(S, A: Array) -> Variant:
     if (1 - R.eqv(S, S.g_generuj_dialog, 0)):
         if R.eqv(S, S.g_generuj_dialog, 1):
             if (((((S.x > (R.get_obj_var(831, "g_x") - 80)) and (S.x < (R.get_obj_var(831, "g_x") + 80))) and (S.y > (R.get_obj_var(831, "g_y") - 80))) and (S.y < (R.get_obj_var(831, "g_y") + 80))) and R.eqv(S, R.get_obj_var(831, "g_idzie"), 0)):
-                P2.SXMS_SFX_PlayExt(S, [121, (((S.x - R.aget(R.view_xview, 0))) / ((R.aget(R.view_xview, 0) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [121, (((S.x - R.anum(R.aget(R.view_xview, 0)))) / ((R.anum(R.aget(R.view_xview, 0)) + 800))), G.glosnosc_dzwieku, -(1), 0, 0])
                 S.g_generuj_dialog = 2
         if R.eqv(S, S.g_generuj_dialog, 2):
             S.g_generuj_dialog = 3

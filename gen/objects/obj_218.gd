@@ -30,7 +30,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         S.g_strzela += 1
         if (S.g_strzela > 300):
             S.g_strzela = -(R.random(S, 100))
-            P2.SXMS_SFX_PlayExt(S, [45, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [45, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.aset(S.g_lolo, 0, R.instance_create(S, (S.x + 20), (S.y + 20), 123))
             R.inst_set(R.aget(S.g_lolo, 0), "ixor", (4 * S.g_kierunek))
             R.inst_set(R.aget(S.g_lolo, 0), "iyor", (-(2) - R.random(S, 3)))

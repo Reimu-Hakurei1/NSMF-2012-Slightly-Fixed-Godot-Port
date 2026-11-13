@@ -34,5 +34,5 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_otwierane = (S.g_otwierane / 1.3)
                 S.g_otwarcie = (S.g_otwarcie / 1.3)
             if R.eqv(S, S.g_door, 100):
-                P2.SXMS_SFX_PlayExt(S, [201, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [201, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     return 0

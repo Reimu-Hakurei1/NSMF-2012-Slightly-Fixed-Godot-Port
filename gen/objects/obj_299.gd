@@ -65,13 +65,13 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 48):
                 S.g_koko = R.instance_place(S, S.x, S.y, 48)
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 376):
                 S.g_koko = R.instance_place(S, S.x, S.y, 376)
                 var _sv2 = S
@@ -82,77 +82,77 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv2
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 73):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 2)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 16):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 50):
                 S.g_koko = R.instance_place(S, S.x, S.y, 50)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 37):
                 S.g_koko = R.instance_place(S, S.x, S.y, 37)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 54):
                 S.g_koko = R.instance_place(S, S.x, S.y, 54)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 58):
                 S.g_koko = R.instance_place(S, S.x, S.y, 58)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 60):
                 S.g_koko = R.instance_place(S, S.x, S.y, 60)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 63):
                 S.g_koko = R.instance_place(S, S.x, S.y, 63)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 66):
                 S.g_koko = R.instance_place(S, S.x, S.y, 66)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 69):
                 S.g_koko = R.instance_place(S, S.x, S.y, 69)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 42):
                 S.g_koko = R.instance_place(S, S.x, S.y, 42)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 1):
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 124):
                 G.hit_x = S.x
                 G.hit_y = S.y
@@ -165,7 +165,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv5
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_coto, 1):
         R.draw_sprite_ext(S, G.gfx_lisciong_1, 0, (S.x + (18 * R.sin(S, R.degtorad(S, (S.g_image_angle + 180))))), (S.y + (10 * R.cos(S, R.degtorad(S, (S.g_image_angle + 180))))), 0.8, (0.65 + (R.sin(S, S.g_promien) / 5)), ((((R.sin(S, S.g_promien) * ((10 + S.g_trzasacz2))) + 40) + S.g_image_angle) + S.g_obracacz), 0xFFFFFF, 1)
         R.draw_sprite_ext(S, G.gfx_lisciong_2, 0, (S.x + (18 * R.sin(S, R.degtorad(S, (S.g_image_angle + 180))))), (S.y + (10 * R.cos(S, R.degtorad(S, (S.g_image_angle + 180))))), -(0.8), (0.65 - (R.sin(S, S.g_promien) / 6)), ((((R.sin(S, S.g_promien) * ((9 + S.g_trzasacz2))) - 40) + S.g_image_angle) + S.g_obracacz), 0xFFFFFF, 1)
@@ -176,13 +176,13 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 48):
                 S.g_koko = R.instance_place(S, S.x, S.y, 48)
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 376):
                 S.g_koko = R.instance_place(S, S.x, S.y, 376)
                 var _sv8 = S
@@ -193,78 +193,78 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv8
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 73):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 2)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 16):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 50):
                 S.g_koko = R.instance_place(S, S.x, S.y, 50)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 37):
                 S.g_koko = R.instance_place(S, S.x, S.y, 37)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 54):
                 S.g_koko = R.instance_place(S, S.x, S.y, 54)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 58):
                 S.g_koko = R.instance_place(S, S.x, S.y, 58)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 60):
                 S.g_koko = R.instance_place(S, S.x, S.y, 60)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 63):
                 S.g_koko = R.instance_place(S, S.x, S.y, 63)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 66):
                 S.g_koko = R.instance_place(S, S.x, S.y, 66)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 69):
                 S.g_koko = R.instance_place(S, S.x, S.y, 69)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 42):
                 S.g_koko = R.instance_place(S, S.x, S.y, 42)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 1):
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 124):
                 G.hit_x = S.x
                 G.hit_y = S.y
@@ -277,7 +277,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv11
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_coto, 2):
         R.draw_sprite_ext(S, G.gfx_lisciong_1, 0, (S.x + (18 * R.sin(S, R.degtorad(S, (S.g_image_angle + 180))))), (S.y + (10 * R.cos(S, R.degtorad(S, (S.g_image_angle + 180))))), 0.8, (0.65 + (R.sin(S, S.g_promien) / 5)), ((((R.sin(S, S.g_promien) * ((10 + S.g_trzasacz2))) + 40) + S.g_image_angle) + S.g_obracacz), 0xFFFFFF, 1)
         R.draw_sprite_ext(S, G.gfx_lisciong_2, 0, (S.x + (18 * R.sin(S, R.degtorad(S, (S.g_image_angle + 180))))), (S.y + (10 * R.cos(S, R.degtorad(S, (S.g_image_angle + 180))))), -(0.8), (0.65 - (R.sin(S, S.g_promien) / 6)), ((((R.sin(S, S.g_promien) * ((9 + S.g_trzasacz2))) - 40) + S.g_image_angle) + S.g_obracacz), 0xFFFFFF, 1)
@@ -288,13 +288,13 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 48):
                 S.g_koko = R.instance_place(S, S.x, S.y, 48)
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 376):
                 S.g_koko = R.instance_place(S, S.x, S.y, 376)
                 var _sv14 = S
@@ -305,77 +305,77 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv14
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 73):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 2)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 16):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 50):
                 S.g_koko = R.instance_place(S, S.x, S.y, 50)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 37):
                 S.g_koko = R.instance_place(S, S.x, S.y, 37)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 54):
                 S.g_koko = R.instance_place(S, S.x, S.y, 54)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 58):
                 S.g_koko = R.instance_place(S, S.x, S.y, 58)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 60):
                 S.g_koko = R.instance_place(S, S.x, S.y, 60)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 63):
                 S.g_koko = R.instance_place(S, S.x, S.y, 63)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 66):
                 S.g_koko = R.instance_place(S, S.x, S.y, 66)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 69):
                 S.g_koko = R.instance_place(S, S.x, S.y, 69)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 42):
                 S.g_koko = R.instance_place(S, S.x, S.y, 42)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 1):
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 124):
                 G.hit_x = S.x
                 G.hit_y = S.y
@@ -388,7 +388,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv17
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_coto, 3):
         R.draw_sprite_ext(S, G.gfx_lisciong_1, 0, (S.x + (18 * R.sin(S, R.degtorad(S, (S.g_image_angle + 180))))), (S.y + (20 * R.cos(S, R.degtorad(S, (S.g_image_angle + 180))))), 0.8, (0.65 + (R.sin(S, S.g_promien) / 5)), ((((R.sin(S, S.g_promien) * ((10 + S.g_trzasacz2))) + 40) + S.g_image_angle) + S.g_obracacz), 0xFFFFFF, 1)
         R.draw_sprite_ext(S, G.gfx_lisciong_2, 0, (S.x + (18 * R.sin(S, R.degtorad(S, (S.g_image_angle + 180))))), (S.y + (20 * R.cos(S, R.degtorad(S, (S.g_image_angle + 180))))), -(0.8), (0.65 - (R.sin(S, S.g_promien) / 6)), ((((R.sin(S, S.g_promien) * ((9 + S.g_trzasacz2))) - 40) + S.g_image_angle) + S.g_obracacz), 0xFFFFFF, 1)
@@ -399,13 +399,13 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 48):
                 S.g_koko = R.instance_place(S, S.x, S.y, 48)
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 376):
                 S.g_koko = R.instance_place(S, S.x, S.y, 376)
                 var _sv20 = S
@@ -416,77 +416,77 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv20
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 73):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 2)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 16):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 50):
                 S.g_koko = R.instance_place(S, S.x, S.y, 50)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 37):
                 S.g_koko = R.instance_place(S, S.x, S.y, 37)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 54):
                 S.g_koko = R.instance_place(S, S.x, S.y, 54)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 58):
                 S.g_koko = R.instance_place(S, S.x, S.y, 58)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 60):
                 S.g_koko = R.instance_place(S, S.x, S.y, 60)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 63):
                 S.g_koko = R.instance_place(S, S.x, S.y, 63)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 66):
                 S.g_koko = R.instance_place(S, S.x, S.y, 66)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 69):
                 S.g_koko = R.instance_place(S, S.x, S.y, 69)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 42):
                 S.g_koko = R.instance_place(S, S.x, S.y, 42)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 1):
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 124):
                 G.hit_x = S.x
                 G.hit_y = S.y
@@ -499,7 +499,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv23
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_coto, 4):
         R.draw_sprite_ext(S, G.gfx_lisciong_1, 0, (S.x + (18 * R.sin(S, R.degtorad(S, (S.g_image_angle + 180))))), (S.y + (10 * R.cos(S, R.degtorad(S, (S.g_image_angle + 180))))), 0.8, (0.65 + (R.sin(S, S.g_promien) / 5)), ((((R.sin(S, S.g_promien) * ((10 + S.g_trzasacz2))) + 40) + S.g_image_angle) + S.g_obracacz), 0xFFFFFF, 1)
         R.draw_sprite_ext(S, G.gfx_lisciong_2, 0, (S.x + (18 * R.sin(S, R.degtorad(S, (S.g_image_angle + 180))))), (S.y + (10 * R.cos(S, R.degtorad(S, (S.g_image_angle + 180))))), -(0.8), (0.65 - (R.sin(S, S.g_promien) / 6)), ((((R.sin(S, S.g_promien) * ((9 + S.g_trzasacz2))) - 40) + S.g_image_angle) + S.g_obracacz), 0xFFFFFF, 1)
@@ -510,13 +510,13 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 48):
                 S.g_koko = R.instance_place(S, S.x, S.y, 48)
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 376):
                 S.g_koko = R.instance_place(S, S.x, S.y, 376)
                 var _sv26 = S
@@ -527,77 +527,77 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv26
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 73):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 2)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 16):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 50):
                 S.g_koko = R.instance_place(S, S.x, S.y, 50)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 37):
                 S.g_koko = R.instance_place(S, S.x, S.y, 37)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 54):
                 S.g_koko = R.instance_place(S, S.x, S.y, 54)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 58):
                 S.g_koko = R.instance_place(S, S.x, S.y, 58)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 60):
                 S.g_koko = R.instance_place(S, S.x, S.y, 60)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 63):
                 S.g_koko = R.instance_place(S, S.x, S.y, 63)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 66):
                 S.g_koko = R.instance_place(S, S.x, S.y, 66)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 69):
                 S.g_koko = R.instance_place(S, S.x, S.y, 69)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 42):
                 S.g_koko = R.instance_place(S, S.x, S.y, 42)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 1):
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 124):
                 G.hit_x = S.x
                 G.hit_y = S.y
@@ -610,7 +610,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv29
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_coto, 5):
         R.draw_sprite_ext(S, G.gfx_lisciong_1, 0, (S.x + (18 * R.sin(S, R.degtorad(S, (S.g_image_angle + 180))))), (S.y + (10 * R.cos(S, R.degtorad(S, (S.g_image_angle + 180))))), 0.8, (0.65 + (R.sin(S, S.g_promien) / 5)), ((((R.sin(S, S.g_promien) * ((10 + S.g_trzasacz2))) + 40) + S.g_image_angle) + S.g_obracacz), 0xFFFFFF, 1)
         R.draw_sprite_ext(S, G.gfx_lisciong_2, 0, (S.x + (18 * R.sin(S, R.degtorad(S, (S.g_image_angle + 180))))), (S.y + (10 * R.cos(S, R.degtorad(S, (S.g_image_angle + 180))))), -(0.8), (0.65 - (R.sin(S, S.g_promien) / 6)), ((((R.sin(S, S.g_promien) * ((9 + S.g_trzasacz2))) - 40) + S.g_image_angle) + S.g_obracacz), 0xFFFFFF, 1)
@@ -621,13 +621,13 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 48):
                 S.g_koko = R.instance_place(S, S.x, S.y, 48)
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 376):
                 S.g_koko = R.instance_place(S, S.x, S.y, 376)
                 var _sv32 = S
@@ -638,77 +638,77 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv32
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 73):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 2)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 16):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 50):
                 S.g_koko = R.instance_place(S, S.x, S.y, 50)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 37):
                 S.g_koko = R.instance_place(S, S.x, S.y, 37)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 54):
                 S.g_koko = R.instance_place(S, S.x, S.y, 54)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 58):
                 S.g_koko = R.instance_place(S, S.x, S.y, 58)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 60):
                 S.g_koko = R.instance_place(S, S.x, S.y, 60)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 63):
                 S.g_koko = R.instance_place(S, S.x, S.y, 63)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 66):
                 S.g_koko = R.instance_place(S, S.x, S.y, 66)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 69):
                 S.g_koko = R.instance_place(S, S.x, S.y, 69)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 42):
                 S.g_koko = R.instance_place(S, S.x, S.y, 42)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 1):
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 124):
                 G.hit_x = S.x
                 G.hit_y = S.y
@@ -721,7 +721,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv35
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_coto, 6):
         R.draw_sprite_ext(S, G.gfx_point_brick_alone, 0, S.x, S.y, 0.8, 0.8, ((40 + S.g_image_angle) + S.g_obracacz), 0xFFFFFF, 1)
         if R.eqv(S, G.pauza, 0):
@@ -730,13 +730,13 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 48):
                 S.g_koko = R.instance_place(S, S.x, S.y, 48)
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 376):
                 S.g_koko = R.instance_place(S, S.x, S.y, 376)
                 var _sv38 = S
@@ -747,77 +747,77 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv38
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 73):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 2)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 16):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 50):
                 S.g_koko = R.instance_place(S, S.x, S.y, 50)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 37):
                 S.g_koko = R.instance_place(S, S.x, S.y, 37)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 54):
                 S.g_koko = R.instance_place(S, S.x, S.y, 54)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 58):
                 S.g_koko = R.instance_place(S, S.x, S.y, 58)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 60):
                 S.g_koko = R.instance_place(S, S.x, S.y, 60)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 63):
                 S.g_koko = R.instance_place(S, S.x, S.y, 63)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 66):
                 S.g_koko = R.instance_place(S, S.x, S.y, 66)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 69):
                 S.g_koko = R.instance_place(S, S.x, S.y, 69)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 42):
                 S.g_koko = R.instance_place(S, S.x, S.y, 42)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 1):
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 124):
                 G.hit_x = S.x
                 G.hit_y = S.y
@@ -830,7 +830,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv41
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_coto, 8):
         R.draw_sprite_ext(S, G.gfx_point_brick_alone2, 0, S.x, S.y, (0.8 + S.g_timer), (0.8 + S.g_timer), S.g_image_angle, 0xFFFFFF, 1)
         if R.eqv(S, G.pauza, 0):
@@ -859,13 +859,13 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 48):
                 S.g_koko = R.instance_place(S, S.x, S.y, 48)
                 R.inst_set(S.g_koko, "zniszczony_od_muszli", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 376):
                 S.g_koko = R.instance_place(S, S.x, S.y, 376)
                 var _sv44 = S
@@ -876,77 +876,77 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv44
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_lisciong, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [65, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 73):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 2)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 16):
                 S.g_koko = R.instance_place(S, S.x, S.y, 16)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 50):
                 S.g_koko = R.instance_place(S, S.x, S.y, 50)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 37):
                 S.g_koko = R.instance_place(S, S.x, S.y, 37)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 54):
                 S.g_koko = R.instance_place(S, S.x, S.y, 54)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 58):
                 S.g_koko = R.instance_place(S, S.x, S.y, 58)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 60):
                 S.g_koko = R.instance_place(S, S.x, S.y, 60)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 63):
                 S.g_koko = R.instance_place(S, S.x, S.y, 63)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 66):
                 S.g_koko = R.instance_place(S, S.x, S.y, 66)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 69):
                 S.g_koko = R.instance_place(S, S.x, S.y, 69)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 42):
                 S.g_koko = R.instance_place(S, S.x, S.y, 42)
                 R.inst_set(S.g_koko, "destroy", 1)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 1):
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick2, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if R.place_meeting(S, S.x, S.y, 124):
                 G.hit_x = S.x
                 G.hit_y = S.y
@@ -959,7 +959,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S = _sv47
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_falling_brick, 12)
                 R.instance_destroy(S)
-                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [63, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
     if R.eqv(S, S.g_coto, 7):
         if R.eqv(S, G.pauza, 0):
             S.g_obracacz += ((S.g_ixor * -(1)) / S.g_watered)
@@ -1019,7 +1019,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             if (S.g_timer > 250):
                 R.instance_destroy(S)
                 R.instance_create(S, S.x, S.y, 311)
-                P2.SXMS_SFX_PlayExt(S, [66, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [66, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if R.eqv(S, S.g_timer3, 0):
             R.draw_sprite_ext(S, G.gfx_bomba, 0, S.x, S.y, 1, 1, (S.g_image_angle + S.g_obracacz), 0xFFFFFF, 1)
         if R.eqv(S, S.g_timer3, 1):

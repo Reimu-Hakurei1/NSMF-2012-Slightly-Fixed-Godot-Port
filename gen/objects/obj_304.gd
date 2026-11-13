@@ -32,43 +32,43 @@ static func ev_8_0(S, A: Array) -> Variant:
     L_xoff = ((((800 - L_sw)) / 2) * G.ekran_size_act)
     S.g_yoff = ((((600 - L_sh)) / 2) * G.ekran_size_act)
     if R.eqv(S, G.rodzaj_mario, 5):
-        R.draw_sprite_ext(S, 156, 0, ((R.aget(R.view_xview, 0) + (L_sw * G.ekran_size_act)) - (80 * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (L_sh * G.ekran_size_act)) - (80 * G.ekran_size_act)) + R.get_obj_var(306, "g_ducher_y")), (1 * G.ekran_size_act), (1 * G.ekran_size_act), (R.sin(S, R.degtorad(S, (R.get_obj_var(306, "g_ducher_obracacz") / 2))) * 5), 0xFFFFFF, 1)
-        R.draw_sprite_ext(S, 157, 0, ((R.aget(R.view_xview, 0) + (L_sw * G.ekran_size_act)) - (72 * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (L_sh * G.ekran_size_act)) - (80 * G.ekran_size_act)) + R.get_obj_var(306, "g_ducher_y")), ((1 * G.ekran_size_act) - (R.cos(S, (R.get_obj_var(306, "g_ducher_obracacz") / 50)) / 15)), ((1 * G.ekran_size_act) + (R.sin(S, (R.get_obj_var(306, "g_ducher_obracacz") / 50)) / 15)), (-(R.cos(S, R.degtorad(S, R.get_obj_var(306, "g_ducher_obracacz")))) * 5), 0xFFFFFF, R.get_obj_var(306, "g_duch_alpha"))
-        R.draw_sprite_ext(S, 158, 0, ((R.aget(R.view_xview, 0) + (L_sw * G.ekran_size_act)) - (80 * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (L_sh * G.ekran_size_act)) - (20 * G.ekran_size_act)) + R.get_obj_var(306, "g_ducher_y")), ((G.ducher_energy / 1000) * G.ekran_size_act), (1 * G.ekran_size_act), (360 + (R.sin(S, R.degtorad(S, (R.get_obj_var(306, "g_ducher_obracacz") / 2))) * 2)), 0xFFFFFF, 1)
+        R.draw_sprite_ext(S, 156, 0, ((R.anum(R.aget(R.view_xview, 0)) + (L_sw * G.ekran_size_act)) - (80 * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (L_sh * G.ekran_size_act)) - (80 * G.ekran_size_act)) + R.get_obj_var(306, "g_ducher_y")), (1 * G.ekran_size_act), (1 * G.ekran_size_act), (R.sin(S, R.degtorad(S, (R.get_obj_var(306, "g_ducher_obracacz") / 2))) * 5), 0xFFFFFF, 1)
+        R.draw_sprite_ext(S, 157, 0, ((R.anum(R.aget(R.view_xview, 0)) + (L_sw * G.ekran_size_act)) - (72 * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (L_sh * G.ekran_size_act)) - (80 * G.ekran_size_act)) + R.get_obj_var(306, "g_ducher_y")), ((1 * G.ekran_size_act) - (R.cos(S, (R.get_obj_var(306, "g_ducher_obracacz") / 50)) / 15)), ((1 * G.ekran_size_act) + (R.sin(S, (R.get_obj_var(306, "g_ducher_obracacz") / 50)) / 15)), (-(R.cos(S, R.degtorad(S, R.get_obj_var(306, "g_ducher_obracacz")))) * 5), 0xFFFFFF, R.get_obj_var(306, "g_duch_alpha"))
+        R.draw_sprite_ext(S, 158, 0, ((R.anum(R.aget(R.view_xview, 0)) + (L_sw * G.ekran_size_act)) - (80 * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (L_sh * G.ekran_size_act)) - (20 * G.ekran_size_act)) + R.get_obj_var(306, "g_ducher_y")), ((G.ducher_energy / 1000) * G.ekran_size_act), (1 * G.ekran_size_act), (360 + (R.sin(S, R.degtorad(S, (R.get_obj_var(306, "g_ducher_obracacz") / 2))) * 2)), 0xFFFFFF, 1)
     if R.eqv(S, G.fog, 1):
         R.draw_set_alpha(S, 1)
         R.draw_background_stretched(S, 35, R.aget(R.view_xview, 0), R.aget(R.view_yview, 0), R.aget(R.view_wview, 0), R.aget(R.view_hview, 0))
     if R.eqv(S, G.fog, 4):
-        R.draw_background_stretched_ext(S, G.background_ghosts_fog, ((R.aget(R.view_xview, 0) - 100) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_yview, 0), ((R.aget(R.view_wview, 0) + 200) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_hview, 0), 0xFFFFFF, ((R.sin(S, (S.g_stream / 10)) / 10) + 0.2))
+        R.draw_background_stretched_ext(S, G.background_ghosts_fog, ((R.anum(R.aget(R.view_xview, 0)) - 100) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_yview, 0), ((R.anum(R.aget(R.view_wview, 0)) + 200) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_hview, 0), 0xFFFFFF, ((R.sin(S, (S.g_stream / 10)) / 10) + 0.2))
     if R.eqv(S, G.fog, 2):
-        R.draw_background_stretched_ext(S, G.background_ghosts_fog, ((R.aget(R.view_xview, 0) - 100) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_yview, 0), ((R.aget(R.view_wview, 0) + 200) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_hview, 0), 0xFFFFFF, ((R.sin(S, (S.g_stream / 10)) / 10) + 0.5))
+        R.draw_background_stretched_ext(S, G.background_ghosts_fog, ((R.anum(R.aget(R.view_xview, 0)) - 100) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_yview, 0), ((R.anum(R.aget(R.view_wview, 0)) + 200) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_hview, 0), 0xFFFFFF, ((R.sin(S, (S.g_stream / 10)) / 10) + 0.5))
     if R.eqv(S, G.fog, 3):
-        R.draw_background_stretched_ext(S, G.background_ghosts_fog, ((R.aget(R.view_xview, 0) - 100) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_yview, 0), ((R.aget(R.view_wview, 0) + 200) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_hview, 0), 0x008000, ((R.sin(S, (S.g_stream / 10)) / 5) + 0.5))
-    R.draw_sprite_ext(S, 405, 0, (((R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)) + L_xoff) + ((R.sin(S, R.degtorad(S, 235)) * 420) * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + S.g_yoff) + ((R.cos(S, R.degtorad(S, 235)) * 420) * G.ekran_size_act)), (G.ekran_size_act / 1.2), (G.ekran_size_act / 1.2), 0, 0xFFFFFF, 0.8)
+        R.draw_background_stretched_ext(S, G.background_ghosts_fog, ((R.anum(R.aget(R.view_xview, 0)) - 100) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_yview, 0), ((R.anum(R.aget(R.view_wview, 0)) + 200) + (R.sin(S, (S.g_stream / 10)) * 50)), R.aget(R.view_hview, 0), 0x008000, ((R.sin(S, (S.g_stream / 10)) / 5) + 0.5))
+    R.draw_sprite_ext(S, 405, 0, (((R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)) + L_xoff) + ((R.sin(S, R.degtorad(S, 235)) * 420) * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + S.g_yoff) + ((R.cos(S, R.degtorad(S, 235)) * 420) * G.ekran_size_act)), (G.ekran_size_act / 1.2), (G.ekran_size_act / 1.2), 0, 0xFFFFFF, 0.8)
     R.draw_set_font(S, G.map_fonts_1)
     R.draw_set_color(S, 0xFFFFFF)
     R.draw_set_alpha(S, 1)
     R.draw_set_halign(S, 0)
     R.draw_set_halign(S, 0)
-    R.draw_text_ext_transformed(S, (((R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)) + L_xoff) + ((R.sin(S, R.degtorad(S, (235 + 3.9))) * ((380 + 43.9))) * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + S.g_yoff) + ((R.cos(S, R.degtorad(S, (235 + 3.9))) * ((380 + 43.9))) * G.ekran_size_act)), R.concat("x", R.string(S, G.zycia)), 0, 0, (G.ekran_size_act / 1), (G.ekran_size_act / 1), 0)
-    R.draw_sprite_ext(S, G.hud_coins, 0, (((R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)) + L_xoff) + ((R.sin(S, R.degtorad(S, (205 + 39.2))) * ((320 + 67))) * G.ekran_size_act)), ((((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + S.g_yoff) + ((R.cos(S, R.degtorad(S, (205 + 39.2))) * ((320 + 67))) * G.ekran_size_act)) + ((R.sin(S, S.g_stream) * 5) * G.ekran_size_act)), (G.ekran_size_act / 1.2), (G.ekran_size_act / 1.2), (R.sin(S, (S.g_stream / 4)) * 20), 0xFFFFFF, (0.75 + (R.sin(S, (S.g_stream / 10)) / 4)))
+    R.draw_text_ext_transformed(S, (((R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)) + L_xoff) + ((R.sin(S, R.degtorad(S, (235 + 3.9))) * ((380 + 43.9))) * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + S.g_yoff) + ((R.cos(S, R.degtorad(S, (235 + 3.9))) * ((380 + 43.9))) * G.ekran_size_act)), R.concat("x", R.string(S, G.zycia)), 0, 0, (G.ekran_size_act / 1), (G.ekran_size_act / 1), 0)
+    R.draw_sprite_ext(S, G.hud_coins, 0, (((R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)) + L_xoff) + ((R.sin(S, R.degtorad(S, (205 + 39.2))) * ((320 + 67))) * G.ekran_size_act)), ((((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + S.g_yoff) + ((R.cos(S, R.degtorad(S, (205 + 39.2))) * ((320 + 67))) * G.ekran_size_act)) + ((R.sin(S, S.g_stream) * 5) * G.ekran_size_act)), (G.ekran_size_act / 1.2), (G.ekran_size_act / 1.2), (R.sin(S, (S.g_stream / 4)) * 20), 0xFFFFFF, (0.75 + (R.sin(S, (S.g_stream / 10)) / 4)))
     S.g_stream += 0.1
     R.draw_set_font(S, G.map_fonts_1)
     R.draw_set_color(S, 0xFFFFFF)
     R.draw_set_alpha(S, 1)
     R.draw_set_halign(S, 0)
     R.draw_set_halign(S, 0)
-    R.draw_text_ext_transformed(S, (((R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)) + L_xoff) + ((R.sin(S, R.degtorad(S, ((205 + 3.9) + 39.2))) * (((280 + 43.9) + 67))) * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + S.g_yoff) + ((R.cos(S, R.degtorad(S, ((205 + 3.9) + 39.2))) * (((280 + 43.9) + 67))) * G.ekran_size_act)), R.concat("x", R.string(S, G.coins)), 0, 0, (G.ekran_size_act / 1), (G.ekran_size_act / 1), 0)
+    R.draw_text_ext_transformed(S, (((R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)) + L_xoff) + ((R.sin(S, R.degtorad(S, ((205 + 3.9) + 39.2))) * (((280 + 43.9) + 67))) * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + S.g_yoff) + ((R.cos(S, R.degtorad(S, ((205 + 3.9) + 39.2))) * (((280 + 43.9) + 67))) * G.ekran_size_act)), R.concat("x", R.string(S, G.coins)), 0, 0, (G.ekran_size_act / 1), (G.ekran_size_act / 1), 0)
     R.draw_set_alpha(S, 1)
-    R.draw_sprite_ext(S, 336, 0, (((((-(1000) / S.g_dzielnik) + R.aget(R.view_xview, 0)) + (R.aget(R.view_wview, 0) / 2)) + L_xoff) - (340 * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + S.g_yoff) - (80 * G.ekran_size_act)), G.ekran_size_act, G.ekran_size_act, ((R.sin(S, ((S.g_stream / 4) + 2)) * 20) - R.abs(S, (R.sin(S, (S.g_stream / 2)) * 30))), 0xFFFFFF, (0.75 + (R.sin(S, (S.g_stream / 10)) / 4)))
-    R.draw_sprite_ext(S, 336, 0, (((((-(1000) / S.g_dzielnik) + R.aget(R.view_xview, 0)) + (R.aget(R.view_wview, 0) / 2)) + L_xoff) - (340 * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + S.g_yoff) - (80 * G.ekran_size_act)), -(G.ekran_size_act), G.ekran_size_act, ((R.sin(S, ((S.g_stream / 4) + 2)) * 20) + R.abs(S, (R.sin(S, (S.g_stream / 2)) * 30))), 0xFFFFFF, (0.75 + (R.sin(S, (S.g_stream / 10)) / 4)))
-    R.draw_sprite_ext(S, 335, 0, (((((-(1000) / S.g_dzielnik) + R.aget(R.view_xview, 0)) + (R.aget(R.view_wview, 0) / 2)) + L_xoff) - (340 * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + S.g_yoff) - (80 * G.ekran_size_act)), G.ekran_size_act, G.ekran_size_act, (R.sin(S, ((S.g_stream / 4) + 2)) * 20), 0xFFFFFF, (0.75 + (R.sin(S, (S.g_stream / 10)) / 4)))
+    R.draw_sprite_ext(S, 336, 0, (((((-(1000) / S.g_dzielnik) + R.anum(R.aget(R.view_xview, 0))) + (R.anum(R.aget(R.view_wview, 0)) / 2)) + L_xoff) - (340 * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + S.g_yoff) - (80 * G.ekran_size_act)), G.ekran_size_act, G.ekran_size_act, ((R.sin(S, ((S.g_stream / 4) + 2)) * 20) - R.abs(S, (R.sin(S, (S.g_stream / 2)) * 30))), 0xFFFFFF, (0.75 + (R.sin(S, (S.g_stream / 10)) / 4)))
+    R.draw_sprite_ext(S, 336, 0, (((((-(1000) / S.g_dzielnik) + R.anum(R.aget(R.view_xview, 0))) + (R.anum(R.aget(R.view_wview, 0)) / 2)) + L_xoff) - (340 * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + S.g_yoff) - (80 * G.ekran_size_act)), -(G.ekran_size_act), G.ekran_size_act, ((R.sin(S, ((S.g_stream / 4) + 2)) * 20) + R.abs(S, (R.sin(S, (S.g_stream / 2)) * 30))), 0xFFFFFF, (0.75 + (R.sin(S, (S.g_stream / 10)) / 4)))
+    R.draw_sprite_ext(S, 335, 0, (((((-(1000) / S.g_dzielnik) + R.anum(R.aget(R.view_xview, 0))) + (R.anum(R.aget(R.view_wview, 0)) / 2)) + L_xoff) - (340 * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + S.g_yoff) - (80 * G.ekran_size_act)), G.ekran_size_act, G.ekran_size_act, (R.sin(S, ((S.g_stream / 4) + 2)) * 20), 0xFFFFFF, (0.75 + (R.sin(S, (S.g_stream / 10)) / 4)))
     R.draw_set_font(S, G.map_fonts_1)
     R.draw_set_color(S, 0xFFFFFF)
     R.draw_set_alpha(S, 1)
     R.draw_set_halign(S, 0)
     R.draw_set_halign(S, 0)
-    R.draw_text_ext_transformed(S, (((((-(1000) / S.g_dzielnik) + R.aget(R.view_xview, 0)) + (R.aget(R.view_wview, 0) / 2)) + L_xoff) - (360 * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + S.g_yoff) - (60 * G.ekran_size_act)), R.concat("x", R.string(S, G.happy_stars)), 0, 0, (G.ekran_size_act / 1), (G.ekran_size_act / 1), 0)
+    R.draw_text_ext_transformed(S, (((((-(1000) / S.g_dzielnik) + R.anum(R.aget(R.view_xview, 0))) + (R.anum(R.aget(R.view_wview, 0)) / 2)) + L_xoff) - (360 * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + S.g_yoff) - (60 * G.ekran_size_act)), R.concat("x", R.string(S, G.happy_stars)), 0, 0, (G.ekran_size_act / 1), (G.ekran_size_act / 1), 0)
     R.draw_set_alpha(S, 1)
     if ((S.g_dzielnik_timer > 0) and (S.g_dzielnik < 1000)):
         S.g_dzielnik += (1 + (S.g_dzielnik / 100))
@@ -106,7 +106,7 @@ static func ev_8_0(S, A: Array) -> Variant:
     R.draw_set_alpha(S, 1)
     R.draw_set_halign(S, 2)
     R.draw_set_halign(S, 0)
-    R.draw_text_ext_transformed(S, ((((R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)) - L_xoff) + (270 * G.ekran_size_act)) + (S.g_kokox * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + S.g_yoff) - (270 * G.ekran_size_act)), R.concat(S.g_wafelix, R.string(S, G.punkty)), 0, 0, (G.ekran_size_act / 1), (G.ekran_size_act / 1), 0)
+    R.draw_text_ext_transformed(S, ((((R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)) - L_xoff) + (270 * G.ekran_size_act)) + (S.g_kokox * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + S.g_yoff) - (270 * G.ekran_size_act)), R.concat(S.g_wafelix, R.string(S, G.punkty)), 0, 0, (G.ekran_size_act / 1), (G.ekran_size_act / 1), 0)
     R.draw_set_alpha(S, 1)
     if R.eqv(S, G.notime, 0):
         if ((S.g_timeup >= 1) and (S.g_timeup <= 100)):
@@ -114,7 +114,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         if R.eqv(S, S.g_timeup, 121):
             S.g_migaj = (S.g_migaj / 1.2)
     if R.eqv(S, G.notime, 0):
-        R.draw_sprite_ext(S, 479, 0, (((R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)) - L_xoff) + (290 * G.ekran_size_act)), ((((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + S.g_yoff) - (270 * G.ekran_size_act)) + ((R.sin(S, (S.g_stream / 2)) * 5) * G.ekran_size_act)), (((0.75 * G.ekran_size_act) + ((R.sin(S, (S.g_stream / 2)) / 40) * G.ekran_size_act)) + R.abs(S, R.sin(S, S.g_migaj))), (((0.75 * G.ekran_size_act) - ((R.sin(S, (S.g_stream / 2)) / 40) * G.ekran_size_act)) + R.abs(S, R.sin(S, S.g_migaj))), (R.sin(S, (S.g_stream / 10)) * 40), 0xFFFFFF, 1)
+        R.draw_sprite_ext(S, 479, 0, (((R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)) - L_xoff) + (290 * G.ekran_size_act)), ((((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + S.g_yoff) - (270 * G.ekran_size_act)) + ((R.sin(S, (S.g_stream / 2)) * 5) * G.ekran_size_act)), (((0.75 * G.ekran_size_act) + ((R.sin(S, (S.g_stream / 2)) / 40) * G.ekran_size_act)) + R.abs(S, R.sin(S, S.g_migaj))), (((0.75 * G.ekran_size_act) - ((R.sin(S, (S.g_stream / 2)) / 40) * G.ekran_size_act)) + R.abs(S, R.sin(S, S.g_migaj))), (R.sin(S, (S.g_stream / 10)) * 40), 0xFFFFFF, 1)
     S.g_fofo = ""
     if (((G.time >= 10) and (G.time <= 99)) and R.eqv(S, G.notime, 0)):
         S.g_fofo = "0"
@@ -126,6 +126,6 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.draw_set_alpha(S, 1)
         R.draw_set_halign(S, 0)
         R.draw_set_halign(S, 0)
-        R.draw_text_ext_transformed(S, (((R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)) - L_xoff) + (320 * G.ekran_size_act)), (((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 2)) + S.g_yoff) - (270 * G.ekran_size_act)), R.concat(S.g_fofo, R.string(S, G.time)), 0, 0, (G.ekran_size_act / 1), (G.ekran_size_act / 1), 0)
+        R.draw_text_ext_transformed(S, (((R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)) - L_xoff) + (320 * G.ekran_size_act)), (((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 2)) + S.g_yoff) - (270 * G.ekran_size_act)), R.concat(S.g_fofo, R.string(S, G.time)), 0, 0, (G.ekran_size_act / 1), (G.ekran_size_act / 1), 0)
         R.draw_set_alpha(S, 1)
     return 0

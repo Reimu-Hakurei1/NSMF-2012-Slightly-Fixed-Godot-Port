@@ -20,7 +20,7 @@ static func ev_3_0(S, A: Array) -> Variant:
             G.punkty += 100
             if (S.g_ciurp > 5):
                 S.g_ciurp = 0
-                P2.SXMS_SFX_PlayExt(S, [108, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [108, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if ((S.g_timer >= 500) and (G.time > 20)):
             G.time -= 10
             G.punkty += 1000

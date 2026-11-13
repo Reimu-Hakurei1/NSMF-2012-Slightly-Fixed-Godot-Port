@@ -7,5 +7,5 @@ static func ev_3_0(S, A: Array) -> Variant:
     if R.eqv(S, G.pauza, 0):
         if ((((R.get_obj_var(303, "g_y") > 1000) and R.eqv(S, R.get_obj_var(303, "g_sekwencja"), 1)) and (R.get_obj_var(303, "g_y") < (R.room_height - 1000))) and (R.get_obj_var(303, "g_grawitacja") > 10)):
             if (R.random(S, 100) > 75):
-                R.instance_create(S, (S.x + R.random(S, R.aget(R.view_wview, 0))), ((R.aget(R.view_yview, 0) + R.aget(R.view_hview, 0)) + 100), 516)
+                R.instance_create(S, (S.x + R.random(S, R.aget(R.view_wview, 0))), ((R.anum(R.aget(R.view_yview, 0)) + R.anum(R.aget(R.view_hview, 0))) + 100), 516)
     return 0

@@ -30,7 +30,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 S.g_spadacz = (S.g_image_xscale * 10)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_monty_digging, 4)
                 R.part_particles_create(S, G.particle_sys_1, S.x, S.y, G.part_effect_smoke, 2)
-                P2.SXMS_SFX_PlayExt(S, [98, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [98, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             if (R.eqv(S, S.g_spadnie, 10) and (1 - R.eqv(S, S.g_spadacz, 0))):
                 S.g_spadacz = (S.g_spadacz / 1.1)
                 S.g_spadx = (R.random(S, S.g_spadacz) - R.random(S, S.g_spadacz))

@@ -49,7 +49,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             if R.eqv(S, S.g_sampeling, 0):
                 S.g_trzesator = 300
                 S.g_sampeling = 1
-                P2.SXMS_SFX_PlayExt(S, [61, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [61, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.set_obj_var(306, "g_animacja", 40)
             if (S.y > R.get_obj_var(303, "g_y")):
                 S.g_fifi = R.instance_create(S, R.get_obj_var(303, "g_x"), R.get_obj_var(303, "g_y"), 324)
@@ -125,7 +125,7 @@ static func ev_8_0(S, A: Array) -> Variant:
         if (S.g_timer >= 50):
             S.g_local_global = 2
             S.g_timer = 0
-            P2.SXMS_SFX_PlayExt(S, [28, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [28, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         R.set_obj_var(303, "g_szybkosc", 0)
         R.set_obj_var(303, "g_grawitacja", 0)
         R.set_obj_var(303, "g_sekwencja", 0)
@@ -164,12 +164,12 @@ static func ev_8_0(S, A: Array) -> Variant:
             S = _sv11
         S.g_timer += 1
         if R.eqv(S, S.g_timer, 100):
-            P2.SXMS_SFX_PlayExt(S, [29, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [29, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if (S.g_timer >= 120):
             S.g_local_global = 4
             S.g_timer = 0
         if R.eqv(S, S.g_samploza, 0):
-            P2.SXMS_SFX_PlayExt(S, [27, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [27, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             S.g_samploza = 1
         if (1 - R.eqv(S, R.get_obj_var(303, "g_sekwencja"), 0)):
             R.set_obj_var(303, "g_x", (R.get_obj_var(303, "g_x") + 2))
@@ -202,7 +202,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             G.punkty += 100
             if (S.g_ciurp > 5):
                 S.g_ciurp = 0
-                P2.SXMS_SFX_PlayExt(S, [108, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [108, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if (((S.g_timer >= 200) and (R.get_obj_var(306, "g_image_alphar") <= 0)) and (G.time > 20)):
             G.time -= 10
             G.punkty += 1000
@@ -254,7 +254,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S = _sv17
         if (R.eqv(S, S.g_samploza_bujania, 0) and (S.g_bujaj > 50)):
             S.g_samploza_bujania = 1
-            P2.SXMS_SFX_PlayExt(S, [26, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [26, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         if (R.get_obj_var(306, "g_size2") > 0):
             R.set_obj_var(303, "g_x", ((S.x - (30 * R.get_obj_var(306, "g_size2"))) + (R.sin(S, R.degtorad(S, (180 + S.g_bujanie))) * 400)))
         if (R.get_obj_var(306, "g_size2") < 0):
@@ -271,7 +271,7 @@ static func ev_8_0(S, A: Array) -> Variant:
                 R.part_particles_create(S, G.particle_sys_1, (R.inst_get(S.g_gdzie_idzie, "x") - R.random(S, 100)), ((R.inst_get(S.g_gdzie_idzie, "y") - 100) - R.random(S, 100)), G.part_cegielka_zamku_1, 1)
                 R.part_particles_create(S, G.particle_sys_1, (R.inst_get(S.g_gdzie_idzie, "x") - R.random(S, 100)), ((R.inst_get(S.g_gdzie_idzie, "y") - R.random(S, 100)) - 100), G.part_cegielka_zamku_2, 1)
                 _n19 -= 1
-            P2.SXMS_SFX_PlayExt(S, [75, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+            P2.SXMS_SFX_PlayExt(S, [75, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
             R.inst_set(S.g_gdzie_idzie, "boom", 1)
             R.inst_set(S.g_gdzie_idzie, "sprite_index", 89)
             S.g_timer = 0

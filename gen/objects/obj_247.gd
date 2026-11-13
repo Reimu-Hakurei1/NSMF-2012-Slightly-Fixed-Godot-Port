@@ -14,7 +14,7 @@ static func ev_8_0(S, A: Array) -> Variant:
             S.g_timer += 1
             if (S.g_timer > S.g_szybkosc_strzalu):
                 S.g_timer = 0
-                P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+                P2.SXMS_SFX_PlayExt(S, [67, (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
                 R.effect_create_above(S, 5, ((S.x + R.random(S, 20)) - R.random(S, 20)), ((S.y + R.random(S, 20)) - R.random(S, 20)), 1, 0xFFFFFF)
                 R.effect_create_above(S, 5, ((S.x + R.random(S, 20)) - R.random(S, 20)), ((S.y + R.random(S, 20)) - R.random(S, 20)), 1, 0xFFFFFF)
                 R.effect_create_above(S, 5, ((S.x + R.random(S, 20)) - R.random(S, 20)), ((S.y + R.random(S, 20)) - R.random(S, 20)), 1, 0xFFFFFF)

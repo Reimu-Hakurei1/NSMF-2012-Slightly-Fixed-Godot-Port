@@ -10,12 +10,12 @@ static func ev_0_0(S, A: Array) -> Variant:
     return 0
 
 static func ev_8_0(S, A: Array) -> Variant:
-    R.draw_sprite_ext(S, 298, 0, (R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)), ((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 6)) - S.g_kolos), (1 + (S.g_energy / 10)), 1, 0, 0xFFFFFF, 1)
+    R.draw_sprite_ext(S, 298, 0, (R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)), ((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 6)) - S.g_kolos), (1 + (S.g_energy / 10)), 1, 0, 0xFFFFFF, 1)
     S.g_i = 0
     while true:
         if not ((S.g_i < S.g_energy)):
             break
-        R.draw_sprite_ext(S, 299, 0, (((R.aget(R.view_xview, 0) + (R.aget(R.view_wview, 0) / 2)) + (S.g_i * 40)) - ((S.g_energy * 40) / 2)), ((R.aget(R.view_yview, 0) + (R.aget(R.view_hview, 0) / 6)) - S.g_kolos), 1, 1, 0, 0xFFFFFF, (1 / S.g_podzielnik))
+        R.draw_sprite_ext(S, 299, 0, (((R.anum(R.aget(R.view_xview, 0)) + (R.anum(R.aget(R.view_wview, 0)) / 2)) + (S.g_i * 40)) - ((S.g_energy * 40) / 2)), ((R.anum(R.aget(R.view_yview, 0)) + (R.anum(R.aget(R.view_hview, 0)) / 6)) - S.g_kolos), 1, 1, 0, 0xFFFFFF, (1 / S.g_podzielnik))
         S.g_i += 1
     S.g_kolos = (S.g_kolos / 1.1)
     if ((S.g_energy <= 0) and (S.g_podzielnik < 1000)):

@@ -25,12 +25,12 @@ static func ev_0_0(S, A: Array) -> Variant:
 static func ev_8_0(S, A: Array) -> Variant:
     P6_7_8.script_enemy_thromb_2(S, [])
     if (R.lnot(R.place_meeting(S, S.x, (S.y + 30), 533)) and R.eqv(S, S.g_plusknie, 0)):
-        P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         S.g_plusknie = 1
         R.part_particles_create(S, G.particle_sys_1, S.x, (S.y - (S.g_image_xscale * 72)), R.aget(G.part_water_splash, 0), 3)
         R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 1), (R.ceil(S, S.g_image_xscale) * 3))
     if (R.place_meeting(S, S.x, (S.y + 30), 533) and R.eqv(S, S.g_plusknie, 1)):
-        P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.aget(R.view_xview, 0))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
+        P2.SXMS_SFX_PlayExt(S, [(93 + R.round(S, R.random(S, 1))), (((((S.x - R.anum(R.aget(R.view_xview, 0)))) / 800)) * 255), G.glosnosc_dzwieku, -(1), 0, 0])
         S.g_plusknie = 0
         R.part_particles_create(S, G.particle_sys_1, S.x, (S.y - (S.g_image_xscale * 72)), R.aget(G.part_water_splash, 0), 3)
         R.part_particles_create(S, G.particle_sys_1, S.x, S.y, R.aget(G.part_water_splash, 1), (R.ceil(S, S.g_image_xscale) * 3))

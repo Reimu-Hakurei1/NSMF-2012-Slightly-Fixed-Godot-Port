@@ -6,5 +6,5 @@ static var G = load("res://gen/globals.gd")
 static func ev_3_0(S, A: Array) -> Variant:
     S.g_image_yscale = 10
     S.x = (R.room_width - 80)
-    S.y = (R.aget(R.view_yview, 0) - 300)
+    S.y = (R.anum(R.aget(R.view_yview, 0)) - 300)
     return 0

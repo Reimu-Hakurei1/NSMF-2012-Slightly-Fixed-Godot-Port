@@ -37,8 +37,8 @@ static func ev_0_0(S, A: Array) -> Variant:
     return 0
 
 static func ev_3_0(S, A: Array) -> Variant:
-    S.x = (R.aget(R.view_xview, 0) + (400 * G.ekran_size_act))
-    S.y = ((R.aget(R.view_yview, 0) + (550 * G.ekran_size_act)) - S.g_pojawiator)
+    S.x = (R.anum(R.aget(R.view_xview, 0)) + (400 * G.ekran_size_act))
+    S.y = ((R.anum(R.aget(R.view_yview, 0)) + (550 * G.ekran_size_act)) - S.g_pojawiator)
     S.g_pojawiator = (S.g_pojawiator / 1.3)
     return 0
 
@@ -67,7 +67,7 @@ static func ev_8_0(S, A: Array) -> Variant:
     R.draw_sprite_ext(S, R.aget(G.gfx_mario_chest, S.g_anim), 0, (S.g_karnof + S.x), (S.y + (R.sin(S, R.degtorad(S, S.g_run_kat)) / 2)), (S.g_size * S.g_size2), S.g_size, ((((((S.g_kat + R.sin(S, R.degtorad(S, S.g_run_kat))) + S.g_run_pochylenie) + (S.g_strzelanie2 / 5))) * S.g_size2) + S.g_globalny_kat), S.g_power_star_kolorek, (1 * S.g_image_alphar))
     R.draw_sprite_ext(S, R.aget(G.gfx_mario_leg, S.g_anim), 0, ((S.g_karnof + S.x) + (((((R.sin(S, R.degtorad(S, ((-(22) + S.g_kat) + S.g_globalny_kat))) * 30) / 3)) * S.g_size))), (S.y + (((((R.cos(S, R.degtorad(S, ((-(22) + S.g_kat) + S.g_globalny_kat))) * 30) / 3)) * S.g_size))), (S.g_size * S.g_size2), S.g_size, (((((S.g_kat - ((R.sin(S, R.degtorad(S, S.g_run_kat)) * S.g_run_promien) * 1)) + S.g_miganie)) * S.g_size2) + S.g_globalny_kat), S.g_power_star_kolorek, (1 * S.g_image_alphar))
     R.draw_sprite_ext(S, R.aget(G.gfx_mario_head, S.g_anim), 0, ((S.g_karnof + S.x) + (((((R.sin(S, R.degtorad(S, ((180 + S.g_kat) + S.g_globalny_kat))) * 30) / 3)) * S.g_size))), ((S.y + ((((R.cos(S, R.degtorad(S, ((180 + S.g_kat) + S.g_globalny_kat))) * 30) / 3)) * S.g_size)) + R.sin(S, R.degtorad(S, S.g_run_kat))), (((0.75 + (S.g_size / 4))) * S.g_size2), ((0.75 + (S.g_size / 4))), (((((S.g_kat + S.g_run_pochylenie) + (S.g_strzelanie2 / 7))) * S.g_size2) + S.g_globalny_kat), S.g_power_star_kolorek, (1 * S.g_image_alphar))
-    R.draw_sprite_ext(S, R.aget(G.gfx_mario_mrugacz, 0), 0, ((S.g_karnof + S.x) + (((((R.sin(S, R.degtorad(S, ((180 + S.g_kat) + S.g_globalny_kat))) * 30) / 3)) * S.g_size))), ((S.y + ((((R.cos(S, R.degtorad(S, ((180 + S.g_kat) + S.g_globalny_kat))) * 30) / 3)) * S.g_size)) + R.sin(S, R.degtorad(S, S.g_run_kat))), (((0.75 + (S.g_size / 4))) * S.g_size2), ((0.75 + (S.g_size / 4))), ((((S.g_kat + S.g_run_pochylenie)) * S.g_size2) + S.g_globalny_kat), S.g_power_star_kolorek, (R.aget(S.g_mrugacz, 2) * S.g_image_alphar))
+    R.draw_sprite_ext(S, R.aget(G.gfx_mario_mrugacz, 0), 0, ((S.g_karnof + S.x) + (((((R.sin(S, R.degtorad(S, ((180 + S.g_kat) + S.g_globalny_kat))) * 30) / 3)) * S.g_size))), ((S.y + ((((R.cos(S, R.degtorad(S, ((180 + S.g_kat) + S.g_globalny_kat))) * 30) / 3)) * S.g_size)) + R.sin(S, R.degtorad(S, S.g_run_kat))), (((0.75 + (S.g_size / 4))) * S.g_size2), ((0.75 + (S.g_size / 4))), ((((S.g_kat + S.g_run_pochylenie)) * S.g_size2) + S.g_globalny_kat), S.g_power_star_kolorek, (R.anum(R.aget(S.g_mrugacz, 2)) * S.g_image_alphar))
     if R.eqv(S, S.g_niesie, 0):
         R.draw_sprite_ext(S, R.aget(G.gfx_mario_arm, S.g_anim), 0, (((((-(S.g_run_pochylenie) * S.g_size2) / 10) + S.g_karnof) + S.x) + ((((((R.sin(S, R.degtorad(S, ((220 + S.g_kat) + S.g_globalny_kat))) * 40) / 3)) * S.g_size)))), (S.y + ((((R.cos(S, R.degtorad(S, ((220 + S.g_kat) + S.g_globalny_kat))) * 40) / 3)) * S.g_size)), (S.g_size * S.g_size2), -(S.g_size), ((((((((40 + 180) + S.g_kat) - ((R.sin(S, R.degtorad(S, S.g_run_kat)) * S.g_run_promien) * -(1))) + 15)) * S.g_size2) + S.g_schylak) + S.g_globalny_kat), S.g_power_star_kolorek, (1 * S.g_image_alphar))
     if R.eqv(S, S.g_niesie, 1):

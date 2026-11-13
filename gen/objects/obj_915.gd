@@ -12,8 +12,8 @@ static func ev_0_0(S, A: Array) -> Variant:
 
 static func ev_8_0(S, A: Array) -> Variant:
     R.set_obj_var(306, "g_animacja", 6)
-    S.g_pos = (R.aget(R.view_wview, 0) / 2)
-    S.g_vpos = ((R.aget(R.view_hview, 0) / 2) - 100)
+    S.g_pos = (R.anum(R.aget(R.view_wview, 0)) / 2)
+    S.g_vpos = ((R.anum(R.aget(R.view_hview, 0)) / 2) - 100)
     if R.eqv(S, G.english_or_polish, 1):
         S.g_i = 0
         S.g_timer += 1
@@ -23,17 +23,17 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.draw_set_alpha(S, 1)
         R.draw_set_halign(S, 1)
         R.draw_set_valign(S, 1)
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Witam CiÄ™ serdecznie drogi graczu!", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Witam CiÄ™ serdecznie drogi graczu!", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "GrÄ™ New Super Mario Forever 2012", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "GrÄ™ New Super Mario Forever 2012", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "stworzyÅ‚em dla wszystkich fanÃ³w", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "stworzyÅ‚em dla wszystkich fanÃ³w", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "gry Super Mario Bros!", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "gry Super Mario Bros!", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Gra jest darmowa i nieodpÅ‚atna.", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Gra jest darmowa i nieodpÅ‚atna.", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Pozdrawiam PolakÃ³w, MichaÅ‚ Gdaniec!", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Pozdrawiam PolakÃ³w, MichaÅ‚ Gdaniec!", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
         S.g_wielkosc += 0.001
         S.g_dodawator += 0.0005
@@ -49,23 +49,23 @@ static func ev_8_0(S, A: Array) -> Variant:
         R.draw_set_alpha(S, 1)
         R.draw_set_halign(S, 1)
         R.draw_set_valign(S, 1)
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Hello there!", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Hello there!", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "You are about to play ", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "You are about to play ", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "New Super Mario Forever 2012!", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "New Super Mario Forever 2012!", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Game have been made by one person", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Game have been made by one person", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "by Michal Gdaniec. This is a fanmade", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "by Michal Gdaniec. This is a fanmade", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "created for free and everybody!!!", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "created for free and everybody!!!", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Have a nice playing time!!", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Have a nice playing time!!", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "I would like to greet everyone on earth!", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "I would like to greet everyone on earth!", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 2
-        R.draw_text_transformed(S, (R.aget(R.view_xview, 0) + S.g_pos), (R.aget(R.view_yview, 0) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Michal Gdaniec", S.g_wielkosc, S.g_wielkosc, 0)
+        R.draw_text_transformed(S, (R.anum(R.aget(R.view_xview, 0)) + S.g_pos), (R.anum(R.aget(R.view_yview, 0)) + (((S.g_vpos + (S.g_kuku * S.g_i))) * ((G.ekran_size_act + S.g_dodawator)))), "Michal Gdaniec", S.g_wielkosc, S.g_wielkosc, 0)
         S.g_i += 1
         S.g_wielkosc += 0.001
         S.g_dodawator += 0.0005
